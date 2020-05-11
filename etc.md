@@ -7,4 +7,12 @@ http://www.man7.org/linux/man-pages/man7/time.7.html
 https://en.cppreference.com/w/cpp/container/vector  
 https://zh.cppreference.com/w/c/io/fprintf  
 
+# git17-hi-memo1
+https://github.com/asbcd17z/hi1/blob/master/memo1.txt  
+###Google Chrome版本 72.0.3626.119（正式版本）（64 位）, firefox 65.0.1 (64 位)  
+https://github.com/TheAlgorithms/Python  
+https://github.com/libfuse/  
+用Python写一个FUSE（用户态文件系统）文件系统 http://blog.jobbole.com/51268/
+https://github.com/qianyubl/WATCH_dojo  
+
 # end==
