@@ -9,6 +9,11 @@ http://man7.org/linux/man-pages/man7/futex.7.html
 https://en.cppreference.com/w/cpp/container/vector  
 https://zh.cppreference.com/w/c/io/fprintf  
 
+# elearning web/lang
+https://www.runoob.com/lua/lua-tutorial.html  
+https://www.w3cschool.cn/sublimetext/  
+
+
 # git17-hi-memo1
 https://github.com/asbcd17z/hi1/blob/master/memo1.txt  
 ###Google Chrome版本 72.0.3626.119（正式版本）（64 位）, firefox 65.0.1 (64 位)  
