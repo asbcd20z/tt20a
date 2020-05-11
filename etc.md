@@ -3,6 +3,7 @@
 http://www.man7.org/linux/man-pages/man2/gettimeofday.2.html  
 http://www.man7.org/linux/man-pages/man7/time.7.html  
 http://www.man7.org/linux/man-pages/man7/vdso.7.html  
+http://man7.org/linux/man-pages/man7/futex.7.html  
 
 # c/cpp/c++
 https://en.cppreference.com/w/cpp/container/vector  
