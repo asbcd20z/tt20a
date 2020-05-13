@@ -19,6 +19,9 @@ git config --global core.autocrlf false/input/true
 git config --global core.safecrlf true/warn/false  
 Sublime Text,View->Line Endings，选Unix，保存;  
 
+# //2git
+https://blog.csdn.net/px_dn/article/details/89455457?utm_medium=distribute.pc_relevant.none-task-blog-OPENSEARCH-2&depth_1-utm_source=distribute.pc_relevant.none-task-blog-OPENSEARCH-2  
+
 # git17-hi-memo1
 https://github.com/asbcd17z/hi1/blob/master/memo1.txt  
 ###Google Chrome版本 72.0.3626.119（正式版本）（64 位）, firefox 65.0.1 (64 位)  
