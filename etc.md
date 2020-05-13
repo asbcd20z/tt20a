@@ -13,6 +13,11 @@ https://zh.cppreference.com/w/c/io/fprintf
 https://www.runoob.com/lua/lua-tutorial.html  
 https://www.w3cschool.cn/sublimetext/  
 
+# //git
+git换行符LF与CRLF转换问题 https://www.cnblogs.com/sdgf/p/6237847.html  
+git config --global core.autocrlf false/input/true  
+git config --global core.safecrlf true/warn/false  
+Sublime Text,View->Line Endings，选Unix，保存;  
 
 # git17-hi-memo1
 https://github.com/asbcd17z/hi1/blob/master/memo1.txt  
