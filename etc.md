@@ -19,8 +19,9 @@ git config --global core.autocrlf false/input/true
 git config --global core.safecrlf true/warn/false  
 Sublime Text,View->Line Endings，选Unix，保存;  
 
-# //2git
-https://blog.csdn.net/px_dn/article/details/89455457?utm_medium=distribute.pc_relevant.none-task-blog-OPENSEARCH-2&depth_1-utm_source=distribute.pc_relevant.none-task-blog-OPENSEARCH-2  
+# //gitlab/github--2git-acc
+https://blog.csdn.net/px_dn/article/details/89455457 
+创建github repository(仓库) https://www.cnblogs.com/siestakc/p/6862446.html  
 
 # git17-hi-memo1
 https://github.com/asbcd17z/hi1/blob/master/memo1.txt  
@@ -30,5 +31,9 @@ https://github.com/libfuse/
 用Python写一个FUSE（用户态文件系统）文件系统 http://blog.jobbole.com/51268/
 https://github.com/qianyubl/WATCH_dojo  
 https://github.com/search?l=C&p=5&q=timer+c&type=Repositories  
+
+# markdown/asciidoc/graphviz/plantuml/planttext.com
+
+
 
 # end==
