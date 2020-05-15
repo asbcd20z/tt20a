@@ -33,7 +33,12 @@ https://github.com/qianyubl/WATCH_dojo
 https://github.com/search?l=C&p=5&q=timer+c&type=Repositories  
 
 # markdown/asciidoc/graphviz/plantuml/planttext.com
-
+方便好用的在线UML制作工具：PlantUML https://www.jianshu.com/p/c006dcb1493b  
+如何在线编辑显示markdown/plantuml/graphiz? https://segmentfault.com/q/1010000002802979  
+http://www.plantuml.com/plantuml/ , https://stackedit.io/ , https://github.com/mikitex70/plantuml-markdown  
+https://www.planttext.com/  
+https://plantuml.com/zh/  
+https://www.w3cschool.cn/asciidoc_guide/  
 
 
 # end==
