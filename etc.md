@@ -38,6 +38,7 @@ https://github.com/search?l=C&p=5&q=timer+c&type=Repositories
 http://www.plantuml.com/plantuml/ , https://stackedit.io/ , https://github.com/mikitex70/plantuml-markdown  
 https://www.planttext.com/  
 https://plantuml.com/zh/  
+uml par/UML序列图总结(Loop,Opt,Par和Alt) https://www.cnblogs.com/cy568searchx/p/6227238.html  
 https://www.w3cschool.cn/asciidoc_guide/  
 
 
