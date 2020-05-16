@@ -18,6 +18,7 @@ git换行符LF与CRLF转换问题 https://www.cnblogs.com/sdgf/p/6237847.html
 git config --global core.autocrlf false/input/true  
 git config --global core.safecrlf true/warn/false  
 Sublime Text,View->Line Endings，选Unix，保存;  
+https://www.cnblogs.com/fangshenghui/p/5693610.html  
 
 # //gitlab/github--2git-acc
 https://blog.csdn.net/px_dn/article/details/89455457 
