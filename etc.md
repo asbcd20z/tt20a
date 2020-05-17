@@ -40,7 +40,8 @@ http://www.plantuml.com/plantuml/ , https://stackedit.io/ , https://github.com/m
 https://www.planttext.com/  
 https://plantuml.com/zh/  
 uml par/UML序列图总结(Loop,Opt,Par和Alt) https://www.cnblogs.com/cy568searchx/p/6227238.html  
-eg:程序员绘图工具-Plantuml https://www.jianshu.com/p/30f6a9c06083 https://zhuanlan.zhihu.com/p/76948461  
+eg:程序员绘图工具-Plantuml https://www.jianshu.com/p/30f6a9c06083  https://zhuanlan.zhihu.com/p/76948461  
+eg:plantuml使用教程 https://www.cnblogs.com/ningskyer/articles/5397750.html  http://archive.3zso.com/archives/plantuml-quickstart.html  
 markdown-stackedit使用 https://www.cnblogs.com/mfmdaoyou/p/6709491.html  
 https://www.w3cschool.cn/asciidoc_guide/  
 
