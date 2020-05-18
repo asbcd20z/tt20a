@@ -44,6 +44,7 @@ eg:程序员绘图工具-Plantuml https://www.jianshu.com/p/30f6a9c06083  https:
 eg:plantuml使用教程 https://www.cnblogs.com/ningskyer/articles/5397750.html  http://archive.3zso.com/archives/plantuml-quickstart.html  
 markdown-stackedit使用 https://www.cnblogs.com/mfmdaoyou/p/6709491.html  
 https://www.w3cschool.cn/asciidoc_guide/  
+https://github.com/stanzgy/wiki/blob/master/markup/asciidoc-guide.asciidoc  
 
 
 # end==
