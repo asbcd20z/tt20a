@@ -45,6 +45,7 @@ eg:plantuml使用教程 https://www.cnblogs.com/ningskyer/articles/5397750.html 
 markdown-stackedit使用 https://www.cnblogs.com/mfmdaoyou/p/6709491.html  
 https://www.w3cschool.cn/asciidoc_guide/  
 https://github.com/stanzgy/wiki/blob/master/markup/asciidoc-guide.asciidoc  
+baidu-asciidoc https://asciidoctor.cn/docs/asciidoc-syntax-quick-reference/  
 在线工具 https://tool.lu/asciidoc/  https://tool.lu/markdown/
 
 
