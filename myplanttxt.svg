@@ -3,8 +3,8 @@
 @startuml
 par
 Bob -> Alice: Hello!
-"cha\nch" - -> Bob1 : xx\nyyy3
-- ->>Bob:zz
+"cha\nch" -> Bob1 : xx\nyyy3
+->>Bob:zz
 end
 create dan
 Alice -\dan :ddd
@@ -21,15 +21,15 @@ participant elan
 box box1
 participant hery
 participant hawk
-hery - -> hawk:msg
+hery --> hawk:msg
 end box
 @enduml
 
 @startuml
 par
 Bob -> Alice: Hello!
-"cha\nch" - -> Bob1 : xx\nyyy3
-- ->>Bob:zz
+"cha\nch" -> Bob1 : xx\nyyy3
+->>Bob:zz
 end
 create dan
 Alice -\dan :ddd
@@ -42,11 +42,11 @@ end box
 
 participant elan
 
-
+'eg:box, planttext.com
 box box1
 participant hery
 participant hawk
-hery - -> hawk:msg
+hery --> hawk:msg
 end box
 @enduml
 
