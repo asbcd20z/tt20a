@@ -1,0 +1,50 @@
+git push origin br-bef-svg-add-autonumber
+git push origin tg-bef-svg-add-autonumber
+git push origin --tags
+--
+git push origin master
+===
+https://help.github.com/en/github/collaborating-with-issues-and-pull-requests/creating-and-deleting-branches-within-your-repository
+https://help.github.com/en/github/authenticating-to-github
+https://help.github.com/en/github/authenticating-to-github/connecting-to-github-with-ssh
+===
+===
+Quick setup — if you’ve done this kind of thing before
+or
+HTTPS SSH git@github.com:asbcd20z/hi1a.git
+Get started by creating a new file or uploading an existing file. We recommend every repository include a README, LICENSE, and .gitignore.
+-
+…or create a new repository on the command line
+echo "# hi1a" >> README.md
+git init
+git add README.md
+git commit -m "first commit"
+git remote add origin git@github.com:asbcd20z/hi1a.git
+git push -u origin master
+-
+…or push an existing repository from the command line
+git remote add origin git@github.com:asbcd20z/hi1a.git
+git push -u origin master
+-
+…or import code from another repository
+You can initialize this repository with code from a Subversion, Mercurial, or TFS project.
+
+====
+MINGW64 /c/xd/tmpd/tgit/a1/tt20a (mybr200527test)$ git pull
+remote: Enumerating objects: 5, done.
+remote: Counting objects: 100% (5/5), done.
+remote: Compressing objects: 100% (1/1), done.
+remote: Total 3 (delta 1), reused 3 (delta 1), pack-reused 0
+Unpacking objects: 100% (3/3), done.
+From https://github.com/asbcd20z/tt20a
+   4c8ff2f..ad68b9d  mybr200527test -> origin/mybr200527test
+There is no tracking information for the current branch.
+Please specify which branch you want to merge with.
+See git-pull(1) for details.
+
+    git pull <remote> <branch>
+
+If you wish to set tracking information for this branch you can do so with:
+
+    git branch --set-upstream-to=origin/<branch> mybr200527test
+
