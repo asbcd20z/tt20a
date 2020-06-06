@@ -1,3 +1,34 @@
 
 
 https://github.com/stanzgy/wiki/blob/master/markup/asciidoc-guide.asciidoc
+
+== 目标
+
+去除 iconfinder 上 icon 的水印
+
+== 原理
+
+利用水印像素点和原图像素点颜色合并的原理，如果拥有加过水印的图片和水印图片，就可以反向推出原图原像素点的颜色；前提是你得拥有他的水印图片
+
+....
+http://a.b
+....
+= ss
+.CpifSctpServiceFlowChart
+
+
+=== System Overview
+.CpifSctpServiceFlowChart
+[plantuml, CpifSctpServiceFlowChart, png]
+....
+
+participant ZmqReceiver
+box "SctpService" #LightGray
+participant SCTPServerEndpoint
+participant SCTPServiceReceiver
+end box
+participant F1apService
+
+SCTPServiceReceiver --> ZmqReceiver: register sctpServiceSocket
+
+....
