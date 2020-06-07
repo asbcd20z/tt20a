@@ -8,10 +8,20 @@ http://man7.org/linux/man-pages/man7/futex.7.html
 # c/cpp/c++
 https://en.cppreference.com/w/cpp/container/vector  
 https://zh.cppreference.com/w/c/io/fprintf  
+https://zh.cppreference.com/w/cpp/io  
+https://coliru.stacked-crooked.com/  
+https://zh.cppreference.com/w/Cppreference:Archives  
+http://www.cplusplus.com/reference/stl/  
+http://www.cplusplus.com/reference/ios/  
+typeid(x).name()  std::type_info  std::type_index  
+boost::typeindex::type_index type=typeindex::type_id<int&>(); type.pretty_name()  
+boost::msm  
+
 
 # elearning web/lang
 https://www.runoob.com/lua/lua-tutorial.html  
 https://www.w3cschool.cn/sublimetext/  
+
 
 # //git
 git换行符LF与CRLF转换问题 https://www.cnblogs.com/sdgf/p/6237847.html  
@@ -23,6 +33,8 @@ https://www.cnblogs.com/fangshenghui/p/5693610.html
 # //gitlab/github--2git-acc
 https://blog.csdn.net/px_dn/article/details/89455457 
 创建github repository(仓库) https://www.cnblogs.com/siestakc/p/6862446.html  
+gitlab项目仓库自动同步到github或者码云gitee https://blog.csdn.net/zjcjava/article/details/90047837  
+Gitlab代码库自动同步到Github https://blog.csdn.net/kelvin_yin/article/details/86661066  
 
 # git17-hi-memo1
 https://github.com/asbcd17z/hi1/blob/master/memo1.txt  
@@ -33,7 +45,8 @@ https://github.com/libfuse/
 https://github.com/qianyubl/WATCH_dojo  
 https://github.com/search?l=C&p=5&q=timer+c&type=Repositories  
 
-# markdown/asciidoc/graphviz/plantuml/planttext.com
+
+# tools/markdown/asciidoc/graphviz/plantuml/planttext.com
 方便好用的在线UML制作工具：PlantUML https://www.jianshu.com/p/c006dcb1493b  
 如何在线编辑显示markdown/plantuml/graphiz? https://segmentfault.com/q/1010000002802979  
 http://www.plantuml.com/plantuml/ , https://stackedit.io/ , https://github.com/mikitex70/plantuml-markdown  
