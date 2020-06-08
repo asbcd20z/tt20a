@@ -57,9 +57,15 @@ eg:程序员绘图工具-Plantuml https://www.jianshu.com/p/30f6a9c06083  https:
 eg:plantuml使用教程 https://www.cnblogs.com/ningskyer/articles/5397750.html  http://archive.3zso.com/archives/plantuml-quickstart.html  
 markdown-stackedit使用 https://www.cnblogs.com/mfmdaoyou/p/6709491.html  
 https://www.w3cschool.cn/asciidoc_guide/  
+Markdown基本语法 https://www.jianshu.com/p/191d1e21f7ed/  
+https://github.com/stanzgy/wiki/blob/master/markup/markdown-guide.md  
 https://github.com/stanzgy/wiki/blob/master/markup/asciidoc-guide.asciidoc  
 baidu-asciidoc https://asciidoctor.cn/docs/asciidoc-syntax-quick-reference/  
 在线工具 https://tool.lu/asciidoc/  https://tool.lu/markdown/
+
+## more
+在语雀绘制PlantUML图 https://www.yuque.com/barretlee/yuque/aabh67  
+糙读《如何高效记忆》后的读后感 https://www.yuque.com/sulirc/virtue/wrbp4i  
 
 
 # end==
