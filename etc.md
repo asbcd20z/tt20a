@@ -63,9 +63,13 @@ https://github.com/stanzgy/wiki/blob/master/markup/asciidoc-guide.asciidoc
 baidu-asciidoc https://asciidoctor.cn/docs/asciidoc-syntax-quick-reference/  
 在线工具 https://tool.lu/asciidoc/  https://tool.lu/markdown/
 
-## more
+## more1
+https://asn1.io/asn1playground/  
+
+## more2
 在语雀绘制PlantUML图 https://www.yuque.com/barretlee/yuque/aabh67  
 糙读《如何高效记忆》后的读后感 https://www.yuque.com/sulirc/virtue/wrbp4i  
-
+gitbook https://www.jianshu.com/p/421cc442f06c  
+Linux常用操作# https://blankj.com/gitbook/linux/ https://github.com/Blankj/AndroidOfferKiller  
 
 # end==
