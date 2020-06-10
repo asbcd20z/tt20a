@@ -62,12 +62,14 @@ https://github.com/stanzgy/wiki/blob/master/markup/markdown-guide.md
 https://github.com/stanzgy/wiki/blob/master/markup/asciidoc-guide.asciidoc  
 baidu-asciidoc https://asciidoctor.cn/docs/asciidoc-syntax-quick-reference/  
 在线工具 https://tool.lu/asciidoc/  https://tool.lu/markdown/  
-AsciidocFX_Windows1.6.6.exe https://github.com/asciidocfx/AsciidocFX(maybe+Graphviz)  
-asciidoctor  
+AsciidocFX_Windows1.6.6.exe(maybe+Graphviz) https://github.com/asciidocfx/AsciidocFX  
+asciidoctor  AsciidocFX支持的元数据 https://blog.csdn.net/wiborgite/article/details/88648802  
+Asciidoc简介#  http://asciidoctor.org/docs/asciidoc-syntax-quick-reference/  
 
 
 ## more1
 https://asn1.io/asn1playground/  
+typeset; man bash |grep PROMPT_DIRTRIM=3  =https://www.cnblogs.com/wi100sh/p/4814745.html  
 
 ## more2
 在语雀绘制PlantUML图 https://www.yuque.com/barretlee/yuque/aabh67  
