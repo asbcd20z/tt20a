@@ -69,7 +69,8 @@ Asciidoc简介#  http://asciidoctor.org/docs/asciidoc-syntax-quick-reference/
 
 ## more1
 https://asn1.io/asn1playground/  
-typeset; man bash |grep PROMPT_DIRTRIM=3  =https://www.cnblogs.com/wi100sh/p/4814745.html  
+typeset; man bash |grep PROMPT_DIRTRIM=3  
+=https://www.cnblogs.com/wi100sh/p/4814745.html Bootloader之uBoot简介##https://www.cnblogs.com/wi100sh/p/4255081.html  
 
 ## more2
 在语雀绘制PlantUML图 https://www.yuque.com/barretlee/yuque/aabh67  
