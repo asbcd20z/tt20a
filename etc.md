@@ -1,11 +1,16 @@
 # etc-link
-# gnu
+:toc:
+:toclevels: 6
+:numbered:
+:icons: font
+
+## gnu
 http://www.man7.org/linux/man-pages/man2/gettimeofday.2.html  
 http://www.man7.org/linux/man-pages/man7/time.7.html  
 http://www.man7.org/linux/man-pages/man7/vdso.7.html  
 http://man7.org/linux/man-pages/man7/futex.7.html  
 
-# c/cpp/c++
+## c/cpp/c++
 https://en.cppreference.com/w/cpp/container/vector  
 https://zh.cppreference.com/w/c/io/fprintf  
 https://zh.cppreference.com/w/cpp/io  
@@ -18,25 +23,25 @@ boost::typeindex::type_index type=typeindex::type_id<int&>(); type.pretty_name()
 boost::msm  
 
 
-# elearning web/lang
+## elearning web/lang
 https://www.runoob.com/lua/lua-tutorial.html  
 https://www.w3cschool.cn/sublimetext/  
 
 
-# //git
+## //git
 git换行符LF与CRLF转换问题 https://www.cnblogs.com/sdgf/p/6237847.html  
 git config --global core.autocrlf false/input/true  
 git config --global core.safecrlf true/warn/false  
 Sublime Text,View->Line Endings，选Unix，保存;  
 https://www.cnblogs.com/fangshenghui/p/5693610.html  
 
-# //gitlab/github--2git-acc
+## //gitlab/github--2git-acc
 https://blog.csdn.net/px_dn/article/details/89455457 
 创建github repository(仓库) https://www.cnblogs.com/siestakc/p/6862446.html  
 gitlab项目仓库自动同步到github或者码云gitee https://blog.csdn.net/zjcjava/article/details/90047837  
 Gitlab代码库自动同步到Github https://blog.csdn.net/kelvin_yin/article/details/86661066  
 
-# git17-hi-memo1
+## git17-hi-memo1
 https://github.com/asbcd17z/hi1/blob/master/memo1.txt  
 ###Google Chrome版本 72.0.3626.119（正式版本）（64 位）, firefox 65.0.1 (64 位)  
 https://github.com/TheAlgorithms/Python  
@@ -46,7 +51,7 @@ https://github.com/qianyubl/WATCH_dojo
 https://github.com/search?l=C&p=5&q=timer+c&type=Repositories  
 
 
-# tools/markdown/asciidoc/graphviz/plantuml/planttext.com
+## tools/markdown/asciidoc/graphviz/plantuml/planttext.com
 方便好用的在线UML制作工具：PlantUML https://www.jianshu.com/p/c006dcb1493b  
 如何在线编辑显示markdown/plantuml/graphiz? https://segmentfault.com/q/1010000002802979  
 http://www.plantuml.com/plantuml/ , https://stackedit.io/ , https://github.com/mikitex70/plantuml-markdown  
@@ -58,6 +63,7 @@ eg:plantuml使用教程 https://www.cnblogs.com/ningskyer/articles/5397750.html 
 markdown-stackedit使用 https://www.cnblogs.com/mfmdaoyou/p/6709491.html  
 https://www.w3cschool.cn/asciidoc_guide/  
 Markdown基本语法 https://www.jianshu.com/p/191d1e21f7ed/  
+印象笔记Markdown入门指南 https://yinxiang.com/new/hc/articles/%E5%8D%B0%E8%B1%A1%E7%AC%94%E8%AE%B0-markdown-%E5%85%A5%E9%97%A8%E6%8C%87%E5%8D%97/  
 https://github.com/stanzgy/wiki/blob/master/markup/markdown-guide.md  
 https://github.com/stanzgy/wiki/blob/master/markup/asciidoc-guide.asciidoc  
 baidu-asciidoc https://asciidoctor.cn/docs/asciidoc-syntax-quick-reference/  
@@ -67,15 +73,16 @@ asciidoctor  AsciidocFX支持的元数据 https://blog.csdn.net/wiborgite/articl
 Asciidoc简介#  http://asciidoctor.org/docs/asciidoc-syntax-quick-reference/  
 
 
-## more1
+### more1
 https://asn1.io/asn1playground/  
+CI/CD devops  git/gerrit/zuul/jenkins/  
 typeset; man bash |grep PROMPT_DIRTRIM=3  
 =https://www.cnblogs.com/wi100sh/p/4814745.html Bootloader之uBoot简介##https://www.cnblogs.com/wi100sh/p/4255081.html  
 
-## more2
+### more2
 在语雀绘制PlantUML图 https://www.yuque.com/barretlee/yuque/aabh67  
 糙读《如何高效记忆》后的读后感 https://www.yuque.com/sulirc/virtue/wrbp4i  
 gitbook https://www.jianshu.com/p/421cc442f06c  
 Linux常用操作# https://blankj.com/gitbook/linux/ https://github.com/Blankj/AndroidOfferKiller  
 
-# end==
+## end==

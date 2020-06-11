@@ -1,4 +1,7 @@
-
+:toc:
+:toclevels: 6
+:numbered:
+:icons: font
 
 https://github.com/stanzgy/wiki/blob/master/markup/asciidoc-guide.asciidoc
 
@@ -21,7 +24,9 @@ http://a.b
 .CpifSctpServiceFlowChart
 [plantuml, CpifSctpServiceFlowChart, png]
 ....
-
+@startuml
+title this-is-demo
+'hide footbox
 participant ZmqReceiver
 box "SctpService" #LightGray
 participant SCTPServerEndpoint
@@ -30,7 +35,7 @@ end box
 participant F1apService
 
 SCTPServiceReceiver --> ZmqReceiver: register sctpServiceSocket
-
+@enduml
 ....
 
 aa
