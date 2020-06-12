@@ -78,6 +78,8 @@ CI/CD devops  git/gerrit/zuul/jenkins/
 typeset; man bash |grep PROMPT_DIRTRIM=3  =https://www.cnblogs.com/wi100sh/p/4814745.html  
 Bootloader之uBoot简介##https://www.cnblogs.com/wi100sh/p/4255081.html  
 endian如何判断CPU是大端还是小端模式 https://www.cnblogs.com/wi100sh/p/4899466.html  
+重载(overload)，覆盖(override),隐藏(hide)的区别 https://www.cnblogs.com/wi100sh/p/4325397.html https://www.cnblogs.com/wi100sh/p/4325336.html  
+gof设计模式简介#https://www.yuque.com/happyhusky/wdbj/uwupyw  plantuml#https://www.yuque.com/happyhusky/wdbj/ogdbl4  
 
 ### more2
 在语雀绘制PlantUML图 https://www.yuque.com/barretlee/yuque/aabh67  
