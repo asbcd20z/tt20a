@@ -22,7 +22,6 @@ typeid(x).name()  std::type_info  std::type_index
 boost::typeindex::type_index type=typeindex::type_id<int&>(); type.pretty_name()  
 boost::msm  
 
-
 ## elearning web/lang
 https://www.runoob.com/lua/lua-tutorial.html  
 https://www.w3cschool.cn/sublimetext/  
@@ -76,8 +75,9 @@ Asciidoc简介#  http://asciidoctor.org/docs/asciidoc-syntax-quick-reference/
 ### more1
 https://asn1.io/asn1playground/  
 CI/CD devops  git/gerrit/zuul/jenkins/  
-typeset; man bash |grep PROMPT_DIRTRIM=3  
-=https://www.cnblogs.com/wi100sh/p/4814745.html Bootloader之uBoot简介##https://www.cnblogs.com/wi100sh/p/4255081.html  
+typeset; man bash |grep PROMPT_DIRTRIM=3  =https://www.cnblogs.com/wi100sh/p/4814745.html  
+Bootloader之uBoot简介##https://www.cnblogs.com/wi100sh/p/4255081.html  
+endian如何判断CPU是大端还是小端模式 https://www.cnblogs.com/wi100sh/p/4899466.html  
 
 ### more2
 在语雀绘制PlantUML图 https://www.yuque.com/barretlee/yuque/aabh67  
