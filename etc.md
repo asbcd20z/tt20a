@@ -84,7 +84,7 @@ proxy.pac https://wenku.baidu.com/view/1d29739ea2161479171128a6.html
 通过socks tunnel设置http代理 https://www.cnblogs.com/milton/p/7777590.html  
 Docker安装和常用命令 https://www.cnblogs.com/milton/p/9866963.html  
 迁移Git项目到Gitlab https://www.cnblogs.com/milton/p/11053007.html  OpenSSL的证书, 私钥和签名请求(CSRs)  
-github仓库迁移到gitlab以及gitlab仓库迁移到另一个gitlab服务器# www.cnblogs.com/saysmy/p/10942814.html  
+github仓库迁移到gitlab以及gitlab仓库迁移到另一个gitlab服务器# https://www.cnblogs.com/saysmy/p/10942814.html  
 typeset; man bash |grep PROMPT_DIRTRIM=3  PS1==https://www.cnblogs.com/wi100sh/p/4814745.html  
 Bootloader之uBoot简介##https://www.cnblogs.com/wi100sh/p/4255081.html  
 endian如何判断CPU是大端还是小端模式 https://www.cnblogs.com/wi100sh/p/4899466.html  
