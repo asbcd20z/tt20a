@@ -67,7 +67,7 @@ https://github.com/stanzgy/wiki/blob/master/markup/markdown-guide.md
 https://github.com/stanzgy/wiki/blob/master/markup/asciidoc-guide.asciidoc  
 baidu-asciidoc https://asciidoctor.cn/docs/asciidoc-syntax-quick-reference/  
 在线工具 https://tool.lu/asciidoc/  https://tool.lu/markdown/  
-AsciidocFX_Windows1.6.6.exe(maybe+Graphviz) https://github.com/asciidocfx/AsciidocFX  
+AsciidocFX_Windows1.6.6.exe(maybe+Graphviz2.44-2019) https://github.com/asciidocfx/AsciidocFX  
 asciidoctor  AsciidocFX支持的元数据 https://blog.csdn.net/wiborgite/article/details/88648802  
 Asciidoc简介#  http://asciidoctor.org/docs/asciidoc-syntax-quick-reference/  
 
@@ -75,11 +75,17 @@ Asciidoc简介#  http://asciidoctor.org/docs/asciidoc-syntax-quick-reference/
 ### more1
 https://asn1.io/asn1playground/  
 CI/CD devops  git/gerrit/zuul/jenkins/  
-typeset; man bash |grep PROMPT_DIRTRIM=3  =https://www.cnblogs.com/wi100sh/p/4814745.html  
+Gerrit 笔记 https://www.cnblogs.com/milton/p/12576792.html  
+proxy.pac https://wenku.baidu.com/view/1d29739ea2161479171128a6.html  
+通过socks tunnel设置http代理 https://www.cnblogs.com/milton/p/7777590.html  
+Docker安装和常用命令 https://www.cnblogs.com/milton/p/9866963.html  
+typeset; man bash |grep PROMPT_DIRTRIM=3  PS1==https://www.cnblogs.com/wi100sh/p/4814745.html  
 Bootloader之uBoot简介##https://www.cnblogs.com/wi100sh/p/4255081.html  
 endian如何判断CPU是大端还是小端模式 https://www.cnblogs.com/wi100sh/p/4899466.html  
 重载(overload)，覆盖(override),隐藏(hide)的区别 https://www.cnblogs.com/wi100sh/p/4325397.html https://www.cnblogs.com/wi100sh/p/4325336.html  
 gof设计模式简介#https://www.yuque.com/happyhusky/wdbj/uwupyw  plantuml#https://www.yuque.com/happyhusky/wdbj/ogdbl4  
+高质量C++/C编程指南 https://www.jianshu.com/p/654fea4bfd4f  
+https://docs.gitlab.com/ee/api/markdown.html  
 
 ### more2
 在语雀绘制PlantUML图 https://www.yuque.com/barretlee/yuque/aabh67  
