@@ -33,6 +33,10 @@ git config --global core.autocrlf false/input/true
 git config --global core.safecrlf true/warn/false  
 Sublime Text,View->Line Endings，选Unix，保存;  
 https://www.cnblogs.com/fangshenghui/p/5693610.html  
+--  
+rebase,merge,cherry-pick的区别详解—面试常问 https://www.cnblogs.com/NaughtyCat/p/differ-with-rebase-merge-cherry-pick.html  
+Git知识总览(五)Git中的merge、rebase、cherry-pick以及交互式rebase https://www.cnblogs.com/ludashi/p/8213550.html  
+
 
 ## //gitlab/github--2git-acc
 https://blog.csdn.net/px_dn/article/details/89455457 
