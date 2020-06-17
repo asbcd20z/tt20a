@@ -34,8 +34,13 @@ git config --global core.safecrlf true/warn/false
 Sublime Text,View->Line Endings，选Unix，保存;  
 https://www.cnblogs.com/fangshenghui/p/5693610.html  
 --  
-rebase,merge,cherry-pick的区别详解—面试常问 https://www.cnblogs.com/NaughtyCat/p/differ-with-rebase-merge-cherry-pick.html  
+Git常用命令速查 https://www.jianshu.com/p/38832b41143d  
+rebase,merge,cherry-pick的区别详解—面试常问 https://www.cnblogs.com/NaughtyCat/p/differ-with-rebase-merge-cherry-pick.html  https://git-scm.com/book/zh/v2  
 Git知识总览(五)Git中的merge、rebase、cherry-pick以及交互式rebase https://www.cnblogs.com/ludashi/p/8213550.html  
+简单对比git pull和git pull --rebase的使用 https://blog.csdn.net/dake_160413/article/details/78676163  https://www.cnblogs.com/kevingrace/p/5896706.html  
+git remote add mybak URL..; git remote set-url URL..;  
+git remote -v; git lls-remote  
+git show-branch  
 git branch -vv  
 git revert/ reset++push -f [Git恢复之前版本的两种方法reset、revert] https://blog.csdn.net/yxlshk/article/details/79944535  
 
@@ -85,7 +90,7 @@ Gerrit 笔记 https://www.cnblogs.com/milton/p/12576792.html
 proxy.pac https://wenku.baidu.com/view/1d29739ea2161479171128a6.html  
 通过socks tunnel设置http代理 https://www.cnblogs.com/milton/p/7777590.html  
 Docker安装和常用命令 https://www.cnblogs.com/milton/p/9866963.html  
-迁移Git项目到Gitlab https://www.cnblogs.com/milton/p/11053007.html  OpenSSL的证书, 私钥和签名请求(CSRs)  
+迁移Git项目到Gitlab https://www.cnblogs.com/milton/p/11053007.html  OpenSSL的证书, 私钥和签名请求(CSRs)www.cnblogs.com/milton/p/11076925.html  
 github仓库迁移到gitlab以及gitlab仓库迁移到另一个gitlab服务器# https://www.cnblogs.com/saysmy/p/10942814.html  
 typeset; man bash |grep PROMPT_DIRTRIM=3  PS1==https://www.cnblogs.com/wi100sh/p/4814745.html  
 Bootloader之uBoot简介##https://www.cnblogs.com/wi100sh/p/4255081.html  
