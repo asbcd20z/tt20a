@@ -38,8 +38,11 @@ Git常用命令速查 https://www.jianshu.com/p/38832b41143d
 rebase,merge,cherry-pick的区别详解—面试常问 https://www.cnblogs.com/NaughtyCat/p/differ-with-rebase-merge-cherry-pick.html  https://git-scm.com/book/zh/v2  
 Git知识总览(五)Git中的merge、rebase、cherry-pick以及交互式rebase https://www.cnblogs.com/ludashi/p/8213550.html  
 简单对比git pull和git pull --rebase的使用 https://blog.csdn.net/dake_160413/article/details/78676163  https://www.cnblogs.com/kevingrace/p/5896706.html  
+git submodule 完整用法整理 https://blog.csdn.net/wkyseo/article/details/81589477  
 git remote add mybak URL..; git remote set-url URL..;  
-git remote -v; git lls-remote  
+git var -l; git config -l --local; git ls-files; git whatchanged  
+git remote show; git remote -v; git ls-remote  
+git branch --unset-upstream  
 git show-branch  
 git branch -vv  
 git revert/ reset++push -f [Git恢复之前版本的两种方法reset、revert] https://blog.csdn.net/yxlshk/article/details/79944535  
