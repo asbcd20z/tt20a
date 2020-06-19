@@ -53,6 +53,8 @@ https://blog.csdn.net/px_dn/article/details/89455457
 创建github repository(仓库) https://www.cnblogs.com/siestakc/p/6862446.html  
 gitlab项目仓库自动同步到github或者码云gitee https://blog.csdn.net/zjcjava/article/details/90047837  
 Gitlab代码库自动同步到Github https://blog.csdn.net/kelvin_yin/article/details/86661066  
+gitlab Repository mirroring  https://gitlab.com/help/user/project/repository/repository_mirroring.md  
+
 
 ## git17-hi-memo1
 https://github.com/asbcd17z/hi1/blob/master/memo1.txt  
@@ -108,5 +110,6 @@ https://docs.gitlab.com/ee/api/markdown.html
 糙读《如何高效记忆》后的读后感 https://www.yuque.com/sulirc/virtue/wrbp4i  
 gitbook https://www.jianshu.com/p/421cc442f06c  
 Linux常用操作# https://blankj.com/gitbook/linux/ https://github.com/Blankj/AndroidOfferKiller  
+http://www.ruanyifeng.com/blog/2019/09/curl-reference.html  
 
 ## end==
