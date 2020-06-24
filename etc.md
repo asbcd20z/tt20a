@@ -39,11 +39,13 @@ rebase,merge,cherry-pick的区别详解—面试常问 https://www.cnblogs.com/N
 Git知识总览(五)Git中的merge、rebase、cherry-pick以及交互式rebase https://www.cnblogs.com/ludashi/p/8213550.html  
 简单对比git pull和git pull --rebase的使用 https://blog.csdn.net/dake_160413/article/details/78676163  https://www.cnblogs.com/kevingrace/p/5896706.html  
 git submodule 完整用法整理 https://blog.csdn.net/wkyseo/article/details/81589477  
+git init --bare project.git; repack,fsck,gc  
+git push -f origin master ///[f]to restore,but better to revert commitId  
 git remote add mybak URL..; git remote set-url URL..;  
 git var -l; git config -l --local; git ls-files; git whatchanged  
 git remote show; git remote -v; git ls-remote  
 git branch --unset-upstream  
-git show-branch  
+git show-branch; lo = log -9 --oneline #--all --graph #--decorate; loag=lo --all --graph #--decorate;  ##log --left-right --boundary --reverse bra1...bra2  
 git branch -vv  
 git revert/ reset++push -f [Git恢复之前版本的两种方法reset、revert] https://blog.csdn.net/yxlshk/article/details/79944535  
 
@@ -53,7 +55,7 @@ https://blog.csdn.net/px_dn/article/details/89455457
 创建github repository(仓库) https://www.cnblogs.com/siestakc/p/6862446.html  
 gitlab项目仓库自动同步到github或者码云gitee https://blog.csdn.net/zjcjava/article/details/90047837  
 Gitlab代码库自动同步到Github https://blog.csdn.net/kelvin_yin/article/details/86661066  
-gitlab Repository mirroring  https://gitlab.com/help/user/project/repository/repository_mirroring.md  
+gitlab Repository mirroring https://gitlab.com/help/workflow/repository_mirroring.html  https://gitlab.com/help/user/project/repository/repository_mirroring.md  
 
 
 ## git17-hi-memo1
