@@ -114,5 +114,19 @@ https://docs.gitlab.com/ee/api/markdown.html
 gitbook https://www.jianshu.com/p/421cc442f06c  
 Linux常用操作# https://blankj.com/gitbook/linux/ https://github.com/Blankj/AndroidOfferKiller  
 http://www.ruanyifeng.com/blog/2019/09/curl-reference.html  
+深入ProtoBuf-简介 https://www.jianshu.com/p/a24c88c0526a  
+python c struct/python之struct详解https://blog.csdn.net/qq_30638831/article/details/80421019  
+PYTHON C/C++结构体 ctypes.Structure https://www.cnblogs.com/yang220/p/12091863.html  
+date +%FT%T.%Nz -u  
+VI模式中上下左右键和回退键出现字母 set nocompatible backspace=2 hlsearch https://www.cnblogs.com/wangshuyi/p/6078678.html  
+
+### python
+python collections.namedtuple dataclasses.@dataclass __slots__  
+python c struct/python之struct详解https://blog.csdn.net/qq_30638831/article/details/80421019  
+PYTHON C/C++结构体 ctypes.Structure https://www.cnblogs.com/yang220/p/12091863.html  
+Python ctypes.Structure() Examples  https://www.programcreek.com/python/example/1122/ctypes.Structure  
+最全ctypes用法总结 https://blog.csdn.net/mfq1219/article/details/81945448  
+Python struct 模块 https://www.jianshu.com/p/7d2576efdac2  
+
 
 ## end==
