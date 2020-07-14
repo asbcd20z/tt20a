@@ -21,6 +21,18 @@ http://www.cplusplus.com/reference/ios/
 typeid(x).name()  std::type_info  std::type_index  
 boost::typeindex::type_index type=typeindex::type_id<int&>(); type.pretty_name()  
 boost::msm  
+c __packed struct, struck __attribute__((packed)),member__attribute((aligned (n))), #pragma pack(2^x)默认是2^2=4B/8double-arch64(最大对齐值)  
+浅谈C语言字节对齐+位域https://blog.csdn.net/ljx_5489464/article/details/50006133  
+C语言字节对齐详解##https://www.cnblogs.com/born2run/p/9581355.html  
+经典C语言面试题4:字节对齐的作用https://blog.csdn.net/M_joy666/article/details/80030024  
+三步解决C语言中struct字节对齐问题https://blog.csdn.net/m0_37829435/article/details/81348532  
+struct 字节对齐详解##https://blog.csdn.net/zhanghow/article/details/55262988  
+C语言字节对齐规则总结+位域###https://blog.csdn.net/bingyu880101/article/details/83304350  
+-需要注意，pragma pack指定的对齐值，是数据类型的最大对齐值，可以小，但是不能大。(default? #pragma pack(4))  
+浅谈C语言的字节对齐 #pragma pack(n)2 https://www.jb51.net/article/102433.htm  
+C语言之#pragma pack或者__packed学习https://blog.csdn.net/oshan2012/article/details/83214491  
+C语言字节对齐详解##https://blog.csdn.net/cclethe/article/details/79659590  
+
 
 ## elearning web/lang
 https://www.runoob.com/lua/lua-tutorial.html  
@@ -35,7 +47,7 @@ Sublime Text,View->Line Endings，选Unix，保存;
 https://www.cnblogs.com/fangshenghui/p/5693610.html  
 --  
 Git算不算程序员的必备技能https://www.zhihu.com/question/41667536/answer/1297935355  
-10.8 Git内部原理-环境变量https://www.git-scm.com/book/en/v2/Git-Internals-Environment-Variables  git-$Id https://git-scm.com/docs/gitattributes/  
+GIT_DIR 10.8 Git内部原理-环境变量https://www.git-scm.com/book/en/v2/Git-Internals-Environment-Variables  git-$Id https://git-scm.com/docs/gitattributes/  
 Git常用命令速查 https://www.jianshu.com/p/38832b41143d  
 rebase,merge,cherry-pick的区别详解—面试常问 https://www.cnblogs.com/NaughtyCat/p/differ-with-rebase-merge-cherry-pick.html  https://git-scm.com/book/zh/v2  
 Git知识总览(五)Git中的merge、rebase、cherry-pick以及交互式rebase https://www.cnblogs.com/ludashi/p/8213550.html  
@@ -117,7 +129,7 @@ Linux常用操作# https://blankj.com/gitbook/linux/ https://github.com/Blankj/A
 http://www.ruanyifeng.com/blog/2019/09/curl-reference.html  
 深入ProtoBuf-简介 https://www.jianshu.com/p/a24c88c0526a  
 python c struct/python之struct详解https://blog.csdn.net/qq_30638831/article/details/80421019  
-PYTHON C/C++结构体 ctypes.Structure https://www.cnblogs.com/yang220/p/12091863.html  https://www.programcreek.com/python/example/1122/ctypes.Structure  
+PYTHON C/C++结构体 ctypes.Structure https://www.cnblogs.com/yang220/p/12091863.html   https://www.programcreek.com/python/example/1122/ctypes.Structure  
 date +%FT%T.%Nz -u  
 VI模式中上下左右键和回退键出现字母 set nocompatible backspace=2 hlsearch https://www.cnblogs.com/wangshuyi/p/6078678.html  
 
@@ -127,7 +139,12 @@ python c struct/python之struct详解https://blog.csdn.net/qq_30638831/article/d
 PYTHON C/C++结构体 ctypes.Structure https://www.cnblogs.com/yang220/p/12091863.html  
 Python ctypes.Structure() Examples  https://www.programcreek.com/python/example/1122/ctypes.Structure  
 最全ctypes用法总结 https://blog.csdn.net/mfq1219/article/details/81945448  
+Python ctypes.Structure() Examples https://www.programcreek.com/python/example/1122/ctypes.Structure  
 Python struct 模块 https://www.jianshu.com/p/7d2576efdac2  
+_ctypes.CField ctypes中的bitfield怎么老不对啊 https://exp.newsmth.net/topic/article/df4e21662be7baaa1307eea24a237047  
+Python ctypes bitfields https://stackoverflow.com/questions/20380451/python-ctypes-bitfields  
+python中运用ctypes库实现c风格变量的定义和调用 https://blog.csdn.net/runner668/article/details/80340683  
+Python 调试器之pdb https://www.cnblogs.com/xiaohai2003ly/p/8529472.html  
 
 
 ## end==
