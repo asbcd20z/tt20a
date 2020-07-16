@@ -144,6 +144,20 @@ Python struct 模块 https://www.jianshu.com/p/7d2576efdac2
 _ctypes.CField ctypes中的bitfield怎么老不对啊 https://exp.newsmth.net/topic/article/df4e21662be7baaa1307eea24a237047  
 Python ctypes bitfields https://stackoverflow.com/questions/20380451/python-ctypes-bitfields  
 python中运用ctypes库实现c风格变量的定义和调用 https://blog.csdn.net/runner668/article/details/80340683  
+Python 在 ctypes 中为我们提供了类似C语言的数据类型# https://www.cnblogs.com/adylee/p/10299157.html  https://www.cnblogs.com/rainduck/archive/2011/09/02/2163230.html  
+Python的学习（三十二）---- ctypes库的使用整理 https://blog.csdn.net/linda1000/article/details/12623527  
+调用c的so库https://blog.csdn.net/claroja/article/details/79237887  使用ctypes进行Python和C的混合编程#https://blog.csdn.net/weixin_30614109/article/details/98999904  
+Python ctypes介绍——非常详尽https://blog.csdn.net/Brouce__Lee/article/details/88869234  ctypes##http://blog.timd.cn/python-ctypes/  
+ python和C语言互相调用的几种方式https://www.cnblogs.com/mq0036/p/8492621.html  
+ctypes##http://blog.timd.cn/python-ctypes/  
+ python ctypes库中动态链接库加载方式https://www.cnblogs.com/bigship/archive/2011/11/24/2262348.html  
+ python ctypes探究----python与c的交互https://www.cnblogs.com/night-ride-depart/p/4907613.html  
+python352.chm/Python » 3.5.2 Documentation » Extending and Embedding the Python Interpreter »  
+python352.chm/Python » 3.5.2 Documentation » The Python Standard Library » 16. Generic Operating System Services »  
+ -ctypes/16.16.1.6. Calling functions with your own custom data types /16.16.1.10. Structures and unions /16.16.1.13. Arrays  
+ -ctypes.Structure(*args, **kw) ctypes.BigEndianStructure(*args, **kw) class ctypes.LittleEndianStructure(*args, **kw)  
+python352.chm/Python » 3.5.2 Documentation » Python/C API Reference Manual  Utilities/Data marshalling support  
+python-document文档###https://docs.python.org/zh-cn/3/library/ctypes.html  
 Python 调试器之pdb https://www.cnblogs.com/xiaohai2003ly/p/8529472.html  
 
 
