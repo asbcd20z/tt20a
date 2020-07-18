@@ -145,10 +145,12 @@ _ctypes.CField ctypes中的bitfield怎么老不对啊 https://exp.newsmth.net/to
 Python ctypes bitfields https://stackoverflow.com/questions/20380451/python-ctypes-bitfields  
 python中运用ctypes库实现c风格变量的定义和调用 https://blog.csdn.net/runner668/article/details/80340683  
 Python 在 ctypes 中为我们提供了类似C语言的数据类型# https://www.cnblogs.com/adylee/p/10299157.html  https://www.cnblogs.com/rainduck/archive/2011/09/02/2163230.html  
+https://www.cnblogs.com/gaowengang/p/7919219.html   (linux+windows)使用ctypes进行Python和C的混合编程#https://blog.csdn.net/weixin_30614109/article/details/98999904  
 Python的学习（三十二）---- ctypes库的使用整理 https://blog.csdn.net/linda1000/article/details/12623527  
 调用c的so库https://blog.csdn.net/claroja/article/details/79237887  使用ctypes进行Python和C的混合编程#https://blog.csdn.net/weixin_30614109/article/details/98999904  
 Python ctypes介绍——非常详尽https://blog.csdn.net/Brouce__Lee/article/details/88869234  ctypes##http://blog.timd.cn/python-ctypes/  
  python和C语言互相调用的几种方式https://www.cnblogs.com/mq0036/p/8492621.html  
+ python与C互相调用的方法详解http://www.cppcns.com/jiaoben/python/196662.html
 ctypes##http://blog.timd.cn/python-ctypes/  
  python ctypes库中动态链接库加载方式https://www.cnblogs.com/bigship/archive/2011/11/24/2262348.html  
  python ctypes探究----python与c的交互https://www.cnblogs.com/night-ride-depart/p/4907613.html  
