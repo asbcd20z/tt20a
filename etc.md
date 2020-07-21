@@ -160,6 +160,10 @@ python352.chm/Python » 3.5.2 Documentation » The Python Standard Library » 16
  -ctypes.Structure(*args, **kw) ctypes.BigEndianStructure(*args, **kw) class ctypes.LittleEndianStructure(*args, **kw)  
 python352.chm/Python » 3.5.2 Documentation » Python/C API Reference Manual  Utilities/Data marshalling support  
 python-document文档###https://docs.python.org/zh-cn/3/library/ctypes.html  
+bitfield in ctypes @Python-cytes-str-#getattr#### https://zhuanlan.zhihu.com/p/20182674  
+type(int().__str__),<type 'method-wrapper'>, help(int().__str__),  https://www.cnblogs.com/wancy86/p/descriptor.html  
+装饰器的完整实现及原理https://www.cnblogs.com/reklen/p/9534941.html  
+用C语言扩展Python的功能https://www.cnblogs.com/zengkefu/p/5562946.html  https://www.ibm.com/developerworks/cn/linux/l-pythc/  
 Python 调试器之pdb https://www.cnblogs.com/xiaohai2003ly/p/8529472.html  
 
 
