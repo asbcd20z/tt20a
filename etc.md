@@ -55,7 +55,8 @@ Git知识总览(五)Git中的merge、rebase、cherry-pick以及交互式rebase h
 git submodule 完整用法整理 https://blog.csdn.net/wkyseo/article/details/81589477  
 git init --bare project.git; repack,fsck,gc  
 git push -f origin master ///[f]to restore,but better to revert commitId  
-git remote add mybak URL..; git remote set-url URL..;  
+git remote -v  #gitlab project项目迁移https://blog.csdn.net/lcyaiym/article/details/77678467  
+git remote add mybak URL..; git remote set-url mybak URL..;  
 git var -l; git config -l --local; git ls-files; git whatchanged  
 git remote show; git remote -v; git ls-remote  
 git branch --unset-upstream  
@@ -70,6 +71,7 @@ https://blog.csdn.net/px_dn/article/details/89455457
 gitlab项目仓库自动同步到github或者码云gitee https://blog.csdn.net/zjcjava/article/details/90047837  
 Gitlab代码库自动同步到Github https://blog.csdn.net/kelvin_yin/article/details/86661066  
 gitlab Repository mirroring https://gitlab.com/help/workflow/repository_mirroring.html  https://gitlab.com/help/user/project/repository/repository_mirroring.md  
+GitLab仓库重命名以及GitHub仓库的删除https://www.jianshu.com/p/d6f7da6bd275  (new-setting\project-name,Advanced\Change-path)  
 
 
 ## git17-hi-memo1
