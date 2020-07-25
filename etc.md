@@ -34,6 +34,8 @@ C语言之#pragma pack或者__packed学习https://blog.csdn.net/oshan2012/articl
 C语言字节对齐详解##https://blog.csdn.net/cclethe/article/details/79659590  
 C/C++打印文件名/行号/函数名的方法https://www.cnblogs.com/shirishiqi/p/5431627.html  
 C语言宏高级用法https://www.cnblogs.com/shirishiqi/p/6033364.html  
+gcc动态链接库so的制作和使用# https://www.cnblogs.com/oxspirt/p/7344371.html  
+=Linux下gcc生成和使用静态库和动态库详解# https://blog.csdn.net/CSqingchen/article/details/51546784  
 
 
 ## elearning web/lang
