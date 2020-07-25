@@ -32,6 +32,8 @@ C语言字节对齐规则总结+位域###https://blog.csdn.net/bingyu880101/arti
 浅谈C语言的字节对齐 #pragma pack(n)2 https://www.jb51.net/article/102433.htm  
 C语言之#pragma pack或者__packed学习https://blog.csdn.net/oshan2012/article/details/83214491  
 C语言字节对齐详解##https://blog.csdn.net/cclethe/article/details/79659590  
+C/C++打印文件名/行号/函数名的方法https://www.cnblogs.com/shirishiqi/p/5431627.html  
+C语言宏高级用法https://www.cnblogs.com/shirishiqi/p/6033364.html  
 
 
 ## elearning web/lang
@@ -166,6 +168,8 @@ bitfield in ctypes @Python-cytes-str-#getattr#### https://zhuanlan.zhihu.com/p/2
 type(int().__str__),<type 'method-wrapper'>, help(int().__str__),  https://www.cnblogs.com/wancy86/p/descriptor.html  
 装饰器的完整实现及原理https://www.cnblogs.com/reklen/p/9534941.html  
 用C语言扩展Python的功能https://www.cnblogs.com/zengkefu/p/5562946.html  https://www.ibm.com/developerworks/cn/linux/l-pythc/  
+python – 如何正确实现__str__和__repr__ #### https://www.icode9.com/content-1-359907.html  
+sys._current_frames(), sys._getframe(), traceback.print_stack(), inspect.currentframe()  logging, str(datetime.datetime.now())  
 Python 调试器之pdb https://www.cnblogs.com/xiaohai2003ly/p/8529472.html  
 
 
