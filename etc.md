@@ -172,6 +172,7 @@ type(int().__str__),<type 'method-wrapper'>, help(int().__str__),  https://www.c
 用C语言扩展Python的功能https://www.cnblogs.com/zengkefu/p/5562946.html  https://www.ibm.com/developerworks/cn/linux/l-pythc/  
 python – 如何正确实现__str__和__repr__ #### https://www.icode9.com/content-1-359907.html  
 sys._current_frames(), sys._getframe(), traceback.print_stack(), inspect.currentframe()  logging, str(datetime.datetime.now())  
+collections.OrderedDict/namedtuple(), Callable, callable()  
 Python 调试器之pdb https://www.cnblogs.com/xiaohai2003ly/p/8529472.html  
 
 
