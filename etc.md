@@ -36,6 +36,7 @@ C/C++打印文件名/行号/函数名的方法https://www.cnblogs.com/shirishiqi
 C语言宏高级用法https://www.cnblogs.com/shirishiqi/p/6033364.html  
 gcc动态链接库so的制作和使用# https://www.cnblogs.com/oxspirt/p/7344371.html  
 =Linux下gcc生成和使用静态库和动态库详解# https://blog.csdn.net/CSqingchen/article/details/51546784  
+router-路由器LAN口IP地址到底是什么?https://www.cnblogs.com/oxspirt/p/12302041.html  https://www.zhihu.com/question/369737960/answer/1004809747  
 
 
 ## elearning web/lang
