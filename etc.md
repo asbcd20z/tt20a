@@ -110,6 +110,9 @@ AsciidocFX_Windows1.6.6.exe(maybe+Graphviz2.44-2019) https://github.com/asciidoc
 asciidoctor  AsciidocFX支持的元数据 https://blog.csdn.net/wiborgite/article/details/88648802  
 Asciidoc简介#  http://asciidoctor.org/docs/asciidoc-syntax-quick-reference/  
 
+### more1a
+在线工具 https://tool.lu/asciidoc/  https://tool.lu/markdown/  
+json在线 https://www.sojson.com/runjs.html  
 
 ### more1
 https://asn1.io/asn1playground/  
