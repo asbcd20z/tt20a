@@ -68,6 +68,8 @@ git branch --unset-upstream
 git show-branch; lo = log -9 --oneline #--all --graph #--decorate; loag=lo --all --graph #--decorate;  ##log --left-right --boundary --reverse bra1...bra2  
 git branch -vv  
 git revert/ reset++push -f [Git恢复之前版本的两种方法reset、revert] https://blog.csdn.net/yxlshk/article/details/79944535  
+git apply --check my.pat; git apply -3 my.pat;  git apply --reject my.pat  
+开源-GIT常用命令 https://www.cnblogs.com/kex1n/p/6141166.html  
 
 
 ## //gitlab/github--2git-acc
@@ -179,6 +181,19 @@ sys._current_frames(), sys._getframe(), traceback.print_stack(), inspect.current
 collections.OrderedDict/namedtuple(), Callable, callable()  
 method-wrapper  https://stackoverflow.com/questions/53130485/how-to-import-method-wrapper-type  
 Python 调试器之pdb https://www.cnblogs.com/xiaohai2003ly/p/8529472.html  
+
+### linux/c
+常见 core dump 原因分析signal 11 - SIGSEGV (signal 6-SIGABRT/11-SIGSEGV) https://www.cnblogs.com/kex1n/p/6972046.html  
+Linux信号列表详解 (kill -l, gdb/i signal,i handle) https://blog.csdn.net/liushuimpc/article/details/51611354  
+应用 Valgrind 发现 Linux 程序的内存问题 https://www.cnblogs.com/kex1n/p/11573606.html  https://www.cnblogs.com/kex1n/p/11573526.html  
+gcc g++支持C++11 标准编译及其区别 https://www.cnblogs.com/kex1n/p/7072092.html  
+Google开源C++单元测试框架Google Test-gtest https://www.cnblogs.com/kex1n/p/5524653.html  
+Google C++单元测试 GTest https://www.cnblogs.com/kex1n/p/8981552.html  http://www.cnblogs.com/jycboy/p/6057677.html  
+开源-GIT常用命令 https://www.cnblogs.com/kex1n/p/6141166.html  
+Linux命令中：rsync和cp之间的区别 https://www.cnblogs.com/kex1n/p/7008178.html  
+如何在socket编程的Tcp连接中实现心跳协议 https://www.cnblogs.com/kex1n/p/7448552.html  http://blog.csdn.net/nyist327/article/details/39586203  
+
+
 
 
 ## end==
