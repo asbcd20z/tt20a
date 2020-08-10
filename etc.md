@@ -115,6 +115,9 @@ Asciidoc简介#  http://asciidoctor.org/docs/asciidoc-syntax-quick-reference/
 ### more1a
 在线工具 https://tool.lu/asciidoc/  https://tool.lu/markdown/  
 json在线 https://www.sojson.com/runjs.html  
+ietf-json https://tools.ietf.org/html/rfc7159.html  https://www.ietf.org/rfc/  
+TIPC  https://blog.csdn.net/yunlong34574/article/details/42460803  http://blog.chinaunix.net/uid-8048969-id-4107394.html  https://www.jianshu.com/p/7fb89e3d19af  
+bash-prompt-Linux命令行提示符修改【全攻略】 https://vimsky.com/article/4284.html  
 
 ### more1
 https://asn1.io/asn1playground/  
@@ -181,6 +184,13 @@ sys._current_frames(), sys._getframe(), traceback.print_stack(), inspect.current
 collections.OrderedDict/namedtuple(), Callable, callable()  
 method-wrapper  https://stackoverflow.com/questions/53130485/how-to-import-method-wrapper-type  
 Python 调试器之pdb https://www.cnblogs.com/xiaohai2003ly/p/8529472.html  
+
+### python-https
+Python3+ssl实现加密通信 https://www.cnblogs.com/lsdb/p/9397530.html  
+在python使用SSL(HTTPS) http://blog.sina.com.cn/s/blog_5d18f85f0102xg3e.html  
+Python抓需要输入用户名密码的https网页 https://blog.csdn.net/liumengcheng/article/details/9627437  
+Python实现网站自动登录---傻瓜教程chromedriver https://blog.csdn.net/qiudechao1/article/details/89234582  
+
 
 ### linux/c
 常见 core dump 原因分析signal 11 - SIGSEGV (signal 6-SIGABRT/11-SIGSEGV) https://www.cnblogs.com/kex1n/p/6972046.html  
