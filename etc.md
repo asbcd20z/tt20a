@@ -37,7 +37,11 @@ C语言宏高级用法https://www.cnblogs.com/shirishiqi/p/6033364.html
 gcc动态链接库so的制作和使用# https://www.cnblogs.com/oxspirt/p/7344371.html  
 =Linux下gcc生成和使用静态库和动态库详解# https://blog.csdn.net/CSqingchen/article/details/51546784  
 router-路由器LAN口IP地址到底是什么?https://www.cnblogs.com/oxspirt/p/12302041.html  https://www.zhihu.com/question/369737960/answer/1004809747  
-
+### c++
+c++ inheritance -- 继承 https://www.cnblogs.com/timssd/p/4781107.html  
+C++类的大小 https://www.cnblogs.com/timssd/p/5714079.html  
+C++ 虚函数表解析 https://blog.csdn.net/haoel/article/details/1948051  
+C++ 对象的内存布局(上) https://blog.csdn.net/haoel/article/details/3081328  https://blog.csdn.net/haoel/article/details/3081385  
 
 ## elearning web/lang
 https://www.runoob.com/lua/lua-tutorial.html  
@@ -166,6 +170,9 @@ Python的学习（三十二）---- ctypes库的使用整理 https://blog.csdn.ne
 Python ctypes介绍——非常详尽https://blog.csdn.net/Brouce__Lee/article/details/88869234  ctypes##http://blog.timd.cn/python-ctypes/  
  python和C语言互相调用的几种方式https://www.cnblogs.com/mq0036/p/8492621.html  
  python与C互相调用的方法详解http://www.cppcns.com/jiaoben/python/196662.html
+Python调用windows下DLL详解 - ctypes库的使用##### https://www.cnblogs.com/timssd/p/9732380.html  
+python中hasattr()、getattr()、setattr()函数的使用 https://www.cnblogs.com/timssd/p/11168127.html  
+cpu个数、核数、线程数、Java多线程关系的理解 https://www.cnblogs.com/timssd/p/9507316.html  
 ctypes##http://blog.timd.cn/python-ctypes/  
  python ctypes库中动态链接库加载方式https://www.cnblogs.com/bigship/archive/2011/11/24/2262348.html  
  python ctypes探究----python与c的交互https://www.cnblogs.com/night-ride-depart/p/4907613.html  
@@ -184,6 +191,19 @@ sys._current_frames(), sys._getframe(), traceback.print_stack(), inspect.current
 collections.OrderedDict/namedtuple(), Callable, callable()  
 method-wrapper  https://stackoverflow.com/questions/53130485/how-to-import-method-wrapper-type  
 Python 调试器之pdb https://www.cnblogs.com/xiaohai2003ly/p/8529472.html  
+//  
+3.5.2chm-Python » 3.5.2 Documentation » Python HOWTOs » Descriptor HowTo Guide // https://docs.python.org/2/howto/descriptor.html#descriptor-protocol
+3.5.2chm-Python Language Reference/3. Data model/3.3. Special method names(__new__)/3.3.3. Customizing class creation(metaclass)/3.3.2. Customizing attribute access(__getattr__)  
+data descriptor, property  
+python logging详解及自动添加上下文信息 https://www.cnblogs.com/xybaby/p/9197032.html  
+关于metaclass，我原以为我是懂的# https://www.cnblogs.com/xybaby/p/7927407.html  //mixin  
+https://stackoverflow.com/questions/100003/what-are-metaclasses-in-python  深刻理解Python中的元类(metaclass) https://www.jianshu.com/p/e017bc810702  
+python属性查找 深入理解（attribute lookup）https://www.cnblogs.com/xybaby/p/6270551.html  python descriptor详解 https://www.cnblogs.com/xybaby/p/6266686.html  
+python __getattr__ 巧妙应用 https://www.cnblogs.com/xybaby/p/6280313.html  
+python decorator 基础 https://www.cnblogs.com/xybaby/p/6274187.html  https://www.cnblogs.com/xybaby/p/6274283.html  
+由一个简单需求到Linux环境下的syslog、unix domain socket https://www.cnblogs.com/xybaby/p/6596431.html  
+python装饰器的诞生过程 https://blog.csdn.net/a315612852/article/details/102040124  
+Python thread local https://www.cnblogs.com/xybaby/p/6420873.html  
 
 ### python-https
 Python3+ssl实现加密通信 https://www.cnblogs.com/lsdb/p/9397530.html  
@@ -191,6 +211,7 @@ Python3+ssl实现加密通信 https://www.cnblogs.com/lsdb/p/9397530.html
 Python抓需要输入用户名密码的https网页 https://blog.csdn.net/liumengcheng/article/details/9627437  
 Python实现网站自动登录---傻瓜教程chromedriver https://blog.csdn.net/qiudechao1/article/details/89234582  
 Python 爬虫的工具列表 附Github代码下载链接 https://www.cnblogs.com/arxive/p/6291709.html  
+python模拟自动登录网站（urllib2）https://blog.csdn.net/xgocn/article/details/85130734  https://www.cnblogs.com/dreamer-fish/p/5484767.html  
 
 
 ### linux/c
