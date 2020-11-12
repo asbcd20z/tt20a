@@ -204,6 +204,8 @@ python decorator 基础 https://www.cnblogs.com/xybaby/p/6274187.html  https://w
 由一个简单需求到Linux环境下的syslog、unix domain socket https://www.cnblogs.com/xybaby/p/6596431.html  
 python装饰器的诞生过程 https://blog.csdn.net/a315612852/article/details/102040124  
 Python thread local https://www.cnblogs.com/xybaby/p/6420873.html  
+python 编程风格术语说明 EAFP: Easier to ask for forgiveness than permission. / LBYL: Look before you leap.  https://blog.csdn.net/zhouguoqionghai/article/details/57089859  
+猴子补丁(monkey patch) JSONEncoder https://www.jianshu.com/p/f1060b22aab8  
 
 ### python-https
 Python3+ssl实现加密通信 https://www.cnblogs.com/lsdb/p/9397530.html  
@@ -213,6 +215,14 @@ Python实现网站自动登录---傻瓜教程chromedriver https://blog.csdn.net/
 Python 爬虫的工具列表 附Github代码下载链接 https://www.cnblogs.com/arxive/p/6291709.html  
 python模拟自动登录网站（urllib2）https://blog.csdn.net/xgocn/article/details/85130734  https://www.cnblogs.com/dreamer-fish/p/5484767.html  
 
+### gdb/gdb python脚本
+用 Python 拓展 GDB（一） https://blog.csdn.net/weixin_33947521/article/details/89377701  
+用 Python 拓展 GDB（一） https://segmentfault.com/a/1190000005718889  GDB 自动化操作的技术 https://segmentfault.com/a/1190000005367875  
+用 Python 拓展 GDB（二） https://blog.csdn.net/weixin_33819479/article/details/89369809  
+https://blog.csdn.net/weixin_34405557/article/details/89370109  
+用 Python 拓展 GDB（三） gdb调试脚本 https://blog.csdn.net/cnsword/article/details/16337031  
+用户自定义gdb命令的Python实现 https://blog.csdn.net/nirendao/article/details/105942335  
+GDB 自动化操作的技术  https://blog.csdn.net/weixin_34075551/article/details/89408018  
 
 ### linux/c
 常见 core dump 原因分析signal 11 - SIGSEGV (signal 6-SIGABRT/11-SIGSEGV) https://www.cnblogs.com/kex1n/p/6972046.html  
@@ -224,8 +234,16 @@ Google C++单元测试 GTest https://www.cnblogs.com/kex1n/p/8981552.html  http:
 开源-GIT常用命令 https://www.cnblogs.com/kex1n/p/6141166.html  
 Linux命令中：rsync和cp之间的区别 https://www.cnblogs.com/kex1n/p/7008178.html  
 如何在socket编程的Tcp连接中实现心跳协议 https://www.cnblogs.com/kex1n/p/7448552.html  http://blog.csdn.net/nyist327/article/details/39586203  
+thread_name-pthread--linux编程 - 给线程起名字_落尘纷扰的专栏-CSDN博客(prctl()/pthread_setname_np()) https://blog.csdn.net/jasonchen_gbd/article/details/51308638  
 
 
+### linux/bash
+bash-substitution(Parameter Expansion)-shell中的参数扩展, 特殊变量 https://www.cnblogs.com/xkfz007/archive/2012/02/02/2336318.html  
+$ cat <<EOT|cut -c2-  
+> 12345  
+> EOT  
+c++ 理解虚函数，多重继承，虚基类和RTTI所需的代价 https://www.cnblogs.com/xkfz007/archive/2012/08/19/2646356.html  
+c++ 虚继承与虚函数表 https://www.cnblogs.com/xkfz007/archive/2012/07/15/2592565.html  
 
 
 ## end==
