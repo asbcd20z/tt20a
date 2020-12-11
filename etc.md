@@ -153,6 +153,7 @@ date +%FT%T.%Nz -u
 VI模式中上下左右键和回退键出现字母 set nocompatible backspace=2 hlsearch https://www.cnblogs.com/wangshuyi/p/6078678.html  
 
 ### python
+help(),type,id,dir/locals/vars,super(),getattr(),Xattr(..)  //py核心编程v2-13.11  
 python collections.namedtuple dataclasses.@dataclass __slots__  
 python c struct/python之struct详解https://blog.csdn.net/qq_30638831/article/details/80421019  
 PYTHON C/C++结构体 ctypes.Structure https://www.cnblogs.com/yang220/p/12091863.html  
