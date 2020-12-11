@@ -32,6 +32,10 @@ C语言字节对齐规则总结+位域###https://blog.csdn.net/bingyu880101/arti
 浅谈C语言的字节对齐 #pragma pack(n)2 https://www.jb51.net/article/102433.htm  
 C语言之#pragma pack或者__packed学习https://blog.csdn.net/oshan2012/article/details/83214491  
 C语言字节对齐详解##https://blog.csdn.net/cclethe/article/details/79659590  
+//baidu/64位机字节对齐(64位时区别pointer/long=8bytes):  
+在64位系统以及64位编译器下字节对齐----阿里巴巴2015实习生笔试题 https://blog.csdn.net/chengonghao/article/details/51861493  
+32位和64位系统区别及字节对齐 https://blog.csdn.net/lz20120808/article/details/49910659  
+
 C/C++打印文件名/行号/函数名的方法https://www.cnblogs.com/shirishiqi/p/5431627.html  
 C语言宏高级用法https://www.cnblogs.com/shirishiqi/p/6033364.html  
 gcc动态链接库so的制作和使用# https://www.cnblogs.com/oxspirt/p/7344371.html  
