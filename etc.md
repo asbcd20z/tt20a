@@ -246,6 +246,7 @@ thread_name-pthread--linux编程 - 给线程起名字_落尘纷扰的专栏-CSDN
 
 
 ### linux/bash
+bash参考文档.html  https://yiyibooks.cn/Phiix/bash_reference_manual/bash%E5%8F%82%E8%80%83%E6%96%87%E6%A1%A3.html#Shell-Expansions  
 bash-substitution(Parameter Expansion)-shell中的参数扩展, 特殊变量 https://www.cnblogs.com/xkfz007/archive/2012/02/02/2336318.html  
 $ cat <<EOT|cut -c2-  
 > 12345  
