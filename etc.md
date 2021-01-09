@@ -51,6 +51,9 @@ C++ 对象的内存布局(上) https://blog.csdn.net/haoel/article/details/30813
 ## elearning web/lang
 https://www.runoob.com/lua/lua-tutorial.html  
 https://www.w3cschool.cn/sublimetext/  
+关于HTTP协议，一篇就够了 https://www.cnblogs.com/ranyonsue/p/5984001.html  
+HTTP协议超级详解        https://www.cnblogs.com/an-wen/p/11180076.html  
+HTTP 代理原理及实现（一）https://blog.csdn.net/dolphin98629/article/details/54599850/  https://imququ.com/post/web-proxy-2.html  
 
 
 ## //git
