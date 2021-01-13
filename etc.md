@@ -247,6 +247,10 @@ Linux命令中：rsync和cp之间的区别 https://www.cnblogs.com/kex1n/p/70081
 如何在socket编程的Tcp连接中实现心跳协议 https://www.cnblogs.com/kex1n/p/7448552.html  http://blog.csdn.net/nyist327/article/details/39586203  
 Python学习之Socket通信的实现  https://blog.csdn.net/m0_37717595/article/details/81101895  
 thread_name-pthread--linux编程 - 给线程起名字_落尘纷扰的专栏-CSDN博客(prctl()/pthread_setname_np()) https://blog.csdn.net/jasonchen_gbd/article/details/51308638  
+LD_LIBRARY_PATH,LD_PRELOAD  
+Linux环境变量设置方法总结PATH,LD_LIBRARY_PATH  (LD_LIBRARY_PATH, ld.so.conf+ldconfig)  https://blog.csdn.net/qq_19004627/article/details/79090052  
+Linux C/C++调试之一：利用LD_PRELOAD机制监控程序IO操作 (readp=dlsym(RTLD_NEXT, "read"))  https://blog.csdn.net/imred/article/details/81106792  
+ CSAPP第三版运行时打桩Segmentation fault (mallocp=dlsym(RTLD_NEXT, "malloc"))          https://blog.csdn.net/imred/article/details/77418323  
 
 
 ### linux/bash
