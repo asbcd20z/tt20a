@@ -54,7 +54,7 @@ https://www.w3cschool.cn/sublimetext/
 关于HTTP协议，一篇就够了 https://www.cnblogs.com/ranyonsue/p/5984001.html  
 HTTP协议超级详解        https://www.cnblogs.com/an-wen/p/11180076.html  
 HTTP 代理原理及实现（一）https://blog.csdn.net/dolphin98629/article/details/54599850/  https://imququ.com/post/web-proxy-2.html  
-
+HTTP协议和SOCKS5协议    https://www.cnblogs.com/yinzhengjie/p/7357860.html  
 
 ## //git
 git换行符LF与CRLF转换问题 https://www.cnblogs.com/sdgf/p/6237847.html  
@@ -136,7 +136,7 @@ https://asn1.io/asn1playground/
 CI/CD devops  git/gerrit/zuul/jenkins/  
 Gerrit 笔记 https://www.cnblogs.com/milton/p/12576792.html  
 proxy.pac https://wenku.baidu.com/view/1d29739ea2161479171128a6.html  
-通过socks tunnel设置http代理 https://www.cnblogs.com/milton/p/7777590.html  
+通过socks tunnel设置http代理 (ssh tunnel, 或putty-socks5代理Connection -> SSH -> Tunnels) https://www.cnblogs.com/milton/p/7777590.html  
 Docker安装和常用命令 https://www.cnblogs.com/milton/p/9866963.html  
 迁移Git项目到Gitlab https://www.cnblogs.com/milton/p/11053007.html  OpenSSL的证书, 私钥和签名请求(CSRs)www.cnblogs.com/milton/p/11076925.html  
 github仓库迁移到gitlab以及gitlab仓库迁移到另一个gitlab服务器# https://www.cnblogs.com/saysmy/p/10942814.html  
