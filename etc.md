@@ -223,6 +223,8 @@ python装饰器的诞生过程 https://blog.csdn.net/a315612852/article/details/
 Python thread local https://www.cnblogs.com/xybaby/p/6420873.html  
 python 编程风格术语说明 EAFP: Easier to ask for forgiveness than permission. / LBYL: Look before you leap.  https://blog.csdn.net/zhouguoqionghai/article/details/57089859  
 猴子补丁(monkey patch) JSONEncoder https://www.jianshu.com/p/f1060b22aab8  
+Python MRO方法解析顺序详解 (c3算法) http://c.biancheng.net/view/5450.html  
+
 
 ### python-https
 Python3+ssl实现加密通信 https://www.cnblogs.com/lsdb/p/9397530.html  
