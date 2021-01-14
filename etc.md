@@ -139,6 +139,9 @@ CI/CD devops  git/gerrit/zuul/jenkins/
 Gerrit 笔记 https://www.cnblogs.com/milton/p/12576792.html  
 proxy.pac https://wenku.baidu.com/view/1d29739ea2161479171128a6.html  
 通过socks tunnel设置http代理 (ssh tunnel, 或putty-socks5代理Connection -> SSH -> Tunnels) https://www.cnblogs.com/milton/p/7777590.html  
+用Python写socks5服务器端             https://www.cnblogs.com/lexus/archive/2012/03/04/2379103.html  
+python怎么走socks5代理？    (PySocks) https://blog.csdn.net/qiya2007/article/details/107291233  
+python3给socket模块设置代理 (PySocks-socks.set_default_proxy) https://www.cnblogs.com/woaixuexi9999/p/9360581.html  
 Docker安装和常用命令 https://www.cnblogs.com/milton/p/9866963.html  
 迁移Git项目到Gitlab https://www.cnblogs.com/milton/p/11053007.html  OpenSSL的证书, 私钥和签名请求(CSRs)www.cnblogs.com/milton/p/11076925.html  
 github仓库迁移到gitlab以及gitlab仓库迁移到另一个gitlab服务器# https://www.cnblogs.com/saysmy/p/10942814.html  
