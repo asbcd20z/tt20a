@@ -218,6 +218,7 @@ python属性查找 深入理解（attribute lookup）https://www.cnblogs.com/xyb
 python __getattr__ 巧妙应用 https://www.cnblogs.com/xybaby/p/6280313.html  
 python decorator 基础 https://www.cnblogs.com/xybaby/p/6274187.html  https://www.cnblogs.com/xybaby/p/6274283.html  
 由一个简单需求到Linux环境下的syslog、unix domain socket https://www.cnblogs.com/xybaby/p/6596431.html  
+Python Syslog Server 开发实例 (syslogd, socketserver.UDPServer) https://cloud.tencent.com/developer/article/1050984  
 python装饰器的诞生过程 https://blog.csdn.net/a315612852/article/details/102040124  
 Python thread local https://www.cnblogs.com/xybaby/p/6420873.html  
 python 编程风格术语说明 EAFP: Easier to ask for forgiveness than permission. / LBYL: Look before you leap.  https://blog.csdn.net/zhouguoqionghai/article/details/57089859  
