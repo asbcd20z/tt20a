@@ -243,6 +243,9 @@ https://blog.csdn.net/weixin_34405557/article/details/89370109
 用户自定义gdb命令的Python实现 https://blog.csdn.net/nirendao/article/details/105942335  
 GDB 自动化操作的技术  https://blog.csdn.net/weixin_34075551/article/details/89408018  
 gdb firewall-tunnel-proxy: iptables, tcp-socket-forward(app,ssh-tunnel,socks5,extend-gdb-target-remote(httpCONNECT-alike)?)  
+gdb+gdbserver远程调试技术（一）——调试环境搭建  https://blog.csdn.net/zhaoxd200808501/article/details/77838933  
+GDBserver远程调试(汇总)                       https://blog.csdn.net/water_cow/article/details/7393125  
+  //gdb: target remote 192.168.x.x:9000; symbol-file xxelf; set solib-absolute-prefix xxsysso; set solib-search-path xxso
 
 ### linux/c
 常见 core dump 原因分析signal 11 - SIGSEGV (signal 6-SIGABRT/11-SIGSEGV) https://www.cnblogs.com/kex1n/p/6972046.html  
