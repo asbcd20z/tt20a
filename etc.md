@@ -242,6 +242,7 @@ https://blog.csdn.net/weixin_34405557/article/details/89370109
 用 Python 拓展 GDB（三） gdb调试脚本 https://blog.csdn.net/cnsword/article/details/16337031  
 用户自定义gdb命令的Python实现 https://blog.csdn.net/nirendao/article/details/105942335  
 GDB 自动化操作的技术  https://blog.csdn.net/weixin_34075551/article/details/89408018  
+gdb firewall-tunnel-proxy: iptables, tcp-socket-forward(app,ssh-tunnel,socks5,extend-gdb-target-remote(httpCONNECT-alike)?)  
 
 ### linux/c
 常见 core dump 原因分析signal 11 - SIGSEGV (signal 6-SIGABRT/11-SIGSEGV) https://www.cnblogs.com/kex1n/p/6972046.html  
