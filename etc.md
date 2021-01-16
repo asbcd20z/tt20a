@@ -275,7 +275,9 @@ syslogd https://github.com/kulasama/syslog-ng-3.4  https://github.com/oasislinux
 //https://github.com/mirror/busybox/tree/master/sysklogd  https://git.busybox.net/busybox/tree/sysklogd/syslogd.c  https://git.busybox.net/buildroot/  
 
 ### linux/bash
-bash参考文档.html  https://yiyibooks.cn/Phiix/bash_reference_manual/bash%E5%8F%82%E8%80%83%E6%96%87%E6%A1%A3.html#Shell-Expansions  
+bash参考文档.html https://yiyibooks.cn/Phiix/bash_reference_manual/bash参考文档.html#Shell-Expansions  
+.. https://yiyibooks.cn/Phiix/bash_reference_manual/bash%E5%8F%82%E8%80%83%E6%96%87%E6%A1%A3.html#Shell-Expansions  
+Bash中文手册  https://gitee.com/ccnuacm/bash-manual-zh  
 bash-substitution(Parameter Expansion)-shell中的参数扩展, 特殊变量 https://www.cnblogs.com/xkfz007/archive/2012/02/02/2336318.html  
 $ cat <<EOT|cut -c2-  
 > 12345  
