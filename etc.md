@@ -190,8 +190,8 @@ Python调用windows下DLL详解 - ctypes库的使用##### https://www.cnblogs.co
 python中hasattr()、getattr()、setattr()函数的使用 https://www.cnblogs.com/timssd/p/11168127.html  
 cpu个数、核数、线程数、Java多线程关系的理解 https://www.cnblogs.com/timssd/p/9507316.html  
 ctypes##http://blog.timd.cn/python-ctypes/  
- python ctypes库中动态链接库加载方式https://www.cnblogs.com/bigship/archive/2011/11/24/2262348.html  
- python ctypes探究----python与c的交互https://www.cnblogs.com/night-ride-depart/p/4907613.html  
+ -python ctypes库中动态链接库加载方式https://www.cnblogs.com/bigship/archive/2011/11/24/2262348.html  
+ -python ctypes探究----python与c的交互https://www.cnblogs.com/night-ride-depart/p/4907613.html  
 python352.chm/Python » 3.5.2 Documentation » Extending and Embedding the Python Interpreter »  
 python352.chm/Python » 3.5.2 Documentation » The Python Standard Library » 16. Generic Operating System Services »  
  -ctypes/16.16.1.6. Calling functions with your own custom data types /16.16.1.10. Structures and unions /16.16.1.13. Arrays  
@@ -209,7 +209,7 @@ collections.OrderedDict/namedtuple(), Callable, callable()
 method-wrapper  https://stackoverflow.com/questions/53130485/how-to-import-method-wrapper-type  
 Python 调试器之pdb https://www.cnblogs.com/xiaohai2003ly/p/8529472.html  
 //  
-3.5.2chm-Python » 3.5.2 Documentation » Python HOWTOs » Descriptor HowTo Guide // https://docs.python.org/2/howto/descriptor.html#descriptor-protocol
+3.5.2chm-Python » 3.5.2 Documentation » Python HOWTOs » Descriptor HowTo Guide // https://docs.python.org/2/howto/descriptor.html#descriptor-protocol  
 3.5.2chm-Python Language Reference/3. Data model/3.3. Special method names(__new__)/3.3.3. Customizing class creation(metaclass)/3.3.2. Customizing attribute access(__getattr__)  
 data descriptor, property  
 python logging详解及自动添加上下文信息 https://www.cnblogs.com/xybaby/p/9197032.html  
