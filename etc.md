@@ -265,7 +265,7 @@ Linux环境变量设置方法总结PATH,LD_LIBRARY_PATH  (LD_LIBRARY_PATH, ld.so
 Linux C/C++调试之一：利用LD_PRELOAD机制监控程序IO操作 (readp=dlsym(RTLD_NEXT, "read"))  https://blog.csdn.net/imred/article/details/81106792  
  CSAPP第三版运行时打桩Segmentation fault (mallocp=dlsym(RTLD_NEXT, "malloc"))          https://blog.csdn.net/imred/article/details/77418323  
 
-###linux/syslog/syslogd
+### linux/syslog/syslogd
 https://www.gnu.org/software/  https://busybox.net/  https://buildroot.org/  
 /usr/include/sys/syslog.h  
 glibc   https://github.com/lattera/glibc/blob/master/misc/syslog.c  https://github.com/lattera/glibc/blob/master/stdio-common/dprintf.c
