@@ -250,7 +250,7 @@ GDBserver远程调试(汇总)                       https://blog.csdn.net/water_
 GDB基本命令(整合) https://blog.csdn.net/wangwenwen/article/details/9259687  
 
 ### linux/c
-常见 core dump 原因分析signal 11 - SIGSEGV (signal 6-SIGABRT/11-SIGSEGV) https://www.cnblogs.com/kex1n/p/6972046.html  
+常见 core dump 原因分析signal 11 - SIGSEGV (signal 6-SIGABRT释放多次/11-SIGSEGV空指针) https://www.cnblogs.com/kex1n/p/6972046.html  
 Linux信号列表详解 (kill -l, gdb/i signal,i handle) https://blog.csdn.net/liushuimpc/article/details/51611354  
 应用 Valgrind 发现 Linux 程序的内存问题 https://www.cnblogs.com/kex1n/p/11573606.html  https://www.cnblogs.com/kex1n/p/11573526.html  
 gcc g++支持C++11 标准编译及其区别 https://www.cnblogs.com/kex1n/p/7072092.html  
@@ -261,11 +261,14 @@ Linux命令中：rsync和cp之间的区别 https://www.cnblogs.com/kex1n/p/70081
 如何在socket编程的Tcp连接中实现心跳协议 https://www.cnblogs.com/kex1n/p/7448552.html  http://blog.csdn.net/nyist327/article/details/39586203  
 Python学习之Socket通信的实现  https://blog.csdn.net/m0_37717595/article/details/81101895  
 thread_name-pthread--linux编程 - 给线程起名字_落尘纷扰的专栏-CSDN博客(prctl()/pthread_setname_np()) https://blog.csdn.net/jasonchen_gbd/article/details/51308638  
+
+### linux/c/lib.so
 LD_LIBRARY_PATH,LD_PRELOAD  //dlopen  
 Linux环境变量设置方法总结PATH,LD_LIBRARY_PATH  (LD_LIBRARY_PATH, ld.so.conf+ldconfig)  https://blog.csdn.net/qq_19004627/article/details/79090052  
 Linux C/C++调试之一：利用LD_PRELOAD机制监控程序IO操作 (readp=dlsym(RTLD_NEXT, "read"))  https://blog.csdn.net/imred/article/details/81106792  
  .CSAPP第三版运行时打桩Segmentation fault (mallocp=dlsym(RTLD_NEXT, "malloc"))         https://blog.csdn.net/imred/article/details/77418323  
 //(man dlopen)  
+//https://baike.baidu.com/item/dlopen/1967576  // -rdynamic (man gcc,This instructs the linker to add all symbols)  
 //dlopen, DT_RPATH 和 DT_RUNPATH      https://blog.csdn.net/icbm/article/details/64128052  
 //动态库加载路径之RPATH与RUNPATH(小记)  https://blog.csdn.net/dbzhang800/article/details/6918413  
 
