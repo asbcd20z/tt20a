@@ -263,6 +263,8 @@ Python学习之Socket通信的实现  https://blog.csdn.net/m0_37717595/article/
 thread_name-pthread--linux编程 - 给线程起名字_落尘纷扰的专栏-CSDN博客(prctl()/pthread_setname_np()) https://blog.csdn.net/jasonchen_gbd/article/details/51308638  
 
 ### linux/c/lib.so
+https://www.man7.org/linux/man-pages/man1/ldd.1.html  
+https://www.man7.org/linux/man-pages/man8/ld.so.8.html  
 LD_LIBRARY_PATH,LD_PRELOAD  //dlopen  
 Linux环境变量设置方法总结PATH,LD_LIBRARY_PATH  (LD_LIBRARY_PATH, ld.so.conf+ldconfig)  https://blog.csdn.net/qq_19004627/article/details/79090052  
 Linux C/C++调试之一：利用LD_PRELOAD机制监控程序IO操作 (readp=dlsym(RTLD_NEXT, "read"))  https://blog.csdn.net/imred/article/details/81106792  
