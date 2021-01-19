@@ -248,6 +248,8 @@ gdb+gdbserver远程调试技术（一）——调试环境搭建  https://blog.c
 GDBserver远程调试(汇总)                       https://blog.csdn.net/water_cow/article/details/7393125  
   //gdb: target remote 192.168.x.x:9000; symbol-file xxelf; set solib-absolute-prefix xxsysso; set solib-search-path xxso  
 GDB基本命令(整合) https://blog.csdn.net/wangwenwen/article/details/9259687  
+//100个gdb小技巧（v1.0）.pdf  https://www.cnblogs.com/LiuYanYGZ/p/14247052.html  摘自https://github.com/hellogcc/100-gdb-tips  
+
 
 ### linux/c
 常见 core dump 原因分析signal 11 - SIGSEGV (signal 6-SIGABRT释放多次/11-SIGSEGV空指针) https://www.cnblogs.com/kex1n/p/6972046.html  
@@ -277,8 +279,10 @@ Linux C/C++调试之一：利用LD_PRELOAD机制监控程序IO操作 (readp=dlsy
 gcc选项-g与-rdynamic的异同 ### https://www.cnblogs.com/LiuYanYGZ/p/5550544.html  摘自http://www.tuicool.com/articles/EvIzUn  
 //可执行文件（ELF）格式的理解  https://www.cnblogs.com/LiuYanYGZ/p/5574602.html  摘自http://www.cnblogs.com/xmphoenix/archive/2011/10/23/2221879.html
 //gcc编译选项 https://www.cnblogs.com/LiuYanYGZ/p/5548855.html  摘自http://blog.csdn.net/liuchao1986105/article/details/6674822  
-//100个gdb小技巧（v1.0）.pdf  https://www.cnblogs.com/LiuYanYGZ/p/14247052.html  ttps://github.com/hellogcc/100-gdb-tips  
-//浅谈C语言中的强符号、弱符号、强引用和弱引用  https://www.cnblogs.com/LiuYanYGZ/p/5605511.html  摘自http://www.jb51.net/article/56924.htm
+//100个gdb小技巧（v1.0）.pdf  https://www.cnblogs.com/LiuYanYGZ/p/14247052.html  摘自https://github.com/hellogcc/100-gdb-tips  
+//浅谈C语言中的强符号、弱符号、强引用和弱引用  https://www.cnblogs.com/LiuYanYGZ/p/5605511.html  摘自http://www.jb51.net/article/56924.htm  
+//iptables四个表五条链  https://www.cnblogs.com/LiuYanYGZ/p/12735528.html  摘自https://blog.csdn.net/longbei9029/article/details/53056744
+
 
 ### linux/syslog/syslogd
 https://www.gnu.org/software/  https://busybox.net/  https://buildroot.org/  
