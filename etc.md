@@ -262,10 +262,10 @@ Linux命令中：rsync和cp之间的区别 https://www.cnblogs.com/kex1n/p/70081
 Python学习之Socket通信的实现  https://blog.csdn.net/m0_37717595/article/details/81101895  
 thread_name-pthread--linux编程 - 给线程起名字_落尘纷扰的专栏-CSDN博客(prctl()/pthread_setname_np()) https://blog.csdn.net/jasonchen_gbd/article/details/51308638  
 
-### linux/c/lib.so
+### linux/c/lib.so ,//gcc+gdb
 https://www.man7.org/linux/man-pages/man1/ldd.1.html  , ldconfig和ldd用法-https://www.cnblogs.com/foohack/p/4105847.html  
 https://www.man7.org/linux/man-pages/man8/ld.so.8.html  
-LD_LIBRARY_PATH,LD_PRELOAD  //dlopen  
+LIBRARY_PATH(静态链接库lib.a),  LD_LIBRARY_PATH,LD_PRELOAD  //dlopen  
 Linux环境变量设置方法总结PATH,LD_LIBRARY_PATH  (LD_LIBRARY_PATH, ld.so.conf+ldconfig)  https://blog.csdn.net/qq_19004627/article/details/79090052  
 Linux C/C++调试之一：利用LD_PRELOAD机制监控程序IO操作 (readp=dlsym(RTLD_NEXT, "read"))  https://blog.csdn.net/imred/article/details/81106792  
  .CSAPP第三版运行时打桩Segmentation fault (mallocp=dlsym(RTLD_NEXT, "malloc"))         https://blog.csdn.net/imred/article/details/77418323  
@@ -273,6 +273,12 @@ Linux C/C++调试之一：利用LD_PRELOAD机制监控程序IO操作 (readp=dlsy
 //https://baike.baidu.com/item/dlopen/1967576  // -rdynamic (man gcc,This instructs the linker to add all symbols)  
 //dlopen, DT_RPATH 和 DT_RUNPATH      https://blog.csdn.net/icbm/article/details/64128052  
 //动态库加载路径之RPATH与RUNPATH(小记)  https://blog.csdn.net/dbzhang800/article/details/6918413  
+//-  
+gcc选项-g与-rdynamic的异同 ### https://www.cnblogs.com/LiuYanYGZ/p/5550544.html  摘自http://www.tuicool.com/articles/EvIzUn  
+//可执行文件（ELF）格式的理解  https://www.cnblogs.com/LiuYanYGZ/p/5574602.html  摘自http://www.cnblogs.com/xmphoenix/archive/2011/10/23/2221879.html
+//gcc编译选项 https://www.cnblogs.com/LiuYanYGZ/p/5548855.html  摘自http://blog.csdn.net/liuchao1986105/article/details/6674822  
+//100个gdb小技巧（v1.0）.pdf  https://www.cnblogs.com/LiuYanYGZ/p/14247052.html  ttps://github.com/hellogcc/100-gdb-tips  
+//浅谈C语言中的强符号、弱符号、强引用和弱引用  https://www.cnblogs.com/LiuYanYGZ/p/5605511.html  摘自http://www.jb51.net/article/56924.htm
 
 ### linux/syslog/syslogd
 https://www.gnu.org/software/  https://busybox.net/  https://buildroot.org/  
