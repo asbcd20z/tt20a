@@ -294,6 +294,23 @@ syslogd https://github.com/kulasama/syslog-ng-3.4  https://github.com/oasislinux
 //https://github.com/mirror/busybox/tree/master/sysklogd  https://git.busybox.net/busybox/tree/sysklogd/syslogd.c  https://git.busybox.net/buildroot/  
 //linux syslog详解  https://www.cnblogs.com/LiuYanYGZ/p/12425234.html  摘自https://blog.csdn.net/know9163/article/details/81901207  
 
+### linux/network/socket
+//port 
+(sdk) $ less /etc/services |grep -esocks -etipc -e'syslog ' -ebootpc -e^rsync -edaytime -etcpmux  
+tcpmux          1/tcp                           # TCP port service multiplexer  
+tcpmux          1/udp                           # TCP port service multiplexer  
+daytime         13/tcp  
+daytime         13/udp  
+bootpc          68/tcp          dhcpc           # BOOTP client  
+bootpc          68/udp          dhcpc  
+rsync           873/tcp                         # rsync  
+rsync           873/udp                         # rsync  
+syslog          514/udp  
+socks           1080/tcp                        # socks proxy server  
+socks           1080/udp                        # socks proxy server  
+tipc            6118/udp                # Transparent Inter Process Communication  
+
+
 ### linux/bash
 bash参考文档.html https://yiyibooks.cn/Phiix/bash_reference_manual/bash参考文档.html#Shell-Expansions  
 .. https://yiyibooks.cn/Phiix/bash_reference_manual/bash%E5%8F%82%E8%80%83%E6%96%87%E6%A1%A3.html#Shell-Expansions  
