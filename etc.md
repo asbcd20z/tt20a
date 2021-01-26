@@ -283,6 +283,9 @@ gcc选项-g与-rdynamic的异同 ### https://www.cnblogs.com/LiuYanYGZ/p/5550544
 //浅谈C语言中的强符号、弱符号、强引用和弱引用 (weakref) https://www.cnblogs.com/LiuYanYGZ/p/5605511.html  摘自http://www.jb51.net/article/56924.htm  
 //iptables四个表五条链  https://www.cnblogs.com/LiuYanYGZ/p/12735528.html  摘自https://blog.csdn.net/longbei9029/article/details/53056744  
 //linux syslog详解  https://www.cnblogs.com/LiuYanYGZ/p/12425234.html  摘自https://blog.csdn.net/know9163/article/details/81901207  
+关于weakref的用法  https://blog.csdn.net/wang1902568721/article/details/71159699  
+// https://gcc.gnu.org/onlinedocs/gcc/Common-Function-Attributes.html#Common-Function-Attributes  
+__attribute__ 机制详解  https://www.cnblogs.com/tureno/articles/12236495.html  https://blog.csdn.net/weaiken/article/details/88085360  
 
 
 ### linux/syslog/syslogd
