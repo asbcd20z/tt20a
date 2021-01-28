@@ -330,6 +330,7 @@ google关于ssh key的解释（转）转的google的wiki的 https://www.cnblogs.
 
 ### lang/script
 lua/(wireshark plugin)  https://www.runoob.com/lua  http://www.lua.org/docs.html  
+Lua编写wireshark插件基础 https://blog.csdn.net/chen_jianjian/article/details/81502840  
 
 
 ### gawk/gawkinet
