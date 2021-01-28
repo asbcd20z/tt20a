@@ -327,6 +327,11 @@ c++ 理解虚函数，多重继承，虚基类和RTTI所需的代价 https://www
 c++ 虚继承与虚函数表 https://www.cnblogs.com/xkfz007/archive/2012/07/15/2592565.html  
 google关于ssh key的解释（转）转的google的wiki的 https://www.cnblogs.com/likui360/p/6012075.html  
 
+
+### lang/script
+lua/(wireshark plugin)  https://www.runoob.com/lua  http://www.lua.org/docs.html  
+
+
 ### gawk/gawkinet
 使用一下gawk的socket功能 http://blog.chinaunix.net/uid-22270773-id-1778335.html  
   http://www.gnu.org/software/gawk/manual/html_node/TCP_002fIP-Networking.html  
