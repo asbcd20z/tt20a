@@ -66,6 +66,7 @@ https://www.cnblogs.com/fangshenghui/p/5693610.html
 ...
 github.com gitlab.com gitee.com oschina.net  
 使用GitHub.io当作自己的博客网站 https://blog.csdn.net/tyyytcj/article/details/80880018  
+搭建自己的github.io博客 https://blog.csdn.net/qq_34106574/article/details/82704883  
 Git算不算程序员的必备技能 https://www.zhihu.com/question/41667536/answer/1297935355  
 GIT_DIR 10.8 Git内部原理-环境变量 https://www.git-scm.com/book/en/v2/Git-Internals-Environment-Variables  git-$Id https://git-scm.com/docs/gitattributes/  
 Git常用命令速查 https://www.jianshu.com/p/38832b41143d  
