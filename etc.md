@@ -127,7 +127,8 @@ AsciidocFX_Windows1.6.6.exe(maybe+Graphviz2.44-2019) https://github.com/asciidoc
 asciidoctor  AsciidocFX支持的元数据 https://blog.csdn.net/wiborgite/article/details/88648802  
 Asciidoc简介#  http://asciidoctor.org/docs/asciidoc-syntax-quick-reference/  
 
-### more1a
+### tools/more1a
+在线工具 https://c.runoob.com/  http://tools.jb51.net/  
 在线工具 https://tool.lu/asciidoc/  https://tool.lu/markdown/  
 json在线 https://www.sojson.com/runjs.html  
 ietf-json https://tools.ietf.org/html/rfc7159.html  https://www.ietf.org/rfc/  
@@ -335,6 +336,7 @@ Lua中调用C函数(lua-5.2.3)    https://www.w3cschool.cn/lua/gxj31te8.html
 //Step By Step(C调用Lua)     https://www.cnblogs.com/orangeform/archive/2012/07/20/2460634.html  
 //Step By Step(Lua-C API简介)https://www.cnblogs.com/orangeform/archive/2012/07/18/2433428.html  
 Lua编写wireshark插件基础 https://blog.csdn.net/chen_jianjian/article/details/81502840  
+脚本之家51jb首页 >> 脚本专栏 >> Lua  https://www.jb51.net/list/list_245_1.htm  
 Duktape：在C/C++项目中嵌入JavaScript  http://www.cppblog.com/tx7do/archive/2016/04/13/213263.html  
 
 
