@@ -19,6 +19,7 @@ https://docs.github.com/en , https://github.com/settings/profile
 gitee自动同步github  
 `1` aa
 ```
+https://gitee.com/giteemirror/free-programming-books-zh_CN
 https://github.com/EbookFoundation/free-programming-books/blob/master/CONTRIBUTING-zh.md
 bb
 ccc
