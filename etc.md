@@ -63,6 +63,11 @@ git config --global core.autocrlf false/input/true
 git config --global core.safecrlf true/warn/false  
 Sublime Text,View->Line Endings，选Unix，保存;  
 https://www.cnblogs.com/fangshenghui/p/5693610.html  
+是时候把gitee仓库迁移回github了  https://blog.csdn.net/qq598535550/article/details/87870931  
+//git clone https://gitee.com/liyifeng1994/study-xxx.git; git remote remove origin;  
+//git remote add origin https://github.com/liyifeng1994/study-xxx.git; git push -u origin master;  
+https://gitee.com/help/articles/4284  https://blog.gitee.com/2018/06/05/github_to_gitee/  
+//git remote add gitee https://xxx;...   git pull origin master;  git push gitee master;  
 ...
 github.com gitlab.com gitee.com oschina.net  
 使用GitHub.io当作自己的博客网站 https://blog.csdn.net/tyyytcj/article/details/80880018  
