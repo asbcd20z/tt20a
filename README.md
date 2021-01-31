@@ -16,6 +16,7 @@ https://docs.github.com/en/github/authenticating-to-github/creating-a-personal-a
 //  
 https://docs.github.com/en , https://github.com/settings/profile  
 ?tab=repositories , tab=projects , tab=stars ,   
+ip查询地址 https://tool.lu/ip/  
 gitee自动同步github  
 `1` aa
 ```
