@@ -15,4 +15,11 @@ https://docs.github.com/en/rest/overview/other-authentication-methods#basic-auth
 https://docs.github.com/en/github/authenticating-to-github/creating-a-personal-access-token  
 //  
 https://docs.github.com/en , https://github.com/settings/profile  
-?tab=repositories , tab=projects , tab=stars , 
+?tab=repositories , tab=projects , tab=stars ,   
+gitee自动同步github  
+`1` aa
+```
+https://github.com/EbookFoundation/free-programming-books/blob/master/CONTRIBUTING-zh.md
+bb
+ccc
+```
