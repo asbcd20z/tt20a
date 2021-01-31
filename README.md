@@ -14,3 +14,5 @@ https://github.com/microsoft/Git-Credential-Manager-Core/blob/master/docs/github
 https://docs.github.com/en/rest/overview/other-authentication-methods#basic-authentication  
 https://docs.github.com/en/github/authenticating-to-github/creating-a-personal-access-token  
 //  
+https://docs.github.com/en , https://github.com/settings/profile  
+?tab=repositories , tab=projects , tab=stars , 
