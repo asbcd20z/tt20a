@@ -9,6 +9,7 @@ https://en.cppreference.com/w/cpp/memory
 https://en.cppreference.com/w/cpp/string
 https://en.cppreference.com/w/cpp/container
 https://zh.cppreference.com/w/cpp/io
+http://www.cplusplus.com/reference/iolibrary/
 ```
 
 ## boost
