@@ -259,6 +259,7 @@ GDBserver远程调试(汇总)                       https://blog.csdn.net/water_
   //gdb: target remote 192.168.x.x:9000; symbol-file xxelf; set solib-absolute-prefix xxsysso; set solib-search-path xxso  
 GDB基本命令(整合) https://blog.csdn.net/wangwenwen/article/details/9259687  
 //100个gdb小技巧（v1.0）.pdf  https://www.cnblogs.com/LiuYanYGZ/p/14247052.html  摘自https://github.com/hellogcc/100-gdb-tips  
+gdb: https://sourceware.org/bugzilla/  
 
 
 ### linux/c
