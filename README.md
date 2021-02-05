@@ -1,6 +1,6 @@
 # tt20a
 tt20a-test20200511-first
-# //started
+## //started
 https://github.com/join/get-started  
 https://github.com/new  
 https://github.com/organizations/plan  
@@ -26,4 +26,13 @@ https://gitee.com/giteemirror/free-programming-books-zh_CN
 https://github.com/EbookFoundation/free-programming-books/blob/master/CONTRIBUTING-zh.md
 bb
 ccc
+```
+
+## //GNU
+```
+https://www.gnu.org/ , https://www.fsf.org/resources/ , http://directory.fsf.org/
+GNU Manuals Online  https://gnu.huihoo.org/
+--
+Linux C/C++编程手册查阅方法  https://www.cnblogs.com/findumars/p/6653704.html
+The Linux man-pages project https://www.kernel.org/doc/man-pages/
 ```
