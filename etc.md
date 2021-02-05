@@ -302,8 +302,8 @@ __attribute__ 机制详解  https://www.cnblogs.com/tureno/articles/12236495.htm
 ### linux/syslog/syslogd
 https://www.gnu.org/software/  https://busybox.net/  https://buildroot.org/  
 /usr/include/sys/syslog.h  
-glibc   https://github.com/lattera/glibc/blob/master/misc/syslog.c  https://github.com/lattera/glibc/blob/master/stdio-common/dprintf.c
-uClibc  https://github.com/kraj/uClibc/blob/master/libc/misc/syslog/syslog.c  
+glibc   https://github.com/lattera/glibc/blob/master/misc/syslog.c  https://github.com/lattera/glibc/blob/master/stdio-common/dprintf.c  
+uClibc  https://github.com/kraj/uClibc/blob/master/libc/misc/syslog/syslog.c  https://github.com/kraj/uClibc/blob/master/libc/stdio/dprintf.c  
 syslogd https://github.com/kulasama/syslog-ng-3.4  https://github.com/oasislinux/syslogd/blob/master/syslogd.c  
 //https://github.com/mirror/busybox/tree/master/sysklogd  https://git.busybox.net/busybox/tree/sysklogd/syslogd.c  https://git.busybox.net/buildroot/  
 //linux syslog详解  https://www.cnblogs.com/LiuYanYGZ/p/12425234.html  摘自https://blog.csdn.net/know9163/article/details/81901207  
