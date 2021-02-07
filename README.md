@@ -13,6 +13,23 @@ https://gitlab.com/help/topics/autodevops/index.md
 https://github.com/microsoft/Git-Credential-Manager-Core/blob/master/docs/github-apideprecation.md  
 https://docs.github.com/en/rest/overview/other-authentication-methods#basic-authentication  
 https://docs.github.com/en/github/authenticating-to-github/creating-a-personal-access-token  
+## //Quick setup
+```
+…or create a new repository on the command line
+echo "# test20210207b" >> README.md
+git init
+git add README.md
+git commit -m "first commit"
+git branch -M main
+git remote add origin git@github.com:asbcd20z/test20210207b.git
+git push -u origin main
+…or push an existing repository from the command line
+git remote add origin git@github.com:asbcd20z/test20210207b.git
+git branch -M main
+git push -u origin main
+…or import code from another repository
+You can initialize this repository with code from a Subversion, Mercurial, or TFS project.
+```
 //  
 sublime Text中的workspace和project什么关系?  https://www.zhihu.com/question/22681628  //Ctrl+Shift+N  
 //http://www.sublimetext.com/docs/3/projects.html  
