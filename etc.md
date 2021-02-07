@@ -357,4 +357,18 @@ Duktape：在C/C++项目中嵌入JavaScript  http://www.cppblog.com/tx7do/archiv
 
 
 
+
+## end00
+```
+//ctrp/Credential Manager
+w.hub:okgit/nokcyg, git version 2.21.0.windows.1
+w.lab:okall
+hm.hub:okgit,  Git-2.10.0-32-bit.exe(32xp)
+hm.lab:okgit/nokcyg(no/dev/tty)
+--
+eg:push usage,
+ignore failure for github,such as: Logon failed, use ctrl+c to cancel basic credential prompt.
+then cmd prompt, Username for 'https://github.com': <id-input>
+and then prompt a (tk)window for <pw>.  (seems they goto Credential)
+```
 ## end==
