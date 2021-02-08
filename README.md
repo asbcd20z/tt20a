@@ -23,6 +23,7 @@ git commit -m "first commit"
 git branch -M main
 git remote add origin git@github.com:asbcd20z/test20210207b.git
 git push -u origin main
+==git branch -u origin/main main;  git push  origin main
 …or push an existing repository from the command line
 git remote add origin git@github.com:asbcd20z/test20210207b.git
 git branch -M main
