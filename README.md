@@ -46,7 +46,7 @@ bb
 ccc
 ```
 
-## //GNU
+## //GNU/linux/c
 ```
 https://www.gnu.org/ , https://www.fsf.org/resources/ , http://directory.fsf.org/
 GNU Manuals Online  https://gnu.huihoo.org/

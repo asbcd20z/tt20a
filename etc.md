@@ -265,6 +265,16 @@ GDB基本命令(整合) https://blog.csdn.net/wangwenwen/article/details/9259687
 gdb: https://sourceware.org/bugzilla/  
 
 
+
+## //GNU/linux/c
+```
+https://www.gnu.org/ , https://www.fsf.org/resources/ , http://directory.fsf.org/
+GNU Manuals Online  https://gnu.huihoo.org/
+--
+Linux C/C++编程手册查阅方法  https://www.cnblogs.com/findumars/p/6653704.html
+The Linux man-pages project https://www.kernel.org/doc/man-pages/
+```
+
 ### linux/c
 常见 core dump 原因分析signal 11 - SIGSEGV (signal 6-SIGABRT释放多次/11-SIGSEGV空指针) https://www.cnblogs.com/kex1n/p/6972046.html  
 Linux信号列表详解 (kill -l, gdb/i signal,i handle) https://blog.csdn.net/liushuimpc/article/details/51611354  
