@@ -61,8 +61,8 @@ https://www.ietf.org/rfc/ , https://www.rfc-editor.org/  , (socks5)https://www.r
 git换行符LF与CRLF转换问题 https://www.cnblogs.com/sdgf/p/6237847.html  
 git config --global core.autocrlf false/input/true  
 git config --global core.safecrlf true/warn/false  
-Sublime Text,View->Line Endings，选Unix，保存;  
 https://www.cnblogs.com/fangshenghui/p/5693610.html  
+Sublime Text,View->Line Endings，选Unix，保存;  
 是时候把gitee仓库迁移回github了  https://blog.csdn.net/qq598535550/article/details/87870931  
 //git clone https://gitee.com/liyifeng1994/study-xxx.git; git remote remove origin;  
 //git remote add origin https://github.com/liyifeng1994/study-xxx.git; git push -u origin master;  
@@ -177,7 +177,13 @@ PYTHON C/C++结构体 ctypes.Structure https://www.cnblogs.com/yang220/p/1209186
 date +%FT%T.%Nz -u  
 VI模式中上下左右键和回退键出现字母 set nocompatible backspace=2 hlsearch https://www.cnblogs.com/wangshuyi/p/6078678.html  
 vim set nu=number hl=hlsearch ruler showmode :q noxx  
-
+```
+{//sublime3 settings
+	"font_size": 9,
+	///"highlight_line": true,
+	"update_check": false
+}
+```
 
 ### python
 help(),x.__class__==type,id,dir/locals/vars,super(),getattr(),Xattr(..)  //py核心编程v2-13.11  
