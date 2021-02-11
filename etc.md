@@ -9,6 +9,7 @@ http://www.man7.org/linux/man-pages/man2/gettimeofday.2.html
 http://www.man7.org/linux/man-pages/man7/time.7.html  
 http://www.man7.org/linux/man-pages/man7/vdso.7.html  
 http://man7.org/linux/man-pages/man7/futex.7.html  
+http://man7.org/linux/man-pages/man3/dlopen.3.html  
 
 ## c/cpp/c++
 https://en.cppreference.com/w/cpp/container/vector  
@@ -278,7 +279,7 @@ https://www.gnu.org/ , https://www.fsf.org/resources/ , http://directory.fsf.org
 GNU Manuals Online  https://gnu.huihoo.org/
 --
 Linux C/C++编程手册查阅方法  https://www.cnblogs.com/findumars/p/6653704.html
-The Linux man-pages project https://www.kernel.org/doc/man-pages/
+The Linux man-pages project https://www.kernel.org/doc/man-pages/  https://man7.org/linux/man-pages/
 ```
 
 ### linux/c
