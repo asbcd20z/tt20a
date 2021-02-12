@@ -185,6 +185,7 @@ vim set nu=number hl=hlsearch ruler showmode :q noxx
 ```
 {//sublime3 settings
 	"font_size": 9,
+	"ignored_packages": ["Vintage"]
 	///"highlight_line": true,
 	"update_check": false
 }
