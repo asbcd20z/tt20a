@@ -162,6 +162,10 @@ endian如何判断CPU是大端还是小端模式 https://www.cnblogs.com/wi100sh
 gof设计模式简介#https://www.yuque.com/happyhusky/wdbj/uwupyw  plantuml#https://www.yuque.com/happyhusky/wdbj/ogdbl4  
 高质量C++/C编程指南 https://www.jianshu.com/p/654fea4bfd4f  
 https://docs.gitlab.com/ee/api/markdown.html  
+关于第三方登录,你应该知道的 https://blog.csdn.net/baidu_37464759/article/details/54906622  
+第三方登录原理及实现       https://blog.csdn.net/xihua1244914259/article/details/79000813  
+了解一下第三方登录         https://blog.csdn.net/y4x5m0nivsrjay3x92c/article/details/89369466  
+第三方账号登录功能接入全流程浅析  http://www.woshipm.com/pd/727011.html  
 
 ### more2
 在语雀绘制PlantUML图 https://www.yuque.com/barretlee/yuque/aabh67  
