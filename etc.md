@@ -172,7 +172,8 @@ https://docs.gitlab.com/ee/api/markdown.html
 糙读《如何高效记忆》后的读后感 https://www.yuque.com/sulirc/virtue/wrbp4i  
 gitbook https://www.jianshu.com/p/421cc442f06c  
 Linux常用操作# https://blankj.com/gitbook/linux/ https://github.com/Blankj/AndroidOfferKiller  
-http://www.ruanyifeng.com/blog/2019/09/curl-reference.html  
+//curl 的用法指南 http://www.ruanyifeng.com/blog/2019/09/curl-reference.html  
+//JavaScript 有多灵活？ http://www.ruanyifeng.com/blog/2015/02/flexible-javascript.html  
 深入ProtoBuf-简介 https://www.jianshu.com/p/a24c88c0526a  
 google ProtoBuf开发者指南 https://linuxstyle.blog.csdn.net/article/details/6594036  
 深入理解 ProtoBuf 原理与工程实践（概述） https://mp.weixin.qq.com/s/fKzZ49YmKawsudGUlbOL3g  
