@@ -282,8 +282,8 @@ gdb: https://sourceware.org/bugzilla/
 ```
 https://www.gnu.org/ , https://www.fsf.org/resources/ , http://directory.fsf.org/
 GNU Manuals Online  https://gnu.huihoo.org/
-https://www.gnu.org/software/libc/manual/
 https://www.gnu.org/software/
+https://www.gnu.org/software/libc/manual/
 https://gcc.gnu.org/onlinedocs/
 https://www.gnu.org/software/gdb/documentation/
 --

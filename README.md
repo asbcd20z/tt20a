@@ -50,6 +50,10 @@ ccc
 ```
 https://www.gnu.org/ , https://www.fsf.org/resources/ , http://directory.fsf.org/
 GNU Manuals Online  https://gnu.huihoo.org/
+https://www.gnu.org/software/
+https://www.gnu.org/software/libc/manual/
+https://gcc.gnu.org/onlinedocs/
+https://www.gnu.org/software/gdb/documentation/
 --
 Linux C/C++编程手册查阅方法  https://www.cnblogs.com/findumars/p/6653704.html
 The Linux man-pages project https://www.kernel.org/doc/man-pages/  https://man7.org/linux/man-pages/
