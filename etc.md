@@ -357,6 +357,7 @@ socks           1080/udp                        # socks proxy server
 tipc            6118/udp                # Transparent Inter Process Communication  
 ```
 TCP粘包分析与处理 (Negle/TCP_NODELAY,PUSH) https://www.cnblogs.com/findumars/p/5638828.html  https://www.cnblogs.com/liyux/p/5594423.html
+web-http-server (embedding)  https://gitee.com/louisyou/mongoose  https://github.com/cesanta/mongoose
 ```
 
 
