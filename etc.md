@@ -92,6 +92,7 @@ git branch -vv
 git revert/ reset++push -f [Git恢复之前版本的两种方法reset、revert] https://blog.csdn.net/yxlshk/article/details/79944535  
 git apply --check my.pat; git apply -3 my.pat;  git apply --reject my.pat  
 开源-GIT常用命令 https://www.cnblogs.com/kex1n/p/6141166.html  
+git config配置  https://www.cnblogs.com/fireporsche/p/9359130.html  
 
 
 ## //gitlab/github--2git-acc
@@ -372,6 +373,8 @@ $ cat <<EOT|cut -c2-
 c++ 理解虚函数，多重继承，虚基类和RTTI所需的代价 https://www.cnblogs.com/xkfz007/archive/2012/08/19/2646356.html  
 c++ 虚继承与虚函数表 https://www.cnblogs.com/xkfz007/archive/2012/07/15/2592565.html  
 google关于ssh key的解释（转）转的google的wiki的 https://www.cnblogs.com/likui360/p/6012075.html  
+pidof, lsof, chmod, lsattr -a,chattr  
+lsattr命令: 显示文件属性介绍 https://blog.csdn.net/weixin_34021089/article/details/92872999  
 
 
 ### lang/script
