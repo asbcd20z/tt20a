@@ -75,6 +75,7 @@ github.com gitlab.com gitee.com oschina.net
 搭建自己的github.io博客 https://blog.csdn.net/qq_34106574/article/details/82704883  
 Git算不算程序员的必备技能 https://www.zhihu.com/question/41667536/answer/1297935355  
 GIT_DIR 10.8 Git内部原理-环境变量 https://www.git-scm.com/book/en/v2/Git-Internals-Environment-Variables  git-$Id https://git-scm.com/docs/gitattributes/  
+廖雪峰-Git教程  https://www.liaoxuefeng.com/wiki/896043488029600/900002180232448  
 Git常用命令速查 https://www.jianshu.com/p/38832b41143d  
 rebase,merge,cherry-pick的区别详解—面试常问 https://www.cnblogs.com/NaughtyCat/p/differ-with-rebase-merge-cherry-pick.html  https://git-scm.com/book/zh/v2  
 Git知识总览(五)Git中的merge、rebase、cherry-pick以及交互式rebase https://www.cnblogs.com/ludashi/p/8213550.html  
@@ -373,7 +374,7 @@ $ cat <<EOT|cut -c2-
 c++ 理解虚函数，多重继承，虚基类和RTTI所需的代价 https://www.cnblogs.com/xkfz007/archive/2012/08/19/2646356.html  
 c++ 虚继承与虚函数表 https://www.cnblogs.com/xkfz007/archive/2012/07/15/2592565.html  
 google关于ssh key的解释（转）转的google的wiki的 https://www.cnblogs.com/likui360/p/6012075.html  
-pidof, lsof, chmod, lsattr -a,chattr  
+pidof, lsof, htop, strace/ltrace, chmod, lsattr -a/chattr  
 lsattr命令: 显示文件属性介绍 https://blog.csdn.net/weixin_34021089/article/details/92872999  
 
 
