@@ -4,7 +4,7 @@
 # tt20a
 tt20a-test20200511-first
 
-https://git-scm.com/book/zh/v2/Git-基础-查看提交历史 https://www.php.cn/manual/view/34971.html
+https://git-scm.com/book/zh/v2/Git-基础-查看提交历史 https://php.cn/manual/view/34971.html
 ## //started
 https://github.com/join/get-started  
 https://github.com/new  

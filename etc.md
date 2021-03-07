@@ -62,6 +62,7 @@ HTTP协议和SOCKS5协议    https://www.cnblogs.com/yinzhengjie/p/7357860.html
 https://www.ietf.org/rfc/ , https://www.rfc-editor.org/  , (socks5)https://www.rfc-editor.org/rfc/rfc1928.txt  
 
 ## //git
+https://git-scm.com/book/zh/v2/Git-基础-查看提交历史 https://php.cn/manual/view/34971.html  
 git换行符LF与CRLF转换问题 https://www.cnblogs.com/sdgf/p/6237847.html  
 git config --global core.autocrlf false/input/true  
 git config --global core.safecrlf true/warn/false  
