@@ -8,7 +8,7 @@
 	name=z
 	email=z
 [alias]
-	#@time20210306a
+	#@time20210311a
 	#git clean -f -d  # rm  untracked files
 	#git rm --cached aa.txt
 	#git add -u  # -A -f --dry-run
@@ -42,6 +42,9 @@
 	log1p=log -1 -p #--name-only ##=show
 	log1f=log -1 --name-only
 	showf=show   --name-status   ##with cid-list
+	showvcat=show  ## git show next~10:Documentation/README  # cat version-file
+	#or, git blame 0.0.0-1615388870 x/y.cc # cat version-file to check
+	# git rebase -i HEAD~4  ## git rebase -i <after-this-commit> # merge HEAD~4..HEAD
 	lol= log -9 --pretty='%h %cI%d %s  .%an'
 	loo= log -8 --pretty=oneline
 	lo = log -9 --oneline #--all --graph #--decorate
