@@ -193,6 +193,9 @@ date +%FT%T.%Nz -u
 VI模式中上下左右键和回退键出现字母 set nocompatible backspace=2 hlsearch https://www.cnblogs.com/wangshuyi/p/6078678.html  
 vim set nu=number hl=hlsearch ruler showmode :q noxx  
 ```
+//Disable “A new version of Sublime Text is available, download now?” in Sublime 3 (stable channel)
+https://forum.sublimetext.com/t/disable-a-new-version-of-sublime-text-is-available-download-now-in-sublime-3-stable-channel/19961
+https://github.com/sublimehq/sublime_text/issues/1206  (merge 127.0.0.1/0.0.0.0 www.sublimetext.com into /etc/hosts)
 {//sublime3 settings
 	"font_size": 9,
 	"ignored_packages": ["Vintage"]

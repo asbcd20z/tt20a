@@ -8,7 +8,7 @@
 	name=z
 	email=z
 [alias]
-	#@time20210311a
+	#@time20210313a
 	#git clean -f -d  # rm  untracked files
 	#git rm --cached aa.txt
 	#git add -u  # -A -f --dry-run
@@ -42,9 +42,14 @@
 	log1p=log -1 -p #--name-only ##=show
 	log1f=log -1 --name-only
 	showf=show   --name-status   ##with cid-list
+	# show [sha1] [file]  ## or, diff sha1~ sha file
 	showvcat=show  ## git show next~10:Documentation/README  # cat version-file
 	#or, git blame 0.0.0-1615388870 x/y.cc # cat version-file to check
+	#or change a file, git co <sha1> -- file.tex ## zhihu.com/question/53061133
+	##
 	# git rebase -i HEAD~4  ## git rebase -i <after-this-commit> # merge HEAD~4..HEAD
+	# git cherry-pick ciid1 ciid2..
+	#https://git-scm.com/book/zh/v2/Git-分支-变基
 	lol= log -9 --pretty='%h %cI%d %s  .%an'
 	loo= log -8 --pretty=oneline
 	lo = log -9 --oneline #--all --graph #--decorate
