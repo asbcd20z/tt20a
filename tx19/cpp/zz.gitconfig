@@ -8,7 +8,7 @@
 	name=z
 	email=z
 [alias]
-	#@time20210313a
+	#@time20210314a
 	#git clean -f -d  # rm  untracked files
 	#git rm --cached aa.txt
 	#git add -u  # -A -f --dry-run
@@ -20,7 +20,7 @@
 	#git log -S'' -i -L --grep=  # grep/search (-i:case insensitive),  -G --basic-regexp...
 	##git log --grep=logMessage -i  -S<string> -G<regex> -L<range>
 	#git-log中文  https://www.php.cn/manual/view/34971.html
-	#git blame my-rev~  myfile  -L99,+9  ## blame-history
+	#git blame -M -C my-rev~  myfile  -L99,+9  ## blame-history
 	tt3=log --oneline -3
 	configge=config --global -e
 	co = checkout
@@ -42,7 +42,8 @@
 	log1p=log -1 -p #--name-only ##=show
 	log1f=log -1 --name-only
 	showf=show   --name-status   ##with cid-list
-	# show [sha1] [file]  ## or, diff sha1~ sha file
+	# show [sha1] -- [file]  ## or, diff sha1~ sha1  file
+	# show -U4 -W  ## diff -M -C  -U4 -W  --unified=4 --function-context
 	showvcat=show  ## git show next~10:Documentation/README  # cat version-file
 	#or, git blame 0.0.0-1615388870 x/y.cc # cat version-file to check
 	#or change a file, git co <sha1> -- file.tex ## zhihu.com/question/53061133
@@ -50,6 +51,8 @@
 	# git rebase -i HEAD~4  ## git rebase -i <after-this-commit> # merge HEAD~4..HEAD
 	# git cherry-pick ciid1 ciid2..
 	#https://git-scm.com/book/zh/v2/Git-分支-变基
+	# gerrit,gitweb,Gitiles
+	# git instaweb --httpd=webrick  ## git-scm.com/book/zh/v2/服务器上的-Git-GitWeb
 	lol= log -9 --pretty='%h %cI%d %s  .%an'
 	loo= log -8 --pretty=oneline
 	lo = log -9 --oneline #--all --graph #--decorate
