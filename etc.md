@@ -202,6 +202,8 @@ https://github.com/sublimehq/sublime_text/issues/1206  (merge 127.0.0.1/0.0.0.0 
 	///"highlight_line": true,
 	"update_check": false
 }
+sublime - sublimerge 文本比较插件  https://blog.csdn.net/qq250782929/article/details/78983119
+sublime--[ctrl]+[alt]+[d]                      - display Quick Panel with commands available for current view //or文件标签上右点击
 ```
 
 ### python
