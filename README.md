@@ -62,4 +62,7 @@ https://www.gnu.org/software/gdb/documentation/
 --
 Linux C/C++编程手册查阅方法  https://www.cnblogs.com/findumars/p/6653704.html
 The Linux man-pages project https://www.kernel.org/doc/man-pages/  https://man7.org/linux/man-pages/
+https://man7.org/linux/man-pages/man1/bash.1.html#EXPANSION
+https://man7.org/linux/man-pages/man1/bash.1.html#REDIRECTION
+lexical/syntax/semantically
 ```
