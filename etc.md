@@ -115,7 +115,7 @@ https://github.com/asbcd17z/hi1/blob/master/memo1.txt
 ###Google Chrome版本 72.0.3626.119（正式版本）（64 位）, firefox 65.0.1 (64 位)  
 https://github.com/TheAlgorithms/Python  
 https://github.com/libfuse/  
-用Python写一个FUSE（用户态文件系统）文件系统 http://blog.jobbole.com/51268/
+用Python写一个FUSE（用户态文件系统）文件系统 http://blog.jobbole.com/51268/  
 https://github.com/qianyubl/WATCH_dojo  
 https://github.com/search?l=C&p=5&q=timer+c&type=Repositories  
 
@@ -191,7 +191,7 @@ python c struct/python之struct详解  https://blog.csdn.net/qq_30638831/article
 PYTHON C/C++结构体 ctypes.Structure https://www.cnblogs.com/yang220/p/12091863.html   https://www.programcreek.com/python/example/1122/ctypes.Structure  
 date +%FT%T.%Nz -u  
 VI模式中上下左右键和回退键出现字母 set nocompatible backspace=2 hlsearch https://www.cnblogs.com/wangshuyi/p/6078678.html  
-vim set nu=number hl=hlsearch ic=ignorecase ruler showmode  :q noxx  
+vim set nu=number hl=hlsearch ic=ignorecase ai=autoindex ruler showmode  :q noxx  #export EXINIT='set nu'  
 ```
 //Disable “A new version of Sublime Text is available, download now?” in Sublime 3 (stable channel)
 https://forum.sublimetext.com/t/disable-a-new-version-of-sublime-text-is-available-download-now-in-sublime-3-stable-channel/19961
@@ -225,7 +225,7 @@ Python的学习（三十二）---- ctypes库的使用整理 https://blog.csdn.ne
 调用c的so库https://blog.csdn.net/claroja/article/details/79237887  使用ctypes进行Python和C的混合编程#https://blog.csdn.net/weixin_30614109/article/details/98999904  
 Python ctypes介绍——非常详尽https://blog.csdn.net/Brouce__Lee/article/details/88869234  ctypes##http://blog.timd.cn/python-ctypes/  
  python和C语言互相调用的几种方式https://www.cnblogs.com/mq0036/p/8492621.html  
- python与C互相调用的方法详解http://www.cppcns.com/jiaoben/python/196662.html
+ python与C互相调用的方法详解http://www.cppcns.com/jiaoben/python/196662.html  
 Python调用windows下DLL详解 - ctypes库的使用##### https://www.cnblogs.com/timssd/p/9732380.html  
 python中hasattr()、getattr()、setattr()函数的使用 https://www.cnblogs.com/timssd/p/11168127.html  
 cpu个数、核数、线程数、Java多线程关系的理解 https://www.cnblogs.com/timssd/p/9507316.html  
