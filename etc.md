@@ -143,7 +143,7 @@ asciidoctor  AsciidocFX支持的元数据 https://blog.csdn.net/wiborgite/articl
 Asciidoc简介#  http://asciidoctor.org/docs/asciidoc-syntax-quick-reference/  
 
 ### tools/more1a
-在线工具 https://c.runoob.com/  http://tools.jb51.net/  
+在线工具 https://c.runoob.com/  http://tools.jb51.net/  www.iloveimg.com/zh-cn  
 在线工具 https://tool.lu/asciidoc/  https://tool.lu/markdown/  
 json在线 https://www.sojson.com/runjs.html  
 ietf-json https://tools.ietf.org/html/rfc7159.html  https://www.ietf.org/rfc/  
@@ -182,7 +182,9 @@ Linux常用操作# https://blankj.com/gitbook/linux/ https://github.com/Blankj/A
 //curl 的用法指南 http://www.ruanyifeng.com/blog/2019/09/curl-reference.html  
 //JavaScript 有多灵活？ http://www.ruanyifeng.com/blog/2015/02/flexible-javascript.html  
 //《SSH 入门教程》发布了   http://www.ruanyifeng.com/blog/2020/12/ssh-tutorial.html  https://wangdoc.com/ssh/  
-//screen tmux           http://www.ruanyifeng.com/blog/2019/10/tmux.html  
+//man screen (-dr) (DEFAULT KEY BINDINGS): C-a C-a, C-a C-c,  C-a ", C-a a
+//screen tmux  byobu         http://www.ruanyifeng.com/blog/2019/10/tmux.html  
+https://stackoverflow.com/questions/41830936/mobaxterm-follow-terminal-folder-stfp-and-byobu  
 深入ProtoBuf-简介 https://www.jianshu.com/p/a24c88c0526a  
 google ProtoBuf开发者指南 https://linuxstyle.blog.csdn.net/article/details/6594036  
 深入理解 ProtoBuf 原理与工程实践（概述） https://mp.weixin.qq.com/s/fKzZ49YmKawsudGUlbOL3g  

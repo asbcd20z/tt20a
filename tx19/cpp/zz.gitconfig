@@ -38,6 +38,7 @@
 	##
 	#show -q -s --name-only --name-status --source/default  [cid1 cid2...]  ##
 	#log     --name-only
+	#log --oneline --follow  # <afile> ,follow rename, -M/--find-renames/--diff-filter=R
 	logme=log --author='liwen.a'
 	log1p=log -1 -p #--name-only ##=show
 	log1f=log -1 --name-only
