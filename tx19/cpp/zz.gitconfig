@@ -92,6 +92,7 @@
 #       proxy = 10.167.32.133:8080
 #       proxy = 127.0.0.1:1087
 #       sslVerify=false
+##alias pgit='https_proxy=135.251.33.16:8080 git'  ##pgit push
 [xuser]
         name=jqasbcd20z
         email=jqasbcd20z@q.com
