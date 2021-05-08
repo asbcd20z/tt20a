@@ -2,6 +2,7 @@
 /debug/
 /out/
 #*/cpp/lvrvo.s
+#*.s
 *.out
 *.o
 *.so

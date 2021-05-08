@@ -1,10 +1,19 @@
+#if 0
+#g++ -g -std=c++11 threadid.cpp
+#g++ -g -std=c++11 $0 -c
+g++ -g -std=c++11 $0 ||exit -1
+ls -l ${0%%.cpp}*  a.*
+./a.exe
+exit 0;
+#endif
+
 #include <iostream>
 #include <thread>
 #include <chrono>
 #include <mutex>
 #include <stdio.h>
-//g++ -std=c++11 threadid.cpp
- 
+
+
 std::mutex g_display_mutex;
 
 std::thread::id  foo2i(int l_){printf("foo2i: %d\n",l_);return std::this_thread::get_id();}
@@ -28,15 +37,15 @@ foo5();
     std::cout << std::this_thread::get_id() << "/"; // add thread id
     //printf("%x/\n", std::this_thread::get_id()); //add thread id
     g_display_mutex.unlock();
- 
+
     std::this_thread::sleep_for(std::chrono::seconds(1));
 }
- 
+
 int main()
 {
     std::thread t1(foo);
     std::thread t2(foo);
- 
+
     t1.join();
     t2.join();
 printf("\n");
