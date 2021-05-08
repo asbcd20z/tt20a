@@ -13,6 +13,7 @@ exit 0;
 
 #include <stdio.h>
 #include <time.h>
+#include <unistd.h>
 //extern int printf(const char *format, ...);
 //extern int time(int*);
 int fooi()
@@ -21,7 +22,7 @@ static int gxs=17;
 static int gxs2=time(0);
 int x=1;
 int x2=time(0);
-printf("%d\n",x);
+printf("gss2=%d,x2=%d\n", gxs2,x2);
 return x+x2+gxs+gxs2;
 }
 
@@ -29,8 +30,17 @@ int gx=7;
 int gx2;
 int gx3=fooi(); //__Z41__static_initialization_and_destruction_0ii
 
+void foo()
+{
+static int gxx=fooi(); //initialize only once for static, so called once here
+printf("foo=%d\n", gxx);
+}
+
 int main(int ac, char* av[])
 {
-fooi();
+sleep(2);
+foo();
+sleep(2);
+foo();
 return 0;
 }
