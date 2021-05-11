@@ -117,7 +117,7 @@ main3
 echo
 exit 0;
 
-#scp /c/temp/20190412.diff 10.183.68.25:tmp/
+#scp -pr  /c/temp/20190412.diff 10.183.68.25:tmp/
 
 ##https://www.cnblogs.com/konrad/p/6901273.html
 ##for-cygwin:install rsync+ssh; ssh-setup-rlogin-without-pw[1.ssh-keygen(create id_rsa+id_rsa.pub), 2.ssh-copy-id remote-ip(local"known_hosts" yes simultaneously)(or:cat id_rsa.pub, then ssh remote-ip, and append id_rsa.pub text to remote"authorized_keys" manually.)]
