@@ -9,7 +9,7 @@
 	email=z
 [alias]
 	#@time20210314a
-	#git clean -f -d  # rm  untracked files
+	#git clean -x -f -d  # rm  untracked files
 	#git rm --cached aa.txt
 	#git add -u  # -A -f --dry-run
 	##git reset    <cid> <file> ---only update INDEX  ##opposite of git add. means to unstaged?
@@ -92,7 +92,7 @@
 #       proxy = 10.167.32.133:8080
 #       proxy = 127.0.0.1:1087
 #       sslVerify=false
-##alias pgit='https_proxy=135.251.33.16:8080 git'  ##pgit push
+##alias pgit='https_proxy=135.251.33.16:8080 git'  ##pgit push  [my-origin] [my-branch] [-u]
 [xuser]
         name=jqasbcd20z
         email=jqasbcd20z@q.com

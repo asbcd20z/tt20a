@@ -29,6 +29,7 @@ int fooi()
 {
 static int gxs=17;
 static int gxs2=time(0); //__ZZ4fooivE4gxs2, and a $__ZGVZ4fooivE4gxs2 flag is used for initialize
+                         //only c++. not for c,with error: initializer element is not constant
 int x=1;
 int x2=time(0);
 printf("gss2=%d,x2=%d\n", gxs2,x2);
@@ -52,6 +53,6 @@ int main(int ac, char* av[])
 sleep(2);
 foo();
 sleep(2);
-foo();
+foo(); //static gxx had been initialized in first foo(), and not call fooi()
 return 0;
 }
