@@ -18,6 +18,7 @@ import sys; sys.path ;print(sys.path)
 #pyy -ic'import ctypesstructure as myt'
 #pyy -i ctypesstructure.py
 #bytes.hex()
+#binascii.hexlify(b'abc'); binascii.b2a_hex(b'abc');
 
 import pdb
 import ctypes

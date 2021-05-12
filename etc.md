@@ -277,6 +277,10 @@ Python抓需要输入用户名密码的https网页 https://blog.csdn.net/liumeng
 Python实现网站自动登录---傻瓜教程chromedriver https://blog.csdn.net/qiudechao1/article/details/89234582  
 Python 爬虫的工具列表 附Github代码下载链接 https://www.cnblogs.com/arxive/p/6291709.html  
 python模拟自动登录网站（urllib2）https://blog.csdn.net/xgocn/article/details/85130734  https://www.cnblogs.com/dreamer-fish/p/5484767.html  
+pytest 
+python behave --BDD(Behavior Driven Development)[BDD in Python]使用behave框架在Python中实践行为驱动开发 https://cloud.tencent.com/developer/article/1157391 
+python behave学习笔记 https://danteyu.github.io/2016/10/13/behave-tutorial/ 
+
 
 ### gdb/gdb python脚本
 用 Python 拓展 GDB（一） https://blog.csdn.net/weixin_33947521/article/details/89377701  
