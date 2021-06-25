@@ -1,5 +1,5 @@
 #if 0
-#g++ -g -std=c++11 threadid.cpp
+#g++ -g -std=c++11 threadid.cpp -lpthread
 #g++ -g -std=c++11 $0 -c
 g++ -g -std=c++11 $0 ||exit -1
 ls -l ${0%%.cpp}*  a.*

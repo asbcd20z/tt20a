@@ -74,6 +74,7 @@
 	# or, git branch -u origin/main main
 	# or, git push -u orign/main main
 	# git push -n  ##--dry-run  ##--all --tags  ##-f -d
+	#git push origin master
 	#git push origin :
 	#git push --all; git push --tags; git push --mirror  ## push-all-branches/-or-tags/-or-alls-in-refs
 	#git push origin mybr1  ## update mybr1, or create mybr1 if not exist remotely. and -n to try
@@ -82,6 +83,8 @@
 	##
 	#git config --local user.name mxasbcd20z; git config --local user.email mxasbcd20z@q.com
 	#git config -l; git var -l
+	#Git Submodule使用完整教程 https://www.cnblogs.com/lsgxeva/p/8540758.html
+	#git中submodule子模块的添加、使用和删除 https://blog.csdn.net/guotianqing/article/details/82391665
 
 [xcolor]
 	status=auto
