@@ -120,12 +120,14 @@ https://github.com/qianyubl/WATCH_dojo
 https://github.com/search?l=C&p=5&q=timer+c&type=Repositories  
 
 
-## tools/markdown/asciidoc/graphviz/plantuml/planttext.com
+## tools/markdown/asciidoc/graphviz/plantuml/planttext.com/svg
 方便好用的在线UML制作工具：PlantUML https://www.jianshu.com/p/c006dcb1493b  
 如何在线编辑显示markdown/plantuml/graphiz? https://segmentfault.com/q/1010000002802979  
 http://www.plantuml.com/plantuml/ , https://stackedit.io/ , https://github.com/mikitex70/plantuml-markdown  
 https://www.planttext.com/  
 https://plantuml.com/zh/  
+https://www.w3cschool.cn/ , https://www.w3school.com.cn/?  
+菜鸟 https://www.runoob.com/svg/svg-tutorial.html  
 uml par/UML序列图总结(Loop,Opt,Par和Alt) https://www.cnblogs.com/cy568searchx/p/6227238.html  
 eg:程序员绘图工具-Plantuml https://www.jianshu.com/p/30f6a9c06083  https://zhuanlan.zhihu.com/p/76948461  
 eg:plantuml使用教程 https://www.cnblogs.com/ningskyer/articles/5397750.html  http://archive.3zso.com/archives/plantuml-quickstart.html  
