@@ -8,6 +8,7 @@ exit 0;
 #include <iostream>
 #include <string>
 #include <map>
+//std::boolalpha
 
 using namespace std;
 
@@ -20,13 +21,14 @@ string x;
 };
 
 int operator<(const K &a_, const K &b_){
-return a_.y<b_.y;//&&a.x<b.x;
+//if(a_.y==b_.y){return a_.x<b_.x;}
+return (a_.y<b_.y); //&&(a_.x<b_.x);
 }
 
 int main(int ac, char* av[])
 {
 map<K,string> map={{{1,1},"aa"},{{2,2},"bb"},{{1,2},"ab"}};
-cout<<map[{1,2}]<<endl;
+cout<<map.size()<<"/"<<map[{1,2}]<<endl;
 cout<<"end.."<<endl;
 return 0;
 }
