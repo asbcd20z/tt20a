@@ -20,7 +20,8 @@ struct V{
 string x;
 };
 
-int operator<(const K &a_, const K &b_){
+//https://en.cppreference.com/w/cpp/container/multimap/find
+bool operator<(const K &a_, const K &b_){
 //if(a_.y==b_.y){return a_.x<b_.x;}
 return (a_.y<b_.y); //&&(a_.x<b_.x);
 }
