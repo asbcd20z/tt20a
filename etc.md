@@ -154,6 +154,7 @@ bash-prompt-Linux命令行提示符修改【全攻略】 https://vimsky.com/arti
 
 ### more1
 https://asn1.io/asn1playground/  
+baidu:asn.1编码规则  ASN.1编码方式详解 https://www.cnblogs.com/NathanYang/p/9951282.html  
 CI/CD devops  git/gerrit/zuul/jenkins/  
 Gerrit 笔记 https://www.cnblogs.com/milton/p/12576792.html  
 proxy.pac https://wenku.baidu.com/view/1d29739ea2161479171128a6.html  
