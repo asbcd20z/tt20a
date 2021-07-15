@@ -155,6 +155,8 @@ bash-prompt-Linux命令行提示符修改【全攻略】 https://vimsky.com/arti
 ### more1
 https://asn1.io/asn1playground/  
 baidu:asn.1编码规则  ASN.1编码方式详解 https://www.cnblogs.com/NathanYang/p/9951282.html  
+ASN1编码规则详解.doc https://max.book118.com/html/2018/1030/6031242001001225.shtm  
+python第三方库asn1tools  https://github.com/eerimoq/asn1tools  
 CI/CD devops  git/gerrit/zuul/jenkins/  
 Gerrit 笔记 https://www.cnblogs.com/milton/p/12576792.html  
 proxy.pac https://wenku.baidu.com/view/1d29739ea2161479171128a6.html  
@@ -166,6 +168,7 @@ Docker安装和常用命令 https://www.cnblogs.com/milton/p/9866963.html
 迁移Git项目到Gitlab https://www.cnblogs.com/milton/p/11053007.html  OpenSSL的证书, 私钥和签名请求(CSRs)www.cnblogs.com/milton/p/11076925.html  
 github仓库迁移到gitlab以及gitlab仓库迁移到另一个gitlab服务器# https://www.cnblogs.com/saysmy/p/10942814.html  
 typeset; man bash |grep PROMPT_DIRTRIM=3  PS1==https://www.cnblogs.com/wi100sh/p/4814745.html  
+export PS1="\[\e[1m\]\w\[\e[0m\] [\u@\h \W]$ "  
 Bootloader之uBoot简介##https://www.cnblogs.com/wi100sh/p/4255081.html  
 endian如何判断CPU是大端还是小端模式 https://www.cnblogs.com/wi100sh/p/4899466.html  
 重载(overload)，覆盖(override),隐藏(hide)的区别 https://www.cnblogs.com/wi100sh/p/4325397.html https://www.cnblogs.com/wi100sh/p/4325336.html  
@@ -203,12 +206,17 @@ https://forum.sublimetext.com/t/disable-a-new-version-of-sublime-text-is-availab
 https://github.com/sublimehq/sublime_text/issues/1206  (merge 127.0.0.1/0.0.0.0 www.sublimetext.com into /etc/hosts)
 {//sublime3 settings
 	"font_size": 9,
+	//"trim_trailing_white_space_on_save": false, //Sublime自动去除代码行尾多余的空格-否
 	"ignored_packages": ["Vintage"]
 	///"highlight_line": true,
 	"update_check": false
 }
 sublime - sublimerge 文本比较插件  https://blog.csdn.net/qq250782929/article/details/78983119
 sublime--[ctrl]+[alt]+[d]                      - display Quick Panel with commands available for current view //or文件标签上右点击
+设置sublime自动换行的两种方法:
+1.   方法一，通过菜单栏的View----> Word Wrap进行勾选设置
+2.   方法二， Preferences--->Settings--->Preferences.sublime-settings-User，添加 "word_wrap":true
+Sublime Text 2 设置文件详解  https://blog.csdn.net/xlh1991/article/details/39099833
 ```
 
 ### python
