@@ -405,6 +405,7 @@ c++ 虚继承与虚函数表 https://www.cnblogs.com/xkfz007/archive/2012/07/15/
 google关于ssh key的解释（转）转的google的wiki的 https://www.cnblogs.com/likui360/p/6012075.html  
 pidof, lsof, htop, strace/ltrace, chmod, lsattr -a/chattr  
 lsattr命令: 显示文件属性介绍 https://blog.csdn.net/weixin_34021089/article/details/92872999  
+hexdump, xxd  
 
 
 ### lang/script

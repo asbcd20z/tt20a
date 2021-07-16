@@ -19,6 +19,7 @@ import sys; sys.path ;print(sys.path)
 #pyy -i ctypesstructure.py
 #bytes.hex()
 #binascii.hexlify(b'abc'); binascii.b2a_hex(b'abc');
+#binascii.hexlify(b'abc\xff').decode('ascii')
 
 import pdb
 import ctypes
