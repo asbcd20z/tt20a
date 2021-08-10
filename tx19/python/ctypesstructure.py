@@ -20,6 +20,7 @@ import sys; sys.path ;print(sys.path)
 #bytes.hex()
 #binascii.hexlify(b'abc'); binascii.b2a_hex(b'abc');
 #binascii.hexlify(b'abc\xff').decode('ascii')
+#binascii.hexlify('123ab'.encode()).decode('ascii')
 
 import pdb
 import ctypes
