@@ -19,6 +19,7 @@ https://en.cppreference.com/w/cpp/container/vector
 https://zh.cppreference.com/w/c/io/fprintf  
 https://zh.cppreference.com/w/cpp/io  
 https://coliru.stacked-crooked.com/  
+https://cppinsights.io/  
 https://zh.cppreference.com/w/Cppreference:Archives  
 http://www.cplusplus.com/reference/stl/  
 http://www.cplusplus.com/reference/ios/  
@@ -120,6 +121,19 @@ https://github.com/qianyubl/WATCH_dojo
 https://github.com/search?l=C&p=5&q=timer+c&type=Repositories  
 
 
+## tools/coding
+```
+https://en.cppreference.com/w/
+https://cppinsights.io/
+推荐几款实用的C++ 在线工具 https://www.jb51.net/article/197290.htm
+https://wandbox.org/
+https://quick-bench.com/q/eP40RY6zDK-eJFdSSPBINa0apTM
+https://gcc.godbolt.org/ -https://github.com/compiler-explorer/compiler-explorer
+https://cppinsights.io/  -https://github.com/andreasfertig/cppinsights
+https://build-bench.com/b/47ciR2_jQ0RuAt2fy1Pnk66b3yM
+```
+
+
 ## tools/markdown/asciidoc/graphviz/plantuml/planttext.com/svg
 方便好用的在线UML制作工具：PlantUML https://www.jianshu.com/p/c006dcb1493b  
 如何在线编辑显示markdown/plantuml/graphiz? https://segmentfault.com/q/1010000002802979  
@@ -218,6 +232,10 @@ sublime--[ctrl]+[alt]+[d]                      - display Quick Panel with comman
 1.   方法一，通过菜单栏的View----> Word Wrap进行勾选设置
 2.   方法二， Preferences--->Settings--->Preferences.sublime-settings-User，添加 "word_wrap":true
 Sublime Text 2 设置文件详解  https://blog.csdn.net/xlh1991/article/details/39099833
+//view->word_wrap
+sublime 快捷键设置 (word_wrap) https://www.jianshu.com/p/04ef6fe437b7
+https://sublime-text-unofficial-documentation.readthedocs.io/en/latest/reference/commands.html#cmd-list
+Sublime Text3—自带快捷键介绍  https://www.cnblogs.com/easy-blue/p/5809760.html
 ```
 
 ### python
