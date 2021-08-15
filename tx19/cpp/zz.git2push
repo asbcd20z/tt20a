@@ -118,5 +118,4 @@ MINGW64 /c/xd/tmpd/tgit/a1/test20210208syn (main)$ MINGW64 /c/xd/tmpd/tgit/a1/tt
 [remote "github"]
   url = https://github.com/asbcd20z/test20210208syn
   fetch = +refs/heads/*:refs/remotes/github/*
-
 ===
