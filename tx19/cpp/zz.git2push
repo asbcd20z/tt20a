@@ -35,6 +35,7 @@ MINGW64 /c/xd/tmpd/tgit/a1/test20210208syn (main)$ git branch --set-upstream-to=
 MINGW64 /c/xd/tmpd/tgit/a1/test20210208syn (main)$ git branch -u                origin/main main
 MINGW64 /c/xd/tmpd/tgit/a1/test20210208syn (main)$ diff .git/config .git/config.bb00
 MINGW64 /c/xd/tmpd/tgit/a1/test20210208syn (main)$ 
+MINGW64 /c/xd/tmpd/tgit/a1/test20210208syn (main)$ 
 MINGW64 /c/xd/tmpd/tgit/a1/test20210208syn (main)$ ///
 MINGW64 /c/xd/tmpd/tgit/a1/test20210208syn (main)$ git push   github main
 Logon failed, use ctrl+c to cancel basic credential prompt.
@@ -73,3 +74,49 @@ MINGW64 /c/xd/tmpd/tgit/a1/test20210208syn (main)$ git branch -a -vv
   remotes/origin/HEAD -> origin/main
   remotes/origin/main 713fab4 README.md--jqedit@hub
 MINGW64 /c/xd/tmpd/tgit/a1/test20210208syn (main)$
+MINGW64 /c/xd/tmpd/tgit/a1/test20210208syn (main)$
+MINGW64 /c/xd/tmpd/tgit/a1/test20210208syn (main)$
+===
+MINGW64 /c/xd/tmpd/tgit/a1/test20210208syn (main)$ git remote add  github https://github.com/asbcd20z/test20210208sy
+MINGW64 /c/xd/tmpd/tgit/a1/test20210208syn (main)$ git branch --set-upstream-to=origin/main main  //not use, set [branch] to [remote]?
+MINGW64 /c/xd/tmpd/tgit/a1/test20210208syn (main)$ git branch -u                origin/main main  //not use
+MINGW64 /c/xd/tmpd/tgit/a1/test20210208syn (main)$ git push -u github main    // upstream and push, not use
+MINGW64 /c/xd/tmpd/tgit/a1/test20210208syn (main)$ git push   github main
+MINGW64 /c/xd/tmpd/tgit/a1/test20210208syn (main)$ MINGW64 /c/xd/tmpd/tgit/a1/tt20a (master)$ cat .git/config
+[user]
+        name=jqasbcd20z
+        email=jqasbcd20z@q.com
+
+[core]
+  repositoryformatversion = 0
+  filemode = false
+  bare = false
+  logallrefupdates = true
+  symlinks = false
+  ignorecase = true
+[remote "origin"]
+  url = https://gitlab.com/asbcd20z/test20210208syn
+  #url = https://asbcd20z@gitlab.com/asbcd20z/test20210208syn
+  fetch = +refs/heads/*:refs/remotes/origin/*
+[branch "main"]
+  remote = origin
+  merge = refs/heads/main
+
+[http]
+#        proxy = 135.245.48.34:8000
+       proxy = 135.251.33.16:8080 #15
+#       proxy = 10.167.32.133:8080
+#       proxy = 127.0.0.1:1087
+[xuser]
+        name=jqasbcd20z
+        email=jqasbcd20z@q.com
+
+
+[xgui]
+  wmstate = normal
+  geometry = 1034x563+32+32 216 255
+[remote "github"]
+  url = https://github.com/asbcd20z/test20210208syn
+  fetch = +refs/heads/*:refs/remotes/github/*
+
+===
