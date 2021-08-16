@@ -82,6 +82,8 @@ MINGW64 /c/xd/tmpd/tgit/a1/test20210208syn (main)$ git branch --set-upstream-to=
 MINGW64 /c/xd/tmpd/tgit/a1/test20210208syn (main)$ git branch -u                origin/main main  //not use
 MINGW64 /c/xd/tmpd/tgit/a1/test20210208syn (main)$ git push -u github main    // upstream and push, not use
 MINGW64 /c/xd/tmpd/tgit/a1/test20210208syn (main)$ git push   github main
+MINGW64 /c/xd/tmpd/tgit/a1/test20210208syn (main)$ //## git push -n -v
+MINGW64 /c/xd/tmpd/tgit/a1/test20210208syn (main)$ //##pgit push  [my-origin] [my-branch] [-u]
 MINGW64 /c/xd/tmpd/tgit/a1/test20210208syn (main)$ cat .git/config
 [user]
         name=jqasbcd20z

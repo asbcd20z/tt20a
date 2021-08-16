@@ -8,7 +8,7 @@
 	name=z
 	email=z
 [alias]
-	#@time20210314a
+	#@time20210816a
 	#git clean -x -f -d  # rm  untracked files
 	#git rm --cached aa.txt
 	#git add -u  # -A -f --dry-run
@@ -73,7 +73,7 @@
 	# eg: git branch --set-upstream-to=origin/main main
 	# or, git branch -u origin/main main
 	# or, git push -u orign/main main
-	# git push -n  ##--dry-run  ##--all --tags  ##-f -d
+	# git push -n  -v ##--dry-run  ##--all --tags  ##-f -d
 	#git push origin master
 	#git push origin :
 	#git push --all; git push --tags; git push --mirror  ## push-all-branches/-or-tags/-or-alls-in-refs
@@ -85,6 +85,7 @@
 	#git config -l; git var -l
 	#Git Submodule使用完整教程 https://www.cnblogs.com/lsgxeva/p/8540758.html
 	#git中submodule子模块的添加、使用和删除 https://blog.csdn.net/guotianqing/article/details/82391665
+
 
 [xcolor]
 	status=auto
