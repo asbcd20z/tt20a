@@ -131,6 +131,14 @@ https://quick-bench.com/q/eP40RY6zDK-eJFdSSPBINa0apTM
 https://gcc.godbolt.org/ -https://github.com/compiler-explorer/compiler-explorer
 https://cppinsights.io/  -https://github.com/andreasfertig/cppinsights
 https://build-bench.com/b/47ciR2_jQ0RuAt2fy1Pnk66b3yM
+推荐几个好用的在线编译器  https://zhuanlan.zhihu.com/p/58294969
+https://www.onlinegdb.com/
+https://wandbox.org/
+https://godbolt.org/
+geeksforgeeks https://ide.geeksforgeeks.org/index.php
+codechef https://www.codechef.com/ide
+菜鸟工具　https://c.runoob.com/compile/12
+ideone https://www.ideone.com/
 ```
 
 
