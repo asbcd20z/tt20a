@@ -121,7 +121,7 @@ https://github.com/qianyubl/WATCH_dojo
 https://github.com/search?l=C&p=5&q=timer+c&type=Repositories  
 
 
-## tools/coding
+## tools/coding/online
 ```
 https://en.cppreference.com/w/
 https://cppinsights.io/
@@ -139,6 +139,8 @@ geeksforgeeks https://ide.geeksforgeeks.org/index.php
 codechef https://www.codechef.com/ide
 菜鸟工具　https://c.runoob.com/compile/12
 ideone https://www.ideone.com/
+=online
+https://code.woboq.org/
 ```
 
 
@@ -360,6 +362,13 @@ Google开源C++单元测试框架Google Test-gtest https://www.cnblogs.com/kex1n
 Google C++单元测试 GTest https://www.cnblogs.com/kex1n/p/8981552.html  http://www.cnblogs.com/jycboy/p/6057677.html  
 开源-GIT常用命令 https://www.cnblogs.com/kex1n/p/6141166.html  
 Linux命令中：rsync和cp之间的区别 https://www.cnblogs.com/kex1n/p/7008178.html  
+python 有 rsync 库吗？ https://pypi.python.org/pypi/rsync.py  
+pyrsync https://pypi.org/project/pyrsync/0.1.0/  
+在python中寻找类似rsync的跨平台功能，例如rsync.py https://www.orcode.com/question/1048465_k67553.html  
+https://www.cnpython.com/pypi/rsync4python  
+在Windows中配置Rsync同步 https://www.cnblogs.com/janas/p/3321087.html  
+rsync windows/https://www.itefix.net/cwrsync  
+rsync putty/https://www.chiark.greenend.org.uk/~sgtatham/putty/latest.html  
 如何在socket编程的Tcp连接中实现心跳协议 https://www.cnblogs.com/kex1n/p/7448552.html  http://blog.csdn.net/nyist327/article/details/39586203  
 Python学习之Socket通信的实现  https://blog.csdn.net/m0_37717595/article/details/81101895  
 thread_name-pthread--linux编程 - 给线程起名字_落尘纷扰的专栏-CSDN博客(prctl()/pthread_setname_np()) https://blog.csdn.net/jasonchen_gbd/article/details/51308638  

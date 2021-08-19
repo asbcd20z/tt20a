@@ -51,7 +51,8 @@
 	##
 	# git rebase -i HEAD~4  ## git rebase -i <after-this-commit> # merge HEAD~4..HEAD
 	# git cherry-pick ciid1 ciid2..
-	#https://git-scm.com/book/zh/v2/Git-分支-变基
+	#https://git-scm.com/book/zh/v2/Git-分支-变基  //rebase
+	#-git rebase --onto master server client  ##then, git checkout master; git merge client
 	# gerrit,gitweb,Gitiles
 	# git instaweb --httpd=webrick  ## git-scm.com/book/zh/v2/服务器上的-Git-GitWeb
 	lol= log -9 --pretty='%h %cI%d %s  .%an'
