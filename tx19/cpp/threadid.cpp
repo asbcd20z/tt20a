@@ -6,6 +6,7 @@ ls -l ${0%%.cpp}*  a.*
 ./a.exe
 exit 0;
 #endif
+//thread_local, std::mutex, std::lock_guard
 
 #include <iostream>
 #include <thread>

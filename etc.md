@@ -141,6 +141,8 @@ codechef https://www.codechef.com/ide
 ideone https://www.ideone.com/
 =online
 https://code.woboq.org/
+https://code.woboq.org/linux/linux/init/main.c.html#start_kernel
+https://code.woboq.org/linux/linux/include/linux/compiler_attributes.h.html#194
 ```
 
 
@@ -394,6 +396,7 @@ gcc选项-g与-rdynamic的异同 ### https://www.cnblogs.com/LiuYanYGZ/p/5550544
 //linux syslog详解  https://www.cnblogs.com/LiuYanYGZ/p/12425234.html  摘自https://blog.csdn.net/know9163/article/details/81901207  
 关于weakref的用法  https://blog.csdn.net/wang1902568721/article/details/71159699  
 // https://gcc.gnu.org/onlinedocs/gcc/Common-Function-Attributes.html#Common-Function-Attributes  
+///weakref https://gcc.gnu.org/onlinedocs/gcc/Common-Function-Attributes.html#index-weak-function-attribute  
 __attribute__ 机制详解  https://www.cnblogs.com/tureno/articles/12236495.html  https://blog.csdn.net/weaiken/article/details/88085360  
 
 

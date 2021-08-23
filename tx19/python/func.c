@@ -45,7 +45,8 @@ struct mycc func2(int a)
 
 __attribute__((weak)) 
 int mainw(int x_){printf("mainw\n");}
-//int mainw2(int x) __attribute__((weakref("mainw")))
+static int mainw2(int x) __attribute__((weakref("mainw")));
+// weakref  must be static. https://gcc.gnu.org/onlinedocs/gcc/Common-Function-Attributes.html#index-weak-function-attribute
 
 //__attribute__((weak))  //linux ok, but cywin fails when ld
 int main(int ac, char* av[]){printf("hi..\n"); mainw(1);}
