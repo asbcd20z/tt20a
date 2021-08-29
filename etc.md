@@ -139,10 +139,23 @@ geeksforgeeks https://ide.geeksforgeeks.org/index.php
 codechef https://www.codechef.com/ide
 菜鸟工具　https://c.runoob.com/compile/12
 ideone https://www.ideone.com/
-=online
+=
+=online-code-review (linux)
 https://code.woboq.org/
 https://code.woboq.org/linux/linux/init/main.c.html#start_kernel
 https://code.woboq.org/linux/linux/include/linux/compiler_attributes.h.html#194
+http://lxr.free-electrons.com/ , https://elixir.bootlin.com/linux/latest/source
+https://elixir.bootlin.com/busybox/1.34.0/source
+https://elixir.bootlin.com/barebox/latest/source
+https://elixir.bootlin.com/linux/v2.6.39.4/source/init/main.c#L456 //init_post
+https://elixir.bootlin.com/linux/v3.19.8/source/Documentation/initrd.txt
+https://elixir.bootlin.com/linux/2.0.40/source/Documentation/initrd.txt
+https://elixir.bootlin.com/linux/2.0.40/source/Documentation/nfsroot.txt
+https://elixir.bootlin.com/linux/v3.19.8/source/Documentation/early-userspace
+https://elixir.bootlin.com/linux/v5.6.19/source/Documentation/filesystems/ramfs-rootfs-initramfs.txt
+https://github.com/torvalds/linux/blob/master/Documentation/filesystems/ramfs-rootfs-initramfs.rst
+Initramfs 原理和实践 https://www.cnblogs.com/wipan/p/9269505.html
+关于initramfs https://blog.csdn.net/laohuang1122/article/details/8243271
 ```
 
 
@@ -179,6 +192,7 @@ TIPC  https://blog.csdn.net/yunlong34574/article/details/42460803  http://blog.c
 bash-prompt-Linux命令行提示符修改【全攻略】 https://vimsky.com/article/4284.html  
 
 ### more1
+```
 https://asn1.io/asn1playground/  
 baidu:asn.1编码规则  ASN.1编码方式详解 https://www.cnblogs.com/NathanYang/p/9951282.html  
 ASN.1笔记——标准编码规则BER https://blog.csdn.net/sever2012/article/details/7698297/  
@@ -206,11 +220,14 @@ https://docs.gitlab.com/ee/api/markdown.html
 第三方登录原理及实现       https://blog.csdn.net/xihua1244914259/article/details/79000813  
 了解一下第三方登录         https://blog.csdn.net/y4x5m0nivsrjay3x92c/article/details/89369466  
 第三方账号登录功能接入全流程浅析  http://www.woshipm.com/pd/727011.html  
+```
 
 ### more2
+```
 在语雀绘制PlantUML图 https://www.yuque.com/barretlee/yuque/aabh67  
 糙读《如何高效记忆》后的读后感 https://www.yuque.com/sulirc/virtue/wrbp4i  
 gitbook https://www.jianshu.com/p/421cc442f06c  
+sudo, chroot, fakeroot
 Linux常用操作# https://blankj.com/gitbook/linux/ https://github.com/Blankj/AndroidOfferKiller  
 //curl 的用法指南 http://www.ruanyifeng.com/blog/2019/09/curl-reference.html  
 //JavaScript 有多灵活？ http://www.ruanyifeng.com/blog/2015/02/flexible-javascript.html  
@@ -225,6 +242,9 @@ Protobuf3语法详解 https://www.cnblogs.com/tohxyblog/p/8974763.html
 python c struct/python之struct详解  https://blog.csdn.net/qq_30638831/article/details/80421019  
 PYTHON C/C++结构体 ctypes.Structure https://www.cnblogs.com/yang220/p/12091863.html   https://www.programcreek.com/python/example/1122/ctypes.Structure  
 date +%FT%T.%Nz -u  
+```
+
+### more3
 VI模式中上下左右键和回退键出现字母 set nocompatible backspace=2 hlsearch https://www.cnblogs.com/wangshuyi/p/6078678.html  
 vim set nu=number hl=hlsearch ic=ignorecase ai=autoindex ruler showmode  :q noxx  #export EXINIT='set nu'  
 ```
@@ -376,6 +396,7 @@ Python学习之Socket通信的实现  https://blog.csdn.net/m0_37717595/article/
 thread_name-pthread--linux编程 - 给线程起名字_落尘纷扰的专栏-CSDN博客(prctl()/pthread_setname_np()) https://blog.csdn.net/jasonchen_gbd/article/details/51308638  
 
 ### linux/c/lib.so ,//gcc+gdb
+```
 https://www.man7.org/linux/man-pages/man1/ldd.1.html  , ldconfig和ldd用法-https://www.cnblogs.com/foohack/p/4105847.html  
 https://www.man7.org/linux/man-pages/man8/ld.so.8.html  
 LIBRARY_PATH(静态链接库lib.a),  LD_LIBRARY_PATH,LD_PRELOAD  //dlopen  
@@ -398,6 +419,10 @@ gcc选项-g与-rdynamic的异同 ### https://www.cnblogs.com/LiuYanYGZ/p/5550544
 // https://gcc.gnu.org/onlinedocs/gcc/Common-Function-Attributes.html#Common-Function-Attributes  
 ///weakref https://gcc.gnu.org/onlinedocs/gcc/Common-Function-Attributes.html#index-weak-function-attribute  
 __attribute__ 机制详解  https://www.cnblogs.com/tureno/articles/12236495.html  https://blog.csdn.net/weaiken/article/details/88085360  
+https://gcc.gnu.org/onlinedocs/gcc/Common-Function-Attributes.html#index-finstrument-functions-1
+///(__cyg_profile_func_enter) 调试技巧之 gcc/g++ -instrument-functions 参数 https://blog.csdn.net/tycoon1988/article/details/38924241
+```
+
 
 
 ### linux/syslog/syslogd
