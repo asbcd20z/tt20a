@@ -109,7 +109,16 @@ gitlab项目仓库自动同步到github或者码云gitee https://blog.csdn.net/z
 Gitlab代码库自动同步到Github https://blog.csdn.net/kelvin_yin/article/details/86661066  
 gitlab Repository mirroring https://gitlab.com/help/workflow/repository_mirroring.html  https://gitlab.com/help/user/project/repository/repository_mirroring.md  
 GitLab仓库重命名以及GitHub仓库的删除https://www.jianshu.com/p/d6f7da6bd275  (new-setting\project-name,Advanced\Change-path)  
-
+```
+remote: Support for password authentication was removed on August 13, 2021. Please use a personal access token instead.
+remote: Please see https://github.blog/2020-12-15-token-authentication-requirements-for-git-operations/ for more information.
+Push上传出错：Support for password authentication was removed on August 13, 2021.git did not exit cleanly
+--https://blog.csdn.net/m0_46332820/article/details/119708248
+--https://docs.github.com/en/github/authenticating-to-github/keeping-your-account-and-data-secure/creating-a-personal-access-token
+--https://github.com/settings/tokens
+--https://xiazemin.github.io/MyBlog/web/2021/08/14/github_token.html
+--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21a
+```
 
 ## git17-hi-memo1
 https://github.com/asbcd17z/hi1/blob/master/memo1.txt  
