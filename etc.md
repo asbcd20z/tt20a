@@ -120,6 +120,21 @@ Push上传出错：Support for password authentication was removed on August 13,
 --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21a
 ```
 
+## //gitlab.CI/CD
+```
+GitLab CI/CD 基础教程（一） https://blog.csdn.net/bingfeilongxin/article/details/88326984 , https://blog.stdioa.com/2018/06/gitlab-cicd-fundmental/
+gitlab中CI/CD自动化部署使用 https://pibigstar.blog.csdn.net/article/details/82762413
+GitLab CI/CD (cube6)  https://www.cnblogs.com/cjsblog/p/12256843.html
+-gitlab image
+GitLab-CI 来自动创建 Docker 镜像  https://www.cnblogs.com/jingtyu/p/6993763.html
+-ci.yaml
+https://gitlabe2.ext.net.nokia.com/help/ci/yaml/README.md#needs
+https://docs.gitlab.com/ee/ci/yaml/index.html
+https://docs.gitlab.com/ee/ci/docker/using_docker_build.html
+-ci.gitlab.image
+# see https://hub.docker.com/_/gcc/
+```
+
 ## git17-hi-memo1
 https://github.com/asbcd17z/hi1/blob/master/memo1.txt  
 ###Google Chrome版本 72.0.3626.119（正式版本）（64 位）, firefox 65.0.1 (64 位)  
@@ -254,6 +269,8 @@ date +%FT%T.%Nz -u
 ```
 
 ### more3
+Linux、Windows、Mac换行符相互转换方法  https://blog.csdn.net/Hehuyi_In/article/details/89735510  
+批量换行符mac转unix  sed -bi 's:\r:\n:g' files*   ///sed 's,a/b/i'  ///tr "\r" "\n" <macfile >unixfile  
 VI模式中上下左右键和回退键出现字母 set nocompatible backspace=2 hlsearch https://www.cnblogs.com/wangshuyi/p/6078678.html  
 vim set nu=number hl=hlsearch ic=ignorecase ai=autoindex ruler showmode  :q noxx  #export EXINIT='set nu'  
 ```
@@ -325,6 +342,8 @@ Python 调试器之pdb https://www.cnblogs.com/xiaohai2003ly/p/8529472.html
 3.5.2chm-Python » 3.5.2 Documentation » Python HOWTOs » Descriptor HowTo Guide // https://docs.python.org/2/howto/descriptor.html#descriptor-protocol  
 3.5.2chm-Python Language Reference/3. Data model/3.3. Special method names(__new__)/3.3.3. Customizing class creation(metaclass)/3.3.2. Customizing attribute access(__getattr__)  
 data descriptor, property  
+Python Hacking: “高级”偏函数 https://blog.stdioa.com/2018/12/python-hacking-advanced-partial/  
+Python学习之logging https://blog.stdioa.com/2015/10/learning-python-logging/  
 python logging详解及自动添加上下文信息 https://www.cnblogs.com/xybaby/p/9197032.html  
 关于metaclass，我原以为我是懂的# https://www.cnblogs.com/xybaby/p/7927407.html  //mixin  
 https://stackoverflow.com/questions/100003/what-are-metaclasses-in-python  深刻理解Python中的元类(metaclass) https://www.jianshu.com/p/e017bc810702  

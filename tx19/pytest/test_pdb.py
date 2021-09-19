@@ -1,5 +1,8 @@
 
 #pytest test_pdb.py
+#inspect.getfullargspec , inspect.signature
+#eg: Python Hacking: “高级”偏函数 https://blog.stdioa.com/2018/12/python-hacking-advanced-partial/
+
 
 import pdb
 import inspect  ## inspect.getfullargspec(func)
