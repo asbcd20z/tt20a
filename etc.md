@@ -118,6 +118,7 @@ Push上传出错：Support for password authentication was removed on August 13,
 --https://github.com/settings/tokens
 --https://xiazemin.github.io/MyBlog/web/2021/08/14/github_token.html
 --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21a
+docker 查看镜像 https://blog.csdn.net/weixin_39892309/article/details/113067230
 ```
 
 ## //gitlab.CI/CD
@@ -131,8 +132,14 @@ GitLab-CI 来自动创建 Docker 镜像  https://www.cnblogs.com/jingtyu/p/69937
 https://gitlabe2.ext.net.nokia.com/help/ci/yaml/README.md#needs
 https://docs.gitlab.com/ee/ci/yaml/index.html
 https://docs.gitlab.com/ee/ci/docker/using_docker_build.html
+gitlab>prj>CI/CD configuration>Browse templates
+-https://gitlab.com/gitlab-org/gitlab-foss/tree/master/lib/gitlab/ci/templates
 -ci.gitlab.image
-# see https://hub.docker.com/_/gcc/
+# see https://hub.docker.com/_/gcc/ , https://hub.docker.com/_/busybox
+https://www.runoob.com/docker/windows-docker-install.html
+docker 查看镜像_Docker容器部署及使用 https://blog.csdn.net/weixin_39892309/article/details/113067230
+(docker网络互通) Docker之四种网络模式 、容器的互通与隔离  https://blog.csdn.net/lilygg/article/details/88616218
+                Docker网络详解——原理篇  https://blog.csdn.net/meltsnow/article/details/94490994
 ```
 
 ## git17-hi-memo1
@@ -269,11 +276,13 @@ date +%FT%T.%Nz -u
 ```
 
 ### more3
+```
 Linux、Windows、Mac换行符相互转换方法  https://blog.csdn.net/Hehuyi_In/article/details/89735510  
-批量换行符mac转unix  sed -bi 's:\r:\n:g' files*   ///sed 's,a/b/i'  ///tr "\r" "\n" <macfile >unixfile  
+批量换行符mac转unix  sed -bi 's:\r:\n:g' files*   ///sed 's,a/b/i'  ///tr "\r" "\n" <macfile >unixfile
+-echo -e 'ab\rc\n' |hexdump -C
 VI模式中上下左右键和回退键出现字母 set nocompatible backspace=2 hlsearch https://www.cnblogs.com/wangshuyi/p/6078678.html  
 vim set nu=number hl=hlsearch ic=ignorecase ai=autoindex ruler showmode  :q noxx  #export EXINIT='set nu'  
-```
+sublime3-text:
 //Disable “A new version of Sublime Text is available, download now?” in Sublime 3 (stable channel)
 https://forum.sublimetext.com/t/disable-a-new-version-of-sublime-text-is-available-download-now-in-sublime-3-stable-channel/19961
 https://github.com/sublimehq/sublime_text/issues/1206  (merge 127.0.0.1/0.0.0.0 www.sublimetext.com into /etc/hosts)
@@ -484,6 +493,7 @@ web-http-server (embedding)  https://gitee.com/louisyou/mongoose  https://github
 
 
 ### linux/bash
+```
 bash参考文档.html https://yiyibooks.cn/Phiix/bash_reference_manual/bash参考文档.html#Shell-Expansions  
 .. https://yiyibooks.cn/Phiix/bash_reference_manual/bash%E5%8F%82%E8%80%83%E6%96%87%E6%A1%A3.html#Shell-Expansions  
 Bash中文手册  https://gitee.com/ccnuacm/bash-manual-zh  
@@ -497,7 +507,11 @@ google关于ssh key的解释（转）转的google的wiki的 https://www.cnblogs.
 pidof, lsof, htop, strace/ltrace, chmod, lsattr -a/chattr  
 lsattr命令: 显示文件属性介绍 https://blog.csdn.net/weixin_34021089/article/details/92872999  
 hexdump, xxd  
-
+ip+ifconfig+busybox //Linux下IP命令使用详解  https://www.cnblogs.com/liunaixu/p/12808936.html
+试试Linux下的ip命令，ifconfig已经过时了  https://linux.cn/article-3144-1.html
+linux命令总结之ip命令  https://www.cnblogs.com/ginvip/p/6367803.html
+配置IP别名 https://blog.51cto.com/dianel/1921129 https://blog.51cto.com/sharan/726600
+```
 
 ### lang/script
 lua/(wireshark plugin)  https://www.runoob.com/lua  http://www.lua.org/docs.html  
