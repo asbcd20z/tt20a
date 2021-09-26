@@ -138,6 +138,10 @@ gitlab>prj>CI/CD configuration>Browse templates
 # see https://hub.docker.com/_/gcc/ , https://hub.docker.com/_/busybox
 https://www.runoob.com/docker/windows-docker-install.html
 docker 查看镜像_Docker容器部署及使用 https://blog.csdn.net/weixin_39892309/article/details/113067230
+-(可选加速image镜像库 /etc/docker/daemon.json)  https://hub.docker.com/explore
+https://www.runoob.com/docker/docker-tutorial.html , https://docs.docker.com/get-started/
+docker image存储路径_Docker架构与基本操作  https://blog.csdn.net/weixin_39548606/article/details/111214747
+baidu:docker image存储路径(/var/lib/docker/)
 (docker网络互通) Docker之四种网络模式 、容器的互通与隔离  https://blog.csdn.net/lilygg/article/details/88616218
                 Docker网络详解——原理篇  https://blog.csdn.net/meltsnow/article/details/94490994
 ```
@@ -367,6 +371,7 @@ python 编程风格术语说明 EAFP: Easier to ask for forgiveness than permiss
 猴子补丁(monkey patch) JSONEncoder https://www.jianshu.com/p/f1060b22aab8  
 Python MRO方法解析顺序详解 (c3算法) http://c.biancheng.net/view/5450.html  
 Python拼接字符串的7种方法总结 https://www.jb51.net/article/149991.htm  
+//python3 -m json.tool  
 
 
 ### python-https
@@ -458,6 +463,7 @@ gcc选项-g与-rdynamic的异同 ### https://www.cnblogs.com/LiuYanYGZ/p/5550544
 __attribute__ 机制详解  https://www.cnblogs.com/tureno/articles/12236495.html  https://blog.csdn.net/weaiken/article/details/88085360  
 https://gcc.gnu.org/onlinedocs/gcc/Common-Function-Attributes.html#index-finstrument-functions-1
 ///(__cyg_profile_func_enter) 调试技巧之 gcc/g++ -instrument-functions 参数 https://blog.csdn.net/tycoon1988/article/details/38924241
+uclibc,eglibc,glibc,Musl-libc之间的区别和联系  https://www.sohu.com/a/164202127_424963
 ```
 
 
