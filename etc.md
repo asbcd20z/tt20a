@@ -136,9 +136,11 @@ gitlab>prj>CI/CD configuration>Browse templates
 -https://gitlab.com/gitlab-org/gitlab-foss/tree/master/lib/gitlab/ci/templates
 -ci.gitlab.image
 # see https://hub.docker.com/_/gcc/ , https://hub.docker.com/_/busybox
+# docker search busybox  ///https://index.docker.io/v1/search?q=busybox&n=25
 https://www.runoob.com/docker/windows-docker-install.html
 docker 查看镜像_Docker容器部署及使用 https://blog.csdn.net/weixin_39892309/article/details/113067230
 -(可选加速image镜像库 /etc/docker/daemon.json)  https://hub.docker.com/explore
+Docker安装和常用命令 https://www.cnblogs.com/milton/p/9866963.html  
 https://www.runoob.com/docker/docker-tutorial.html , https://docs.docker.com/get-started/
 docker image存储路径_Docker架构与基本操作  https://blog.csdn.net/weixin_39548606/article/details/111214747
 baidu:docker image存储路径(/var/lib/docker/)
@@ -174,6 +176,7 @@ geeksforgeeks https://ide.geeksforgeeks.org/index.php
 codechef https://www.codechef.com/ide
 菜鸟工具　https://c.runoob.com/compile/12
 ideone https://www.ideone.com/
+https://www.tutorialspoint.com/compile_cpp_online.php
 =
 =online-code-review (linux)
 https://code.woboq.org/

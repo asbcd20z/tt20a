@@ -1,4 +1,6 @@
 
+//docker ps
+//docker search busybox
 //docker images
 //docker pull hello-world
 //docker run hello-world
@@ -35,7 +37,7 @@ $ tar -xvf hello-world.dockimg.tar c28b9c2faac407005d4d657e49f372fb3579a47dd4e4d
 c28b9c2faac407005d4d657e49f372fb3579a47dd4e4d87d13e29edd1c912d5c/layer.tar
 -rwxrwxr-x 0/0           13256 2021-09-24 07:47 hello
 
-$ tar -xvf hello-world.dockimg.tar c28b9c2faac407005d4d657e49f372fb3579a47dd4e4d87d13e29edd1c912d5c/layer.tar -O |tar -xv hello
+$ tar -xvf hello-world.dockimg.tar  */layer.tar -O |tar -xv hello
 c28b9c2faac407005d4d657e49f372fb3579a47dd4e4d87d13e29edd1c912d5c/layer.tar
 hello
 
