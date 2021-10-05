@@ -96,6 +96,7 @@
 	status=auto
 [xhttp]
 	#http_proxy=http://10.158.100.8:8080 #//sct
+	#http_proxy=http://10.158.100.1:8080 #gitlabe1cs?
 #        proxy = 135.245.48.34:8000
 #	proxy = 135.251.33.16:8080 #15
 #       proxy = 10.167.32.133:8080

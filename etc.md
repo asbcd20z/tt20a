@@ -135,17 +135,34 @@ https://docs.gitlab.com/ee/ci/docker/using_docker_build.html
 gitlab>prj>CI/CD configuration>Browse templates
 -https://gitlab.com/gitlab-org/gitlab-foss/tree/master/lib/gitlab/ci/templates
 -ci.gitlab.image
-# see https://hub.docker.com/_/gcc/ , https://hub.docker.com/_/busybox
+#
+# see https://hub.docker.com/_/gcc/ , hub.docker.com/_/busybox/?tab=tags , hub.docker.com/_/hello-world/
 # docker search busybox  ///https://index.docker.io/v1/search?q=busybox&n=25
 https://www.runoob.com/docker/windows-docker-install.html
 docker 查看镜像_Docker容器部署及使用 https://blog.csdn.net/weixin_39892309/article/details/113067230
 -(可选加速image镜像库 /etc/docker/daemon.json)  https://hub.docker.com/explore
+# docker  // LXC(Linux Container, namespace,cgroups), AUFS
 Docker安装和常用命令 https://www.cnblogs.com/milton/p/9866963.html  
-https://www.runoob.com/docker/docker-tutorial.html , https://docs.docker.com/get-started/
+https://www.runoob.com/docker/docker-tutorial.html
+https://www.runoob.com/docker/docker-dockerfile.html
+https://docs.docker.com/get-started/ , https://docs.docker.com/reference/ , forums.docker.com
 docker image存储路径_Docker架构与基本操作  https://blog.csdn.net/weixin_39548606/article/details/111214747
 baidu:docker image存储路径(/var/lib/docker/)
+Dockerfile文件详解  https://www.cnblogs.com/panwenbin-logs/p/8007348.html
+dumb-init：一个Docker容器初始化系统  https://www.zybuluo.com/babydragon/note/262116
 (docker网络互通) Docker之四种网络模式 、容器的互通与隔离  https://blog.csdn.net/lilygg/article/details/88616218
                 Docker网络详解——原理篇  https://blog.csdn.net/meltsnow/article/details/94490994
+veth-pair, opnenstack,ovs(Open VSwitch)
+#baidu: docker架构图
+https://gitee.com/kuangstudy/kuang_livenote
+[狂神说Java]Docker最新超详细版教程通俗易懂  https://www.bilibili.com/video/BV1og4y1q7M4?p=2
+[狂神说Java]Docker进阶篇超详细版教程通俗易懂  https://www.bilibili.com/video/BV1kv411q7Qc
+Docker 10分钟快速入门 https://www.bilibili.com/video/BV1s54y1n7Ev , yeasy.gitbook.io/docker_practice
+[编程不良人]2021年最新Docker容器技术&Docker-Compose实战教程  https://www.bilibili.com/video/BV1ZT4y1K75K
+2020年最新 docker+k8s技术全解 #老男孩教育  https://www.bilibili.com/video/BV1PJ411h7Sw
+Docker Compose, Docker Swarm, CI/CD Jenkins
+k8s Kubernetes(assemble编排), openstack
+LXC的介绍(LXC与KVM技术的比较)  https://www.cnblogs.com/xidongyu/p/5767020.html
 ```
 
 ## git17-hi-memo1
@@ -210,6 +227,9 @@ eg:程序员绘图工具-Plantuml https://www.jianshu.com/p/30f6a9c06083  https:
 eg:plantuml使用教程 https://www.cnblogs.com/ningskyer/articles/5397750.html  http://archive.3zso.com/archives/plantuml-quickstart.html  
 markdown-stackedit使用 https://www.cnblogs.com/mfmdaoyou/p/6709491.html  
 https://www.w3cschool.cn/asciidoc_guide/  
+markdown,typora,http://www.gtalkabout.cn/tools/minidown.html  
+typora + q七牛(qq截图),Snipaste + PicGo  
+文章编写实用工具——Typora+PicGo+Gitee  https://www.jianshu.com/p/1152941beaa7  
 Markdown基本语法 https://www.jianshu.com/p/191d1e21f7ed/  
 印象笔记Markdown入门指南 https://yinxiang.com/new/hc/articles/%E5%8D%B0%E8%B1%A1%E7%AC%94%E8%AE%B0-markdown-%E5%85%A5%E9%97%A8%E6%8C%87%E5%8D%97/  
 https://github.com/stanzgy/wiki/blob/master/markup/markdown-guide.md  
