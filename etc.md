@@ -137,7 +137,8 @@ gitlab>prj>CI/CD configuration>Browse templates
 -ci.gitlab.image
 #
 # see https://hub.docker.com/_/gcc/ , hub.docker.com/_/busybox/?tab=tags , hub.docker.com/_/hello-world/
-# docker search busybox  ///https://index.docker.io/v1/search?q=busybox&n=25
+# AlpineLinux hub.docker.com/_/alpine
+# docker search busybox  ===https://index.docker.io/v1/search?q=busybox&n=25
 https://www.runoob.com/docker/windows-docker-install.html
 docker 查看镜像_Docker容器部署及使用 https://blog.csdn.net/weixin_39892309/article/details/113067230
 -(可选加速image镜像库 /etc/docker/daemon.json)  https://hub.docker.com/explore
@@ -146,8 +147,16 @@ Docker安装和常用命令 https://www.cnblogs.com/milton/p/9866963.html
 https://www.runoob.com/docker/docker-tutorial.html
 https://www.runoob.com/docker/docker-dockerfile.html
 https://docs.docker.com/get-started/ , https://docs.docker.com/reference/ , forums.docker.com
+https://docs.docker.com/engine/reference/builder/
+https://docs.docker.com/compose/gettingstarted/
+https://docs.docker.com/compose/wordpress/ ,=https://docs.docker.com/samples/wordpress/
+https://docs.docker.com/compose/compose-file/compose-file-v3/#compose-file-structure-and-examples
+https://docs.docker.com/get-started/swarm-deploy/
+https://docs.docker.com/engine/swarm/how-swarm-mode-works/nodes/
+https://docs.docker.com/config/containers/logging/
 docker image存储路径_Docker架构与基本操作  https://blog.csdn.net/weixin_39548606/article/details/111214747
 baidu:docker image存储路径(/var/lib/docker/)
+深刻理解Docker镜像大小  https://blog.csdn.net/shlazww/article/details/47375009
 Dockerfile文件详解  https://www.cnblogs.com/panwenbin-logs/p/8007348.html
 dumb-init：一个Docker容器初始化系统  https://www.zybuluo.com/babydragon/note/262116
 (docker网络互通) Docker之四种网络模式 、容器的互通与隔离  https://blog.csdn.net/lilygg/article/details/88616218
@@ -160,9 +169,13 @@ https://gitee.com/kuangstudy/kuang_livenote
 Docker 10分钟快速入门 https://www.bilibili.com/video/BV1s54y1n7Ev , yeasy.gitbook.io/docker_practice
 [编程不良人]2021年最新Docker容器技术&Docker-Compose实战教程  https://www.bilibili.com/video/BV1ZT4y1K75K
 2020年最新 docker+k8s技术全解 #老男孩教育  https://www.bilibili.com/video/BV1PJ411h7Sw
-Docker Compose, Docker Swarm, CI/CD Jenkins
-k8s Kubernetes(assemble编排), openstack
+Docker Compose(yaml), Docker Swarm, CI/CD Jenkins
+k8s Kubernetes(assemble编排), openstack/vm
 LXC的介绍(LXC与KVM技术的比较)  https://www.cnblogs.com/xidongyu/p/5767020.html
+Docker学习（一）：如何Docker化任意一个应用 https://blog.csdn.net/liao392781/article/details/85992207
+                                        https://blog.csdn.net/liao392781/category_8591111.html
+golang
+从0开始学习微服务框架(go)  https://www.bilibili.com/video/BV137411H7t9
 ```
 
 ## git17-hi-memo1
@@ -248,6 +261,8 @@ json在线 https://www.sojson.com/runjs.html
 ietf-json https://tools.ietf.org/html/rfc7159.html  https://www.ietf.org/rfc/  
 TIPC  https://blog.csdn.net/yunlong34574/article/details/42460803  http://blog.chinaunix.net/uid-8048969-id-4107394.html  https://www.jianshu.com/p/7fb89e3d19af  
 bash-prompt-Linux命令行提示符修改【全攻略】 https://vimsky.com/article/4284.html  
+intelliJ IDEA  
+
 
 ### more1
 ```
@@ -562,6 +577,18 @@ Duktape：在C/C++项目中嵌入JavaScript  http://www.cppblog.com/tx7do/archiv
 
 ## HarmonyOS
 https://gitee.com/openharmony/docs?hmsr=aladdin1e6  
+
+
+
+##  Alpine Linux
+```
+hub.docker.com/_/alpine
+http://dl-cdn.alpinelinux.org/alpine/v3.6/releases/x86_64/alpine-standard-3.6.2-x86_64.iso
+Alpine Linux 使用简介  https://blog.csdn.net/freeking101/article/details/80795752
+Alpine linux硬盘安装  https://blog.csdn.net/csdn_duomaomao/article/details/76053229
+Alpine Linux详解  https://blog.csdn.net/weixin_34355715/article/details/89536087
+tinycore?
+```
 
 
 ## end00
