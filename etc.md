@@ -176,6 +176,9 @@ Docker学习（一）：如何Docker化任意一个应用 https://blog.csdn.net/
                                         https://blog.csdn.net/liao392781/category_8591111.html
 golang
 从0开始学习微服务框架(go)  https://www.bilibili.com/video/BV137411H7t9
+##
+GitHub Actions 入门教程  http://www.ruanyifeng.com/blog/2019/09/getting-started-with-github-actions.html
+YAML 语言教程            https://www.ruanyifeng.com/blog/2016/07/yaml.html
 ```
 
 ## git17-hi-memo1
