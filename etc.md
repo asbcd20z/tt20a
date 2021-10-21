@@ -119,6 +119,7 @@ Push上传出错：Support for password authentication was removed on August 13,
 --https://xiazemin.github.io/MyBlog/web/2021/08/14/github_token.html
 --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21a
 docker 查看镜像 https://blog.csdn.net/weixin_39892309/article/details/113067230
+https://docs.gitlab.com/ee/user/profile/account/two_factor_authentication.html
 ```
 
 ## //gitlab.CI/CD
@@ -480,6 +481,9 @@ thread_name-pthread--linux编程 - 给线程起名字_落尘纷扰的专栏-CSDN
 
 ### linux/c/lib.so ,//gcc+gdb
 ```
+https://www.gnu.org/software/software.html
+https://directory.fsf.org/ , https://www.gnu.org/software/libc/ , https://www.gnu.org/software/libc/manual/
+https://www.kernel.org/doc/man-pages/
 https://www.man7.org/linux/man-pages/man1/ldd.1.html  , ldconfig和ldd用法-https://www.cnblogs.com/foohack/p/4105847.html  
 https://www.man7.org/linux/man-pages/man8/ld.so.8.html  
 LIBRARY_PATH(静态链接库lib.a),  LD_LIBRARY_PATH,LD_PRELOAD  //dlopen  
@@ -551,7 +555,7 @@ $ cat <<EOT|cut -c2-
 c++ 理解虚函数，多重继承，虚基类和RTTI所需的代价 https://www.cnblogs.com/xkfz007/archive/2012/08/19/2646356.html  
 c++ 虚继承与虚函数表 https://www.cnblogs.com/xkfz007/archive/2012/07/15/2592565.html  
 google关于ssh key的解释（转）转的google的wiki的 https://www.cnblogs.com/likui360/p/6012075.html  
-pidof, lsof, htop, strace/ltrace, chmod, lsattr -a/chattr  
+pidof, lsof -i:80, htop, strace/ltrace, chmod, lsattr -a/chattr  
 lsattr命令: 显示文件属性介绍 https://blog.csdn.net/weixin_34021089/article/details/92872999  
 hexdump, xxd  
 ip+ifconfig+busybox //Linux下IP命令使用详解  https://www.cnblogs.com/liunaixu/p/12808936.html

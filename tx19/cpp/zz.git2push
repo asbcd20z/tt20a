@@ -105,10 +105,14 @@ MINGW64 /c/xd/tmpd/tgit/a1/test20210208syn (main)$ cat .git/config
   merge = refs/heads/main
 
 [http]
+  #http_proxy=http://10.158.100.8:8080 #//sct
+  #http_proxy=http://10.158.100.1:8080 #gitlabe1cs?
 #        proxy = 135.245.48.34:8000
        proxy = 135.251.33.16:8080 #15
 #       proxy = 10.167.32.133:8080
 #       proxy = 127.0.0.1:1087
+#       sslVerify=false
+##alias pgit='https_proxy=135.251.33.16:8080 git'  ##pgit push  [my-origin] [my-branch] [-u]
 [xuser]
         name=jqasbcd20z
         email=jqasbcd20z@q.com
