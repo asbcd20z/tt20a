@@ -1,0 +1,328 @@
+# bash is required for the stderr subshell sed
+SHELL:=/bin/bash
+
+-include myCustomMakefile
+#WRL=cplanesh09.eecloud.dynamic.nsn-net.net
+WRL=10.182.65.78
+#BRANCH=trunk
+SYNC_PATH_REMOTE?=/var/fpwork/$(USER)/tw/$(BRANCH)
+
+# define and export a build_host_name function to override the default build host
+# e.g. in your .bashrc:
+# build_host_name() { echo ulling01; }
+# export -f build_host_name
+WRL ?= $(shell build_host_name 2>/dev/null || echo wrling45.emea.nsn-net.net)
+SYNC_PATH_LOCAL=$(CURDIR)
+SEE ?= /opt/bin/setsee LINSEE_BTS_4.8.1_64_RHEL6
+
+ifeq ($(CHECKSUM_BASED_RSYNC),yes)
+	RSYNC_FLAGS+=-c
+endif
+
+ifdef CLANG
+	VARS+=CLANG=yes_please
+endif
+
+ifndef BRANCH
+	ifneq ($(wildcard .git),)
+		ifneq ($(shell git status | grep -E 'HEAD detached'),)
+            $(error Your repository is currently in detached from head state. If you realy want to compile this code add BRANCH=some_name before make command.)
+		endif
+		BRANCH?=$(shell git branch 2>/dev/null | grep "*" | awk '{print $$2;}')
+	else
+		BRANCH?=$(shell basename $(CURDIR))
+	endif
+endif
+
+ifneq ($(wildcard .config*fsmr3*),)
+    T?=fsmr3
+else
+    T?=fsmr4
+endif
+
+V?=fdd
+
+ifeq ($(T),fsmr3)
+    UT_PATH=linux64
+else
+    ifeq ($(T),fsmr4)
+        UT_PATH=linux
+    else
+        $(error Unknown architecture [$(T)]. T=[fsmr3|fsmr4]. Default: fsmr3)
+    endif
+endif
+
+ifeq ($V,tdd)
+    CVARIANT="tdd"
+    SCTVARIANT=.config_$(V)$(T)
+else
+    ifeq ($V,fdd)
+        CVARIANT=""
+        SCTVARIANT=.config_$(T)
+    else
+        $(error Unknown variant [$(V)]. V=[fdd|tdd]. Default: fdd)
+    endif
+endif
+
+ifeq ($(INTERNAL_COMPILER_ERROR),yes)
+    UT_PATH=arm_fzm_k2
+endif
+
+
+ifeq ($(wildcard $(SCTVARIANT)),)
+    $(error Variant file [$(SCTVARIANT)] does not exist)
+endif
+
+SYNC_PATH_REMOTE?=/var/fpwork/$(USER)/$(BRANCH)
+MODE?=debug
+EXEC="$(SYNC_PATH_REMOTE)/lteTools/production/bin/LTE -c .config -w $(SYNC_PATH_REMOTE) exec"
+COMMON_DIR=`cat .config 2>/dev/null| grep COMMON_00 | awk '{print $2;}'`
+FIX_PATHS+=stdbuf -oL -eL sed -e 's|$(SYNC_PATH_REMOTE)|$(SYNC_PATH_LOCAL)|g' -e 's|/work/$(USER)/$(BRANCH)|$(SYNC_PATH_LOCAL)|g'
+FIX_PATHS+=$(FIX_PATHS_POST)
+FIX_GCDA=find . -name '*.gcda' -delete
+SCT_REMAINS='Daemon' 'Client' 'CELLCexe' 'ENBCexe' 'RROMexe' 'TUPcexe' 'UECexe' 'CCSDaemonExe' 'Agent' 'k3r.exe' 'build.sh' 'vde_switch' 'startPitVde.sh'
+
+K3LTEASN1_PATH:= ../../../../SC_K3LTEASN1/
+CTEST_COMMON_PATH= ../../Common/
+TTCN3_GENCODE_PATH:= ../../../../../lteDo/gencode/
+TTCN_COMMON_LOCATIONS=$(K3LTEASN1_PATH) $(CTEST_COMMON_PATH) $(TTCN3_GENCODE_PATH)
+
+TTCN_TARGETS='CELLC' 'ENBC' 'PIT' 'RROM' 'TUPC' 'UEC'
+TTCN_SRC:="C_Test/cplane_k3/src"
+TTCN_LOC:="$(TTCN_SRC)/TestTargets"
+TTCN_ROOT:="$(SYNC_PATH_REMOTE)/$(TTCN_LOC)"
+SCT_LOCAL_LOG:="lteDo/sct_local_log"
+REMOTEMAKEFLAGS+=MODE=$(MODE)
+GNU_PARALLEL:=/opt/parallel/x86_64/20151022/bin/parallel
+
+LOCAL_BACKUP_DIR=~/backups/
+REMOTE_BACKUP_DIR=/home/$(USER)/backups/
+_BACKUP_FILENAME=backup_`eval date +%Y_%m_%d_%H%M_%s`.tar.gz
+NEWEST_BACKUP_FILE=`ls -t $(LOCAL_BACKUP_DIR) | head -n 1`
+
+ifeq ($(VERBOSE),1)
+REMOTEMAKEFLAGS+=VERBOSE=1
+RSYNC_FLAGS?=-v
+else
+RSYNC_FLAGS?=--stats
+endif
+
+COALESCENCE?=~/coalescence/run_sct
+
+components?=$(SYSTEM_COMPONENTS)
+
+test:
+	@echo "Branch = $(BRANCH) [override with BRANCH=name]"
+	@echo "Fix paths = $(FIX_PATHS)"
+	@echo "Build host = $(WRL) [change with WRL=hostname]"
+	@echo "Remote path = $(SYNC_PATH_REMOTE) [change with SYNC_PATH_REMOTE=path]"
+	@echo "Target = $(UT_PATH) [change with T=fsmr3|fsmr4]"
+	@echo "CVARIANT = $(CVARIANT) [change with V=tdd|fdd]"
+	@echo "SCTVARIANT = $(SCTVARIANT) [change with V and T]"
+	@echo "MODE = $(MODE) [change with MODE]"
+	@echo "REMOTEMAKEFLAGS = $(REMOTEMAKEFLAGS)"
+
+rsync:
+	#RSYNC to $(WRL):$(SYNC_PATH_REMOTE)
+	@ssh $(USER)@$(WRL) "mkdir -p $(SYNC_PATH_REMOTE); mkdir -p $(SYNC_PATH_REMOTE)/C_Application/SC_CPCL/Source"
+	@rsync -Ctaz $(RSYNC_FLAGS) --delete $(RSYNC_OPTIONS) \
+		--exclude 'tags' \
+		--exclude '/makefile' \
+		--exclude '.env' \
+		--exclude '*.pyc' \
+		--exclude '*.pyo' \
+		--exclude '*.swo' \
+		--exclude 'C_Test/SC_K3LTEASN1' \
+		--exclude 'lteDo' \
+		--exclude '*.swp' \
+		--exclude '/C_Test/cplane_k3/src/TestTargets/*/target/' \
+		--exclude '/qtcreator*' \
+		--exclude '/my*' \
+		--exclude '*DirectMessagingPlugin*'\
+		--exclude 'C_Test/cplane_k3/src/TestTargets/*/testcases/dmp'\
+		--exclude 'C_Test/cplane_k3/src/Common/functions/dmp'\
+		--include 'C_Test/cplane_k3/src/TestTargets/UEC/library/core'\
+		--include 'C_Test/cplane_k3/src/TestTargets/CELLC/library/core'\
+		--include 'C_Test/cplane_k3/src/TestTargets/RROM/library/core' \
+		--include 'C_Test/cplane_k3/src/TestTargets/MCEC/library/core' \
+		--include 'C_Test/cplane_k3/src/TestTargets/PIT/library/core' \
+		--filter 'protect lteDo' \
+		--filter 'protect C_Application/SC_UEC/Make/Uec_UT.mk' \
+		--filter 'protect C_Application/SC_CPCL/Source' \
+		--filter 'protect C_Application/SC_CPCL' \
+		--filter 'protect log' \
+		--filter 'protect logs' \
+		--filter 'protect target' \
+		--filter 'protect core*' \
+		--filter 'protect .*' \
+		--filter 'protect *.ysm' \
+		--filter 'protect */__pycache__' \
+		--filter 'protect C_Test/SC_K3LTEASN1' \
+		--filter 'protect _coalescence' \
+		--filter 'protect E_External' \
+		--filter 'protect I_Interface/Global_Env' \
+		--filter 'protect I_Interface/Platform_Env' \
+		--filter 'protect GeneratedMainControlPart.ttcn3' \
+		$(SYNC_PATH_LOCAL)/ $(USER)@$(WRL):$(SYNC_PATH_REMOTE)
+	@ssh $(USER)@$(WRL) "echo $(SYNC_PATH_REMOTE)/ >~/current_rsync_dir"
+	@ssh $(USER)@$(WRL) 'for i in `find $(SYNC_PATH_REMOTE)/C_Application -type d -name Include` ; do if [ ! -d $$i/../Source ] ; then  mkdir $$i/../Source ; fi;  done; '
+	#done
+
+upsack: rsync
+	@echo -e "\e[1;34mEXPERIMENTAL - MAY NOT WORK AS EXPECTED!\e[0m"
+	@ssh $(USER)@$(WRL) "cd $(SYNC_PATH_REMOTE); make $(VARS) genCPlaneIsar && ./C_Test/cplane_k3/src/Common/utils/upSack.sh -all"
+	@rsync \
+		-ctzrLC \
+		--include "*/" \
+		--include "*.ttcn3" \
+		--exclude "*" \
+		$(RSYNC_FLAGS) \
+		$(USER)@$(WRL):$(SYNC_PATH_REMOTE)/C_Test/ \
+		$(SYNC_PATH_LOCAL)/C_Test/
+
+upsack_sack: rsync
+	@ssh $(USER)@$(WRL) "cd $(SYNC_PATH_REMOTE); make $(VARS) genCPlaneIsar && ./C_Test/cplane_k3/src/Common/utils/upSack.sh -sack"
+	@rsync \
+		-ctz \
+		$(RSYNC_FLAGS) \
+		$(USER)@$(WRL):$(SYNC_PATH_REMOTE)/C_Test/cplane_k3/src/Common/types/SACK.ttcn3 \
+		$(SYNC_PATH_LOCAL)/C_Test/cplane_k3/src/Common/types/SACK.ttcn3
+
+getInterfaces: rsync _morax _genDataRep
+	#Syncing interfaces from $(WRL) to $(SYNC_PATH_LOCAL)/lteDo
+	@rsync \
+		-ctzrLCm --delete \
+		$(RSYNC_FLAGS) \
+		--exclude="prefix-linux64-debug/" \
+		--exclude="prefix-linux64-release/" \
+		--exclude="prefix-linux-debug/" \
+		--exclude="prefix-linux-release/" \
+		--include="*/" \
+		--include=*.h \
+		--include=*.hpp \
+		--include=*.ttcn3 \
+		--include=*.cpp \
+		--include=*.c \
+		--include=*.xml \
+		--include=PDDB_metadata_export_merged.xml \
+		--exclude="*" \
+		$(USER)@$(WRL):$(SYNC_PATH_REMOTE)/lteDo \
+		$(SYNC_PATH_LOCAL)
+
+sack: getInterfaces
+
+getTtcn3Interfaces: generateTtcn3Files
+	@rsync -rtm $(RSYNC_FLAGS) --include='*.ttcn3' --include='*/' --exclude='*' $(USER)@$(WRL):$(SYNC_PATH_REMOTE)/C_Test/SC_K3LTEASN1/ $(SYNC_PATH_LOCAL)/C_Test/SC_K3LTEASN1
+	@rsync -rtm $(RSYNC_FLAGS) --include='*.ttcn3' --include='*/' --exclude='*' $(USER)@$(WRL):$(SYNC_PATH_REMOTE)/lteDo/gencode/ $(SYNC_PATH_LOCAL)/lteDo/gencode
+
+generateTtcn3Files:
+	@ssh $(USER)@$(WRL) "cd $(SYNC_PATH_REMOTE); make $(VARS) symlinks; make $(VARS) genNpfTypes genRadInfo; rm -f lteDo/gencode/types/tmpdir/.SACK.ttcn3"
+
+tags: getTtcn3Interfaces
+	@ssh $(USER)@$(WRL) "for TARGET in $(TTCN_TARGETS); do echo "Generating cTAGS for \$$TARGET"; cd $(TTCN_ROOT)/\$$TARGET; pwd; ctags --language-force=TTCN \`find -L ./ $(TTCN_COMMON_LOCATIONS) -iname \"*.ttcn3\"\`; done;"
+	@rsync -rt $(RSYNC_FLAGS) --include='tags' --include='*/' --exclude='*' --prune-empty-dirs $(USER)@$(WRL):$(TTCN_ROOT)/ $(SYNC_PATH_LOCAL)/$(TTCN_LOC)
+	#done placing TTCN cTAGS in $(TTCN_LOC)/(component)/tags
+
+tags_allinone: getTtcn3Interfaces
+	$(eval TTCN_COMMON_LOCATIONS_FOR_ALLINONE= $(shell echo " "$(TTCN_COMMON_LOCATIONS)|sed 's| ../| |g' ))
+	@ssh $(USER)@$(WRL) "echo "Generating cTAGS for $(TTCN_TARGETS) Common" ; cd $(TTCN_ROOT); ctags --language-force=TTCN \`find -L ./ $(TTCN_COMMON_LOCATIONS_FOR_ALLINONE) -iname *.ttcn3\`;"
+	@rsync -rt $(RSYNC_FLAGS) --include='tags' --include='*/' --exclude='*' --prune-empty-dirs $(USER)@$(WRL):$(TTCN_ROOT)/ $(SYNC_PATH_LOCAL)/$(TTCN_LOC)
+	#done placing TTCN cTAGS in $(TTCN_LOC)/tags
+
+clear_remote:
+	#Cleaning $(USER)@$(WRL) $(SYNC_PATH_REMOTE)
+	@ssh $(USER)@$(WRL) "cd $(SYNC_PATH_REMOTE); rm -rf *"
+	#done
+
+compile_sct_%: rsync
+	#@ssh $(USER)@$(WRL) "cd $(TTCN_ROOT)/$*; make $(VARS) compile | sed 's/^    //' | sed -E 's/error #([1-9]*):/error:/' 2>&1;" 1> >( $(FIX_PATHS) >&2 )
+	@ssh $(USER)@$(WRL) "cd $(TTCN_ROOT)/$*; make $(VARS) compile 2>&1;" 1> >( $(FIX_PATHS) >&2 )
+	#done
+
+
+textviewer: 
+	@ssh -t $(USER)@$(WRL) "cd $(SYNC_PATH_REMOTE)/_coalescence/logs; ../../C_Test/cplane_k3/src/Common/utils/textviewer */*_SCT.log"
+	
+pullsctlogs: textviewer	
+	@echo -n "Pulling logs..."
+	@mkdir -p $(SCT_LOCAL_LOG)
+	@rsync -rt "$(USER)@$(WRL):$(SYNC_PATH_REMOTE)/_coalescence/logs" $(SCT_LOCAL_LOG)
+	@echo done
+
+sct_%: rsync
+	$(eval COMPONENT:=$(shell expr match $* '\([A-Z]*\)'))
+	@ssh -t $(USER)@$(WRL) "cd $(SYNC_PATH_REMOTE); if [ -e $(COALESCENCE) ]; then $(COALESCENCE) -c $(SCTVARIANT) $(COMPONENT) $(COALEFLAGS) -b ALL -k -p $*; else echo You need to have $(COALESCENCE); fi"
+	@$(MAKE) -f makefile pullsctlogs
+	@echo done
+
+pit_%: rsync
+	@ssh -t $(USER)@$(WRL) "cd $(SYNC_PATH_REMOTE); if [ -e $(COALESCENCE) ]; then $(COALESCENCE) -c $(SCTVARIANT) PIT $(COALEFLAGS) -b ALL -k -t $* ; else echo You need to have $(COALESCENCE); fi"
+	@ssh -t $(USER)@$(WRL) "cd $(SYNC_PATH_REMOTE); ./C_Test/Common/utils/textviewer lteDo/pit/target/k3r-logs/*.log"
+	@echo -n "Pulling logs..."
+	@mkdir -p $(SCT_LOCAL_LOG)
+	@rsync -rt "$(USER)@$(WRL):$(SYNC_PATH_REMOTE)/lteDo/pit/target" $(SCT_LOCAL_LOG)
+	@echo done
+
+
+run_sct_np_%: rsync
+	@ssh -t $(USER)@$(WRL) "cd $(SYNC_PATH_REMOTE); if [ -e $(COALESCENCE) ]; then $(COALESCENCE) -c $(SCTVARIANT) -l 99999 -f $*; else echo You need to have $(COALESCENCE); fi"
+
+run_sct_g_%: rsync
+	@ssh -t $(USER)@$(WRL) "cd $(SYNC_PATH_REMOTE); if [ -e $(COALESCENCE) ]; then $(COALESCENCE) -c $(SCTVARIANT) $* $(COALEFLAGS); else echo You need to have $(COALESCENCE); fi"
+
+run_sct_%: rsync
+	@ssh -t $(USER)@$(WRL) "cd $(SYNC_PATH_REMOTE); if [ -e $(COALESCENCE) ]; then JOB_NAME=$(WRL) $(COALESCENCE) -l999999 -c $(SCTVARIANT) $*; else echo You need to have $(COALESCENCE); fi"
+
+
+coallog:
+	@ssh -t $(USER)@$(WRL) "cd $(SYNC_PATH_REMOTE); vim _coalescence/logs"
+
+killall:
+	#cleaning up on $(WRL): killing $(SCT_REMAINS) and removing /dev/shm/*$(USER)*
+	@ssh $(USER)@$(WRL) "for REMAIN in $(SCT_REMAINS); do pkill -9 \$$REMAIN 2>/dev/null; done; rm -rf /dev/shm/genNpf/*; exit 0"
+
+run_ut:
+	#running UTs on $(WRL) $(SYNC_PATH_REMOTE)
+	@ssh $(USER)@$(WRL) "cd $(SYNC_PATH_REMOTE); ./run_ut.sh"
+
+unittest_%: rsync
+	@ssh $(USER)@$(WRL) "cd $(SYNC_PATH_REMOTE); ./lteTools/scbm/bin/unittest_$*.sh"
+
+run_recent_ut:
+	#running UT targets touched in the past 60 minutes on $(WRL) $(SYNC_PATH_REMOTE)
+	@ssh $(USER)@$(WRL) "cd $(SYNC_PATH_REMOTE); export PROJECT_ROOT=$(SYNC_PATH_REMOTE); export TARGETS=\`find ./lteDo/exec/$(UT_PATH)/debug/ -name '*T' -mmin -60\`; echo Recent targets found: \`echo \"\$$TARGETS\" | wc -l\`; echo \"\$$TARGETS\" | $(GNU_PARALLEL) 'echo -n {}\ ;{} --enable_debug_logs --enable_ut_logs 2>&1 1>/dev/null | grep -v Assertion | grep -v mismatch'"
+
+run_ut_%: _%
+	@ssh $(USER)@$(WRL) "export PROJECT_ROOT=$(SYNC_PATH_REMOTE); $(SYNC_PATH_REMOTE)/lteDo/exec/$(UT_PATH)/debug/$*  2>&1 | grep -v \"profiling\""
+
+_%: rsync
+	#building $(SCTVARIANT) target $* on $(WRL)
+	@ssh $(USER)@$(WRL) "cd $(SYNC_PATH_REMOTE); mkdir -p .svn; make $(VARS) $* -f GNUmakefile ARCH=$(UT_PATH) F=$(CVARIANT) $(REMOTEMAKEFLAGS) >&2 && echo $(WRL) > \$$HOME/.last_build_host && echo $(SYNC_PATH_REMOTE) > \$$HOME/.last_build_dir; $(FIX_GCDA)" 2> >( $(FIX_PATHS) >&2 )
+	#done
+
+all: rsync
+	@ssh $(USER)@$(WRL) "cd $(SYNC_PATH_REMOTE); mkdir -p .svn; make $(VARS) ptCPLANE ptCPLANE_UT -f GNUmakefile ARCH=$(UT_PATH) F=$(CVARIANT) $(REMOTEMAKEFLAGS); $(FIX_GCDA)" 2> >( $(FIX_PATHS) >&2 )
+
+checkout:
+	@git pull --rebase
+
+sync_project:
+	@$(UTILS_REPO_PATH)/qtcreator-tools/projectfile-updater/myUpdateQtcreatorFiles.py $(components)
+
+updateProjectFiles: checkout sync_project
+	#done
+
+update: updateProjectFiles
+	#done
+
+archive:
+	@ssh $(USER)@$(WRL) "mkdir -p $(REMOTE_BACKUP_DIR)" \
+	mkdir -p $(LOCAL_BACKUP_DIR); tar -zcvf $(LOCAL_BACKUP_DIR)$(_BACKUP_FILENAME) $(SYNC_PATH_LOCAL); \
+	scp $(LOCAL_BACKUP_DIR)$(NEWEST_BACKUP_FILE) $(USER)@$(WRL):$(REMOTE_BACKUP_DIR)$(NEWEST_BACKUP_FILE)
+
+
+logs:
+	@rsync -r $(USER)@$(WRL):$(SYNC_PATH_REMOTE)/_coalescence .
+
+console:
+	ssh $(USER)@$(WRL)

@@ -1,0 +1,19 @@
+WRL=wrling100
+SEE="/opt/bin/setsee LINSEE_BTS_4.6.0_64"
+#INTERNAL_COMPILER_ERROR=yes
+#CHECKSUM_BASED_RSYNC=yes
+# Used by updateProjectFiles
+UTILS_REPO_PATH=
+#FIX_PATHS=sed -e s/.... |
+#FIX_PATHS_POST=| sed -e s/....
+# when using cygwin may occur problem with directories permissions
+# to solve, use RSYNC_OPTIONS=--chmod=+r,D+x,u+w,a+x
+#RSYNC_OPTIONS= 
+
+# set path to coalescence run_sct script 
+#COALESCENCE=
+#CLANG:=yes_please
+# used by updateProjectFiles target.
+#SYSTEM_COMPONENTS=cellc rrom uec
+SYSTEM_COMPONENTS=all
+COALLOG_EXPLORER=vim
