@@ -43,6 +43,16 @@ git push -u origin main
 You can initialize this repository with code from a Subversion, Mercurial, or TFS project.
 ```
 //  
+bash下快捷键移动光标示意图:
+ctr-A, ctr-E  移动行首，行尾
+alt-B, alt-F  移动词前，词后
+ctr-B, ctr-F  移动字前，字后
+ctr-U, ctr-K  删去至行首，行尾
+ctr-W, alt-D  删去至词前，词后
+===
+-echo -e '1aa\n2bb\n3c' |sed -e'\=bb= i\\nXX-\n' -e'$ aY-' -e'$ iZ-'
+-echo -e '1aa\n2bb\n3c' |sed -e'\=bb= s/^/\n/'   -e'$ aY-' -e'$ iZ-'
+===
 sublime Text中的workspace和project什么关系?  https://www.zhihu.com/question/22681628  //Ctrl+Shift+N  
 //http://www.sublimetext.com/docs/3/projects.html  
 https://docs.github.com/en , https://github.com/settings/profile  
