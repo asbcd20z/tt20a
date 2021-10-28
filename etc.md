@@ -259,13 +259,17 @@ asciidoctor  AsciidocFX支持的元数据 https://blog.csdn.net/wiborgite/articl
 Asciidoc简介#  http://asciidoctor.org/docs/asciidoc-syntax-quick-reference/  
 
 ### tools/more1a
+```
 在线工具 https://c.runoob.com/  http://tools.jb51.net/  www.iloveimg.com/zh-cn  
 在线工具 https://tool.lu/asciidoc/  https://tool.lu/markdown/  
 json在线 https://www.sojson.com/runjs.html  
 ietf-json https://tools.ietf.org/html/rfc7159.html  https://www.ietf.org/rfc/  
 TIPC  https://blog.csdn.net/yunlong34574/article/details/42460803  http://blog.chinaunix.net/uid-8048969-id-4107394.html  https://www.jianshu.com/p/7fb89e3d19af  
 bash-prompt-Linux命令行提示符修改【全攻略】 https://vimsky.com/article/4284.html  
-intelliJ IDEA  
+==
+intelliJ IDEA , vscode+ssh-remote, sublime
+notepad++v7.7.1, UltraEdit17.10.0.1015, beyondcompare, MobaXterm_Personal_9.0, AsciidocFX_Windows1.6.6
+```
 
 
 ### more1

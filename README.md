@@ -46,12 +46,13 @@ You can initialize this repository with code from a Subversion, Mercurial, or TF
 ```
 bash下快捷键移动光标示意图:
 ctr-A, ctr-E  移动行首，行尾
-alt-B, alt-F  移动词前，词后
+alt-B, alt-F  移动词前，词后 //or: ctr-<, ctr->
 ctr-B, ctr-F  移动字前，字后
 ctr-U, ctr-K  删去至行首，行尾
 ctr-W, alt-D  删去至词前，词后
 ===
 -echo -e 'aa-join-lines\nbbb\nc'| for i in `cat -` ; do echo -n "$i, "; done
+-echo aa |sed 'i\\' |hexdump.exe  -C
 -echo -e '1aa\n2bb\n3c' |sed -e'\=bb= i\\nXX-\n' -e'$ aY-' -e'$ iZ-'
 -echo -e '1aa\n2bb\n3c' |sed -e'\=bb= s/^/\n/'   -e'$ aY-' -e'$ iZ-'
 ===
