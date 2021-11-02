@@ -265,6 +265,7 @@ Asciidoc简介#  http://asciidoctor.org/docs/asciidoc-syntax-quick-reference/
 json在线 https://www.sojson.com/runjs.html  
 ietf-json https://tools.ietf.org/html/rfc7159.html  https://www.ietf.org/rfc/  
 TIPC  https://blog.csdn.net/yunlong34574/article/details/42460803  http://blog.chinaunix.net/uid-8048969-id-4107394.html  https://www.jianshu.com/p/7fb89e3d19af  
+http://tipc.sourceforge.net/protocol.html (tipc can over some media for transport,such as:ethernet,tcp,udp,...  eg:torvalds/linux/net/tipc/udp_media.c)
 bash-prompt-Linux命令行提示符修改【全攻略】 https://vimsky.com/article/4284.html  
 ==
 intelliJ IDEA , vscode+ssh-remote, sublime
@@ -564,8 +565,9 @@ lsattr命令: 显示文件属性介绍 https://blog.csdn.net/weixin_34021089/art
 hexdump, xxd  
 ip+ifconfig+busybox //Linux下IP命令使用详解  https://www.cnblogs.com/liunaixu/p/12808936.html
 试试Linux下的ip命令，ifconfig已经过时了  https://linux.cn/article-3144-1.html
-linux命令总结之ip命令  https://www.cnblogs.com/ginvip/p/6367803.html
+linux命令总结之ip命令 (ip addr)  https://www.cnblogs.com/ginvip/p/6367803.html
 配置IP别名 https://blog.51cto.com/dianel/1921129 https://blog.51cto.com/sharan/726600
+Linux系统使用ss命令查看端口状态  https://my.oschina.net/u/4413564/blog/3550024
 ```
 
 ### lang/script

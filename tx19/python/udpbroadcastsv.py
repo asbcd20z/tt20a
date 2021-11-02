@@ -10,6 +10,21 @@
 #b nc -vul -s 0.0.0.0 -p 29999  # FYI: 1:it listen on ipv6 by default,and nc has a "connect" for both tcp/udp
 #b nc -vu 127.0.0.1 29999       #  2:still means a "connect" for nc'udp when first sendto from a udp client, and seems ignore other clients
 #
+#IP地址分类以及网络地址的计算(子网划分、超网划分):
+#https://blog.csdn.net/weixin_43625577/article/details/84728675
+'''
+2.4、特殊的网址
+1、每一个字节都为0的地址（“0.0.0.0”）对应于当前主机；
+2、IP地址中的每一个字节都为1的IP地址（“255．255．255．255”）是当前子网的广播地址；(本子网的受限广播)
+3、IP地址中不能以十进制“127”作为开头，该类地址中数字127．0．0．1到127．255．255．255用于回路测试，如：127.0.0.1可以代表本机IP地址，ping 127.0.0.1 可以测试本机TCP/IP是否正常。
+4、0.0.0.0 —当一台主机还没有被分配一个IP地址的时候，用于表示主机本身；被保留用来指向默认路由。
+--
+ip地址主机号全0或全1:
+主机号全为“0”。不论哪一类网络，主机号全为“0”表示指向本网，常用在路由表中；(此类ip地址可以当源端但不可以做目的端)
+主机号全为“1”。主机号全为“1”表示广播地址，向特定的所在网上的所有主机发送数据包。(广播地址是不可以做源端的，但是可以做目的端)
+'''
+#
+#
 import socket;
 import sys;
 
