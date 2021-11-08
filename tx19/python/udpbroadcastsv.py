@@ -41,4 +41,5 @@ s.bind(('', 9999))
 #s.bind(('', 19999))
 #s.sendto(b'AAA',('127.0.0.1',9999))
 #s.sendto(b'AAA',('192.168.1.255',9999))
+#datetime.datetime.now()
 
