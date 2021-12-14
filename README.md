@@ -20,6 +20,9 @@ https://gist.github.com/mine
 https://help.github.com/en/packages/publishing-and-managing-packages/about-github-packages#supported-clients-and-formats  
 https://help.github.com/en/github/collaborating-with-issues-and-pull-requests/about-pull-requests  
 https://gitlab.com/help/topics/autodevops/index.md  
+https://gitlab.com/users/asbcd20z/starred  
+https://gitlab.com/explore  
+https://gitlab.com/explore/projects/topics  
 //authentication  
 https://github.com/microsoft/Git-Credential-Manager-Core/blob/master/docs/github-apideprecation.md  
 https://docs.github.com/en/rest/overview/other-authentication-methods#basic-authentication  
@@ -55,6 +58,19 @@ ctr-W, alt-D  删去至词前，词后
 -echo aa |sed 'i\\' |hexdump.exe  -C
 -echo -e '1aa\n2bb\n3c' |sed -e'\=bb= i\\nXX-\n' -e'$ aY-' -e'$ iZ-'
 -echo -e '1aa\n2bb\n3c' |sed -e'\=bb= s/^/\n/'   -e'$ aY-' -e'$ iZ-'
+-
+-echo  -e 'AA\bBBCC'|tr -c '[:graph:][:blank:]\n' -|hexdump -C
+-echo  -e 'AA\bBBCC'|tr -c '[:print:][:blank:]\n' -|hexdump -C
+-python3 -B -c "for i in range(128):print('%c' %i, end='');" |hexdump -C
+-python3 -B -c "for i in range(128):print('%c' %i, end='');" |tr -c '[:print:][:blank:]\n' - |hexdump -C
+--
+-echo -e 'a\0177b' |hexdump -C
+-python3 -B -c "for i in range(128):print('%c' %i, end='');" |tr '\0-\037\177' '0-8\t\nB-Z' |hexdump -C
+-python3 -B -c "for i in range(128):print('%c' %i, end='');" |tr  -c '[:print:]' - |hexdump -C  #transform all ~print to one '-'
+-python3 -B -c "for i in range(128):print('%c' %i, end='');" |tr -c '[:graph:]' x |hexdump -C   #[:print:][:cntrl:][:space:][:blank:][:punct:]
+ASCII码一览表，ASCII码对照表,  http://c.biancheng.net/c/ascii/
+-echo -e 'aa\r\nb\rc\rd' |sed -e 's/\r/-/g' |hexdump -C   ##ps, sed take '\r\n' as one-char\n??
+-echo -e 'aa\r\nb\rc\rd' |sed -e 's/\r/\n/g'  |hexdump -C
 ===
 ```
 

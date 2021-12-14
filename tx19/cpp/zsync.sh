@@ -119,7 +119,8 @@ echo;  rsync -rvCtaz --stats --files-from=$y . $rpath/
 
 
 #== run
-echo -e "\n==ssh.exec==" `date`
+echo -e "\n\n\n==ssh.exec==" `date`
+echo sleep...; sleep 3; #pause.yes?
 #sleep 1  #pause.yes?
 #ssh 10.182.65.71 'cd /ephemeral/workspace/lzhao019/nr71/gnb; pwd; time ./gnb_build/build.py --icecc cplane cprt sct -b stable -p TestSaCa4CCTddAnyFr1.rt_  run --no-config'
 ssh 10.182.65.71 'cd /ephemeral/workspace/lzhao019/nr71/gnb; pwd; time ./gnb_build/build.py --icecc cplane cprt sct -b stable -p TestSaCa4CCTddAnyFr1.rt_x1  run --no-config'

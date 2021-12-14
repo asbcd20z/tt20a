@@ -292,6 +292,12 @@ Docker安装和常用命令 https://www.cnblogs.com/milton/p/9866963.html
 github仓库迁移到gitlab以及gitlab仓库迁移到另一个gitlab服务器# https://www.cnblogs.com/saysmy/p/10942814.html  
 typeset; man bash |grep PROMPT_DIRTRIM=3  PS1==https://www.cnblogs.com/wi100sh/p/4814745.html  
 export PS1="\[\e[1m\]\w\[\e[0m\] [\u@\h \W]$ "  
+PROMPT_COMMAND=/etc/sysconfig/bash-prompt-screen
+PROMPT_COMMAND='printf "\033k%s@%s:%s\033\\" "${USER}" "${HOSTNAME%%.*}" "${PWD/#$HOME/~}"'
+/etc/profile.d/bash_completion.sh
+linux系统用户登陆时脚本执行顺序, https://www.cnblogs.com/yzwone/p/12527603.html
+linux切换用户后执行脚本,Linux 用户登录后执行的脚本, https://blog.csdn.net/weixin_34163588/article/details/116772209
+--/etc/profile(/etc/profile.d)->.bash_profile->.bashrc(/etc/bashrc)-->.bash_logout
 Bootloader之uBoot简介##https://www.cnblogs.com/wi100sh/p/4255081.html  
 endian如何判断CPU是大端还是小端模式 https://www.cnblogs.com/wi100sh/p/4899466.html  
 重载(overload)，覆盖(override),隐藏(hide)的区别 https://www.cnblogs.com/wi100sh/p/4325397.html https://www.cnblogs.com/wi100sh/p/4325336.html  
@@ -324,6 +330,7 @@ Protobuf3语法详解 https://www.cnblogs.com/tohxyblog/p/8974763.html
 python c struct/python之struct详解  https://blog.csdn.net/qq_30638831/article/details/80421019  
 PYTHON C/C++结构体 ctypes.Structure https://www.cnblogs.com/yang220/p/12091863.html   https://www.programcreek.com/python/example/1122/ctypes.Structure  
 date +%FT%T.%Nz -u  
+c++filter , http://demangler.com/
 ```
 
 ### more3
@@ -354,6 +361,7 @@ Sublime Text 2 设置文件详解  https://blog.csdn.net/xlh1991/article/details
 sublime 快捷键设置 (word_wrap) https://www.jianshu.com/p/04ef6fe437b7
 https://sublime-text-unofficial-documentation.readthedocs.io/en/latest/reference/commands.html#cmd-list
 Sublime Text3—自带快捷键介绍  https://www.cnblogs.com/easy-blue/p/5809760.html
+Sublime 注册, https://www.cnblogs.com/lingzhii/p/10543437.html, https://www.jianshu.com/p/1dc6ca5b9175
 ```
 
 ### python
