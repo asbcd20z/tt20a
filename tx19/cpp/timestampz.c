@@ -27,6 +27,11 @@ exit 0
 #include <sys/time.h> //gettimeofday
 #include <time.h> //clock_gettime
 #include <unistd.h>
+//#include <stddef.h> //bool, https://en.cppreference.com/w/c/types
+///in c(typedef int _BOOL)sizeof(bool)=1,but sizeof(false/true)=sizeof(int)=4
+///bool =1byte,sizeof(false/true)=1 in c++.
+#include <stdbool.h> //bool, /usr/lib/gcc/i686-pc-cygwin/4.9.3/include/stdbool.h
+
 
 extern unsigned getLine(){static unsigned l=-3u;return ++l;}
 //#define LOG(...)
@@ -70,6 +75,8 @@ printf("%d, %04x\n", __LINE__, getLine());
 printf("%d, %04x\n", __LINE__, getLine());
 #endif
 
+bool b=false;
+printf("%d, sizeof(bool)1==%d,%d, sizeof(false)4==%d\n", __LINE__, sizeof(b),b, sizeof(false));
 return 0;
 }
 
