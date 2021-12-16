@@ -264,9 +264,11 @@ Asciidoc简介#  http://asciidoctor.org/docs/asciidoc-syntax-quick-reference/
 在线工具 https://tool.lu/asciidoc/  https://tool.lu/markdown/  
 json在线 https://www.sojson.com/runjs.html  
 ietf-json https://tools.ietf.org/html/rfc7159.html  https://www.ietf.org/rfc/  
+https://www.ietf.org/rfc/ , https://www.rfc-editor.org/  , (socks5)https://www.rfc-editor.org/rfc/rfc1928.txt  
 TIPC  https://blog.csdn.net/yunlong34574/article/details/42460803  http://blog.chinaunix.net/uid-8048969-id-4107394.html  https://www.jianshu.com/p/7fb89e3d19af  
 http://tipc.sourceforge.net/protocol.html (tipc can over some media for transport,such as:ethernet,tcp,udp,...  eg:torvalds/linux/net/tipc/udp_media.c)
 bash-prompt-Linux命令行提示符修改【全攻略】 https://vimsky.com/article/4284.html  
+测速网 https://www.speedtest.cn/ , http://www.dglxx.com/ , https://ping.chinaz.com/
 ==
 intelliJ IDEA , vscode+ssh-remote, sublime
 notepad++v7.7.1, UltraEdit17.10.0.1015, beyondcompare, MobaXterm_Personal_9.0, AsciidocFX_Windows1.6.6
@@ -362,6 +364,7 @@ sublime 快捷键设置 (word_wrap) https://www.jianshu.com/p/04ef6fe437b7
 https://sublime-text-unofficial-documentation.readthedocs.io/en/latest/reference/commands.html#cmd-list
 Sublime Text3—自带快捷键介绍  https://www.cnblogs.com/easy-blue/p/5809760.html
 Sublime 注册, https://www.cnblogs.com/lingzhii/p/10543437.html, https://www.jianshu.com/p/1dc6ca5b9175
+sublime text--你所不知道的12个秘密  https://blog.csdn.net/weixin_42108494/article/details/80312343
 ```
 
 ### python
@@ -558,6 +561,8 @@ web-http-server (embedding)  https://gitee.com/louisyou/mongoose  https://github
 
 ### linux/bash
 ```
+https://www.runoob.com/linux/linux-command-manual.html
+https://www.runoob.com/w3cnote/linux-common-command-2.html
 bash参考文档.html https://yiyibooks.cn/Phiix/bash_reference_manual/bash参考文档.html#Shell-Expansions  
 .. https://yiyibooks.cn/Phiix/bash_reference_manual/bash%E5%8F%82%E8%80%83%E6%96%87%E6%A1%A3.html#Shell-Expansions  
 Bash中文手册  https://gitee.com/ccnuacm/bash-manual-zh  
@@ -571,6 +576,20 @@ google关于ssh key的解释（转）转的google的wiki的 https://www.cnblogs.
 pidof, lsof -i:80, htop, strace/ltrace, chmod, lsattr -a/chattr  
 lsattr命令: 显示文件属性介绍 https://blog.csdn.net/weixin_34021089/article/details/92872999  
 hexdump, xxd  
+-
+for i in *.c ;do echo $i ==; done
+ls *.c |xargs -tn1 -i true {} == {}
+find ./ -name '*c' -exec echo {} == \;
+echo -e 'aa\nbbb\nc'| for i in `cat -`;do echo -n "$i, ";done
+foo(){ echo $1-xyz-$*;}
+typeset -f foo //declare
+htail(){ head -3 $*; echo ...; tail --line=3 $*;}
+a xztail='xzcat|cat -n|grep Cprt|htail'
+a sort.k7='sort -k7,7'  ##for syslog,better for cu
+#echo -e 'AA\r\nBB\rC' |sed -b -e's/\r$/-/g' -e's/\r/\n/g' | hexdump -C  ##can't match \n or $
+a lsed="sed -bi 's:\r:\n:g'"  #files*
+a pyy='python3 -B' #-Bi
+-
 ip+ifconfig+busybox //Linux下IP命令使用详解  https://www.cnblogs.com/liunaixu/p/12808936.html
 试试Linux下的ip命令，ifconfig已经过时了  https://linux.cn/article-3144-1.html
 linux命令总结之ip命令 (ip addr)  https://www.cnblogs.com/ginvip/p/6367803.html

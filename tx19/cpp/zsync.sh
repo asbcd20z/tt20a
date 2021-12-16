@@ -110,9 +110,13 @@ rpath=10.182.65.71:/ephemeral/workspace/lzhao019/nr71/gnb/
 #rpath=10.182.68.88:/ephemeral/workspace/lzhao019/nr7/gnb
 
 #pwd
+# //log location for download
+#echo rsync -rvCtaz --stats $rpath/cplane/b2cu/sctworkingdir/cp_ue/logs ./
 #echo ==scp -pr $rpath/cplane/b2cu/sctworkingdir/cp_ue/logs ./
-echo ==scp -pr $rpath/build/native/cprt/sct/sctworkingdir/cp_rt/logs ./
-echo ==$PWD ==$rpath
+echo 'date; scp -pr 10.182.65.71:/ephemeral/workspace/lzhao019/nr71/gnb///cplane/b1rt/sctworkingdir/cp_rt/logs/*-1  ./logs/'
+echo ==scp -pr $rpath//build/native/cprt/sct/sctworkingdir/cp_rt/logs ./
+# //sync source-code
+echo ==$PWD ==$rpath//cplane/b1rt
 #echo rsync -a --include-from= $v $rpath/$v
 ##echo rsync -nrvCtaz --stats `cat ylist.txt` $rpath/$v
 echo;  rsync -rvCtaz --stats --files-from=$y . $rpath/

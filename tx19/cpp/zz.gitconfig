@@ -8,7 +8,7 @@
 	name=z
 	email=z
 [alias]
-	#@time20210907a
+	#@time20211217a
 	#git clean -x -f -d  # rm  untracked files
 	#git rm --cached aa.txt
 	#git add -u  # -A -f --dry-run
@@ -96,7 +96,8 @@
 	status=auto
 [xhttp]
 	#http_proxy=http://10.158.100.8:8080 #//sct
-	#http_proxy=http://10.158.100.1:8080 #gitlabe1cs?
+	#http_proxy=http://10.158.100.2:8080 #CLion-VSCode-User-Guide
+	#http_proxy=http://10.158.100.1:8080 #gitlabe1ccs?
 #        proxy = 135.245.48.34:8000
 #	proxy = 135.251.33.16:8080 #15
 #       proxy = 10.167.32.133:8080
