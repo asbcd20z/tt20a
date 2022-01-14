@@ -15,14 +15,20 @@ http://man7.org/linux/man-pages/man7/futex.7.html
 http://man7.org/linux/man-pages/man3/dlopen.3.html  
 
 ## c/cpp/c++
+```
+https://gcc.gnu.org/onlinedocs/libstdc++/manual/
 https://en.cppreference.com/w/cpp/container/vector  
 https://zh.cppreference.com/w/c/io/fprintf  
 https://zh.cppreference.com/w/cpp/io  
 https://coliru.stacked-crooked.com/  
+http://coliru.stacked-crooked.com/  
 https://cppinsights.io/  
 https://zh.cppreference.com/w/Cppreference:Archives  
 http://www.cplusplus.com/reference/stl/  
 http://www.cplusplus.com/reference/ios/  
+https://www.cplusplus.com/reference/type_traits/decay/  
+C++ 教程 https://cloud.tencent.com/developer/doc/1024  
+apiref  https://www.apiref.com/cpp/index.html
 typeid(x).name()  std::type_info  std::type_index  
 boost::typeindex::type_index type=typeindex::type_id<int&>(); type.pretty_name()  
 boost::msm  
@@ -47,11 +53,36 @@ C语言宏高级用法https://www.cnblogs.com/shirishiqi/p/6033364.html
 gcc动态链接库so的制作和使用# https://www.cnblogs.com/oxspirt/p/7344371.html  
 =Linux下gcc生成和使用静态库和动态库详解# https://blog.csdn.net/CSqingchen/article/details/51546784  
 router-路由器LAN口IP地址到底是什么?https://www.cnblogs.com/oxspirt/p/12302041.html  https://www.zhihu.com/question/369737960/answer/1004809747  
+```
+
 ### c++
 c++ inheritance -- 继承 https://www.cnblogs.com/timssd/p/4781107.html  
 C++类的大小 https://www.cnblogs.com/timssd/p/5714079.html  
 C++ 虚函数表解析 https://blog.csdn.net/haoel/article/details/1948051  
 C++ 对象的内存布局(上) https://blog.csdn.net/haoel/article/details/3081328  https://blog.csdn.net/haoel/article/details/3081385  
+
+### c++/type_traits/MPL/boost/fusion
+```
+baidu: type_traits
+C++模板元编程Type_traits     https://blog.csdn.net/zxc024000/article/details/79405869
+-C++11标准库之Type Traits简介https://blog.csdn.net/garfee_guan/article/details/12234011
+c++11——type_traits 类型萃取  https://www.cnblogs.com/gtarcoder/p/4807670.html
+模板元编程 --- 用 MPL 解决实际问题 http://www.cppblog.com/jack-wang/archive/2010/10/04/128589.html , http://blog.csdn.net/ralph623/archive/2005/10/15/504369.aspx
+//
+baidu: boost::fusion::extension::struct_member_name , BOOST_FUSION_ADAPT_STRUCT
+https://www.boost.org/doc/libs/  Asio,fusion,iterator,json,log,msm(Meta State Machine),move,mp11,MPL,pool,Preprocessor,Process,Program_options,Python,Range,Ref,
+   Signals2,Stacktrace,Test,Thread,Timer,TTI(Type Traits Introspection),typeinfo(not typeid,std::type_index,std::type_info),type_traits,typeof,Variant,VMD(Variadic)
+https://www.boost.org/doc/libs/1_78_0/libs
+https://www.boost.org/doc/libs/1_78_0/libs/fusion/doc/html/fusion/extension/ext_full.html
+https://www.boost.org/doc/libs/1_78_0/libs/fusion/doc/html/index.html
+https://www.boost.org/doc/libs/1_78_0/libs/mpl/doc/refmanual/components.html
+如何迭代boost :: fusion关联结构并以通用方式访问关键字  http://cn.voidcc.com/question/p-dhyelvne-gp.html
+--(std::string(typeid(typename boost::fusion::result_of::key_of<T>::type).name()) + ": " + boost::lexical_cast<std::string>(deref(t)))
+Boost Fusion：将适应的结构类型转换为文本  https://www.thinbug.com/q/39033097
+--std::string member_type = boost::typeindex::type_id<typename fusion::result_of::value_at<Sequence,Index>::type >().pretty_name() ;
+--std::string member_name = fusion::extension::struct_member_name<Sequence,Index::value>::call();
+```
+
 
 ## elearning web/lang
 https://www.runoob.com/lua  https://www.w3cschool.cn/lua  
@@ -63,6 +94,7 @@ HTTP协议和SOCKS5协议    https://www.cnblogs.com/yinzhengjie/p/7357860.html
 https://www.ietf.org/rfc/ , https://www.rfc-editor.org/  , (socks5)https://www.rfc-editor.org/rfc/rfc1928.txt  
 
 ## //git
+```
 https://git-scm.com/book/zh/v2/Git-基础-查看提交历史 https://php.cn/manual/view/34971.html  
 git换行符LF与CRLF转换问题 https://www.cnblogs.com/sdgf/p/6237847.html  
 git config --global core.autocrlf false/input/true  
@@ -100,14 +132,24 @@ git revert/ reset++push -f [Git恢复之前版本的两种方法reset、revert] 
 git apply --check my.pat; git apply -3 my.pat;  git apply --reject my.pat  
 开源-GIT常用命令 https://www.cnblogs.com/kex1n/p/6141166.html  
 git config配置  https://www.cnblogs.com/fireporsche/p/9359130.html  
+git-常用的搜索命令 https://www.cnblogs.com/daowangzhizhu-pt/p/12778478.html
+==
+Git Submodule //baidu
+git submodule 完整用法整理 https://blog.csdn.net/wkyseo/article/details/81589477
+Git Submodule管理项目子模块 https://www.cnblogs.com/nicksheng/p/6201711.html
+Git Submodule使用完整教程 https://www.cnblogs.com/lsgxeva/p/8540758.html
+```
 
 
-## //gitlab/github--2git-acc
+## //gitlab/github--2git-acc/gitee
 https://blog.csdn.net/px_dn/article/details/89455457 
 创建github repository(仓库) https://www.cnblogs.com/siestakc/p/6862446.html  
 gitlab项目仓库自动同步到github或者码云gitee https://blog.csdn.net/zjcjava/article/details/90047837  
+github博客自动同步到gitee（保姆级教程） https://www.icode9.com/content-4-916162.html , https://blog.csdn.net/outman_1921/article/details/115454572  
 Gitlab代码库自动同步到Github https://blog.csdn.net/kelvin_yin/article/details/86661066  
 gitlab Repository mirroring https://gitlab.com/help/workflow/repository_mirroring.html  https://gitlab.com/help/user/project/repository/repository_mirroring.md  
+Repository mirroring        https://docs.gitlab.com/ee/user/project/repository/mirror/index.html  
+-Bidirectional mirroring    https://docs.gitlab.com/ee/user/project/repository/mirror/bidirectional.html  
 GitLab仓库重命名以及GitHub仓库的删除https://www.jianshu.com/p/d6f7da6bd275  (new-setting\project-name,Advanced\Change-path)  
 ```
 remote: Support for password authentication was removed on August 13, 2021. Please use a personal access token instead.
@@ -195,7 +237,8 @@ https://github.com/search?l=C&p=5&q=timer+c&type=Repositories
 ## tools/coding/online
 ```
 https://en.cppreference.com/w/
-https://cppinsights.io/
+http://coliru.stacked-crooked.com/
+https://cppinsights.io/ , https://godbolt.org/
 推荐几款实用的C++ 在线工具 https://www.jb51.net/article/197290.htm
 https://wandbox.org/
 https://quick-bench.com/q/eP40RY6zDK-eJFdSSPBINa0apTM
@@ -203,6 +246,7 @@ https://gcc.godbolt.org/ -https://github.com/compiler-explorer/compiler-explorer
 https://cppinsights.io/  -https://github.com/andreasfertig/cppinsights
 https://build-bench.com/b/47ciR2_jQ0RuAt2fy1Pnk66b3yM
 推荐几个好用的在线编译器  https://zhuanlan.zhihu.com/p/58294969
+C++在线编译器 http://t.zoukankan.com/abc-begin-p-7765532.html
 https://www.onlinegdb.com/
 https://wandbox.org/
 https://godbolt.org/
@@ -211,6 +255,30 @@ codechef https://www.codechef.com/ide
 菜鸟工具　https://c.runoob.com/compile/12
 ideone https://www.ideone.com/
 https://www.tutorialspoint.com/compile_cpp_online.php
+Code::Blocks https://www.codeblocks.org/
+https://www.cplusplus.com/reference/type_traits/decay/
+http://cpp.sh/
+=
+https://wandbox.org/
+// GCC reference:
+//   https://gcc.gnu.org/
+
+// C++ language references:
+//   https://cppreference.com/
+//   https://isocpp.org/
+//   http://www.open-std.org/jtc1/sc22/wg21/
+
+// Boost libraries references:
+//   https://www.boost.org/doc/
+=
+C++ Online Compilers  https://arne-mertz.de/2017/05/online-compilers/
+-http://melpon.org/wandbox , http://godbolt.org/ , https://ideone.com/ 
+-http://coliru.stacked-crooked.com/ , http://rextester.com/ , http://cpp.sh/ 
+-https://www.tutorialspoint.com/compile_cpp11_online.php , http://codepad.org/
+-http://fiddle.jyt.io/
+推荐几个好用的在线编译器  https://zhuanlan.zhihu.com/p/58294969
+-https://www.onlinegdb.com/ , https://wandbox.org/ , https://godbolt.org/ ,...
+最全盘点：18款在线C/C++/Py/Java编译器  https://www.eet-china.com/mp/a7826.html
 =
 =online-code-review (linux)
 https://code.woboq.org/
@@ -293,7 +361,7 @@ Docker安装和常用命令 https://www.cnblogs.com/milton/p/9866963.html
 迁移Git项目到Gitlab https://www.cnblogs.com/milton/p/11053007.html  OpenSSL的证书, 私钥和签名请求(CSRs)www.cnblogs.com/milton/p/11076925.html  
 github仓库迁移到gitlab以及gitlab仓库迁移到另一个gitlab服务器# https://www.cnblogs.com/saysmy/p/10942814.html  
 typeset; man bash |grep PROMPT_DIRTRIM=3  PS1==https://www.cnblogs.com/wi100sh/p/4814745.html  
-export PS1="\[\e[1m\]\w\[\e[0m\] [\u@\h \W]$ "  
+export PS1='\[\e[1m\]\w\[\e[0m\] [\u@\h \W]\$ '  
 PROMPT_COMMAND=/etc/sysconfig/bash-prompt-screen
 PROMPT_COMMAND='printf "\033k%s@%s:%s\033\\" "${USER}" "${HOSTNAME%%.*}" "${PWD/#$HOME/~}"'
 /etc/profile.d/bash_completion.sh
@@ -495,7 +563,7 @@ rsync putty/https://www.chiark.greenend.org.uk/~sgtatham/putty/latest.html
 Python学习之Socket通信的实现  https://blog.csdn.net/m0_37717595/article/details/81101895  
 thread_name-pthread--linux编程 - 给线程起名字_落尘纷扰的专栏-CSDN博客(prctl()/pthread_setname_np()) https://blog.csdn.net/jasonchen_gbd/article/details/51308638  
 
-### linux/c/lib.so ,//gcc+gdb
+### linux/c/lib.so ,//gcc+gdb ,//llvm,icecc
 ```
 https://www.gnu.org/software/software.html
 https://directory.fsf.org/ , https://www.gnu.org/software/libc/ , https://www.gnu.org/software/libc/manual/
@@ -525,6 +593,10 @@ __attribute__ 机制详解  https://www.cnblogs.com/tureno/articles/12236495.htm
 https://gcc.gnu.org/onlinedocs/gcc/Common-Function-Attributes.html#index-finstrument-functions-1
 ///(__cyg_profile_func_enter) 调试技巧之 gcc/g++ -instrument-functions 参数 https://blog.csdn.net/tycoon1988/article/details/38924241
 uclibc,eglibc,glibc,Musl-libc之间的区别和联系  https://www.sohu.com/a/164202127_424963
+//-
+https://github.com/icecc/icecream
+使用 icecream 进行分布式编译  https://blog.csdn.net/yuwen_dai/article/details/17223309
+深入浅出让你理解什么是LLVM   https://www.jianshu.com/p/1367dad95445
 ```
 
 
@@ -628,6 +700,12 @@ Alpine Linux 使用简介  https://blog.csdn.net/freeking101/article/details/807
 Alpine linux硬盘安装  https://blog.csdn.net/csdn_duomaomao/article/details/76053229
 Alpine Linux详解  https://blog.csdn.net/weixin_34355715/article/details/89536087
 tinycore?
+```
+
+
+## etc
+```
+日历精灵 http://www.5adanci.com/excel/2022.html
 ```
 
 

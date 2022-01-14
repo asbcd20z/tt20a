@@ -1,0 +1,587 @@
+
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta name="sogou_site_verification" content="EEplM9r5SR"/>
+    <meta name="baidu-site-verification" content="CF3iexlYQz" />
+    <meta name="360-site-verification" content="b0078e7022efd96ef92ebfb94320309f" />
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="keywords" content="c&#43;&#43;,introspection,boost-fusion">
+    <meta name="description" content="给出这样的结构：
+
+&lt;pre&gt;&lt;code&gt;struct Foo
+{
+    int x;
+    int y;
+    double z;
+};
+
+BOOST_FUSION_ADAPT_STRUCT(Foo, x, y, z);   ">
+    <title>Boost Fusion：将适应的结构类型转换为文本 - Thinbug</title>
+    <link rel="stylesheet" href="/static/reset.css"/>
+    <link rel="stylesheet" href="/static/base.css"/>
+    
+    <link rel="next" href="" />
+    
+
+    <script async src="https://www.googletagmanager.com/gtag/js?id=UA-143782868-1"></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
+      gtag('js', new Date());
+    
+      gtag('config', 'UA-143782868-1');
+    </script>
+
+    <script>
+      var _hmt = _hmt || [];
+      (function() {
+        var hm = document.createElement("script");
+        hm.src = "https://hm.baidu.com/hm.js?41df2cb3f8e0d043db13c179c978bee4";
+        var s = document.getElementsByTagName("script")[0];
+        s.parentNode.insertBefore(hm, s);
+      })();
+    </script>
+
+
+    <script data-ad-client="ca-pub-6263610230477973" async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
+
+  </head>
+
+  <body>
+    <nav>
+      <div class="nav-items">
+        <a href="/" class="nav-logo">Thinbug</a>
+        <ul class="nav">
+          <li><a href="/news">News</a></li>
+        </ul>
+      </div>
+      </div>
+    </nav>
+    
+<link rel="stylesheet" href="/static/github-markdown.css">
+<style>
+.question-container {
+  padding: 30px;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  min-height: 100vh;
+  flex-wrap: wrap;
+}
+
+        img {
+          max-width: 100%;
+        }
+
+        .left {
+          width: 66.66%;
+          padding: 0 10px;
+        }
+
+        pre {
+          overflow-x: scroll;;
+          width: 100%;
+        }
+
+        .right {
+          width: 33.33%;
+          min-width:300px;
+        }
+
+        .ad1 {
+           
+          height: 80px;
+        }
+
+        .ad2 {
+          margin-top: 92px;
+        }
+
+
+        .tag a {
+          margin-right: 10px;
+        }
+
+        .tag span {
+          margin-right: 10px;
+        }
+
+        h3 a {
+          color: #444;
+          text-decoration: none;
+        }
+
+        .meta, .meta a {
+          color: #666;
+          text-decoration: none;
+          font-size: small;
+        }
+
+        h3 {
+          color: #000;
+        }
+
+        .releated-question-wrapper {
+          border: 1px solid #d9d9d9;
+          border-radius: 4px;
+          -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+          margin: 0;
+          padding: 14px;
+          color: rgba(0,0,0,0.65);
+          font-size: 16px;
+          font-variant: tabular-nums;
+          line-height: 2;
+          list-style: none;
+          -webkit-font-feature-settings: 'tnum';
+          font-feature-settings: 'tnum';
+          position: relative;
+        }
+
+        .releated-question-wrapper .header{
+          font-size: 16px;
+          color: black;
+          font-weight:bold;
+         }
+
+        .releated-question-wrapper ul{
+          margin: 0;
+          padding: 0;
+          list-style: none;
+        }
+
+        .releated-question-wrapper a{
+          color: #007bff;
+          font-weight: normal;
+          cursor: pointer;
+        }
+
+        @media (max-width: 768px) {
+          .left {
+            width: 100%;
+          }
+
+          .right {
+            margin-top: 30px;
+            width: 100%;
+          }
+
+          .question-container {
+            padding: 0;
+          }
+        }
+
+</style>
+<div class="container question-container">
+  <div class="left">to: https://www.thinbug.com/q/39033097 <br/>
+    <h3>
+      <a href="/q/39033097">
+        Boost Fusion：将适应的结构类型转换为文本
+      </a>
+    </h3>
+
+    <div class="meta">
+      <span class="date">时间：2016-08-19 07:12:18</span>
+      
+      <p>
+
+        <span class="tag">
+          标签：
+          
+          <span class="label">
+            c&#43;&#43;
+          </span>
+          
+          <span class="label">
+            introspection
+          </span>
+          
+          <span class="label">
+            boost-fusion
+          </span>
+          
+        </span>
+
+        
+      </p>
+    </div>
+    <div class="hr-line-dashed"></div>
+    
+    <div>
+
+      <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-6263610230477973"
+         crossorigin="anonymous"></script>
+      
+      <ins class="adsbygoogle"
+        style="display:block"
+        data-ad-client="ca-pub-6263610230477973"
+        data-ad-slot="2678421423"
+        data-ad-format="auto"></ins>
+        <script>
+               (adsbygoogle = window.adsbygoogle || []).push({});
+        </script>
+
+    </div>
+    <div class="question-body markdown-body">
+      <p>给出这样的结构：</p>
+
+<pre><code>struct Foo
+{
+    int x;
+    int y;
+    double z;
+};
+
+BOOST_FUSION_ADAPT_STRUCT(Foo, x, y, z);       
+</code></pre>
+
+<p>我想生成一个这样的字符串：</p>
+
+<pre><code>&#34;{ int x; int y; double z; }&#34;
+</code></pre>
+
+<p>我已经看过如何使用Fusion改编的结构<a href="https://stackoverflow.com/a/17660354/4323">print the <em>values</em></a>，但在这里我只需打印类型和名称。</p>
+
+<p>我怎么能这么简单地做到这一点？我没有和Boost.Fusion结婚，如果有更好的方式。</p>
+    </div>
+
+    <div class="answer-list">
+      <h4>2 个答案:</h4>
+      
+      <div class="hr-line-dashed"></div>
+      <p>答案 0 :(得分：5)</p>
+      <div class="answer markdown-body">
+        <p>我认为您可以通过对<a href="https://stackoverflow.com/a/17842958/2417774">this answer</a>中的代码进行一些细微修改来获得类似于您想要的内容。您可以使用<code>boost::fusion::extension::struct_member_name</code>轻松获取成员名称，但据我所知，您无法直接获取成员类型名称。您可以使用<code>boost::fusion::result_of::value_at</code>（以及其他选项）获取成员类型，并且我已选择使用Boost.TypeIndex来获取其名称（在不同程度的可爱程度，取决于编译器和相关类型） 。所有这一切都假设你实际上需要融合适应，如果你不能，你可能会得到一个更简单的方法，只做你需要的。</p>
+
+<p> <strong>完整代码</strong> <br/>
+<a href="http://melpon.org/wandbox/permlink/garJmgbRY9Do9I9j" rel="nofollow noreferrer">Running on WandBox (gcc)</a> <BR/>
+<a href="http://rextester.com/PQL69470" rel="nofollow noreferrer">Running on rextester (vc)</a> </P>
+
+<pre><code>#include &lt;iostream&gt;
+#include &lt;string&gt;
+
+#include &lt;boost/mpl/range_c.hpp&gt;
+#include &lt;boost/fusion/include/for_each.hpp&gt;
+#include &lt;boost/fusion/include/zip.hpp&gt;
+#include &lt;boost/fusion/include/at_c.hpp&gt;
+#include &lt;boost/fusion/include/adapt_struct.hpp&gt;
+#include &lt;boost/fusion/include/mpl.hpp&gt;
+
+#include &lt;boost/type_index.hpp&gt;
+
+
+namespace fusion=boost::fusion;
+namespace mpl=boost::mpl;
+
+struct Foo
+{
+    int x;
+    int y;
+    double z;
+};
+
+BOOST_FUSION_ADAPT_STRUCT(Foo, x, y, z);
+
+struct Bar
+{
+    std::pair&lt;int,int&gt; p;
+    std::string s;
+};
+
+BOOST_FUSION_ADAPT_STRUCT(Bar, p, s);
+
+template &lt;typename Sequence&gt;
+struct Struct_member_printer
+{
+    Struct_member_printer(const Sequence&amp; seq):seq_(seq){}
+    const Sequence&amp; seq_;
+    template &lt;typename Index&gt;
+    void operator() (Index) const
+    {
+
+        std::string member_type = boost::typeindex::type_id&lt;typename fusion::result_of::value_at&lt;Sequence,Index&gt;::type &gt;().pretty_name() ;
+        std::string member_name = fusion::extension::struct_member_name&lt;Sequence,Index::value&gt;::call();
+
+        std::cout &lt;&lt; member_type &lt;&lt; &#34; &#34; &lt;&lt; member_name &lt;&lt; &#34;; &#34;;
+    }
+};
+template&lt;typename Sequence&gt;
+void print_struct(Sequence const&amp; v)
+{
+    typedef mpl::range_c&lt;unsigned, 0, fusion::result_of::size&lt;Sequence&gt;::value &gt; Indices; 
+    std::cout &lt;&lt; &#34;{ &#34;;
+    fusion::for_each(Indices(), Struct_member_printer&lt;Sequence&gt;(v));
+    std::cout &lt;&lt; &#34;}\n&#34;;
+}
+
+int main()
+{
+    Foo foo;
+    print_struct(foo);
+
+    Bar bar;
+    print_struct(bar);
+}
+</code></pre>
+      </div>
+      
+      <div class="hr-line-dashed"></div>
+      <p>答案 1 :(得分：0)</p>
+      <div class="answer markdown-body">
+        <p>您可以使用以下解决方案，该解决方案依赖于编译器（在clang / gcc / MSVC上测试），并且只有在您使用c ++ 14（在稍作修改后才能使用c ++ 11）时才有效。它做你想要的，但可能有更简单的解决方案...... </p>
+
+<p>第一部分是一些编译器相关代码，以<strong> demangle names </strong>返回<code>std::type_info::name</code>：</p>
+
+<pre><code>#include &lt;string&gt;
+
+#if defined __GNUC__
+
+#include &lt;cxxabi.h&gt;
+
+std::string demangle (const char *name) {
+    int status = 0;
+    return abi::__cxa_demangle(name, 0, 0, &amp;status);
+}
+
+#elif defined _WIN32 
+
+#include &lt;Windows.h&gt;
+#include &lt;DbgHelp.h&gt;
+
+std::string demangle (const char *name) {
+    char buffer[1024];
+    UnDecorateSymbolName(name, buffer, sizeof(buffer)/sizeof(*buffer), 0);
+    return buffer;
+}
+
+#endif
+</code></pre>
+
+<p>然后“通用”部分很短：</p>
+
+<pre><code>#include &lt;array&gt;
+#include &lt;tuple&gt;
+
+
+template &lt;typename Tuple, size_t ...Idx&gt;
+std::string to_string (std::string vars, std::index_sequence&lt;Idx...&gt;) {
+    std::array&lt;const char *, std::tuple_size&lt;Tuple&gt;::value&gt; tnames{
+        typeid(typename std::tuple_element&lt;Idx, Tuple&gt;::type).name()...};
+    std::stringstream res;
+    res &lt;&lt; &#34;{ &#34;;
+    for (auto s: tnames) {
+        size_t end = vars.find(&#39;,&#39;);
+        res &lt;&lt; demangle(s) &lt;&lt; &#39; &#39; &lt;&lt; vars.substr(0, end) &lt;&lt; &#34;; &#34;;
+        vars = vars.substr(end + 2);
+    }
+    res &lt;&lt; &#39;}&#39;;
+    return res.str();
+}
+
+#define CREATE(S, ...) struct: S { \
+    using Tuple = decltype(std::make_tuple(__VA_ARGS__)); \
+    std::string operator()() { \
+        return to_string&lt;Tuple&gt;(#__VA_ARGS__, \
+            std::make_index_sequence&lt;std::tuple_size&lt;Tuple&gt;::value&gt;{}); \
+    }; \
+} 
+</code></pre>
+
+<p>我们的想法是创建一个继承自指定类（例如<code>L</code>）的类<code>Foo</code>，并使用<code>__VA_ARGS__</code>宏将属性名称扩展为<code>std::make_tuple</code>获得他们的类型。 </p>
+
+<p> <code>to_string</code>从<code>std::type_info::name</code>检索每个元素的<code>tuple</code>，并将其与属性名称（例如<code>&#34;x, y, z&#34;</code>）合并。</p>
+
+<p> <code>CREATE</code>宏返回一个lambda，你可以使用如下：</p>
+
+<pre><code>struct Foo {
+    int x;
+    int y;
+    double z;
+};
+
+CREATE(Foo, x, y, z) foo_xyz;
+
+#include &lt;iostream&gt;
+
+int main () {
+   std::cout &lt;&lt; foo_xyz() &lt;&lt; std::endl; 
+}
+</code></pre>
+
+<P>输出：</p>
+
+<pre><code>{ int x; int y; double z; }
+</code></pre>
+
+<p> <strong>注意：</strong>由于demangling与编译器有关，因此您可能无法获得与所有编译器完全相同的输出...例如，如果您有<code>std::array&lt;int, 10&gt;</code>：</p>
+
+<pre><code>gcc: std::array&lt;int, 10ul&gt;
+clang: std::__1::array&lt;int, 10ul&gt;
+msvc: class std::array&lt;int,10&gt;
+</code></pre>
+
+<p> <strong>注意：</strong>支持MSVC的用法“很复杂”：最初我在<code>CREATE</code>内使用了lambda，这样你就可以<code>CREATE(Foo, x, y, z)()</code>而不必费心去创建一个变量（我不知道如何生成正确的名称 - 请参阅此答案的初始版本），但MSVC不喜欢lambda中的<code>decltype(std::make_tuple(x, y, z))</code> ...（可能是一个错误）。</p>
+      </div>
+      
+    </div>
+
+  </div>
+
+  <div class="right">
+    <div style="height:400px">
+        <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
+        <ins class="adsbygoogle"
+             style="display:block"
+             data-ad-client="ca-pub-6263610230477973"
+             data-ad-slot="2820756182"
+             data-ad-format="auto"
+             data-full-width-responsive="true"></ins>
+        <script>
+          (adsbygoogle = window.adsbygoogle || []).push({});
+        </script>
+    </div>
+
+
+    <div style="height:20px"></div>
+
+    <div class="releated-question-wrapper">
+      <div class="header">
+        相关问题
+      </div>
+      <div class="hr-line-dashed"></div>
+      <ul>
+        
+        <li>
+          <a href="/q/13652987">如何将std :: vector &lt;std :: string&gt;转换为boost :: spirit中struct的成员？&lt;/std :: string&gt;</a>
+        </li>
+        
+        <li>
+          <a href="/q/13751752">使用boost :: spirit时无法在boost :: variant中转换boost :: fusion结构</a>
+        </li>
+        
+        <li>
+          <a href="/q/18166958">为什么Boost.Spirit正确地将标识符解析为std :: string，而不是解析为仅由std :: string组成的自适应结构？</a>
+        </li>
+        
+        <li>
+          <a href="/q/18831546">为Boost Fusion调整空结构</a>
+        </li>
+        
+        <li>
+          <a href="/q/19657065">是否有可能从适应的结构生成融合图？</a>
+        </li>
+        
+        <li>
+          <a href="/q/25099397">为什么未正确推导出boost :: fusion序列中的struct array成员类型？</a>
+        </li>
+        
+        <li>
+          <a href="/q/39033097">Boost Fusion：将适应的结构类型转换为文本</a>
+        </li>
+        
+        <li>
+          <a href="/q/39762113">Boost Fusion：在编译时验证适应的struct成员排序</a>
+        </li>
+        
+        <li>
+          <a href="/q/49222879">具有适应的std :: pair点类型的R-Tree查询</a>
+        </li>
+        
+        <li>
+          <a href="/q/49389592">Boost.Fusion定义struct数组成员</a>
+        </li>
+        
+      </ul>
+    </div>
+
+
+
+    
+
+    <div>
+      <a href="https://www.inktok.com" target="_blank" style="text-decoration: none;">
+        <img id="inktokad" src="https://file.inktok.com/ad/ad1.webp"/>
+      </a>
+    </div>
+
+    <div class="releated-question-wrapper">
+      <div class="header">
+        最新问题
+      </div>
+      <div class="hr-line-dashed"></div>
+      <ul>
+        
+        <li>
+          <a href="/q/68614764">我写了这段代码，但我无法理解我的错误</a>
+        </li>
+        
+        <li>
+          <a href="/q/68615123">在此代码中是否有使用“this”的替代方法？</a>
+        </li>
+        
+        <li>
+          <a href="/q/68614097">在 SQL Server 和 PostgreSQL 上查询，我如何从第一个表获得第二个表的可视化</a>
+        </li>
+        
+        <li>
+          <a href="/q/68615109">为什么我的 Onclick 箭头功能在 React 中不起作用？</a>
+        </li>
+        
+        <li>
+          <a href="/q/68614313">java中的random.expovariate()</a>
+        </li>
+        
+        <li>
+          <a href="/q/68614427">每千个数字得到</a>
+        </li>
+        
+        <li>
+          <a href="/q/68614175">是否有可能使 loadstring 不可能等于打印？卢阿</a>
+        </li>
+        
+        <li>
+          <a href="/q/68613238">启动调试会话时出错 - Google Cloud Shell</a>
+        </li>
+        
+        <li>
+          <a href="/q/68614678">我无法从一个代码实例的列表中删除 None 值，但我可以在另一个实例中。为什么它适用于一个细分市场而不适用于另一个细分市场？</a>
+        </li>
+        
+        <li>
+          <a href="/q/68614125">Appscript 通过会议在 Google 日历中发送电子邮件和创建活动</a>
+        </li>
+        
+      </ul>
+    </div>
+    <div class="">
+    </div>
+  </div>
+</div>
+
+
+    <div>
+      <script>
+        var host = window.location.host;
+if (host =="www.thinbug.com"){
+  (function(){
+    var bp = document.createElement('script');
+    var curProtocol = window.location.protocol.split(':')[0];
+    if (curProtocol === 'https') {
+        bp.src = 'https://zz.bdstatic.com/linksubmit/push.js';
+    }
+    else {
+        bp.src = 'http://push.zhanzhang.baidu.com/push.js';
+    }
+    var s = document.getElementsByTagName("script")[0];
+    s.parentNode.insertBefore(bp, s);
+})();
+}
+      </script>
+
+    
+
+  </body>
+</html>
