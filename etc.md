@@ -31,7 +31,7 @@ C++ 教程 https://cloud.tencent.com/developer/doc/1024
 apiref  https://www.apiref.com/cpp/index.html
 typeid(x).name()  std::type_info  std::type_index  
 boost::typeindex::type_index type=typeindex::type_id<int&>(); type.pretty_name()  
-boost::msm  
+boost::msm   Boost.Msm 介绍  https://www.jianshu.com/p/6748aa7c117b  
 c __packed struct, struck __attribute__((packed)),member__attribute((aligned (n))), #pragma pack(2^x)默认是2^2=4B/8double-arch64(最大对齐值)  
 浅谈C语言字节对齐+位域https://blog.csdn.net/ljx_5489464/article/details/50006133  
 C语言字节对齐详解##https://www.cnblogs.com/born2run/p/9581355.html  
@@ -85,7 +85,7 @@ Boost Fusion：将适应的结构类型转换为文本  https://www.thinbug.com/
 
 
 ## elearning web/lang
-https://www.runoob.com/lua  https://www.w3cschool.cn/lua  
+菜鸟 https://www.runoob.com/lua , https://www.w3cschool.cn/lua  
 https://www.w3cschool.cn/sublimetext/  
 关于HTTP协议，一篇就够了 https://www.cnblogs.com/ranyonsue/p/5984001.html  
 HTTP协议超级详解        https://www.cnblogs.com/an-wen/p/11180076.html  
@@ -120,11 +120,11 @@ Git知识总览(五)Git中的merge、rebase、cherry-pick以及交互式rebase h
 简单对比git pull和git pull --rebase的使用 https://blog.csdn.net/dake_160413/article/details/78676163  https://www.cnblogs.com/kevingrace/p/5896706.html  
 git submodule 完整用法整理 https://blog.csdn.net/wkyseo/article/details/81589477  
 git init --bare project.git; repack,fsck,gc  
-git push -f origin master ///[f]to restore,but better to revert commitId  
-git remote -v  #gitlab project项目迁移https://blog.csdn.net/lcyaiym/article/details/77678467  
+git push -vv -f  origin master  #--force ///careful!!!, to restore,but better to revert commitId  
+git remote -vv  #gitlab project项目迁移https://blog.csdn.net/lcyaiym/article/details/77678467  
 git remote add mybak URL..; git remote set-url mybak URL..;  
 git var -l; git config -l --local; git ls-files; git whatchanged  
-git remote show; git remote -v; git ls-remote  
+git remote show; git remote -vv; git ls-remote  
 git branch --unset-upstream  
 git show-branch; lo = log -9 --oneline #--all --graph #--decorate; loag=lo --all --graph #--decorate;  ##log --left-right --boundary --reverse bra1...bra2  
 git branch -vv  
@@ -135,11 +135,83 @@ git config配置  https://www.cnblogs.com/fireporsche/p/9359130.html
 git-常用的搜索命令 https://www.cnblogs.com/daowangzhizhu-pt/p/12778478.html
 ==
 Git Submodule //baidu
-git submodule 完整用法整理 https://blog.csdn.net/wkyseo/article/details/81589477
-Git Submodule管理项目子模块 https://www.cnblogs.com/nicksheng/p/6201711.html
-Git Submodule使用完整教程 https://www.cnblogs.com/lsgxeva/p/8540758.html
+git submodule 完整用法整理 https://blog.csdn.net/wkyseo/article/details/81589477 ，https://www.cnblogs.com/zhoug2020/p/13544721.html
+Git Submodule管理项目子模块# https://www.cnblogs.com/nicksheng/p/6201711.html
+Git Submodule使用完整教程 https://www.cnblogs.com/lsgxeva/p/8540758.html , https://recomm.cnblogs.com/blogpost/8540758
+1.先来个官方的API
+git submodule [--quiet] add [<options>] [--] <repository> [<path>]       #add new (and in cached**)
+git submodule [--quiet] status [--cached] [--recursive] [--] [<path>…​]
+git submodule [--quiet] init [--] [<path>…​]                              #init exsting to be registered in .git/config
+git submodule [--quiet] deinit [-f|--force] (--all|[--] <path>…​)         #.............to deregister
+git submodule [--quiet] update [<options>] [--] [<path>…​]                #update exsting to clone(1st) or update
+git submodule [--quiet] summary [<options>] [--] [<path>…​]
+git submodule [--quiet] foreach [--recursive] <command>
+git submodule [--quiet] sync [--recursive] [--] [<path>…​]
+git submodule [--quiet] absorbgitdirs [--] [<path>…​]
+//.gitmodules, .git/config[submodule]
+2.解析git命令
+常用命令如下
+#cat .git/config;ll .git/modules/; ll moduleA -R
+#//rm moduleA/* -fr              //ok,only del module/*
+#//git submodule deinit moduleA  //ok,only del module/*,vs-init
+#//git rm moduleA  -r            //del moduleA-dir and change .gitmodule to commit
+git clone <repository> --recursive  //递归的方式克隆整个项目
+git submodule add <repository> <path> //添加子模块
+git submodule init //初始化子模块
+git submodule update //更新子模块
+git submodule foreach git pull  //拉取所有子模块
 ```
 
+## //git remote ,pull/push/branch
+```
+baidu: git fetch push不同路径
+==
+git push 到不同的 地址库  https://www.cnblogs.com/woshixiaozhu/p/13439913.html
+	git push 到不同的 url
+	1、增加库地址
+	git remote add origin(可以自己命名) URL
+	2、修改
+	git remote origin set-url URL
+	3、先删后加
+	git remote rm origin
+	git remote add origin URL
+	4、提交
+	git push origin //提交默认分支
+	git push myorigin dev //提交指定的地址，指定的分支
+	5、git pull
+	git pull  #拉取默认分支
+	git push aliyun dev #拉取指定地址的指定分支
+==
+git fetch和push的区别  http://t.zoukankan.com/jeremylee-p-5564776.html
+	git remote add origin git@github.com:schacon/simplegit-progit.git
+	git fetch /home/bob/myrepo master:bobworks ：用于从bob的工作目录的master分支下载objects和refs到本地的bobworks分支中。
+	git pull是git fetch和git merge命令的一个组合
+	git push origin master 把本地仓库提交到远程仓库的master分支中
+	$ git push origin test:master         // 提交本地test分支作为远程的master分支
+	$ git push origin test:test              // 提交本地test分支作为远程的test分支
+	git push origin :test              // 刚提交到远程的test将被删除，但是本地还会保存的，不用担心
+==
+Git 设置不同的 fetch 和 push 地址  https://www.awaimai.com/2971.html
+	方法一：多个 origin
+	第一种方法是，在原 origin 远程仓库地址的基础上，再加一个地址，也就是主仓库地址，例如加一个origin_mian，如下
+	git remote add origin_main git@github.com:yeszao/dnmp.git
+	git remote -vv
+	origin git@github.com:MY_REPOSITY/dnmp.git (fetch)
+	origin git@github.com:MY_REPOSITY/dnmp.git (push)
+	origin_main git@github.com:yeszao/dnmp.git (fetch)
+	origin_main git@github.com:yeszao/dnmp.git (push)
+	git push origin master
+	git pull origin_main master
+	方法二：一个 origin（推荐）
+	另外一种办法就是，我们只用一个 origin，设置主仓库为 fetch 地址，个人仓库为 push 地址：
+	git remote set-url origin git@github.com:yeszao/dnmp.git                    #pull remote.url=
+	git remote set-url --add --push origin git@github.com:MY_REPOSITY/dnmp.git  #push remote.pushurl=
+	git remote -vv
+	origin git@github.com:MY_REPOSITY/dnmp.git (push)
+	origin git@github.com:yeszao/dnmp.git (fetch)
+	git push origin master
+	git pull origin master
+```
 
 ## //gitlab/github--2git-acc/gitee
 https://blog.csdn.net/px_dn/article/details/89455457 
@@ -357,6 +429,17 @@ proxy.pac https://wenku.baidu.com/view/1d29739ea2161479171128a6.html
 用Python写socks5服务器端             https://www.cnblogs.com/lexus/archive/2012/03/04/2379103.html  
 python怎么走socks5代理？    (PySocks) https://blog.csdn.net/qiya2007/article/details/107291233  https://github.com/Anorov/PySocks  
 python3给socket模块设置代理 (PySocks-socks.set_default_proxy) https://www.cnblogs.com/woaixuexi9999/p/9360581.html  
+使用frp进行内网穿透(frp V0.35.1)  http://www.awccc.com/3107
+-FrpProxy。frp是什么，简单地说，frp就是一个反向代理软件，它体积轻量但功能很强大，可以使处于内网或防火墙后的设备对外界提供服务，它支持HTTP、TCP、UDP等众多协议。
+十分钟教你配置frp实现内网穿透  https://blog.csdn.net/u013144287/article/details/78589643
+https://www.cnblogs.com/lsgxeva/p/8540758.html
+FrpProxy - tcp://frpgz1.idcfengye.com:10000
+ChromeURLs - chrome://chrome-urls/
+ProxyDownload - https://d.serctl.com/
+nand2tetris - https://www.nand2tetris.org/
+fuchsia - https://cs.opensource.google/fuchsia/fuchsia
+firefox - https://www.mozilla.org/zh-CN/firefox
+--
 Docker安装和常用命令 https://www.cnblogs.com/milton/p/9866963.html  
 迁移Git项目到Gitlab https://www.cnblogs.com/milton/p/11053007.html  OpenSSL的证书, 私钥和签名请求(CSRs)www.cnblogs.com/milton/p/11076925.html  
 github仓库迁移到gitlab以及gitlab仓库迁移到另一个gitlab服务器# https://www.cnblogs.com/saysmy/p/10942814.html  
@@ -670,6 +753,7 @@ Linux系统使用ss命令查看端口状态  https://my.oschina.net/u/4413564/bl
 ```
 
 ### lang/script
+```
 lua/(wireshark plugin)  https://www.runoob.com/lua  http://www.lua.org/docs.html  
 Lua中调用C函数(lua-5.2.3)    https://www.w3cschool.cn/lua/gxj31te8.html  
 //Step By Step(Lua调用C函数) https://www.cnblogs.com/orangeform/archive/2012/07/23/2469902.html  
@@ -678,6 +762,8 @@ Lua中调用C函数(lua-5.2.3)    https://www.w3cschool.cn/lua/gxj31te8.html
 Lua编写wireshark插件基础 https://blog.csdn.net/chen_jianjian/article/details/81502840  
 脚本之家51jb首页 >> 脚本专栏 >> Lua  https://www.jb51.net/list/list_245_1.htm  
 Duktape：在C/C++项目中嵌入JavaScript  http://www.cppblog.com/tx7do/archive/2016/04/13/213263.html  
+Rust 专注于安全，尤其是并发安全  https://www.runoob.com/rust
+```
 
 
 ### gawk/gawkinet
@@ -705,6 +791,8 @@ tinycore?
 
 ## etc
 ```
+github/gitlab-web-acc-nopw-authentication win10\控制面板\用户帐户\凭据管理器(管理Windows凭据)
+https://shjg.nongtianlang.com/  https://gitee.com/yinshuwei
 日历精灵 http://www.5adanci.com/excel/2022.html
 ```
 

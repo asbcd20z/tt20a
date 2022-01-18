@@ -2,6 +2,8 @@ git push origin br-bef-svg-add-autonumber
 git push origin tg-bef-svg-add-autonumber
 git push origin --tags
 --
+#git push -vv -f  gith master  #--force ///careful!!!
+--
 git push origin master
 git push -u origin master
 git remote add bklab https://gitlab.com/asbcd20z/tt20a
