@@ -26,7 +26,24 @@ Boost type_index库使用介绍 https://blog.csdn.net/ffx54611/article/details/4
 ```
 
 ### c++/type_traits/MPL/boost/fusion
-```
+//
+https://en.cppreference.com/w/cpp/utility
+https://en.cppreference.com/w/cpp/utility/forward
+https://en.cppreference.com/w/cpp/utility/move
+https://en.cppreference.com/w/cpp/utility/declval
+https://en.cppreference.com/w/cpp/keyword/decltype
+https://en.cppreference.com/w/cpp/language/attributes/noreturn
+//types
+https://en.cppreference.com/w/cpp/types
+https://en.cppreference.com/w/cpp/types/decay
+https://en.cppreference.com/w/cpp/types/enable_if
+https://en.cppreference.com/w/cpp/types/type_index
+https://en.cppreference.com/w/cpp/types/type_info/name
+-https://gcc.gnu.org/onlinedocs/libstdc++/manual/ext_demangling.html
+-https://www.boost.org/doc/libs/1_78_0/libs/core/doc/html/core/demangle.html
+https://en.cppreference.com/w/cpp/types/type_identity
+https://en.cppreference.com/w/cpp/keyword/typeid
+//
 baidu: type_traits
 C++模板元编程Type_traits     https://blog.csdn.net/zxc024000/article/details/79405869
 -C++11标准库之Type Traits简介https://blog.csdn.net/garfee_guan/article/details/12234011
