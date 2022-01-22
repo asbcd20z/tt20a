@@ -43,6 +43,7 @@ https://en.cppreference.com/w/cpp/types/type_info/name
 -https://www.boost.org/doc/libs/1_78_0/libs/core/doc/html/core/demangle.html
 https://en.cppreference.com/w/cpp/types/type_identity
 https://en.cppreference.com/w/cpp/keyword/typeid
+https://en.cppreference.com/w/cpp/keyword/sizeof
 //
 baidu: type_traits
 C++模板元编程Type_traits     https://blog.csdn.net/zxc024000/article/details/79405869
