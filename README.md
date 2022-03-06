@@ -113,7 +113,7 @@ The Linux man-pages project https://www.kernel.org/doc/man-pages/  https://man7.
 https://www.runoob.com/cprogramming/c-standard-library.html
 https://man7.org/linux/man-pages/man1/bash.1.html#EXPANSION
 https://man7.org/linux/man-pages/man1/bash.1.html#REDIRECTION
-https://linux.die.net/man/5/ssh_config (vscode ssh remote: IdentityFile ~/.ssh/id_rsa)
+https://linux.die.net/man/5/ssh_config (vscode ssh remote: IdentityFile ~/.ssh/id_rsa, gitlens)
 https://www.cnblogs.com/liyufeia/p/11405779.html (cat id_rsa.pub >> authorized_keys //ssh-copy-id)
 lexical/syntax/semantically
 ```

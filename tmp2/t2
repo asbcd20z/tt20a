@@ -2,6 +2,41 @@ t2
 json.tool.py
 json格式化工具有哪些 https://www.bejson.com/
 https://baike.baidu.com/item/MPL/13908461 
+https://www.freesion.com/article/18571258268/
+boost::msm   Boost.Msm 介绍  https://www.jianshu.com/p/6748aa7c117b  
+Boost.Msm - 多弗朗强哥 https://www.cnblogs.com/chendeqiang/p/12885243.html ,
+https://blog.csdn.net/weixin_39759247/article/details/107055132
+https://www.boost.org/doc/libs/1_78_0/
+https://www.boost.org/doc/libs/1_78_0/libs/python/doc/html/index.html
+https://www.boost.org/doc/libs/master/doc/html/stacktrace.html
+https://www.boost.org/doc/libs/1_45_0/libs/statechart/doc/tutorial.html
+https://www.boost.org/doc/libs/1_78_0/libs/msm/doc/HTML/index.html
+https://www.boost.org/doc/libs/1_78_0/libs/msm/doc/HTML/ch03s02.html#d0e344
 C++元编程和Boost编程库  https://blog.csdn.net/hityct1/article/details/4191030
 为wget命令设置代理  https://www.cnblogs.com/frankyou/p/6693256.html
-
+MobaXterm personal edition v21.4//mobadifffiles
+boost::msm   Boost.Msm 介绍  https://www.jianshu.com/p/6748aa7c117b  
+ https://www.cnblogs.com/chendeqiang/p/12885243.html
+https://en.cppreference.com/w/cpp/utility/tuple
+https://en.cppreference.com/w/cpp/utility/tuple/tie
+//std::bind , std::ref(*this)  std::cref
+https://en.cppreference.com/w/cpp/algorithm/for_each
+https://zh.cppreference.com/w/cpp/language/template_argument_deduction
+https://en.cppreference.com/w/cpp/utility/functional/ref
+https://en.cppreference.com/w/cpp/utility/functional/reference_wrapper
+https://en.cppreference.com/w/cpp/utility/variant
+https://en.cppreference.com/w/cpp/utility/variant/visit
+https://en.cppreference.com/w/cpp/utility/apply
+如何优雅的使用 std::variant 与 std::optional  https://zhuanlan.zhihu.com/p/366537214
+boost::static_visitor， boost::apply_visitor
+boost::variant and boost::apply_visitor  https://blog.csdn.net/janeqi1987/article/details/78425454
+https://www.bilibili.com/video/BV1ES4y1C7y5
+//
+baidu:网页禁止右键代码 //body oncontextmenu="return false"
+//body oncontextmenu="return false" onselectstart="return false" 
+ondragstart="return false" onbeforecopy="return false" oncopy=document.selection.empty() onselect=document.selection.empty()
+//
+https://www.bilibili.com/video/BV1Pf4y1j7hA?spm_id_from=333.999.0.0
+https://www.bilibili.com/video/BV1jT4y1d7Dr/?spm_id_from=333.788.recommend_more_video.0
+https://www.bilibili.com/video/BV1fk4y1d7qn/?spm_id_from=333.788.recommend_more_video.1
+bat批处理, https://baike.baidu.com/item/批处理/1448600

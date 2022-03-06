@@ -32,5 +32,5 @@ int main()
     another_list.push_back("world");
    
     for_each(str_list.begin(), str_list.end(), print{1});
-    for_each(another_list.begin(), another_list.end(), print(2));
+    std::for_each(another_list.begin(), another_list.end(), print(2));
 }

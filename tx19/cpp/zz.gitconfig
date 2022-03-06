@@ -7,6 +7,12 @@
 #
 	name=z
 	email=z
+[corex]
+	core.whitespace
+	core.ignoreCase
+	core.gitProxy  # GIT_PROXY_COMMAND 
+	core.longpaths
+	#git config --global core.longpaths true
 [alias]
 	#@time20211217a
 	#git clean -x -f -d  # rm  untracked files
@@ -104,6 +110,7 @@
 #       proxy = 127.0.0.1:1087
 #       sslVerify=false
 ##alias pgit='https_proxy=135.251.33.16:8080 git'  ##pgit push  [my-origin] [my-branch] [-u]
+##alias pgit=  'all_proxy=135.251.33.16:8080 git'  ##pgit push  [my-origin] [my-branch] [-u]
 [xuser]
         name=jqasbcd20z
         email=jqasbcd20z@q.com
