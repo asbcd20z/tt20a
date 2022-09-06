@@ -473,7 +473,7 @@ Linux常用操作# https://blankj.com/gitbook/linux/ https://github.com/Blankj/A
 //curl 的用法指南 http://www.ruanyifeng.com/blog/2019/09/curl-reference.html  
 //JavaScript 有多灵活？ http://www.ruanyifeng.com/blog/2015/02/flexible-javascript.html  
 //《SSH 入门教程》发布了   http://www.ruanyifeng.com/blog/2020/12/ssh-tutorial.html  https://wangdoc.com/ssh/  
-//man screen (-dr) (DEFAULT KEY BINDINGS): C-a C-a, C-a C-c,  C-a ", C-a a
+//man screen (-dr) (DEFAULT KEY BINDINGS): C-a C-a, C-a C-c,  C-a ", C-a a, //-dr -ls -wipe
 //screen tmux  byobu         http://www.ruanyifeng.com/blog/2019/10/tmux.html  
 https://stackoverflow.com/questions/41830936/mobaxterm-follow-terminal-folder-stfp-and-byobu  
 深入ProtoBuf-简介 https://www.jianshu.com/p/a24c88c0526a  
@@ -735,12 +735,14 @@ hexdump, xxd
 for i in *.c ;do echo $i ==; done
 ls *.c |xargs -tn1 -i true {} == {}
 find ./ -name '*c' -exec echo {} == \;
+if ! [[ $x =~ ^(startup|runtime)_cp_.*\.log ]]; then echo 111; fi  #bash正则匹配
+if [[ 'aa' == 'ab' ]] ;then echo 111;else echo 222; fi
 echo -e 'aa\nbbb\nc'| for i in `cat -`;do echo -n "$i, ";done
 foo(){ echo $1-xyz-$*;}
 typeset -f foo //declare
 htail(){ head -3 $*; echo ...; tail --line=3 $*;}
 a xztail='xzcat|cat -n|grep Cprt|htail'
-a sort.k7='sort -k7,7'  ##for syslog,better for cu
+a sort.k77='sort -k7,7'  ##for syslog,better for cu
 #echo -e 'AA\r\nBB\rC' |sed -b -e's/\r$/-/g' -e's/\r/\n/g' | hexdump -C  ##can't match \n or $
 a lsed="sed -bi 's:\r:\n:g'"  #files*
 a pyy='python3 -B' #-Bi

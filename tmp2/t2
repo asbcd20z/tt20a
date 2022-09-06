@@ -36,7 +36,74 @@ baidu:网页禁止右键代码 //body oncontextmenu="return false"
 //body oncontextmenu="return false" onselectstart="return false" 
 ondragstart="return false" onbeforecopy="return false" oncopy=document.selection.empty() onselect=document.selection.empty()
 //
+//5G-NR CSI-RS, LTE
+LTE两种帧结构  https://www.icode9.com/content-4-770461.html
+//
+https://www.3gpp.org/specification-numbering
+https://www.3gpp.org/DynaReport/38-series.htm
+https://blog.csdn.net/lilliana/article/details/109402345#  /5G/NR帧格式概要#
+http://www.sharetechnote.com/
+https://blog.csdn.net/m0_38099948/article/details/108561696  /5G NR 无线帧结构###
+https://blog.csdn.net/qq_39074243/article/details/119886180
+https://blog.csdn.net/qq_39074243/article/details/119926972
+https://blog.csdn.net/qq_39074243/article/details/120901507
+http://www.sharetechnote.com/
+https://blog.csdn.net/Graduate2015/article/details/118547062  /【5G NR】帧结构
+https://blog.csdn.net/Graduate2015/article/details/119295224  /【5G NR】UE上报CSI的过程—CSI框架
+https://blog.csdn.net/graduate2015/category_11192048.html
+https://blog.csdn.net/Graduate2015/article/details/111874148  /LTE空口资源
+https://blog.csdn.net/m_052148/article/details/51305338  /LTE物理传输资源（1）-帧结构和OFDM符号
+https://zhuanlan.zhihu.com/p/365758206  /5G-NR-3GPP协议学习（零）：CSI简介
+/
+https://blog.csdn.net/weixin_41008284/article/details/108896591  /MIMO基础总结##
+https://blog.csdn.net/jyqxerxes/article/details/78994699
+//
 https://www.bilibili.com/video/BV1Pf4y1j7hA?spm_id_from=333.999.0.0
 https://www.bilibili.com/video/BV1jT4y1d7Dr/?spm_id_from=333.788.recommend_more_video.0
 https://www.bilibili.com/video/BV1fk4y1d7qn/?spm_id_from=333.788.recommend_more_video.1
 bat批处理, https://baike.baidu.com/item/批处理/1448600
+https://www.ddnx.com/shenghuo/592339.html 花洒切换水的按钮坏了怎么修
+//
+https://www.kylc.com/stats/global/yearly_overview/g_gdp.html
+https://gdp.gotohui.com/word/
+QoS-3gpp TS23.501 section5.7 5G QoS model, defined 5QI values etc.
+MobaXterm PersonalEdition v21.4 Build 4786 --2021.8?
+//外国评论翻译,k8s教程
+//Kubernetes (K8S) 3 小时快速上手
+https://space.bilibili.com/22667024
+https://www.bilibili.com/video/BV1Tg411P7EB?spm_id_from=333.337.search-card.all.click
+https://k8s.easydoc.net/docs/dRiQjyTY/28366845/6GiNOzyZ/9EX8Cp45
+https://docker.easydoc.net/
+//
+git reset 三种使用方法  https://blog.csdn.net/zeye5731/article/details/122261447
+https://blog.csdn.net/qq310563349/article/details/107044199
+git diff的最全最详细的4大主流用法/log https://lijunde.blog.csdn.net/article/details/88798254
+//
+MSC-Generator 的语法  https://blog.csdn.net/weixin_40643581/article/details/78242664
+脚本绘图工具总结       https://blog.csdn.net/dfe30001/article/details/102154644
+//
+在linux中的sort命令,技术|Linux 的 ‘sort’命令的14个有用的范例  https://blog.csdn.net/weixin_35648264/article/details/116575875
+Linux Bash之正则表达式  https://www.cnblogs.com/phillee/p/10949796.html
+bash 自带正则匹配功能 - BASH_REMATCH 介绍  =~ http://bbs.chinaunix.net/thread-4125147-1-1.html
+awk and sed 饭醉团伙 高清版 修订第三版  http://bbs.chinaunix.net/thread-1743038-1-1.html
+https://man.linuxde.net/docs/shell_regex.html
+//
+http://www.timebie.com/cn/timezonesearch.php
+https://m.pp.cn/home.html
+//
+https://www.kylc.com/stats/global/yearly_overview/g_gdp.html
+//AI/ML
+jupyter notebook
+jupyter notebook 可以做哪些事情？ https://zhuanlan.zhihu.com/p/33105153
+https://blog.csdn.net/Bocker_Will/article/details/122828050 , try.jupyter.org , https://jupyter.org/try
+-https://jupyter.org/try-jupyter/lab/ , from matplotlib import pyplot as plt; import numpy as np
+//
+pip3 代理 https://www.csdn.net/tags/MtTakg5sMjE1NjctYmxvZwO0O0OO0O0O.html
+https://www.runoob.com/w3cnote/python-pip-install-usage.html
+pip和pip3（安装与使用）详细讲解 https://blog.csdn.net/hgdl_sanren/article/details/82858896 , https://pypi.org/project/pip/#downloads
+Python--详细讲解反射has|get|set|delattr  https://blog.csdn.net/hgdl_sanren/article/details/81368628
+//
+网盘 https://ufile.io/
+
+
+
