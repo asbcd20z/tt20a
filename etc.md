@@ -732,7 +732,22 @@ pidof, lsof -i:80, htop, strace/ltrace, chmod, lsattr -a/chattr
 lsattr命令: 显示文件属性介绍 https://blog.csdn.net/weixin_34021089/article/details/92872999  
 hexdump, xxd  
 -
+json.tool.py
+mkdir -p
+which, whereis, whatis
+mount -o remount r,w /
+console-tset-reset, dirname, basename
+mobadifffiles v0route.txt vpnroute.txt
+grep -s --exclude-dir=tests/ --include=GLOB
+find . -type l  ##symbolic link
+find . -type d  #dir
+echo aa |& tee afile  #https://www.runoob.com/linux/linux-comm-tee.html  www.cnblogs.com/nanruosen/p/16317025.html
+ps -aux -ef, pgrep, pidof, killall,pkill
+ifconfig, ip, ping6, traceroute,route,arp -a, dhcpconfig, netstat,ss, netsh-w
+https://deepinout.com/linux-cmd/linux-terminal-related-cmd/linux-cmd-reset.html
+-
 for i in *.c ;do echo $i ==; done
+for ((i=0; i<10; i++)); do touch t$i.txt; done
 ls *.c |xargs -tn1 -i true {} == {}
 find ./ -name '*c' -exec echo {} == \;
 if ! [[ $x =~ ^(startup|runtime)_cp_.*\.log ]]; then echo 111; fi  #bash正则匹配

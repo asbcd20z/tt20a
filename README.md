@@ -53,6 +53,10 @@ alt-B, alt-F  移动词前，词后 //or: ctr-<, ctr->
 ctr-B, ctr-F  移动字前，字后
 ctr-U, ctr-K  删去至行首，行尾
 ctr-W, alt-D  删去至词前，词后
+--
+ctr-Y  粘贴ctr+u/k剪切的内容
+ctr-xx 再命令行尾和光标之间移动toggle
+ctr-L  进行清屏, reset
 ===
 -echo -e 'aa-join-lines\nbbb\nc'| for i in `cat -` ; do echo -n "$i, "; done
 -echo aa |sed 'i\\' |hexdump.exe  -C

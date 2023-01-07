@@ -1,0 +1,753 @@
+
+//mobile-quicksshd.apk
+$ ssh  -p 2222 192.168.1.7
+Unable to negotiate with 192.168.1.7: no matching key exchange method found. Their offer: diffie-hellman-group1-sha1
+$ ssh  -o KexAlgorithms=diffie-hellman-group1-sha1 -p 2222 192.168.43.1 //z
+$ ssh  -oKexAlgorithms=diffie-hellman-group1-sha1 -p 2222 192.168.1.7 -vvv
+$ ssh  -oKexAlgorithms=diffie-hellman-group1-sha1 -p 2222 root@192.168.1.7
+QuickSSHD for Android
+Single-User mode (Any username works).
+Root your device to allow users.
+root@192.168.1.7's password:
+u0_a107@A31c:/data/data/com.teslacoilsw.quicksshd/home $
+u0_a107@A31c:/data/data/com.teslacoilsw.quicksshd/home $ id
+uid=10107(u0_a107) gid=10107(u0_a107) groups=1015(sdcard_rw),1023(media_rw),1028(sdcard_r),3003(inet),50107(all_a107) context=u:r:untrusted_app:s0
+u0_a107@A31c:/data/data/com.teslacoilsw.quicksshd/home $
+u0_a107@A31c:/data/data/com.teslacoilsw.quicksshd/home $
+u0_a107@A31c:/data/data/com.teslacoilsw.quicksshd/home $ ps |grep u0_a107
+u0_a107   9598  490   545744 30080 ffffffff 00000000 S com.teslacoilsw.quicksshd
+u0_a107   9623  1     1448   356   c01feb88 400e88cc S /data/data/com.teslacoilsw.quicksshd/dropbear/dropbear
+u0_a107   10025 9623  1512   540   00000000 0000e8f0 R /data/data/com.teslacoilsw.quicksshd/dropbear/dropbear
+u0_a107   10043 10025 928    484   c012d678 40073304 S -sh
+u0_a107   10101 10043 1244   240   00000000 401534bc R ps
+u0_a107   10102 10043 1236   240   00000000 401584bc R grep
+u0_a107@A31c:/data/data/com.teslacoilsw.quicksshd/home $
+u0_a107@A31c:/data/data/com.teslacoilsw.quicksshd/home $
+u0_a107@A31c:/data/data/com.teslacoilsw.quicksshd/home $ ll /etc/password
+/etc/password: No such file or directory
+1|u0_a107@A31c:/data/data/com.teslacoilsw.quicksshd/home $ ll
+u0_a107@A31c:/data/data/com.teslacoilsw.quicksshd/home $
+u0_a107@A31c:/data/data/com.teslacoilsw.quicksshd/home $ ll /data
+opendir failed, Permission denied
+1|u0_a107@A31c:/data/data/com.teslacoilsw.quicksshd/home $ echo $PS1
+$(precmd)$USER@$HOSTNAME:${PWD:-?} $
+u0_a107@A31c:/data/data/com.teslacoilsw.quicksshd/home $
+u0_a107@A31c:/data/data/com.teslacoilsw.quicksshd/home $
+u0_a107@A31c:/data/data/com.teslacoilsw.quicksshd/home $ set
+ANDROID_ASSETS=/system/app
+ANDROID_BOOTLOGO=1
+ANDROID_DATA=/data
+ANDROID_PROPERTY_WORKSPACE=8,0
+ANDROID_ROOT=/system
+BASHPID=10496
+BOOTCLASSPATH=/system/framework/core.jar:/system/framework/conscrypt.jar:/system/framework/okhttp.jar:/system/framework/core-junit.jar:/system/framework/bouncycastle.jar:/system/framework/ext.jar:/system/framework/framework.jar:/system/framework/framework2.jar:/system/framework/telephony-common.jar:/system/framework/voip-common.jar:/system/framework/mms-common.jar:/system/framework/android.policy.jar:/system/framework/services.jar:/system/framework/apache-xml.jar:/system/framework/webviewchromium.jar:/system/framework/telephony-msim.jar:/system/framework/qcmediaplayer.jar:/system/framework/WfdCommon.jar:/system/framework/oem-services.jar:/system/framework/qcom.fmradio.jar:/system/framework/org.codeaurora.Performance.jar:/system/framework/vcard.jar:/system/framework/oppo-framework.jar
+COLUMNS
+EPOCHREALTIME=1669433265.048415
+EXTERNAL_STORAGE=/storage/emulated/legacy
+HOME=/data/data/com.teslacoilsw.quicksshd/home
+HOSTNAME=A31c
+IFS=$' \t\n'
+KSHEGID=10107
+KSHGID=10107
+KSHUID=10107
+KSH_VERSION='@(#)MIRBSD KSH R43 2013/02/19'
+LINES
+LOGNAME=u0_a107
+MKSH=/system/bin/sh
+OPTIND=1
+PATH=/data/data/com.teslacoilsw.quicksshd/dropbear:/usr/bin:/usr/sbin:/bin:/sbin:/system/sbin:/system/bin:/system/xbin:/system/xbin/bb:/data/local/bin
+PGRP=10496
+PIPESTATUS[0]=0
+PPID=10475
+PS1='$(precmd)$USER@$HOSTNAME:${PWD:-?} $ '
+PS2='> '
+PS3='#? '
+PS4='+ '
+PWD=/data/data/com.teslacoilsw.quicksshd/home
+RANDOM=4398
+SECONDS=1752
+SHELL=/system/bin/sh
+TERM=xterm
+TMOUT=0
+USER=u0_a107
+USER_ID=10107
+_=set
+u0_a107@A31c:/data/data/com.teslacoilsw.quicksshd/home $
+u0_a107@A31c:/data/data/com.teslacoilsw.quicksshd/home $
+u0_a107@A31c:/data/data/com.teslacoilsw.quicksshd/home $
+u0_a107@A31c:/data/data/com.teslacoilsw.quicksshd/home $ env
+sh: env: not found
+u0_a107@A31c:/data/data/com.teslacoilsw.quicksshd/home $
+u0_a107@A31c:/data/data/com.teslacoilsw.quicksshd/home $ busybox env
+_=/system/xbin/busybox
+ANDROID_DATA=/data
+HOSTNAME=A31c
+BOOTCLASSPATH=/system/framework/core.jar:/system/framework/conscrypt.jar:/system/framework/okhttp.jar:/system/framework/core-junit.jar:/system/framework/bouncycastle.jar:/system/framework/ext.jar:/system/framework/framework.jar:/system/framework/framework2.jar:/system/framework/telephony-common.jar:/system/framework/voip-common.jar:/system/framework/mms-common.jar:/system/framework/android.policy.jar:/system/framework/services.jar:/system/framework/apache-xml.jar:/system/framework/webviewchromium.jar:/system/framework/telephony-msim.jar:/system/framework/qcmediaplayer.jar:/system/framework/WfdCommon.jar:/system/framework/oem-services.jar:/system/framework/qcom.fmradio.jar:/system/framework/org.codeaurora.Performance.jar:/system/framework/vcard.jar:/system/framework/oppo-framework.jar
+PATH=/data/data/com.teslacoilsw.quicksshd/dropbear:/usr/bin:/usr/sbin:/bin:/sbin:/system/sbin:/system/bin:/system/xbin:/system/xbin/bb:/data/local/bin
+ANDROID_ROOT=/system
+SHELL=/system/bin/sh
+MKSH=/system/bin/sh
+USER=u0_a107
+LOGNAME=u0_a107
+ANDROID_PROPERTY_WORKSPACE=8,0
+EXTERNAL_STORAGE=/storage/emulated/legacy
+ANDROID_ASSETS=/system/app
+TERM=xterm
+RANDOM=7284
+HOME=/data/data/com.teslacoilsw.quicksshd/home
+ANDROID_BOOTLOGO=1
+u0_a107@A31c:/data/data/com.teslacoilsw.quicksshd/home $
+u0_a107@A31c:/data/data/com.teslacoilsw.quicksshd/home $
+u0_a107@A31c:/data/data/com.teslacoilsw.quicksshd/home $
+u0_a107@A31c:/data/data/com.teslacoilsw.quicksshd/home $ echo $SHELL
+/system/bin/sh
+u0_a107@A31c:/data/data/com.teslacoilsw.quicksshd/home $ ll /system/bin/sh
+lrwxrwxrwx root     root              1971-09-12 17:36 sh -> mksh
+u0_a107@A31c:/data/data/com.teslacoilsw.quicksshd/home $ ll /system/bin/mksh
+-rwxr-xr-x root     shell      153324 2008-08-01 20:00 mksh
+u0_a107@A31c:/data/data/com.teslacoilsw.quicksshd/home $
+u0_a107@A31c:/data/data/com.teslacoilsw.quicksshd/home $
+u0_a107@A31c:/data/data/com.teslacoilsw.quicksshd/home $ echo $PATH
+/data/data/com.teslacoilsw.quicksshd/dropbear:/usr/bin:/usr/sbin:/bin:/sbin:/system/sbin:/system/bin:/system/xbin:/system/xbin/bb:/data/local/bin
+u0_a107@A31c:/data/data/com.teslacoilsw.quicksshd/home $
+u0_a107@A31c:/data/data/com.teslacoilsw.quicksshd/home $ busybox which  bash busybox toolbox  sh  adb
+/system/xbin/bash
+/system/xbin/busybox
+/system/bin/toolbox
+/system/bin/sh
+/system/bin/adb
+u0_a107@A31c:/data/data/com.teslacoilsw.quicksshd/home $
+u0_a107@A31c:/data/data/com.teslacoilsw.quicksshd/home $
+u0_a107@A31c:/data/data/com.teslacoilsw.quicksshd/home $ ll /system/bin/sh  /system/bin/mksh  /system/bin/adb
+lrwxrwxrwx root     root              1971-09-12 17:36 sh -> mksh
+-rwxr-xr-x root     shell      153324 2008-08-01 20:00 mksh
+-rwxr-xr-x root     shell      108944 2008-08-01 20:00 adb
+u0_a107@A31c:/data/data/com.teslacoilsw.quicksshd/home $
+u0_a107@A31c:/data/data/com.teslacoilsw.quicksshd/home $
+u0_a107@A31c:/data/data/com.teslacoilsw.quicksshd/home $ ll /system/bin/toolbox /system/bin/sync /system/bin/brctl
+-rwxr-xr-x root     shell      139024 2008-08-01 20:00 toolbox
+lrwxrwxrwx root     root              1971-09-12 17:36 sync -> toolbox
+-rwxr-xr-x root     shell       21828 2008-08-01 20:00 brctl
+u0_a107@A31c:/data/data/com.teslacoilsw.quicksshd/home $
+u0_a107@A31c:/data/data/com.teslacoilsw.quicksshd/home $
+u0_a107@A31c:/data/data/com.teslacoilsw.quicksshd/home $ ll /system/xbin/
+-rwxr-xr-x root     shell        9432 2008-08-01 20:00 antradio_app
+-rwxr-xr-x root     shell       10436 2008-08-01 20:00 backup_log
+-rwxr-xr-x root     shell        5836 2008-08-01 20:00 backup_log_nosd
+-rwxr-xr-x root     shell      467752 2008-08-01 20:00 bash
+-rwxr-xr-x root     shell        5364 2008-08-01 20:00 bttest
+-rwxr-xr-x root     shell     1815252 2008-08-01 20:00 busybox
+-rwxr-xr-x root     shell       59748 2008-08-01 20:00 dexdump
+-rwxr-xr-x root     shell        5284 2008-08-01 20:00 geterrno
+-rwxr-xr-x root     shell      483480 2008-08-01 20:00 klogd
+-rwxr-xr-x root     shell      741927 2008-08-01 20:00 lrz
+-rwxr-xr-x root     shell      734270 2008-08-01 20:00 lsz
+-rwxr-xr-x root     shell        9384 2008-08-01 20:00 mdm-notify
+-rwxr-xr-x root     shell       79352 2008-08-01 20:00 qlogd
+-rwsr-sr-x root     root       624196 2008-08-01 20:00 tcpdump
+u0_a107@A31c:/data/data/com.teslacoilsw.quicksshd/home $
+u0_a107@A31c:/data/data/com.teslacoilsw.quicksshd/home $
+u0_a107@A31c:/data/data/com.teslacoilsw.quicksshd/home $
+u0_a107@A31c:/data/data/com.teslacoilsw.quicksshd/home $ busybox uname -a
+Linux localhost 3.10.28-g990a986 #1 SMP PREEMPT Sat Jun 13 13:45:36 CST 2015 armv7l unknown
+u0_a107@A31c:/data/data/com.teslacoilsw.quicksshd/home $
+u0_a107@A31c:/data/data/com.teslacoilsw.quicksshd/home $ cat /proc/version
+Linux version 3.10.28-g990a986 (root@ubuntu-14-118) (gcc version 4.7 (GCC) ) #1 SMP PREEMPT Sat Jun 13 13:45:36 CST 2015
+u0_a107@A31c:/data/data/com.teslacoilsw.quicksshd/home $
+u0_a107@A31c:/data/data/com.teslacoilsw.quicksshd/home $
+u0_a107@A31c:/data/data/com.teslacoilsw.quicksshd/home $ more /proc/cpuinfo
+u0_a107@A31c:/data/data/com.teslacoilsw.quicksshd/home $
+
+u0_a107@A31c:/data/data/com.teslacoilsw.quicksshd/home $
+u0_a107@A31c:/data/data/com.teslacoilsw.quicksshd/home $
+u0_a107@A31c:/data/data/com.teslacoilsw.quicksshd/home $ toolbox
+Toolbox!
+u0_a107@A31c:/data/data/com.teslacoilsw.quicksshd/home $
+u0_a107@A31c:/data/data/com.teslacoilsw.quicksshd/home $ busybox
+BusyBox v1.13.3 (2009-05-12 19:39:09 CST) multi-call binary
+Copyright (C) 1998-2008 Erik Andersen, Rob Landley, Denys Vlasenko
+and others. Licensed under GPLv2.
+See source distribution for full notice.
+
+Usage: busybox [function] [arguments]...
+   or: function [arguments]...
+
+        BusyBox is a multi-call binary that combines many common Unix
+        utilities into a single executable.  Most people will create a
+        link to busybox for each function they wish to use and BusyBox
+        will act like whatever it was invoked as!
+
+Currently defined functions:
+        [, [[, addgroup, adduser, adjtimex, ar, arp, arping, ash,
+        awk, basename, blkid, brctl, bunzip2, bzcat, bzip2, cal,
+        cat, catv, chat, chattr, chgrp, chmod, chown, chpasswd,
+        chpst, chroot, chrt, chvt, cksum, clear, cmp, comm, cp,
+        cpio, crond, crontab, cryptpw, cttyhack, cut, date, dc,
+        dd, deallocvt, delgroup, deluser, devmem, df, dhcprelay,
+        diff, dirname, dnsd, dos2unix, du, dumpkmap, dumpleases,
+        echo, ed, egrep, eject, env, envdir, envuidgid, ether-wake,
+        expand, expr, fakeidentd, false, fbset, fbsplash, fdflush,
+        fdformat, fdisk, fgrep, find, findfs, fold, free, freeramdisk,
+        fsck, fsck.minix, ftpget, ftpput, fuser, getopt, getty,
+        grep, gunzip, gzip, hd, hdparm, head, hexdump, hostid, hostname,
+        httpd, hush, hwclock, id, ifconfig, ifdown, ifenslave, ifup,
+        inetd, install, ip, ipaddr, ipcalc, ipcrm, ipcs, iplink,
+        iproute, iprule, iptunnel, kbd_mode, kill, killall, killall5,
+        last, length, less, linux32, linux64, ln, loadfont, loadkmap,
+        login, logname, losetup, lpd, lpq, lpr, ls, lsattr, lzmacat,
+        makedevs, makemime, man, md5sum, mdev, microcom, mkdir,
+        mkfifo, mkfs.minix, mknod, mkswap, mktemp, more, mount,
+        mountpoint, msh, mt, mv, nameif, nc, netstat, nice, nmeter,
+        nohup, nslookup, od, openvt, passwd, patch, pgrep, pidof,
+        ping, ping6, pipe_progress, pivot_root, pkill, popmaildir,
+        printenv, printf, pscan, pwd, raidautorun, rdate, rdev,
+        readahead, readlink, readprofile, realpath, reformime, renice,
+        reset, resize, rm, rmdir, route, rtcwake, run-parts, runlevel,
+        runsv, runsvdir, rx, script, sed, seq, setarch, setconsole,
+        setfont, setkeycodes, setlogcons, setsid, setuidgid, sh,
+        sha1sum, showkey, slattach, sleep, softlimit, sort, split,
+        start-stop-daemon, stat, strings, stty, su, sulogin, sum,
+        sv, svlogd, swapoff, swapon, switch_root, sync, sysctl,
+        tac, tail, tar, tcpsvd, tee, telnet, telnetd, test, tftp,
+        tftpd, time, top, touch, tr, traceroute, true, tty, ttysize,
+        udhcpc, udhcpd, udpsvd, umount, uname, uncompress, unexpand,
+        uniq, unix2dos, unlzma, unzip, uptime, usleep, uudecode,
+        uuencode, vconfig, vi, vlock, watch, watchdog, wc, wget,
+        which, who, whoami, xargs, yes, zcat, zcip
+
+u0_a107@A31c:/data/data/com.teslacoilsw.quicksshd/home $
+u0_a107@A31c:/data/data/com.teslacoilsw.quicksshd/home $
+u0_a107@A31c:/data/data/com.teslacoilsw.quicksshd/home $
+u0_a107@A31c:/data/data/com.teslacoilsw.quicksshd/home $ mount
+rootfs / rootfs ro,relatime 0 0
+tmpfs /dev tmpfs rw,seclabel,nosuid,relatime,size=453036k,nr_inodes=113259,mode=755 0 0
+devpts /dev/pts devpts rw,seclabel,relatime,mode=600 0 0
+none /dev/cpuctl cgroup rw,relatime,cpu 0 0
+proc /proc proc rw,relatime 0 0
+sysfs /sys sysfs rw,seclabel,relatime 0 0
+selinuxfs /sys/fs/selinux selinuxfs rw,relatime 0 0
+debugfs /sys/kernel/debug debugfs rw,relatime 0 0
+none /sys/fs/cgroup tmpfs rw,seclabel,relatime,size=453036k,nr_inodes=113259,mode=750,gid=1000 0 0
+none /acct cgroup rw,relatime,cpuacct 0 0
+tmpfs /mnt/asec tmpfs rw,seclabel,relatime,size=453036k,nr_inodes=113259,mode=755,gid=1000 0 0
+tmpfs /mnt/obb tmpfs rw,seclabel,relatime,size=453036k,nr_inodes=113259,mode=755,gid=1000 0 0
+/dev/block/bootdevice/by-name/system /system ext4 ro,seclabel,nosuid,nodev,relatime,discard,data=ordered 0 0
+/dev/block/bootdevice/by-name/userdata /data ext4 rw,seclabel,nosuid,nodev,relatime,discard,noauto_da_alloc,data=ordered 0 0
+/dev/block/bootdevice/by-name/cache /cache ext4 rw,seclabel,nosuid,nodev,relatime,data=ordered 0 0
+/dev/block/bootdevice/by-name/persist /persist ext4 rw,seclabel,nosuid,nodev,relatime,data=ordered 0 0
+/dev/block/bootdevice/by-name/modem /firmware vfat ro,relatime,uid=1000,gid=1000,fmask=0337,dmask=0227,codepage=437,iocharset=iso8859-1,shortname=lower,errors=remount-ro 0 0
+/dev/fuse /mnt/shell/emulated fuse rw,nosuid,nodev,relatime,user_id=1023,group_id=1023,default_permissions,allow_other 0 0
+/dev/fuse /storage/emulated/legacy fuse rw,nosuid,nodev,relatime,user_id=1023,group_id=1023,default_permissions,allow_other 0 0
+tmpfs /storage/emulated tmpfs rw,seclabel,nosuid,nodev,relatime,size=453036k,nr_inodes=113259,mode=751,gid=1028 0 0
+/dev/fuse /storage/emulated/0 fuse rw,nosuid,nodev,relatime,user_id=1023,group_id=1023,default_permissions,allow_other 0 0
+/dev/fuse /storage/emulated/legacy fuse rw,nosuid,nodev,relatime,user_id=1023,group_id=1023,default_permissions,allow_other 0 0
+u0_a107@A31c:/data/data/com.teslacoilsw.quicksshd/home $
+u0_a107@A31c:/data/data/com.teslacoilsw.quicksshd/home $
+u0_a107@A31c:/data/data/com.teslacoilsw.quicksshd/home $ ps |busybox grep u0_a107
+u0_a107   25927 490   544780 32472 ffffffff 00000000 S com.teslacoilsw.quicksshd
+u0_a107   27609 1     1448   356   c01feb88 401278cc S /data/data/com.teslacoilsw.quicksshd/dropbear/dropbear
+u0_a107   27611 27609 1512   540   c01feb88 401278cc S /data/data/com.teslacoilsw.quicksshd/dropbear/dropbear
+u0_a107   27613 27611 932    496   c012d678 40112304 S -sh
+u0_a107   28061 27613 1244   240   00000000 401634bc R ps
+u0_a107   28062 27613 2076   248   c01f5b04 00008dbc S busybox
+u0_a107@A31c:/data/data/com.teslacoilsw.quicksshd/home $
+u0_a107@A31c:/data/data/com.teslacoilsw.quicksshd/home $
+u0_a107@A31c:/data/data/com.teslacoilsw.quicksshd/home $
+
+
+
+
+
+
+u0_a107@A31c:/data/data/com.teslacoilsw.quicksshd/home $
+u0_a107@A31c:/data/data/com.teslacoilsw.quicksshd/home $
+u0_a107@A31c:/data/data/com.teslacoilsw.quicksshd/home $ adb
+Android Debug Bridge version 1.0.31
+
+ -a                            - directs adb to listen on all interfaces for a connection
+ -d                            - directs command to the only connected USB device
+                                 returns an error if more than one USB device is present.
+ -e                            - directs command to the only running emulator.
+                                 returns an error if more than one emulator is running.
+ -s <specific device>          - directs command to the device or emulator with the given
+                                 serial number or qualifier. Overrides ANDROID_SERIAL
+                                 environment variable.
+ -p <product name or path>     - simple product name like 'sooner', or
+                                 a relative/absolute path to a product
+                                 out directory like 'out/target/product/sooner'.
+                                 If -p is not specified, the ANDROID_PRODUCT_OUT
+                                 environment variable is used, which must
+                                 be an absolute path.
+ -H                            - Name of adb server host (default: localhost)
+ -P                            - Port of adb server (default: 5037)
+ devices [-l]                  - list all connected devices
+                                 ('-l' will also list device qualifiers)
+ connect <host>[:<port>]       - connect to a device via TCP/IP
+                                 Port 5555 is used by default if no port number is specified.
+ disconnect [<host>[:<port>]]  - disconnect from a TCP/IP device.
+                                 Port 5555 is used by default if no port number is specified.
+                                 Using this command with no additional arguments
+                                 will disconnect from all connected TCP/IP devices.
+
+device commands:
+  adb push <local> <remote>    - copy file/dir to device
+  adb pull <remote> [<local>]  - copy file/dir from device
+  adb sync [ <directory> ]     - copy host->device only if changed
+                                 (-l means list but don't copy)
+                                 (see 'adb help all')
+  adb shell                    - run remote shell interactively
+  adb shell <command>          - run remote shell command
+  adb emu <command>            - run emulator console command
+  adb logcat [ <filter-spec> ] - View device log
+  adb forward --list           - list all forward socket connections.
+                                 the format is a list of lines with the following format:
+                                    <serial> " " <local> " " <remote> "\n"
+  adb forward <local> <remote> - forward socket connections
+                                 forward specs are one of:
+                                   tcp:<port>
+                                   localabstract:<unix domain socket name>
+                                   localreserved:<unix domain socket name>
+                                   localfilesystem:<unix domain socket name>
+                                   dev:<character device name>
+                                   jdwp:<process pid> (remote only)
+  adb forward --no-rebind <local> <remote>
+                               - same as 'adb forward <local> <remote>' but fails
+                                 if <local> is already forwarded
+  adb forward --remove <local> - remove a specific forward socket connection
+  adb forward --remove-all     - remove all forward socket connections
+  adb jdwp                     - list PIDs of processes hosting a JDWP transport
+  adb install [-l] [-r] [-s] [--algo <algorithm name> --key <hex-encoded key> --iv <hex-encoded iv>] <file>
+                               - push this package file to the device and install it
+                                 ('-l' means forward-lock the app)
+                                 ('-r' means reinstall the app, keeping its data)
+                                 ('-s' means install on SD card instead of internal storage)
+                                 ('--algo', '--key', and '--iv' mean the file is encrypted already)
+  adb uninstall [-k] <package> - remove this app package from the device
+                                 ('-k' means keep the data and cache directories)
+  adb bugreport                - return all information from the device
+                                 that should be included in a bug report.
+
+  adb backup [-f <file>] [-apk|-noapk] [-obb|-noobb] [-shared|-noshared] [-all] [-system|-nosystem] [<packages...>]
+                               - write an archive of the device's data to <file>.
+                                 If no -f option is supplied then the data is written
+                                 to "backup.ab" in the current directory.
+                                 (-apk|-noapk enable/disable backup of the .apks themselves
+                                    in the archive; the default is noapk.)
+                                 (-obb|-noobb enable/disable backup of any installed apk expansion
+                                    (aka .obb) files associated with each application; the default
+                                    is noobb.)
+                                 (-shared|-noshared enable/disable backup of the device's
+                                    shared storage / SD card contents; the default is noshared.)
+                                 (-all means to back up all installed applications)
+                                 (-system|-nosystem toggles whether -all automatically includes
+                                    system applications; the default is to include system apps)
+                                 (<packages...> is the list of applications to be backed up.  If
+                                    the -all or -shared flags are passed, then the package
+                                    list is optional.  Applications explicitly given on the
+                                    command line will be included even if -nosystem would
+                                    ordinarily cause them to be omitted.)
+
+  adb restore <file>           - restore device contents from the <file> backup archive
+
+  adb help                     - show this help message
+  adb version                  - show version num
+
+scripting:
+  adb wait-for-device          - block until device is online
+  adb start-server             - ensure that there is a server running
+  adb kill-server              - kill the server if it is running
+  adb get-state                - prints: offline | bootloader | device
+  adb get-serialno             - prints: <serial-number>
+  adb get-devpath              - prints: <device-path>
+  adb status-window            - continuously print device status for a specified device
+  adb remount                  - remounts the /system partition on the device read-write
+  adb reboot [bootloader|recovery] - reboots the device, optionally into the bootloader or recovery program
+  adb reboot-bootloader        - reboots the device into the bootloader
+  adb root                     - restarts the adbd daemon with root permissions
+  adb usb                      - restarts the adbd daemon listening on USB
+  adb tcpip <port>             - restarts the adbd daemon listening on TCP on the specified port
+networking:
+  adb ppp <tty> [parameters]   - Run PPP over USB.
+ Note: you should not automatically start a PPP connection.
+ <tty> refers to the tty for PPP stream. Eg. dev:/dev/omap_csmi_tty1
+ [parameters] - Eg. defaultroute debug dump local notty usepeerdns
+
+adb sync notes: adb sync [ <directory> ]
+  <localdir> can be interpreted in several ways:
+
+  - If <directory> is not specified, both /system and /data partitions will be updated.
+
+  - If it is "system" or "data", only the corresponding partition
+    is updated.
+
+environmental variables:
+  ADB_TRACE                    - Print debug information. A comma separated list of the following values
+                                 1 or all, adb, sockets, packets, rwx, usb, sync, sysdeps, transport, jdwp
+  ANDROID_SERIAL               - The serial number to connect to. -s takes priority over this if given.
+  ANDROID_LOG_TAGS             - When used with the logcat option, only these debug tags are printed.
+u0_a107@A31c:/data/data/com.teslacoilsw.quicksshd/home $
+u0_a107@A31c:/data/data/com.teslacoilsw.quicksshd/home $
+u0_a107@A31c:/data/data/com.teslacoilsw.quicksshd/home $
+
+
+
+
+
+
+
+u0_a107@A31c:/data/data/com.teslacoilsw.quicksshd/home $
+u0_a107@A31c:/data/data/com.teslacoilsw.quicksshd/home $
+u0_a107@A31c:/data/data/com.teslacoilsw.quicksshd/home $
+u0_a107@A31c:/data/data/com.teslacoilsw.quicksshd/home $ ll -F /
+drwxr-xr-x root     root              1974-04-20 05:50 acct
+-rwxrwxrwx root     root         9755 1970-01-01 08:00 autochmod.sh
+drwxrwx--- system   cache             1971-09-13 02:14 cache
+dr-x------ root     root              1974-04-20 05:50 config
+lrwxrwxrwx root     root              1974-04-20 05:50 d -> /sys/kernel/debug
+drwxrwx--x system   system            2022-11-21 01:37 data
+-rw-r--r-- root     root          231 1970-01-01 08:00 default.prop
+drwxr-xr-x root     root              2022-11-16 08:38 dev
+lrwxrwxrwx root     root              1974-04-20 05:50 etc -> /system/etc
+-rw-r--r-- root     root         9093 1970-01-01 08:00 file_contexts
+dr-xr-x--- system   system            1970-01-01 08:00 firmware
+-rw-r----- root     root         1524 1970-01-01 08:00 fstab.qcom
+-rwxr-x--- root     root       187796 1970-01-01 08:00 init
+-rwxr-x--- root     root        39793 1970-01-01 08:00 init.at.rc
+-rwxr-x--- root     root         2823 1970-01-01 08:00 init.class_main.sh
+-rwxr-x--- root     root         1208 1970-01-01 08:00 init.environ.rc
+-rwxr-x--- root     root         1730 1970-01-01 08:00 init.mdm.sh
+-rwxr-x--- root     root        22783 1970-01-01 08:00 init.mos.rc
+-rwxr-x--- root     root          266 1970-01-01 08:00 init.oppo.block.sh
+-rwxr-x--- root     root         2901 1970-01-01 08:00 init.oppo.debug.rc
+-rwxr-x--- root     root         1960 1970-01-01 08:00 init.oppo.engineermode.sh
+-rwxr-x--- root     root         3395 1970-01-01 08:00 init.oppo.init.rc
+-rwxr-x--- root     root         9926 1970-01-01 08:00 init.oppo.rc
+-rwxr-x--- root     root         2321 1970-01-01 08:00 init.oppo.rf.sh
+-rwxr-x--- root     root          376 1970-01-01 08:00 init.oppo.rootdetect.sh
+-rwxr-x--- root     root        18051 1970-01-01 08:00 init.oppo.usb.rc
+-rwxr-x--- root     root        10014 1970-01-01 08:00 init.prop.self_adaptive.sh
+-rwxr-x--- root     root         7374 1970-01-01 08:00 init.qcom.class_core.sh
+-rwxr-x--- root     root         6920 1970-01-01 08:00 init.qcom.early_boot.sh
+-rwxr-x--- root     root        12466 1970-01-01 08:00 init.qcom.factory.sh
+-rwxr-x--- root     root        30730 1970-01-01 08:00 init.qcom.rc
+-rwxr-x--- root     root         6765 1970-01-01 08:00 init.qcom.sh
+-rwxr-x--- root     root         4561 1970-01-01 08:00 init.qcom.ssr.sh
+-rwxr-x--- root     root         2962 1970-01-01 08:00 init.qcom.syspart_fixup.sh
+-rwxr-x--- root     root        10378 1970-01-01 08:00 init.qcom.usb.sh
+-rwxr-x--- root     root         2455 1970-01-01 08:00 init.qcom.wcnss3660.sh
+-rwxr-x--- root     root        26860 1970-01-01 08:00 init.rc
+-rwxr-x--- root     root          260 1970-01-01 08:00 init.rf.modem.test.sh
+-rwxr-x--- root     root        21560 1970-01-01 08:00 init.rf.rc
+-rwxr-x--- root     root         5779 1970-01-01 08:00 init.target.rc
+-rwxr-x--- root     root         1795 1970-01-01 08:00 init.trace.rc
+-rwxr-x--- root     root         3915 1970-01-01 08:00 init.usb.rc
+-rwxr-x--- root     root        20458 1970-01-01 08:00 init.wlan.rc
+-rw-r--r-- root     root         1733 1970-01-01 08:00 mem_proc_slab.sh
+drwxrwxr-x root     system            1974-04-20 05:50 mnt
+drwxrwx--x system   system            2015-12-11 21:05 persist
+dr-xr-xr-x root     root              1970-01-01 08:00 proc
+-rw-r--r-- root     root         2161 1970-01-01 08:00 property_contexts
+drwxr-xr-x root     root              1970-01-01 08:00 res
+drwx------ root     root              2015-06-13 13:44 root
+drwxr-x--- root     root              1970-01-01 08:00 sbin
+lrwxrwxrwx root     root              1974-04-20 05:50 sdcard -> /storage/emulated/legacy
+-rw-r--r-- root     root          776 1970-01-01 08:00 seapp_contexts
+-rw-r--r-- root     root        75234 1970-01-01 08:00 sepolicy
+drwxr-x--x root     sdcard_r          1974-04-20 05:50 storage
+dr-xr-xr-x root     root              1974-04-20 05:50 sys
+drwxr-xr-x root     root              1971-09-12 17:36 system
+lrwxrwxrwx root     root              1974-04-20 05:50 tombstones -> /data/tombstones
+-rw-r--r-- root     root         9740 1970-01-01 08:00 ueventd.qcom.rc
+-rw-r--r-- root     root         4151 1970-01-01 08:00 ueventd.rc
+lrwxrwxrwx root     root              1974-04-20 05:50 vendor -> /system/vendor
+u0_a107@A31c:/data/data/com.teslacoilsw.quicksshd/home $
+u0_a107@A31c:/data/data/com.teslacoilsw.quicksshd/home $
+u0_a107@A31c:/data/data/com.teslacoilsw.quicksshd/home $
+u0_a107@A31c:/data/data/com.teslacoilsw.quicksshd/home $ ll -F /system/
+drwxr-xr-x root     root              1971-09-12 17:35 addon.d
+drwxr-xr-x root     root              1971-09-12 17:35 app
+drwxr-xr-x root     shell             1971-09-12 17:36 bin
+drwxr-xr-x root     root              1971-09-12 17:35 bpm
+-rw-r--r-- root     root         8295 2008-08-01 20:00 build.prop
+drwxr-xr-x root     root              1971-09-12 17:35 etc
+drwxr-xr-x root     root              1971-09-12 17:36 fonts
+drwxr-xr-x root     root              1971-09-12 17:35 framework
+drwxr-xr-x root     root              1971-09-12 17:36 lib
+drwxr-xr-x root     root              1970-01-01 08:00 lost+found
+drwxr-xr-x root     root              1971-09-12 17:36 media
+drwxr-xr-x root     root              1971-09-12 17:35 priv-app
+drwxr-xr-x root     root              1971-09-12 17:35 protecteye
+-rw-r--r-- root     root      1015719 2008-08-01 20:00 recovery-from-boot.p
+drwxr-xr-x root     root              1971-09-12 17:35 reserve
+drwxr-xr-x root     root              1971-09-12 17:35 tts
+drwxr-xr-x root     root              1971-09-12 17:36 userguide
+drwxr-xr-x root     root              1971-09-12 17:36 usr
+drwxr-xr-x root     shell             1971-09-12 17:36 vendor
+drwxr-xr-x root     shell             1971-09-12 17:36 xbin
+u0_a107@A31c:/data/data/com.teslacoilsw.quicksshd/home $ lll  /system/app/  /system/priv-app/Shell*  /data/app/
+-rw-r--r-- root     root         8281 2008-08-01 20:00 Shell.apk
+-rw-r--r-- root     root        19600 2008-08-01 20:00 Shell.odex
+u0_a107@A31c:/data/data/com.teslacoilsw.quicksshd/home $ ll  /etc
+lrwxrwxrwx root     root              1974-04-20 05:50 etc -> /system/etc
+u0_a107@A31c:/data/data/com.teslacoilsw.quicksshd/home $
+u0_a107@A31c:/data/data/com.teslacoilsw.quicksshd/home $
+u0_a107@A31c:/data/data/com.teslacoilsw.quicksshd/home $
+u0_a107@A31c:/data/data/com.teslacoilsw.quicksshd/home $
+u0_a107@A31c:/data/data/com.teslacoilsw.quicksshd/home $
+u0_a107@A31c:/data/data/com.teslacoilsw.quicksshd/home $ busybox which ssh
+/data/data/com.teslacoilsw.quicksshd/dropbear/ssh
+u0_a107@A31c:/data/data/com.teslacoilsw.quicksshd/home $ ll /data/data/com.teslacoilsw.quicksshd/dropbear/
+-rw------- u0_a107  u0_a107        22 2022-11-17 14:29 banner.root
+-rw------- u0_a107  u0_a107        94 2022-11-17 14:29 banner.user
+-rwxr-xr-x u0_a107  u0_a107    101936 2022-11-17 14:29 dropbear
+-rw------- u0_a107  u0_a107         6 2022-11-24 17:24 dropbear.pid
+-rw------- u0_a107  u0_a107       457 2022-11-17 14:31 dropbear_dss_key
+-rw------- u0_a107  u0_a107       427 2022-11-17 14:31 dropbear_rsa_key
+-rw------- u0_a107  u0_a107         2 2022-11-17 14:29 dropbear_tree.version
+-rwxr-xr-x u0_a107  u0_a107     42708 2022-11-17 14:29 dropbearkey
+-rw------- u0_a107  u0_a107       211 2022-11-24 17:24 log
+-rwxr-xr-x u0_a107  u0_a107      5556 2022-11-17 14:29 quicksshd_helper
+-rwxr-xr-x u0_a107  u0_a107     22240 2022-11-17 14:29 scp
+-rwxr-xr-x u0_a107  u0_a107     39280 2022-11-17 14:29 sftp-server
+-rwxr-xr-x u0_a107  u0_a107     93464 2022-11-17 14:29 ssh
+u0_a107@A31c:/data/data/com.teslacoilsw.quicksshd/home $
+u0_a107@A31c:/data/data/com.teslacoilsw.quicksshd/home $
+u0_a107@A31c:/data/data/com.teslacoilsw.quicksshd/home $ ll /data/data/com.teslacoilsw.quicksshd/
+drwxrwx--x u0_a107  u0_a107           2022-11-17 14:29 cache
+drwx------ u0_a107  u0_a107           2022-11-24 17:24 dropbear
+drwx------ u0_a107  u0_a107           2022-11-17 20:26 home
+lrwxrwxrwx install  install           2022-11-17 14:29 lib -> /data/app-lib/com.teslacoilsw.quicksshd-1
+drwxrwx--x u0_a107  u0_a107           2022-11-24 17:24 shared_prefs
+u0_a107@A31c:/data/data/com.teslacoilsw.quicksshd/home $ ll /data/data/
+opendir failed, Permission denied
+1|u0_a107@A31c:/data/data/com.teslacoilsw.quicksshd/home $ ll /data/
+opendir failed, Permission denied
+1|u0_a107@A31c:/data/data/com.teslacoilsw.quicksshd/home $
+1|u0_a107@A31c:/data/data/com.teslacoilsw.quicksshd/home $l
+u0_a107@A31c:/data/data/com.teslacoilsw.quicksshd/home $
+u0_a107@A31c:/data/data/com.teslacoilsw.quicksshd/home $
+u0_a107@A31c:/data/data/com.teslacoilsw.quicksshd/home $
+u0_a107@A31c:/data/data/com.teslacoilsw.quicksshd/home $
+u0_a107@A31c:/data/data/com.teslacoilsw.quicksshd/home $
+u0_a107@A31c:/data/data/com.teslacoilsw.quicksshd/home $ lll  /system/app/  /system/priv-app/Shell*
+-rw-r--r-- root     root         8281 2008-08-01 20:00 Shell.apk
+-rw-r--r-- root     root        19600 2008-08-01 20:00 Shell.odex
+u0_a107@A31c:/data/data/com.teslacoilsw.quicksshd/home $
+u0_a107@A31c:/data/data/com.teslacoilsw.quicksshd/home $
+u0_a107@A31c:/data/data/com.teslacoilsw.quicksshd/home $
+
+
+
+
+
+
+
+
+$ ssh  -o KexAlgorithms=diffie-hellman-group1-sha1 -p 2222 192.168.43.1 //z
+$ scp -pr -o KexAlgorithms=diffie-hellman-group1-sha1 -P 2222 192.168.43.1:/sdcard/_zmyzop/apk/quickSSHd.apk ./
+$ scp -pr -o KexAlgorithms=diffie-hellman-group1-sha1 -P 2222 192.168.1.7:/system/priv-app/Shell.apk ./
+$
+$
+ ~
+$ 7z l Shell.apk
+
+7-Zip 19.00 (x64) : Copyright (c) 1999-2018 Igor Pavlov : 2019-02-21
+
+Scanning the drive for archives:
+1 file, 8281 bytes (9 KiB)
+
+Listing archive: Shell.apk
+
+--
+Path = Shell.apk
+Type = zip
+Physical Size = 8281
+
+   Date      Time    Attr         Size   Compressed  Name
+------------------- ----- ------------ ------------  ------------------------
+2012-07-12 00:33:30 .....        12348         2668  AndroidManifest.xml
+2012-07-12 00:33:30 .....          952          441  res\layout\confirm_repeat.xml
+2012-07-12 00:33:30 .....          400          202  res\xml\file_provider_paths.xml
+2012-07-12 00:33:30 .....         2236         2236  resources.arsc
+2012-07-12 00:33:30 .....          440          298  META-INF\MANIFEST.MF
+2012-07-12 00:33:30 .....          527          318  META-INF\CERT.SF
+2012-07-12 00:33:30 .....         1642         1168  META-INF\CERT.RSA
+------------------- ----- ------------ ------------  ------------------------
+2012-07-12 00:33:30              18545         7331  7 files
+
+ ~
+$
+$
+$
+ ~
+$ 7z l quickSSHd.apk
+
+7-Zip 19.00 (x64) : Copyright (c) 1999-2018 Igor Pavlov : 2019-02-21
+
+Scanning the drive for archives:
+1 file, 670450 bytes (655 KiB)
+
+Listing archive: quickSSHd.apk
+
+--
+Path = quickSSHd.apk
+Type = zip
+Physical Size = 670450
+Characteristics = Minor_Extra_ERROR
+
+   Date      Time    Attr         Size   Compressed  Name
+------------------- ----- ------------ ------------  ------------------------
+2010-06-09 00:15:58 .....           22           22  assets\dropbear_tree\banner.root
+2010-06-09 00:15:58 .....           94           94  assets\dropbear_tree\banner.user
+2010-08-12 17:39:52 .....       101936        67735  assets\dropbear_tree\dropbear
+2010-08-12 17:39:54 .....        42708        27474  assets\dropbear_tree\dropbearkey
+2010-08-12 17:39:54 .....         5448         2141  assets\dropbear_tree\quicksshd_helper1
+2010-08-12 17:39:54 .....         5556         2174  assets\dropbear_tree\quicksshd_helper2
+2010-08-12 17:39:54 .....        22240        11605  assets\dropbear_tree\scp
+2010-08-12 17:39:54 .....        39280        23854  assets\dropbear_tree\sftp-server
+2010-08-12 17:39:54 .....        93464        61666  assets\dropbear_tree\ssh
+2010-08-12 17:39:54 .....       235020       184319  assets\QuickSSHD Icon
+2010-08-12 17:39:54 .....          692          307  res\drawable\about_gradient.xml
+2010-08-12 17:39:54 .....          836          297  res\drawable\button.xml
+2010-08-12 17:39:54 .....         1156          339  res\drawable\checkbox.xml
+2010-08-12 17:39:54 .....         1320          388  res\drawable\edit_text.xml
+2010-08-12 17:39:54 .....         1296          441  res\drawable\header_gradient.xml
+2010-08-12 17:39:10 .....         6024         6024  res\drawable\header_icon.png
+2010-08-12 17:39:54 .....          692          313  res\drawable\main_gradient.xml
+2010-08-12 17:39:54 .....         8172         1432  res\layout\about.xml
+2010-08-12 17:39:54 .....        11616         1788  res\layout\help.xml
+2010-08-12 17:39:54 .....         8656         2096  res\layout\main.xml
+2010-08-12 17:39:54 .....          700          307  res\layout\widget.xml
+2010-08-12 17:39:54 .....         1744          607  res\layout\widget_banner.xml
+2010-08-12 17:39:54 .....          844          292  res\menu\options_menu.xml
+2010-08-12 17:39:54 .....         1384          486  res\xml\preferences.xml
+2010-08-12 17:39:54 .....          544          271  res\xml\quicksshd_widget_banner_info.xml
+2010-08-12 17:39:54 .....          544          268  res\xml\quicksshd_widget_info.xml
+2010-08-12 17:39:54 .....         4816         1378  AndroidManifest.xml
+2010-08-12 17:39:10 .....        38492        38492  resources.arsc
+2010-08-12 17:39:10 .....          682          682  res\drawable-hdpi\btn.png
+2010-08-12 17:39:10 .....          947          947  res\drawable-hdpi\btn_focused.png
+2010-08-12 17:39:10 .....         1293         1293  res\drawable-hdpi\btn_off.png
+2010-08-12 17:39:10 .....          826          826  res\drawable-hdpi\checkbox_checked.png
+2010-08-12 17:39:10 .....         1128         1128  res\drawable-hdpi\checkbox_checked_focused.png
+2010-08-12 17:39:10 .....          307          307  res\drawable-hdpi\checkbox_clear.png
+2010-08-12 17:39:10 .....          611          611  res\drawable-hdpi\checkbox_clear_focused.png
+2010-08-12 17:39:10 .....          274          274  res\drawable-hdpi\checkbox_label_background.9.png
+2010-08-12 17:39:10 .....         9672         9672  res\drawable-hdpi\header_icon.png
+2010-08-12 17:39:10 .....         6024         6024  res\drawable-hdpi\icon.png
+2010-08-12 17:39:10 .....         1729         1729  res\drawable-hdpi\notification_icon.png
+2010-08-12 17:39:10 .....         7315         7315  res\drawable-hdpi\sftp_cyberduck.9.png
+2010-08-12 17:39:10 .....        15407        15407  res\drawable-hdpi\sftp_nautilus.9.png
+2010-08-12 17:39:10 .....         3331         3331  res\drawable-hdpi\sftp_winscp_a.9.png
+2010-08-12 17:39:10 .....         3667         3667  res\drawable-hdpi\sftp_winscp_b.9.png
+2010-08-12 17:39:10 .....         1958         1958  res\drawable-hdpi\sftp_winscp_c.9.png
+2010-08-12 17:39:10 .....         2000         2000  res\drawable-hdpi\sftp_winscp_d.9.png
+2010-08-12 17:39:10 .....        20286        20286  res\drawable-hdpi\sftp_winscp_e.9.png
+2010-08-12 17:39:10 .....        13595        13595  res\drawable-hdpi\ssh_putty_a.9.png
+2010-08-12 17:39:10 .....         2744         2744  res\drawable-hdpi\ssh_putty_b.9.png
+2010-08-12 17:39:10 .....         1786         1786  res\drawable-hdpi\ssh_putty_c.9.png
+2010-08-12 17:39:10 .....        14239        14239  res\drawable-hdpi\ssh_putty_d.9.png
+2010-08-12 17:39:10 .....         1078         1078  res\drawable-hdpi\textfield_default.9.png
+2010-08-12 17:39:10 .....          770          770  res\drawable-hdpi\textfield_disabled.9.png
+2010-08-12 17:39:10 .....          960          960  res\drawable-hdpi\textfield_disabled_selected.9.png
+2010-08-12 17:39:10 .....         1972         1972  res\drawable-hdpi\textfield_pressed.9.png
+2010-08-12 17:39:10 .....         1118         1118  res\drawable-hdpi\textfield_selected.9.png
+2010-08-12 17:39:10 .....        10035        10035  res\drawable-hdpi\widget_banner_off.png
+2010-08-12 17:39:10 .....        10404        10404  res\drawable-hdpi\widget_banner_on.png
+2010-08-12 17:39:10 .....         7043         7043  res\drawable-hdpi\widget_banner_preview.png
+2010-08-12 17:39:10 .....        10250        10250  res\drawable-hdpi\widget_banner_starting.png
+2010-08-12 17:39:10 .....         7647         7647  res\drawable-hdpi\widget_off.png
+2010-08-12 17:39:10 .....         7938         7938  res\drawable-hdpi\widget_on.png
+2010-08-12 17:39:10 .....         7877         7877  res\drawable-hdpi\widget_starting.png
+2010-08-12 17:39:10 .....          244          244  res\drawable-ldpi\checkbox_label_background.9.png
+2010-08-12 17:39:10 .....         1003         1003  res\drawable-mdpi\btn.png
+2010-08-12 17:39:10 .....          519          519  res\drawable-mdpi\btn_focused.png
+2010-08-12 17:39:10 .....          854          854  res\drawable-mdpi\btn_off.png
+2010-08-12 17:39:10 .....          244          244  res\drawable-mdpi\checkbox_label_background.9.png
+2010-08-12 17:39:54 .....        84628        38538  classes.dex
+2010-08-12 17:39:54 .....         5889         2142  META-INF\MANIFEST.MF
+2010-08-12 17:39:54 .....         5942         2213  META-INF\CERT.SF
+2010-08-12 17:39:54 .....          898          647  META-INF\CERT.RSA
+------------------- ----- ------------ ------------  ------------------------
+2010-08-12 17:39:54             912430       659927  71 files
+
+ ~
+$
+ ~
+$ 7z l quickSSHd.apk  assets/dropbear_tree/
+
+7-Zip 19.00 (x64) : Copyright (c) 1999-2018 Igor Pavlov : 2019-02-21
+
+Scanning the drive for archives:
+1 file, 670450 bytes (655 KiB)
+
+Listing archive: quickSSHd.apk
+
+--
+Path = quickSSHd.apk
+Type = zip
+Physical Size = 670450
+Characteristics = Minor_Extra_ERROR
+
+   Date      Time    Attr         Size   Compressed  Name
+------------------- ----- ------------ ------------  ------------------------
+2010-06-09 00:15:58 .....           22           22  assets\dropbear_tree\banner.root
+2010-06-09 00:15:58 .....           94           94  assets\dropbear_tree\banner.user
+2010-08-12 17:39:52 .....       101936        67735  assets\dropbear_tree\dropbear
+2010-08-12 17:39:54 .....        42708        27474  assets\dropbear_tree\dropbearkey
+2010-08-12 17:39:54 .....         5448         2141  assets\dropbear_tree\quicksshd_helper1
+2010-08-12 17:39:54 .....         5556         2174  assets\dropbear_tree\quicksshd_helper2
+2010-08-12 17:39:54 .....        22240        11605  assets\dropbear_tree\scp
+2010-08-12 17:39:54 .....        39280        23854  assets\dropbear_tree\sftp-server
+2010-08-12 17:39:54 .....        93464        61666  assets\dropbear_tree\ssh
+------------------- ----- ------------ ------------  ------------------------
+2010-08-12 17:39:54             310748       196765  9 files
+
+ ~
+$
+$
+lzhao019@N-20N3PF224VCM ~
+$ echo ssh  -oKexAlgorithms=diffie-hellman-group1-sha1 -p 2222 root@192.168.1.7 |grep sha1 --col
+$
+lzhao019@N-20N3PF224VCM ~
+$
+$
+
+
+
+
+///
+Android进程间通信之2——Bionic  https://www.jianshu.com/p/3e33d76726af
+-在Android中没有etc/password和etc/groups 文件.每个已经安装的的应用程序都有自己的用户ID和组ID.
+《Android Security Internals》第一章安卓安全模型翻译  http://www.javashuo.com/article/p-tqlxsssi-m.html
+小型ssh工具dropbear 安装配置及使用详解  https://blog.csdn.net/qq_41714057/article/details/82079165
+Dropbear 安装配置与启动ssh服务详解  https://blog.csdn.net/paladinzh/article/details/96328520
+初识Android下的busybox与toolbox  https://www.cnblogs.com/chorm590/p/12562588.html
+Android目录结构        https://blog.csdn.net/zxc472504515/article/details/123786658
+Android系统目录结构详解  https://blog.csdn.net/azhen5222/article/details/101093825
+-https://www.cnblogs.com/ChandlerVer5/p/android_struct.html
+Android-安卓应用目录结构  https://blog.csdn.net/m0_63887380/article/details/126932219
+初识Android下的busybox与toolbox  https://www.cnblogs.com/chorm590/p/12562588.html
+Android下运行Linux可执行程序     https://www.cnblogs.com/chorm590/p/11224299.html
+rk3128 手动挂载 U 盘            https://www.cnblogs.com/chorm590/p/10716509.html
+Android开发学习总结(五)——Android应用目录结构分析（转） https://blog.51cto.com/u_15147537/5618009
+Docker简明教程（转）     https://blog.51cto.com/u_15147537/5848637
+全网最全ADB命令，没有之一  https://blog.csdn.net/weixin_42182599/article/details/120654697
+--
+Linux mksh命令  https://deepinout.com/linux-cmd/linux-shell-related-cmd/linux-cmd-mksh.html
+Android dex文件格式介绍  https://deepinout.com/android-system-analysis/android-framework-related/easy-to-understand-dex-file-format.html
+合并APK和ODEX  https://www.cnblogs.com/4-312/p/3421231.html
+dex与odex的比较实验  https://blog.csdn.net/protoss_penguin/article/details/52028554
+Android的.dex、.odex与.oat文件扫盲  https://linxinfa.blog.csdn.net/article/details/107669242
+java class 文件格式解析  https://www.cnblogs.com/tomj2ee/p/16153238.html
+jvm字节码  https://www.cnblogs.com/liconglong/p/16209454.html
+JVM       https://blog.csdn.net/qq_48435252/article/details/123697193
+root--Android 获取ROOT权限原理解析  http://t.zoukankan.com/l1pe1-p-9341930.html
+-https://blog.csdn.net/pan0755/article/details/76927015
+android手机root权限（用安卓手机三步获取root权限教程magisk） http://www.webzuan.cn/szk/7968.html
+docker009最小的镜像 http://t.zoukankan.com/www1707-p-10182804.html, https://www.cnblogs.com/www1707/p/10182804.html
+docker100base镜像  http://t.zoukankan.com/www1707-p-10187958.html, https://www.cnblogs.com/CloudMan6/p/6799197.html
+--
+
+
+

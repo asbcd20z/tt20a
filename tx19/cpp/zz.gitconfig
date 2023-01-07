@@ -8,20 +8,30 @@
 	name=z
 	email=z
 [corex]
+	core.autocrlf
 	core.whitespace
 	core.ignoreCase
-	core.gitProxy  # GIT_PROXY_COMMAND 
+	core.gitProxy  # GIT_PROXY_COMMAND ,or alias pgit='https_proxy=135.251.33.16:8080 git' 
 	core.longpaths
+	#symlinks = false  # If false, symbolic links are checked out as small plain files that contain the link text.
 	#git config --global core.longpaths true
+	#git config -l
+	#git config --get-all core.symlinks
+#hint:   git config pull.rebase false  # merge (the default strategy)
+#hint:   git config pull.rebase true   # rebase
+#hint:   git config pull.ff only       # fast-forward only
 [alias]
-	#@time20220516a
+	#@time20220930a
 	#https://git-scm.com/docs/git-log
-	#git clean -x -f -d  # rm  untracked files
-	#git rm --cached aa.txt
+	#core.symlinks   ,https://www.codenong.com/11662868/
+	#delete: git rm LICENSE.txt ; git ci --amend --allow-empty   ## use "git restore --staged <file>..." to unstage
+	#git clean -x -f -d    # rm  untracked files, git clean -fd
+	#git rm --cached aa.txt   # or git reset aa.txt
 	#git add -u  # -A -f --dry-run
 	##reset/checkout  https://blog.csdn.net/zeye5731/article/details/122261447
 	##git reset    <cid> <file> ---only update INDEX  ##opposite of git add. means to unstaged?
 	##git checkout <cid> <file> ---both update INDEX and workspace,or only update workspace from INDEX if without cid
+	##git checkout       <file> ---only update INDEX to workspace
 	#git br -vv
 	#git show-branch
 	#git show -name-only [cid] my-path   ## see changes log
@@ -40,6 +50,7 @@
 	#git add -A
 	br = branch
 	#br -r -a
+	#git br -f  #--force, -d -D -m -M
 	puv= push origin HEAD:refs/for/master
 	pwip=push origin HEAD:refs/for/master%wip
 	#puv19a=push origin HEAD:refs/for/rel/5G19A
@@ -59,7 +70,8 @@
 	#or, git blame 0.0.0-1615388870 x/y.cc # cat version-file to check
 	#or change a file, git co <sha1> -- file.tex ## zhihu.com/question/53061133
 	##
-	# git rebase -i HEAD~4  ## git rebase -i <after-this-commit> # merge HEAD~4..HEAD
+	# https://blog.csdn.net/small_white_123/article/details/121563248
+	# git rebase -i HEAD~4  ## git rebase -i <after-this-commit> # merge HEAD~4..HEAD (merge form ~3,not include HEAD~4)
 	# git cherry-pick ciid1 ciid2..
 	#https://git-scm.com/book/zh/v2/Git-分支-变基  //rebase
 	#-git rebase --onto master server client  ##then, git checkout master; git merge client
@@ -85,7 +97,7 @@
 	#https://blog.csdn.net/wq6ylg08/article/details/88798254
 	st = status
 	hh = help
-	#git apply --check my.pat; git apply -3 my.pat; git apply --reject my.pat #patch
+	#git apply --check my.pat; git apply -3 my.pat; git apply --reject my.pat //-R --reverse -p0,  #patch -p0 <aa.diff
 	#git branch [--track | --no-track] [-f] <branchname> [<start-point>]
 	#git branch (--set-upstream-to=<upstream> | -u <upstream>) [<branchname>]
 	# eg: git branch --set-upstream-to=origin/main main
@@ -99,6 +111,7 @@
 	#git branch -d mybr1; git push origin :mybr1; or,git push origin  --delete mybr1  ## same. delete branch remotely
 	#git tag -d tag-name; git push origin :refs/tags/tag-name; or,git push origin --delete tag-name  ## delete tag local/remotely
 	##https://www.runoob.com/git/git-remote.html
+	# git revert
 	# git remote -v
 	# git remote add ...
 	# git remote show origin
@@ -108,6 +121,54 @@
 	#Git Submodule使用完整教程 https://www.cnblogs.com/lsgxeva/p/8540758.html
 	#git中submodule子模块的添加、使用和删除 https://blog.csdn.net/guotianqing/article/details/82391665
 
+[xremote "origin"]
+	#pushurl = ssh://usser1@gerrit.a.b.com:29418/apath/gnb
+[xurl "ssh://****:29418/"]
+#[url "ssh://lzhao019@gerrit-hzsl2.int.net.nokia.com:29418"]
+#insteadOf = ssh://lzhao019@gerrit.ext.net.nokia.com:29418
+#[url "ssh://lzhao019@gerrit.ext.net.nokia.com:29418"]
+#pushInsteadOf = ssh://lzhao019@gerrit.ext.net.nokia.com:29418
+#pushInsteadOf = ssh://lzhao019@gerrit-hzsl2.int.net.nokia.com:29418
+#Git命令小记  https://zhuanlan.zhihu.com/p/20938735
+#
+[xdownload-patch]
+checkout:		git fetch "ssh://x" refs/changes/79/4801979/1 && git checkout FETCH_HEAD
+cherry-pick:	git fetch "ssh://x" refs/changes/79/4801979/1 && git cherry-pick FETCH_HEAD
+format-patch:	git fetch "ssh://x" refs/changes/79/4801979/1 && git format-patch -1 --stdout FETCH_HEAD
+pull:			git pull "ssh://x" refs/changes/79/4801979/1
+#
+##cd `git rev-parse --git-dir`/hooks; ln -fs ../../tools/githooks/*-* .
+#You are currently cherry-picking commit 182bcc0c1ea5.
+#  (fix conflicts and run "git cherry-pick --continue")
+#  (use "git cherry-pick --abort" to cancel the cherry-pick operation)
+#
+#git rebase --skip
+#
+[xpull-rebase]
+#git pull -r
+#Resolve all conflicts manually, mark them as resolved with
+#"git add/rm <conflicted_files>", then run "git rebase --continue".
+#You can instead skip this commit: run "git rebase --skip".
+#To abort and get back to the state before "git rebase", run "git rebase --abort".
+#
+#$ git st
+#interactive rebase in progress; onto 6bf3db26a2b7
+#Last command done (1 command done):
+#   pick 45a6e011a761 [none] cp ci test for PR667451
+#Next command to do (1 remaining command):
+#   pick 7d7d6587ba82 cc
+#  (use "git rebase --edit-todo" to view and edit)
+#You are currently rebasing branch 'master' on '6bf3db26a2b7'.
+#  (fix conflicts and then run "git rebase --continue")
+#  (use "git rebase --skip" to skip this patch)
+#  (use "git rebase --abort" to check out the original branch)
+#
+#Changes to be committed:
+#  (use "git restore --staged <file>..." to unstage)
+#
+#Unmerged paths:
+#  (use "git restore --staged <file>..." to unstage)
+#  (use "git add <file>..." to mark resolution)
 
 [xcolor]
 	status=auto
@@ -125,4 +186,6 @@
 [xuser]
         name=jqasbcd20z
         email=jqasbcd20z@q.com
+
+
 
