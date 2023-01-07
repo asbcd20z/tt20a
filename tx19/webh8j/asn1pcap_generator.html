@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <title>pcap generator</title>
+        <script src="js/jquery.min.js"></script>
+        <script>
+            function httpGet(url)
+            {
+                    var xmlHttp = new XMLHttpRequest();
+                    xmlHttp.open("GET", url, false); // false: wait respond
+                    confirm("It will take a few seconds to complete, be patient to wait it done....");
+                    xmlHttp.send(null);
+                    return xmlHttp.responseText;
+            }
+            function f()
+            {
+                var url = "http://best.eecloud.dynamic.nsn-net.net:666/cgi-bin/pcapGenerator/pcap_generator.py?"
+                    + "pdu_data=" + document.getElementById("pdu_data").value
+                    + "&protocol_type=" + document.getElementById("protocol_type").value
+                    + "&user_mail=" + document.getElementById("user_mail").value;
+                document.getElementById("out").innerHTML = httpGet(url);
+            }
+        </script>
+        <script>
+            $(document).ready(function(){
+                $("#search").click(function()
+                {
+                    document.getElementById("load_image").style.display = 'none';
+                });
+            });
+        </script>
+    </head>
+
+    <body  style="background:#0539e7 url(images/gates.jpg); background-size:100%; background-repeat: no-repeat; background-attachment: fixed;">
+        <p style="color: Lime; font-weight:bold; font-size: 300%" align="center">Pcap Generator</p>
+        <pre style="padding-left: 15%; font-weight:bold; font-size: 150%">
+       Function: Input pdu data(nokia private xnap/f1ap pdu data) then generate pacp file and send mail</pre>
+        <div class="form_context" style="font-size:2vw" align="center">
+            <p style="color: MediumSpringGreen;">Pdu data: <input type="text" name="pdu_data" value="0016407E00000000CAFE4076008C007200000B608300020001607000020001608500080087F965000000080040400387F965608400020000607100020100608200020100608A00090087F9650000000010608900010460880011000087F965000000001000000000000001607E001300000010000000000102000400020000010200" id="pdu_data" placeholder="e.g. : 0016407E00000000CAFE4076008C007200000B608300020001607000020001608500080087F965000000080040400387F965608400020000607100020100608200020100608A00090087F9650000000010608900010460880011000087F965000000001000000000000001607E001300000010000000000102000400020000010200" style="color: Coral; width: 50%"></p>
+            <p style="color: rgb(237, 0, 250);">Protocol type: <select id="protocol_type" value="3d" style="color: rgb(255, 80, 80); width: 5%">
+                <option value="3c">ngap</option><option value="3d" selected="selected">xnap</option><option value="3e">f1ap</option><option value="3f">x2ap</option><option value="40">e1ap</option>
+            </select></p>
+            <p style="color: rgb(250, 233, 0);">User mail: <input type="text" name="user_mail" value="qiaolin.tu@nokia-sbell.com" id="user_mail" placeholder="e.g. : qiaolin.tu@nokia-sbell.com" style="color: rgb(255, 80, 246); width: 20%"></p>
+            <button onclick='f()' style="font-weight: bold" id="search">Enter</button>
+        </div>
+        <br>
+        <div id="load_image" style="text-align: center;"><img src="images/image_loading.gif" alt="" style="width: 15%; height: 15%;"></div>
+        <pre id='out'></pre>
+    </body>
+</html>

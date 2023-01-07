@@ -1,0 +1,45 @@
+commit 63de9f09cc917ad22336119e25060e0f2be6fcb1
+Author: panwang <panpan.1.wang@nokia-sbell.com>
+Date:   Tue Nov 22 12:59:18 2022 +0800
+
+    [none] add PR transfer
+
+diff --git a/js/content.js b/js/content.js
+index 97bad4d..6ecd400 100644
+--- a/js/content.js
++++ b/js/content.js
+@@ -9,6 +9,8 @@ var url_regexp_CP_System_Level_Others;
+ var url_regexp_Entity_Level;
+ var url_regexp_L3_Entity_Level_Flows;
+ var url_regexp_L3_Interfaces;
++var url_regexp_PR;
++
+ 
+ 
+ //url_regexp = /((https?:\/\/|www\.)[\x21-\x7e]+[\w\/=]|\w([\w._-])+@\w[\w\._-]+\.(com|cn|org|net|info|tv|cc|gov|edu)|(\w[\w._-]+\.(com|cn|org|net|info|tv|cc|gov|edu))(\/[\x21-\x7e]*[\w\/])?|ed2k:\/\/[\x21-\x7e]+\|\/|thunder:\/\/[\x21-\x7e]+=)/gi;
+@@ -22,6 +24,7 @@ url_regexp_CP_System_Level_Others = /(5G_CP_OTH_\d+)/gi
+ url_regexp_Entity_Level = /(5G_L3_\d+)/gi
+ url_regexp_L3_Entity_Level_Flows = /(5G_L3_FLOW_\d+)/gi
+ url_regexp_L3_Interfaces = /(5G_L3_IF_\d+)/gi
++url_regexp_PR =  /(PR\d+)/gi
+ 
+ urlPrefixes = ['http://', 'https://', 'ftp://', 'thunder://', 'ed2k://', 'mailto://', 'file://'];
+ 
+@@ -89,6 +92,10 @@ setLink = function (candidate) {
+   {
+       text = candidate.textContent.replace(url_regexp_L3_Entity_Level_Flows, '<a href="https://gates.nsn-net.net/requirement/$1", target="_blank" class="textToLink">$1</a>');
+   }
++  else if(candidate.textContent.match(url_regexp_PR))
++  {
++      text = candidate.textContent.replace(url_regexp_PR, '<a href="https://pronto.int.net.nokia.com/pronto/problemReportSearch.html?freeTextdropDownID=prId&searchTopText=$1&HomeFlag=true", target="_blank" class="textToLink">$1</a>');
++  }
+   else
+   {
+       text = candidate.textContent.replace(url_regexp_L3_Interfaces, '<a href="https://gates.nsn-net.net/requirement/$1", target="_blank" class="textToLink">$1</a>');
+@@ -221,4 +228,4 @@ linkMixInit = function () {
+   });
+ };
+ 
+-setTimeout(linkMixInit, 3000);
+\ No newline at end of file
++setTimeout(linkMixInit, 3000);

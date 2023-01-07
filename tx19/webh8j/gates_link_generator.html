@@ -1,0 +1,28 @@
+<html>
+<head>
+    <title>Gates link generator</title>
+    <script>
+    function httpGet(url)
+    {
+            var xmlHttp = new XMLHttpRequest();
+            xmlHttp.open("GET", url, false); // false: wait respond
+            xmlHttp.send(null);
+            return xmlHttp.responseText;
+    }
+    function f()
+    {
+        var url = "http://best.eecloud.dynamic.nsn-net.net:666/cgi-bin/gates/gates_link_generator.sh?"
+            + document.getElementById('in').value;
+        document.getElementById('out').innerHTML = httpGet(url);
+    }
+    </script>
+</head>
+<body  style="background:#0539e7 url(http://best.eecloud.dynamic.nsn-net.net:666/tools/gates/html/images/gates.jpg); background-size:100%; background-repeat: no-repeat; background-attachment: fixed;">
+    <p style="color: Lime; font-weight:bold; font-size: 400%" align="center">Gates Link Generator</p>
+    <div class="form_context" style="font-size:2vw" align="center">
+        <p style="color: aqua;">Please input requirement id:    <input type="text" name="line_name" value="5G_L3_11612" id="in" placeholder="e.g. : 5G_L3_11612" style="color: Coral; width: 15%"></p>
+        <button onclick='f()' style="font-weight: bold">Enter</button>
+    </div>
+    <pre id='out'></pre>
+</body>
+</html>

@@ -1,0 +1,62 @@
+#pragma once
+#include <cstdint>
+
+namespace types::cell_config
+{
+struct DtxOptimizedScheduler
+{
+    friend bool operator==(const DtxOptimizedScheduler&, const DtxOptimizedScheduler&);
+    using ActDtxOptimizedScheduler = bool;
+    using MaxRetentionDelay = std::uint16_t;
+    using PrbThreshold = std::uint16_t;
+    using DtxDelaySinceLastScheduling = std::uint16_t;
+    using PrioDlDtxOptimizedDrbTraffic = std::uint8_t;
+    using DtxRoundingFactor = std::uint8_t;
+    using DtxRoundingOffset = std::uint8_t;
+
+    ActDtxOptimizedScheduler actDtxOptimizedScheduler;
+    MaxRetentionDelay maxRetentionDelay;
+    PrbThreshold prbThreshold;
+    DtxDelaySinceLastScheduling dtxDelaySinceLastScheduling;
+    bool drbDifferentiationEnabled;
+    bool caSupportEnabled;
+    bool rlcStatusPduSupportEnabled;
+    bool drxSupportEnabled;
+    bool multiCellSyncEnabled;
+    DtxRoundingFactor dtxRoundingFactor;
+    DtxRoundingOffset dtxRoundingOffset;
+    PrioDlDtxOptimizedDrbTraffic prioDlDtxOptimizedDrbTraffic;
+};
+
+} // namespace types::cell_config
+
+
+
+///==cpp
+
+#include "types/cell_config/DtxOptimizedScheduler.hpp"
+#include <boost/fusion/adapted/struct/adapt_struct.hpp>
+#include <boost/fusion/include/equal_to.hpp>
+
+BOOST_FUSION_ADAPT_STRUCT(
+    types::cell_config::DtxOptimizedScheduler,
+    actDtxOptimizedScheduler,
+    maxRetentionDelay,
+    prbThreshold,
+    dtxDelaySinceLastScheduling,
+    drbDifferentiationEnabled,
+    caSupportEnabled,
+    rlcStatusPduSupportEnabled,
+    drxSupportEnabled,
+    multiCellSyncEnabled,
+    dtxRoundingFactor,
+    dtxRoundingOffset,
+    prioDlDtxOptimizedDrbTraffic)
+
+namespace types::cell_config
+{
+bool operator==(const DtxOptimizedScheduler& lhs, const DtxOptimizedScheduler& rhs)
+{
+    return boost::fusion::equal_to(lhs, rhs);
+}
+} // namespace types::cell_config
