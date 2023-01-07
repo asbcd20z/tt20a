@@ -59,4 +59,20 @@ bool operator==(const DtxOptimizedScheduler& lhs, const DtxOptimizedScheduler& r
 {
     return boost::fusion::equal_to(lhs, rhs);
 }
+
+
+
+//eg2:RemoteSCellData
+bool operator==(const CsiRsCandidateItem& lhs, const CsiRsCandidateItem& rhs)
+{
+    //return lhs.csiRsOffset == rhs.csiRsOffset and lhs.numberCsiRsResources == rhs.numberCsiRsResources;
+    return std::tie(lhs.csiRsOffset, lhs.numberCsiRsResources) ==
+           std::tie(rhs.csiRsOffset, rhs.numberCsiRsResources);
+}
+struct CsiRsCandidateItem
+{
+    std::uint16_t csiRsOffset;
+    std::uint16_t numberCsiRsResources;
+};
+
 } // namespace types::cell_config
