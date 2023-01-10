@@ -1,22 +1,51 @@
 <html>
 <head>
 <script>
+function changeStyle()
+{
+var x=document.getElementById("ifr5");
+var y=(x.contentWindow || x.contentDocument);
+if (y.document)y=y.document;
+y.body.style.backgroundColor="#0000ff";
+y.body.innerHTML="<br/>hi"
+//document.getElementById("div1").innerHTML+= y.getElementById("div15").innerHTML;
+//console.log("xxx");
+}
+function console_log()
+{
+console.log("xxx");
+}
 </script>
 </head>
 <body>
-aa
-<iframe src="//player.bilibili.com/player.html?aid=423982749&bvid=BV1c341177vp&cid=506423299&page=1" scrolling="no" border="0" frameborder="no" framespacing="0" allowfullscreen="true"> </iframe>
-bb
+<br/>
+aa-
+<iframe src="xhttp://player.bilibili.com/player.html?aid=423982749&bvid=BV1c341177vp&cid=506423299&page=1" scrolling="no" border="0" frameborder="no" framespacing="0" allowfullscreen="true"> </iframe>
+<br/>
+bb-
 <iframe id="ifr2" width=888 src="http://www.runoob.com"></iframe>
+<br/>
+<div id="div1" >cc-</div>
+<br/>
+dd-
+<iframe id="ifr2" width=888 src="https://www.w3cschool.cn/htmltags/tag-iframe.html"></iframe>
+<br/>
+ee-
+<iframe id="ifr5" width=888 xsrc="ifrsub.html"></iframe>
+<br/>
+<input type="button" onclick="changeStyle()" value="Change background color">
+<br/>
+<input type="button" onclick="console_log()" value="console_log">
 
-<div id="div1" >cc</div>
 <script>
 document.write(Date());
 div2="<div style='color:#0000FF'> xx </div>";
 document.writeln(div2);
 //console.write
 console.log(document.getElementById("div1").innerHTML+"--"+document.getElementById("ifr2").src);
-document.getElementById("div1").innerHTML=document.getElementById("ifr2").src;
+document.getElementById("div1").innerHTML+=document.getElementById("ifr2").src;
+//
+//document.getElementById("ifr5")contentWindow.document.getElementById("div15").innerHTML+="inerxx";
 //
 sd=document.getElementById("ifr2");//.document;
 //sd.getElementsByTagName("title")[0].text

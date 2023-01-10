@@ -194,6 +194,12 @@ windows杀死进程命令 ntsd -c q -p PID, tasklist|findstr, taskkill /f /t /im
 javascript, 油猴chrome Tampermonkey
 htmldiff(python3,from lxml.html.diff import htmldiff)
 resetAPI, GraphQL
+baidu iframe跨域问题 嵌入别人的网站
+iframe嵌套其它网站页面详解  https://blog.csdn.net/qq_27009517/article/details/124476405
+iframe跨域嵌套问题  https://zhuanlan.zhihu.com/p/335140487
+【JS应用】Iframe解决跨域  https://zhuanlan.zhihu.com/p/90188940
+解决：Uncaught DOMException: Blocked a frame with origin “xxx“ from accessing a cross-origin frame.
+-https://blog.csdn.net/qq_41422946/article/details/108270534
 https://www.iloveimg.com/zh-cn , https://www.yasuotu.com/gif
 /
 regedit添加文件或文件夹右键菜单项  https://blog.csdn.net/qq_44705203/article/details/119966938
