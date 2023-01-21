@@ -45,6 +45,9 @@ https://en.cppreference.com/w/cpp/utility/apply
 如何优雅的使用 std::variant 与 std::optional  https://zhuanlan.zhihu.com/p/366537214
 boost::static_visitor， boost::apply_visitor
 boost::variant and boost::apply_visitor  https://blog.csdn.net/janeqi1987/article/details/78425454
+https://search.bilibili.com/all?keyword=外国评论翻译&from_source=webtop_search&spm_id_from=333.788&order=pubdate&tids_1=0&page=2&o=36
+https://player.bilibili.com/player.html?aid=423982749&bvid=BV1c341177vp&cid=506423299&page=1
+https://player.bilibili.com/player.html?bvid=BV1c341177vp
 https://www.bilibili.com/video/BV1ES4y1C7y5
 //
 wasp
@@ -214,5 +217,27 @@ vi上下左右键异常(set nocompatible,set backspace=2) https://wenku.baidu.co
 //
 std::optional<int> x{8},y{9};
 std::cout<<std::boolalpha<<std::oct<<int((std::int8_t)65)<<(x==y) <<x.value()<<y.value()<<std::endl;
-
+//
+Docker 创建镜像、修改、上传镜像  https://www.cnblogs.com/lsgxeva/p/8746644.html
+Git Submodule使用完整教程      https://www.cnblogs.com/lsgxeva/p/8540758.html
+ELF反调试初探     https://www.cnblogs.com/lsgxeva/p/8781533.html
+IPV6地址格式分析  https://www.cnblogs.com/lsgxeva/p/9209266.html
+Android-adb root https://www.cnblogs.com/lsgxeva/p/13469934.html
+//
+git-submodule
+.gitmodules/[submodule]
+.git/config/[submodule]
+.git/modules/repository-for-submodule
+git submodule ststus,init,update,
+//
+4g5g  http://www.sharetechnote.com/html/5G/5G_LTE_Interworking.html
+http://www.sharetechnote.com/html/5G/5G_LTE_Interworking.html#Overall_Signaling_Procedure
+http://www.sharetechnote.com/html/5G/5G_CommonSearchSpace_Type0_PDCCH.html
+http://www.sharetechnote.com/html/5G/5G_UE_Capability.html
+http://www.sharetechnote.com/html/5G/5G_DSS.html
+http://www.sharetechnote.com/html/5G/5G_CSI_Framework.html
+5G学习笔记之NG-RAN系统架构（2）  https://blog.csdn.net/u012800825/article/details/105890037
+高效的5G ASN.1编解码工具  https://blog.csdn.net/Dybinx/article/details/115458634
+使用asn1tools进行asn1编解码  https://www.bbsmax.com/A/kmzLmKyNJG/ , https://www.cnblogs.com/zhanghongfeng/p/9234663.html
+投资回报率/溢价
 
