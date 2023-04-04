@@ -1,3 +1,31 @@
+//
+https://www.runoob.com/docker/docker-dockerfile.html
+https://www.runoob.com/docker/docker-compose.html
+https://www.runoob.com/docker/docker-resources.html
+docker常用命令汇总  https://zongxp.blog.csdn.net/article/details/124793309
+https://docs.docker.com/engine/reference/commandline/info/#extended-description
+Docker Info内容详解    https://blog.csdn.net/qq_32641217/article/details/125417770
+-Docker Info内容详解   https://blog.csdn.net/m0_61443457/article/details/124420827
+docker部署及简单使用## https://blog.csdn.net/YSTWD_WY/article/details/121667483
+//
+//
+$ docker manifest inspect $CI_REGISTRY_IMAGE:$CI_COMMIT_REF_SLUG > /dev/null && exit || true
+command = f'docker-compose run --rm hz-bash bash -c "{gbuildPath} {runningArguments}"'
+//
+docker info  ##client-and--daemon-server-ce-details?
+docker inspect <image>
+docker inspect busybox[:latest]
+docker build -t myimg ./
+docker image build ??
+docker run -it <images> [/bin/sh,..]
+docker start/stop..
+docker ps -a
+docker images =docker image ls
+docker search busybox
+docker pull busybox
+docker top/stats
+docker logs <container>
+
 
 ///
 $
@@ -95,6 +123,9 @@ $
 $ docker run
 "docker run" requires at least 1 argument.
 See 'docker run --help'.
+//
+https://www.runoob.com/docker/docker-dockerfile.html
+
 
 Usage:  docker run [OPTIONS] IMAGE [COMMAND] [ARG...]
 
@@ -219,6 +250,8 @@ $
 
 
 
+///
+command = f'docker-compose run --rm hz-bash bash -c "{gbuildPath} {runningArguments}"'
 
 ///
 $
@@ -284,6 +317,8 @@ Commands:
   version            Show version information and quit
 $
 $
+
+
 
 $
 $ docker-compose run --rm hz-bash bash -c /home/xxx/wa5g/bin/gbuild cprt sct aaa
