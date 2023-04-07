@@ -1,6 +1,6 @@
 #
 #sh -x ../zsync
-##lz,v20210218a-git
+##lz,v2021.10.21a-git
 #function: sync checkout-source-code from one trunk on local windows-pc to another trunk on linux(but shared by samba)
 #attention: 1.trunk with same release version; 2.the file should be newer on local windows-pc if it needs updated by this script
 #precondition: 'pwd(./)' is the checkout-trunk on local windows-pc(by tortoiseSVN), and $rpath is checkout-trunk with same release version on linux(linsee,so it can be compiled on linux),and $rpath is shared mapping by samba(linux's smbd service). so we can cp files from 'pwd' to $rpath easilly
@@ -75,6 +75,7 @@ catzz3()
 {
 cat<<eot |egrep -v '\-$'
 cplane/CP-RT/CP-RT/SCT/Ttcn3/messages/F1APControlMessages.ttcn3--
+cplane/CP-RT/CP-RT/src/services/ue_mgmt/ue_procedures/ue_modify/src/modify/Init.cpp--
 
 eot
 }
@@ -84,12 +85,15 @@ main3()
 local x=`dirname $0`; local y=$x/ylist.txt
 echo >$y
 #svn diff|grep 'Index:'|cut -d' ' -f2 >$y
-git diff --name-only HEAD >$y
-#git diff --name-only origin/master >$y
+#git diff --name-only HEAD >$y
+#bash -xc "git diff --name-only HEAD >$y"
+bash -xc "git diff --name-only origin/master >$y"
 #
 catzz3 >>$y
 sed -i -e'/cplaneLogger/s|$|-|'  $y
-sed -i -e'/CPRT_Design_Document_20B.adoc/s|$|-|'  $y
+sed -i -e'/CPRT_Design_Document_20B.adoc/ s|$|-|'  $y
+sed -i -e'\!cplane/CP-RT/CP-RT/src/services/ue_mgmt/ue_procedures/ue_modify/src/modify/Init.cpp! s|$|-|'  $y
+#
 #bash -xc "cat $y"
 bash -xc "nl $y"
 echo
@@ -101,15 +105,29 @@ echo
 rpath=10.183.68.25:/var/fpwork/lzhao019/t/nr/gnb/
 rpath=10.183.68.25:/ephemeral/workspace/lzhao019/nr5/gnb/
 rpath=10.183.67.66:/ephemeral/workspace/lzhao019/nr6/gnb
+rpath=10.182.65.71:/ephemeral/workspace/lzhao019/nr71/gnb/
 #rpath=10.182.67.77:/ephemeral/workspace/lzhao019/nr7/gnb
 #rpath=10.182.68.88:/ephemeral/workspace/lzhao019/nr7/gnb
 
 #pwd
-echo ==$PWD ==$rpath
+# //log location for download
+#echo rsync -rvCtaz --stats $rpath/cplane/b2cu/sctworkingdir/cp_ue/logs ./
+#echo ==scp -pr $rpath/cplane/b2cu/sctworkingdir/cp_ue/logs ./
+echo 'date; scp -pr 10.182.65.71:/ephemeral/workspace/lzhao019/nr71/gnb///cplane/b1rt/sctworkingdir/cp_rt/logs/*-1  ./logs/'
+echo ==scp -pr $rpath//build/native/cprt/sct/sctworkingdir/cp_rt/logs ./
+# //sync source-code
+echo ==$PWD ==$rpath//cplane/b1rt
 #echo rsync -a --include-from= $v $rpath/$v
 ##echo rsync -nrvCtaz --stats `cat ylist.txt` $rpath/$v
-echo
-  rsync -rvCtaz --stats --files-from=$y . $rpath/
+echo;  rsync -rvCtaz --stats --files-from=$y . $rpath/
+
+
+#== run
+echo -e "\n\n\n==ssh.exec==" `date`
+echo sleep...; sleep 3; #pause.yes?
+#sleep 1  #pause.yes?
+#ssh 10.182.65.71 'cd /ephemeral/workspace/lzhao019/nr71/gnb; pwd; time ./gnb_build/build.py --icecc cplane cprt sct -b stable -p TestSaCa4CCTddAnyFr1.rt_  run --no-config'
+ssh 10.182.65.71 'cd /ephemeral/workspace/lzhao019/nr71/gnb; pwd; time ./gnb_build/build.py --icecc cplane cprt sct -b stable -p TestSaCa4CCTddAnyFr1.rt_x1  run --no-config'
 }
 
 

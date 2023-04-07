@@ -7,18 +7,36 @@
 #
 	name=z
 	email=z
+[corex]
+	core.autocrlf
+	core.whitespace
+	core.ignoreCase
+	core.gitProxy  # GIT_PROXY_COMMAND ,or alias pgit='https_proxy=135.251.33.16:8080 git' 
+	core.longpaths
+	#symlinks = false  # If false, symbolic links are checked out as small plain files that contain the link text.
+	#git config --global core.longpaths true
+	#git config -l
+	#git config --get-all core.symlinks
+#hint:   git config pull.rebase false  # merge (the default strategy)
+#hint:   git config pull.rebase true   # rebase
+#hint:   git config pull.ff only       # fast-forward only
 [alias]
-	#@time20210816a
-	#git clean -x -f -d  # rm  untracked files
-	#git rm --cached aa.txt
+	#@time20220930a
+	#https://git-scm.com/docs/git-log
+	#core.symlinks   ,https://www.codenong.com/11662868/
+	#delete: git rm LICENSE.txt ; git ci --amend --allow-empty   ## use "git restore --staged <file>..." to unstage
+	#git clean -x -f -d    # rm  untracked files, git clean -fd
+	#git rm --cached aa.txt   # or git reset aa.txt
 	#git add -u  # -A -f --dry-run
+	##reset/checkout  https://blog.csdn.net/zeye5731/article/details/122261447
 	##git reset    <cid> <file> ---only update INDEX  ##opposite of git add. means to unstaged?
 	##git checkout <cid> <file> ---both update INDEX and workspace,or only update workspace from INDEX if without cid
+	##git checkout       <file> ---only update INDEX to workspace
 	#git br -vv
 	#git show-branch
 	#git show -name-only [cid] my-path   ## see changes log
-	#git log -S'' -i -L --grep=  # grep/search (-i:case insensitive),  -G --basic-regexp...
-	##git log --grep=logMessage -i  -S<string> -G<regex> -L<range>
+	#git log -S'' -i -L --grep=  # grep/search (-S can be for addition/deletion-text) (-i:case insensitive),  -G'' --basic-regexp...
+	##git log --grep=logMessage -i  -S<string> -G<regex> -L<range>   # -G 会搜索出更多同行(但有其他修改)
 	#git-log中文  https://www.php.cn/manual/view/34971.html
 	#git blame -M -C my-rev~  myfile  -L99,+9  ## blame-history
 	tt3=log --oneline -3
@@ -27,11 +45,14 @@
 	ci = commit
 	cia= commit --amend
 	df = diff --name-only
+	#    diff --name-status
 	#git add -N aa.txt ; git rm --cached aa.txt ##new-file-for-diff, untracked--notStaged-staged4tobeCommit
 	#git add -A
 	br = branch
 	#br -r -a
+	#git br -f  #--force, -d -D -m -M
 	puv= push origin HEAD:refs/for/master
+	pwip=push origin HEAD:refs/for/master%wip
 	#puv19a=push origin HEAD:refs/for/rel/5G19A
 	#
 	logfuller=log -1 --format=fuller
@@ -49,7 +70,8 @@
 	#or, git blame 0.0.0-1615388870 x/y.cc # cat version-file to check
 	#or change a file, git co <sha1> -- file.tex ## zhihu.com/question/53061133
 	##
-	# git rebase -i HEAD~4  ## git rebase -i <after-this-commit> # merge HEAD~4..HEAD
+	# https://blog.csdn.net/small_white_123/article/details/121563248
+	# git rebase -i HEAD~4  ## git rebase -i <after-this-commit> # merge HEAD~4..HEAD (merge form ~3,not include HEAD~4)
 	# git cherry-pick ciid1 ciid2..
 	#https://git-scm.com/book/zh/v2/Git-分支-变基  //rebase
 	#-git rebase --onto master server client  ##then, git checkout master; git merge client
@@ -62,13 +84,20 @@
 	#lot=lo --pretty=format:"%h [%cI %cn] %s %d" -9
 	lot =lo --pretty=format:'%h %cI %d %s  .%an'  #--decorate
 	lotag=lot --all --graph #--decorate' 
+	##
 	##log bra1..bra2 == log ^br1 br2  #gitrevisions  # branch-base-point
 	##log --left-right --boundary --reverse bra1...bra2
+	#git rev-list --left-right --boundary --pretty=oneline A...B
 	#show
 	#reflog
+	##
+	#git log <changed-dir>                         ## to find delete or rename
+	#git log --oneline --diff-filter=DR --summary  ## to find delete or rename
+	#https://blog.csdn.net/asdfgh0077/article/details/103790981
+	#https://blog.csdn.net/wq6ylg08/article/details/88798254
 	st = status
 	hh = help
-	#git apply --check my.pat; git apply -3 my.pat; git apply --reject my.pat #patch
+	#git apply --check my.pat; git apply -3 my.pat; git apply --reject my.pat //-R --reverse -p0,  #patch -p0 <aa.diff
 	#git branch [--track | --no-track] [-f] <branchname> [<start-point>]
 	#git branch (--set-upstream-to=<upstream> | -u <upstream>) [<branchname>]
 	# eg: git branch --set-upstream-to=origin/main main
@@ -81,24 +110,82 @@
 	#git push origin mybr1  ## update mybr1, or create mybr1 if not exist remotely. and -n to try
 	#git branch -d mybr1; git push origin :mybr1; or,git push origin  --delete mybr1  ## same. delete branch remotely
 	#git tag -d tag-name; git push origin :refs/tags/tag-name; or,git push origin --delete tag-name  ## delete tag local/remotely
+	##https://www.runoob.com/git/git-remote.html
+	# git revert
+	# git remote -v
+	# git remote add ...
+	# git remote show origin
 	##
 	#git config --local user.name mxasbcd20z; git config --local user.email mxasbcd20z@q.com
 	#git config -l; git var -l
 	#Git Submodule使用完整教程 https://www.cnblogs.com/lsgxeva/p/8540758.html
 	#git中submodule子模块的添加、使用和删除 https://blog.csdn.net/guotianqing/article/details/82391665
 
+[xremote "origin"]
+	#pushurl = ssh://usser1@gerrit.a.b.com:29418/apath/gnb
+[xurl "ssh://****:29418/"]
+#[url "ssh://lzhao019@gerrit-hzsl2.int.net.nokia.com:29418"]
+#insteadOf = ssh://lzhao019@gerrit.ext.net.nokia.com:29418
+#[url "ssh://lzhao019@gerrit.ext.net.nokia.com:29418"]
+#pushInsteadOf = ssh://lzhao019@gerrit.ext.net.nokia.com:29418
+#pushInsteadOf = ssh://lzhao019@gerrit-hzsl2.int.net.nokia.com:29418
+#Git命令小记  https://zhuanlan.zhihu.com/p/20938735
+#
+[xdownload-patch]
+checkout:		git fetch "ssh://x" refs/changes/79/4801979/1 && git checkout FETCH_HEAD
+cherry-pick:	git fetch "ssh://x" refs/changes/79/4801979/1 && git cherry-pick FETCH_HEAD
+format-patch:	git fetch "ssh://x" refs/changes/79/4801979/1 && git format-patch -1 --stdout FETCH_HEAD
+pull:			git pull "ssh://x" refs/changes/79/4801979/1
+#
+##cd `git rev-parse --git-dir`/hooks; ln -fs ../../tools/githooks/*-* .
+#You are currently cherry-picking commit 182bcc0c1ea5.
+#  (fix conflicts and run "git cherry-pick --continue")
+#  (use "git cherry-pick --abort" to cancel the cherry-pick operation)
+#
+#git rebase --skip
+#
+[xpull-rebase]
+#git pull -r
+#Resolve all conflicts manually, mark them as resolved with
+#"git add/rm <conflicted_files>", then run "git rebase --continue".
+#You can instead skip this commit: run "git rebase --skip".
+#To abort and get back to the state before "git rebase", run "git rebase --abort".
+#
+#$ git st
+#interactive rebase in progress; onto 6bf3db26a2b7
+#Last command done (1 command done):
+#   pick 45a6e011a761 [none] cp ci test for PR667451
+#Next command to do (1 remaining command):
+#   pick 7d7d6587ba82 cc
+#  (use "git rebase --edit-todo" to view and edit)
+#You are currently rebasing branch 'master' on '6bf3db26a2b7'.
+#  (fix conflicts and then run "git rebase --continue")
+#  (use "git rebase --skip" to skip this patch)
+#  (use "git rebase --abort" to check out the original branch)
+#
+#Changes to be committed:
+#  (use "git restore --staged <file>..." to unstage)
+#
+#Unmerged paths:
+#  (use "git restore --staged <file>..." to unstage)
+#  (use "git add <file>..." to mark resolution)
 
 [xcolor]
 	status=auto
 [xhttp]
 	#http_proxy=http://10.158.100.8:8080 #//sct
+	#http_proxy=http://10.158.100.2:8080 #CLion-VSCode-User-Guide
+	#http_proxy=http://10.158.100.1:8080 #gitlabe1ccs?
 #        proxy = 135.245.48.34:8000
 #	proxy = 135.251.33.16:8080 #15
 #       proxy = 10.167.32.133:8080
 #       proxy = 127.0.0.1:1087
 #       sslVerify=false
 ##alias pgit='https_proxy=135.251.33.16:8080 git'  ##pgit push  [my-origin] [my-branch] [-u]
+##alias pgit=  'all_proxy=135.251.33.16:8080 git'  ##pgit push  [my-origin] [my-branch] [-u]
 [xuser]
         name=jqasbcd20z
         email=jqasbcd20z@q.com
+
+
 

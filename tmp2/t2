@@ -1,0 +1,218 @@
+t2
+网速测试 https://www.speedtest.cn/  360测速-https://wangsuceshi.bmcx.com/
+json.tool.py
+mkdir -p
+which, whereis, whatis
+mount -o remount r,w /
+console-tset-reset, dirname, basename
+mobadifffiles v0route.txt vpnroute.txt
+grep -s --exclude-dir=tests/ --include=GLOB
+find . -type l  ##symbolic link
+find . -type d  #dir
+echo aa |& tee afile  #https://www.runoob.com/linux/linux-comm-tee.html  www.cnblogs.com/nanruosen/p/16317025.html
+ps -aux -ef, pgrep, pidof, killall,pkill
+ifconfig, ip, ping6, traceroute,route,arp -a, dhcpconfig, netstat,ss, netsh-w
+https://deepinout.com/linux-cmd/linux-terminal-related-cmd/linux-cmd-reset.html
+//
+greenshot, Snipaste.exe  https://github.com/Snipaste https://www.snipaste.com/download.html
+json格式化工具有哪些 https://www.bejson.com/
+https://baike.baidu.com/item/MPL/13908461 
+https://www.freesion.com/article/18571258268/
+boost::msm   Boost.Msm 介绍  https://www.jianshu.com/p/6748aa7c117b  
+Boost.Msm - 多弗朗强哥 https://www.cnblogs.com/chendeqiang/p/12885243.html ,
+https://blog.csdn.net/weixin_39759247/article/details/107055132
+https://www.boost.org/doc/libs/1_78_0/
+https://www.boost.org/doc/libs/1_78_0/libs/python/doc/html/index.html
+https://www.boost.org/doc/libs/master/doc/html/stacktrace.html
+https://www.boost.org/doc/libs/1_45_0/libs/statechart/doc/tutorial.html
+https://www.boost.org/doc/libs/1_78_0/libs/msm/doc/HTML/index.html
+https://www.boost.org/doc/libs/1_78_0/libs/msm/doc/HTML/ch03s02.html#d0e344
+C++元编程和Boost编程库  https://blog.csdn.net/hityct1/article/details/4191030
+为wget命令设置代理  https://www.cnblogs.com/frankyou/p/6693256.html
+MobaXterm personal edition v21.4//mobadifffiles
+boost::msm   Boost.Msm 介绍  https://www.jianshu.com/p/6748aa7c117b  
+ https://www.cnblogs.com/chendeqiang/p/12885243.html
+https://en.cppreference.com/w/cpp/utility/tuple
+https://en.cppreference.com/w/cpp/utility/tuple/tie
+//std::bind , std::ref(*this)  std::cref
+https://en.cppreference.com/w/cpp/algorithm/for_each
+https://zh.cppreference.com/w/cpp/language/template_argument_deduction
+https://en.cppreference.com/w/cpp/utility/functional/ref
+https://en.cppreference.com/w/cpp/utility/functional/reference_wrapper
+https://en.cppreference.com/w/cpp/utility/variant
+https://en.cppreference.com/w/cpp/utility/variant/visit
+https://en.cppreference.com/w/cpp/utility/apply
+如何优雅的使用 std::variant 与 std::optional  https://zhuanlan.zhihu.com/p/366537214
+boost::static_visitor， boost::apply_visitor
+boost::variant and boost::apply_visitor  https://blog.csdn.net/janeqi1987/article/details/78425454
+https://www.bilibili.com/video/BV1ES4y1C7y5
+//
+wasp
+baidu:网页禁止右键代码 //body oncontextmenu="return false"
+//body oncontextmenu="return false" onselectstart="return false" 
+ondragstart="return false" onbeforecopy="return false" oncopy=document.selection.empty() onselect=document.selection.empty()
+//
+//5G-NR CSI-RS, LTE
+LTE两种帧结构  https://www.icode9.com/content-4-770461.html
+//
+https://www.3gpp.org/specification-numbering
+https://www.3gpp.org/DynaReport/38-series.htm
+https://blog.csdn.net/lilliana/article/details/109402345#  /5G/NR帧格式概要#
+http://www.sharetechnote.com/
+https://blog.csdn.net/m0_38099948/article/details/108561696  /5G NR 无线帧结构###
+https://blog.csdn.net/qq_39074243/article/details/119886180
+https://blog.csdn.net/qq_39074243/article/details/119926972
+https://blog.csdn.net/qq_39074243/article/details/120901507
+http://www.sharetechnote.com/
+https://blog.csdn.net/Graduate2015/article/details/118547062  /【5G NR】帧结构
+https://blog.csdn.net/Graduate2015/article/details/119295224  /【5G NR】UE上报CSI的过程—CSI框架
+https://blog.csdn.net/graduate2015/category_11192048.html
+https://blog.csdn.net/Graduate2015/article/details/111874148  /LTE空口资源
+https://blog.csdn.net/m_052148/article/details/51305338  /LTE物理传输资源（1）-帧结构和OFDM符号
+https://zhuanlan.zhihu.com/p/365758206  /5G-NR-3GPP协议学习（零）：CSI简介
+/
+https://blog.csdn.net/weixin_41008284/article/details/108896591  /MIMO基础总结##
+https://blog.csdn.net/jyqxerxes/article/details/78994699
+//
+https://www.bilibili.com/video/BV1Pf4y1j7hA?spm_id_from=333.999.0.0
+https://www.bilibili.com/video/BV1jT4y1d7Dr/?spm_id_from=333.788.recommend_more_video.0
+https://www.bilibili.com/video/BV1fk4y1d7qn/?spm_id_from=333.788.recommend_more_video.1
+bat批处理, https://baike.baidu.com/item/批处理/1448600
+https://www.ddnx.com/shenghuo/592339.html 花洒切换水的按钮坏了怎么修
+//
+https://www.kylc.com/stats/global/yearly_overview/g_gdp.html
+https://gdp.gotohui.com/word/
+https://www.xiguay.com/guocanju/xuezhonghandaoxing/
+//外国评论翻译,k8s教程
+https://search.bilibili.com/all?keyword=外国评论翻译&from_source=webtop_search&spm_id_from=333.788&order=pubdate&tids_1=0&page=2&o=36
+//Kubernetes (K8S) 3 小时快速上手
+https://space.bilibili.com/22667024
+https://www.bilibili.com/video/BV1Tg411P7EB?spm_id_from=333.337.search-card.all.click
+https://k8s.easydoc.net/docs/dRiQjyTY/28366845/6GiNOzyZ/9EX8Cp45
+https://docker.easydoc.net/
+docker, https://www.runoob.com/docker/docker-compose.html
+年35-华为云11.11主会场_实惠更实用，“1 1”都如愿_云服务器限时购_领万元大礼包-华为云
+//
+QoS-3gpp TS23.501 section5.7 5G QoS model, defined 5QI values etc.
+MobaXterm PersonalEdition v21.4 Build 4786 --2021.8?
+//
+cmakefile target_link_libraries   add_library add_subdirectory
+#Cmake#__target_link_libraries函数的使用说明 https://blog.csdn.net/sinat_37231928/article/details/121684722
+target_link_libraries 和link_libraries区别  https://blog.csdn.net/u012483097/article/details/109066405
+//
+https://www.w3cschool.cn/tutorial
+https://www.w3cschool.cn/doc_git/git-git-log.html?lang=en
+git reset 三种使用方法  https://blog.csdn.net/zeye5731/article/details/122261447
+https://blog.csdn.net/qq310563349/article/details/107044199
+git diff的最全最详细的4大主流用法/log https://lijunde.blog.csdn.net/article/details/88798254
+Git 命令小记  https://zhuanlan.zhihu.com/p/20938735
+git的冲突解决--git rebase之abort、continue、skip  https://blog.csdn.net/qq_37708668/article/details/88813266
+//
+MSC-Generator 的语法  https://blog.csdn.net/weixin_40643581/article/details/78242664
+脚本绘图工具总结       https://blog.csdn.net/dfe30001/article/details/102154644
+//
+在linux中的sort命令,技术|Linux 的 ‘sort’命令的14个有用的范例  https://blog.csdn.net/weixin_35648264/article/details/116575875
+Linux Bash之正则表达式  https://www.cnblogs.com/phillee/p/10949796.html
+bash 自带正则匹配功能 - BASH_REMATCH 介绍  =~ http://bbs.chinaunix.net/thread-4125147-1-1.html
+awk and sed 饭醉团伙 高清版 修订第三版  http://bbs.chinaunix.net/thread-1743038-1-1.html
+https://man.linuxde.net/docs/shell_regex.html
+//
+http://www.timebie.com/cn/timezonesearch.php
+https://m.pp.cn/home.html
+//
+https://www.kylc.com/stats/global/yearly_overview/g_gdp.html
+//
+//AI/ML-python
+jupyter notebook
+jupyter notebook 可以做哪些事情？ https://zhuanlan.zhihu.com/p/33105153
+https://blog.csdn.net/Bocker_Will/article/details/122828050 , try.jupyter.org , https://jupyter.org/try
+-https://jupyter.org/try-jupyter/lab/ , from matplotlib import pyplot as plt; import numpy as np
+//
+pip3 代理 https://www.csdn.net/tags/MtTakg5sMjE1NjctYmxvZwO0O0OO0O0O.html
+https://www.runoob.com/w3cnote/python-pip-install-usage.html
+pip和pip3（安装与使用）详细讲解 https://blog.csdn.net/hgdl_sanren/article/details/82858896 , https://pypi.org/project/pip/#downloads
+Python--详细讲解反射has|get|set|delattr  https://blog.csdn.net/hgdl_sanren/article/details/81368628
+//
+网盘 https://ufile.io/
+//
+FlatBuffers, protobuf,ProtoBuffers
+深入浅出FlatBuffers原理 https://baijiahao.baidu.com/s?id=1705686535856873496&wfr=spider&for=pc
+深入浅出FlatBuffers原理 https://blog.csdn.net/yunqiinsight/article/details/118928676
+//cc,gcc, google mock,gtest
+icecc
+distcc  https://wiki.archlinux.org/title/Distcc_(简体中文)
+Ccache — a fast C/C++ compiler cache   https://ccache.dev/
+GoogleMock初探(0)   http://t.zoukankan.com/duan-shui-liu-p-10740642.html
+单元测试其二：gmock  https://zhuanlan.zhihu.com/p/536004224 , https://blog.csdn.net/weixin_43966547/article/details/126784391
+gmock  EXPECT_CALL(mock_object, method(matchers)).Times(cardinality).WillOnce(action).WillRepeatedly(action);
+gmock  EXPECT_CALL(*ueContextScopeMock, getNrDrb(Matcher<types::QCI>(_), _)).WillRepeatedly(Return(nrDrb));//
+gmock  ON_CALL(ueContextMock, isSa()).WillByDefault(Return(false));
+gmock  StrictMock,NiceMock, MATCHER_P2
+.WillOnce(Invoke([&firstTaskId](const auto& startTask) { firstTaskId = startTask.taskId; }));
+google mock 语法基础篇 （三）  https://blog.csdn.net/nowETforever/article/details/116142073
+/到目前为止一直很好...... 现在我读到除非你需要，否则不要使用EXPECT_CALL。 
+/然而，一个简单的EXPECT_CALL到ON_CALL替换将不起作用（??），因为带有WillByDefault的ON_CALL只计算一次返回类型（??）
+https://stackoverflow.com/questions/13933475/gmock-setting-default-actions-on-call-vs-expect-call
+--
+class XSuite:public ::testing::Test{...}; TEST_F(XSuite, aCase){...}
+struct ArgSet{}, const std::vector<ArgSet> argSetList; class Xtest:public ::testing::Test,public WithParamInterface<ArgSet>, 
+TEST_P(Xtest,aCase){...},  INSTANTIATE_TEST_SUITE_P(grp,Xtest,::testing::ValuesIn(argSetList))), ===>grp/Xtest.aCase/0
+namespace mytest{using namespace ::testing;}
+/
+std::reference_wrapper  https://zh.cppreference.com/w/cpp/utility/functional/reference_wrapper
+C++引用  https://blog.csdn.net/qq_41412237/article/details/125174203
+--
+--
+baidu小米路由器桥接模式怎么设置
+路由器的桥接方式  https://blog.csdn.net/X_Slayer/article/details/122440322
+路由器无线桥接（WDS）设置  https://blog.csdn.net/i_____miss__you/article/details/80539578
+路由器 AP、路由、中继、桥接模式的区别  https://blog.csdn.net/ahelloyou/article/details/113781634
+WIFI无线路由器的五种工作模式  http://www.360doc.com/content/12/0814/08/10560798_230064460.shtml
+路由器WDS（无线桥接，无线中继）设置，网上的坑货教程只教了一半(Wireless Distribution System)  https://zhuanlan.zhihu.com/p/103715511
+/
+excel vba //vb模拟键盘输入,vbs模拟鼠标键盘
+https://learn.microsoft.com/en-us/office/vba/language/reference/user-interface-help/visual-basic-user-interface-help
+https://learn.microsoft.com/en-us/office/vba/language/reference/user-interface-help/visual-basic-user-interface-help
+https://learn.microsoft.com/en-us/office/vba/api/overview/language-reference
+https://learn.microsoft.com/en-us/office/vba/Language/Reference/User-Interface-Help/sub-function-or-property-not-defined-error-35
+https://learn.microsoft.com/en-us/office/vba/language/how-to/enter-a-declaration-in-code?source=recommendations
+https://learn.microsoft.com/en-us/office/vba/language/reference/user-interface-help/a-compatible-activex-component-must-be-a-visual-basic-executable-or-a-dll
+vbs模拟键盘和鼠标输入=, https://blog.csdn.net/qq_42662283/article/details/106537827
+VBS基础篇  http://www.360doc.com/content/21/1019/10/541242_1000378279.shtml
+vbs, https://baike.baidu.com/item/vbs/1700748?fr=aladdin
+在vbs文件中传递参数 https://www.cnblogs.com/mq0036/p/16077256.html //WScript.Arguments
+vbs基础教程 https://blog.csdn.net/bianchengxueseng/article/details/107345726
+VBScript Time 函数  https://www.w3school.com.cn/vbscript/func_time.asp //Now=Date+Time 
+Vbs(Vbscript)脚本常用操作合集（QTP(UTF)自动化测试工具）https://blog.csdn.net/u010665638/article/details/84592648
+vbs脚本在服务器上虚拟按键,VBS模拟按键方法 https://blog.csdn.net/weixin_30253941/article/details/119691928
+VBS自动按键大全，vbs基本和特殊按键===  https://blog.csdn.net/qq_38254897/article/details/121975078
+vbs模拟键盘和鼠标输入  https://blog.csdn.net/qq_42662283/article/details/106537827
+vbs创建快捷方式, 使用VBS创建快捷方式的代码  https://www.jb51.net/article/224580.htm
+-批处理BAT创建快捷方式 https://www.jb51.net/article/54832.htm
+windows杀死进程命令 ntsd -c q -p PID, tasklist|findstr, taskkill /f /t /im wscript.exe
+/
+javascript, 油猴chrome Tampermonkey
+htmldiff(python3,from lxml.html.diff import htmldiff)
+resetAPI, GraphQL
+baidu iframe跨域问题 嵌入别人的网站
+iframe嵌套其它网站页面详解  https://blog.csdn.net/qq_27009517/article/details/124476405
+iframe跨域嵌套问题  https://zhuanlan.zhihu.com/p/335140487
+【JS应用】Iframe解决跨域  https://zhuanlan.zhihu.com/p/90188940
+解决：Uncaught DOMException: Blocked a frame with origin “xxx“ from accessing a cross-origin frame.
+-https://blog.csdn.net/qq_41422946/article/details/108270534
+https://www.iloveimg.com/zh-cn , https://www.yasuotu.com/gif
+/
+regedit添加文件或文件夹右键菜单项  https://blog.csdn.net/qq_44705203/article/details/119966938
+[HKEY_CLASSES_ROOT\Directory\shell\git_shell\command]
+@="\"C:\\appc\\Git\\git-bash.exe\" \"--cd=%1\""
+[HKEY_CLASSES_ROOT\Directory\shell\zz\command]
+@="cmd.exe"
+/
+vi上下左右键异常(set nocompatible,set backspace=2) https://wenku.baidu.com/view/5971023668d97f192279168884868762caaebbf7.html
+年终工作总结/技术工作年度总结/软件工程师年度总结
+/
+//
+std::optional<int> x{8},y{9};
+std::cout<<std::boolalpha<<std::oct<<int((std::int8_t)65)<<(x==y) <<x.value()<<y.value()<<std::endl;
+
+

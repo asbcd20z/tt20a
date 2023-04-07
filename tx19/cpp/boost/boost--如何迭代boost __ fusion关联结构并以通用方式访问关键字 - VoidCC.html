@@ -1,0 +1,612 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+    <meta charset="utf-8"/>
+    <title>如何迭代boost :: fusion关联结构并以通用方式访问关键字 - VoidCC</title>
+    <meta name="description" content="这是我进入这个伟大的知识交流的第一个问题，我希望我能找到一些帮助。 我尝试实现一种通用的方式来创建PrintTo函数（稍后将在GoogleTest中使用）。 所以下面的代码只做了一半的工作。它只打印定义的结构Foo::Bar #include &lt;iostream&gt; 
+#include &lt;sstream&gt; 
+#include &lt;string&gt; 
+
+#include &lt;boost/fusion/con"/>
+    <meta name="keywords" content="如何,迭代,boost,fusion,关联,结构,通用,方式,访问,关键字"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1"/>
+
+    <link rel="shortcut icon" href="http://img.voidcc.com/voidso/favicon.ico" type="image/x-icon"/>
+
+    <link href="//cdn.bootcss.com/bootstrap/3.3.5/css/bootstrap.min.css" rel="stylesheet">
+    <link href="//cdn.bootcss.com/font-awesome/4.4.0/css/font-awesome.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="http://img.voidcc.com/voidso/css/animate.css?t=1640443370269" type="text/css"/>
+    <link rel="stylesheet" href="http://img.voidcc.com/voidso/css/voidme.css?t=1640443370269" type="text/css"/>
+    <script src="//cdn.bootcss.com/jquery/1.11.3/jquery.min.js"></script>
+    <script src="//cdn.bootcss.com/bootstrap/3.3.5/js/bootstrap.min.js"></script>
+
+    <script async src="//pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
+    <script>
+        (adsbygoogle = window.adsbygoogle || []).push({
+            google_ad_client: "ca-pub-6208739752673518",
+            enable_page_level_ads: true
+        });
+    </script>
+</head>
+
+<body>
+<div id="wrap"><!-- wrap begin-->
+    <header id="header" class="navbar navbar-fixed-top box-shadow" data-spy="affix" data-offset-top="1">
+        <div class="bg-simple">
+            <div class="container">
+                <div class="navbar-header ">
+                    <button class="btn btn-link visible-xs pull-right m-r" type="button" data-toggle="collapse"
+                            data-target=".navbar-collapse">
+                        <i class="fa fa-bars"></i>
+                    </button>
+                    <a href="/" class="navbar-brand m-r-n m-l-n-md">
+                    VoidCC
+                    </a>
+                </div>
+                <div class="collapse navbar-collapse">
+
+                    <ul class="nav navbar-nav m-l-n visible-xs visible-sm visible-md visible-lg visible-xl">
+                        <li>
+                            <a href="/tag">
+                                <span><i class="fa fa-tags m-r-xs" aria-hidden="true"></i>标签列表</span>
+                            </a>
+                        </li>
+                    </ul>
+
+                    <ul class="nav navbar-nav ">
+                        <li>
+                            <!-- search form -->
+                            <form id="search" action="/search" method="GET"
+                                  class="navbar-form navbar-form-sm visible-xs visible-md visible-lg"
+                                  ui-shift="prependTo" data-target=".navbar-collapse" role="search">
+                                <div class="form-group">
+                                    <div class="input-group">
+                                        <input type="text" name="q" ng-model="selected"
+                                               class="form-control input-sm bg-light no-border  padder"
+                                               placeholder="搜索...">
+                                        <span class="input-group-btn">
+                                        <button type="submit" class="btn btn-sm bg-light "><i class="fa fa-search"></i></button>
+                                    </span>
+                                    </div>
+                                </div>
+                            </form>
+                            <!-- / search form -->
+                        </li>
+                    </ul>
+
+                    <ul class="nav navbar-nav navbar-right m-r-xs">
+                        <li>
+                            <div class="m-t">
+                                <a class="dropdown mr-3 card-link" onclick="showLang()"><i
+                                        class="fa fa-globe fa-lg"></i><span>简体中文</span></a>
+                            </div>
+                        </li>
+                            <script>var mulang = true;</script>
+                            <div class="dropdown-menu" id="dropdownMenu">
+                                    <a class="dropdown-item col-lg-4 col-md-6 col-sm-12"
+                                       href="http://hk.voidcc.com/question/p-dhyelvne-gp.html" target="_blank"
+                                       title="如何迭代boost :: fusion關聯結構並以通用方式訪問關鍵字">HK
+                                        (繁體中文)</a>
+                            </div>
+                        <script>
+                            function showLang() {
+                                if (mulang) {
+                                    var ddmenus = $("#dropdownMenu");
+                                    if (ddmenus.hasClass("show")) {
+                                        ddmenus.removeClass("show");
+                                    } else {
+                                        ddmenus.addClass("show");
+                                    }
+                                }
+                            }
+                        </script>
+                    </ul>
+
+                </div>
+            </div>
+        </div>
+    </header><div class="main-content bg-light container">
+    <div class="row banner">
+    </div>
+    <div class="row">
+
+<div class="col-lg-9 col-md-8 col-sm-7">
+    <ol class="breadcrumb">
+        <li><a href="http://cn.voidcc.com/">首页</a></li>
+        <li>问答</li>
+        <li>如何迭代boost :: fusion关联结构并以通用方式访问关键字</li>
+    </ol>
+    <div class="page box_white">
+
+        <div class="question-title">
+            <span class="text-logo margin-top-sm">Q</span>
+            <h1>
+                <a href="http://cn.voidcc.com/question/p-dhyelvne-gp.html">如何迭代boost :: fusion关联结构并以通用方式访问关键字</a>
+            </h1>
+        </div>
+
+        <div class="question-meta">
+
+            <div class="tags left">
+                <ul class="list-inline">
+                        <li><a target='_blank' href="http://cn.voidcc.com/tag/c%2B%2B" title="c++">c++</a></li>
+                        <li><a target='_blank' href="http://cn.voidcc.com/tag/boost" title="boost">boost</a></li>
+                        <li><a target='_blank' href="http://cn.voidcc.com/tag/boost-fusion" title="boost-fusion">boost-fusion</a></li>
+                </ul>
+            </div>
+
+            <div class="p-author padding-top-12">
+                    <span><i class="glyphicon glyphicon-time"></i>
+                        <span>2013-04-30</span>
+                    </span>
+                <span><i class="glyphicon glyphicon-eye-open"></i>
+                        <span class="view" title="views">12 views</span>
+                    </span>
+
+                <span class="like" title="likes">
+                        <i class="glyphicon glyphicon-heart"></i>
+                        <span class="likenum">7</span> likes&nbsp;
+                    </span>
+            </div>
+        </div>
+
+        <div class="clearfix"></div>
+
+        <div class="item-description text-md markdown-body voidso">
+
+<div>
+        <script async src="//pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
+        <ins class="adsbygoogle"
+             style="display:block"
+             data-ad-client="ca-pub-6208739752673518"
+             data-ad-slot="3932151511"
+             data-ad-format="auto"
+             data-full-width-responsive="true"></ins>
+        <script>
+            (adsbygoogle = window.adsbygoogle || []).push({});
+        </script>
+</div>
+
+            <article>
+
+                <div class="post-col vote-info">
+                    <span class="count">7<i class="fa fa-thumbs-up"></i></span>
+                </div>
+
+                <div class="post-offset">
+                <p>这是我进入这个伟大的知识交流的第一个问题，我希望我能找到一些帮助。<a href="http://cn.voidcc.com/question/p-dhyelvne-gp.html">如何迭代boost :: fusion关联结构并以通用方式访问关键字</a></p> 
+<p>我尝试实现一种通用的方式来创建PrintTo函数（稍后将在GoogleTest中使用）。</p> 
+<p>所以下面的代码只做了一半的工作。它只打印定义的结构<code class="prettyprint-override">Foo::Bar</code></p> 
+<pre><code class="prettyprint-override">#include &lt;iostream&gt; 
+#include &lt;sstream&gt; 
+#include &lt;string&gt; 
+
+#include &lt;boost/fusion/container.hpp&gt; 
+#include &lt;boost/fusion/algorithm.hpp&gt; 
+#include &lt;boost/fusion/adapted/struct/define_assoc_struct.hpp&gt; 
+#include &lt;boost/fusion/include/define_assoc_struct.hpp&gt; 
+
+namespace Foo 
+{ 
+    namespace Keys 
+    { 
+    struct StringField; 
+    struct IntField; 
+    }; 
+} 
+
+BOOST_FUSION_DEFINE_ASSOC_STRUCT(
+    (Foo), Bar, 
+    (std::string, stringField, Foo::Keys::StringField) 
+    (int,   intField, Foo::Keys::IntField)) 
+
+
+struct fusion_printer_impl 
+{ 
+    std::ostream&amp; _os; 
+
+    fusion_printer_impl(std::ostream&amp; os) 
+    : _os(os) {} 
+
+    template &lt;typename T&gt; 
+    void operator() (T&amp; v) const 
+    { 
+    _os &lt;&lt; v &lt;&lt; std::endl; 
+    } 
+}; 
+
+void PrintTo(Foo::Bar const&amp; v, std::ostream* os) 
+{ 
+    boost::fusion::for_each(v, fusion_printer_impl(*os)); 
+} 
+
+int main() 
+{ 
+    Foo::Bar fb("Don't panic!", 42); 
+    std::ostringstream temp; 
+
+    PrintTo(fb, &amp;temp); 
+
+    std::cout &lt;&lt; temp.str() &lt;&lt; std::endl; 
+} 
+</code></pre> 
+<p>的值那么我期待的是自动打印<code class="prettyprint-override">Foo::Keys</code>还有一种方式。我查看了makro生成的BOOST_FUSION_DEFINE_ASSOC_STRUCT代码，并且据我所见，Keys可以用作静态常量char * boost :: fusion :: extension :: struct_member_name :: call（）。</p> 
+<p>我查看了fusion :: for_each的代码，到目前为止，我只看到一种方法来“复制”完整代码，以便用两个参数Key和values调用fusion_printer_impl :: operator（）。在我进入这个方向之前，我想知道是否有更简单的方法来实现这一点。</p> 
+<p>我知道可以定义显式的boost :: fusion :: map。这里可以通过fusion :: pair自动访问Key类型和值。但是，这对我来说目前不适合。</p> 
+<p>所以这里的任何帮助是受欢迎的。</p>
+
+                    <!-- post info -->
+                    <div class="post-info">
+                        <div class="post-meta row">
+                            <p class="text-secondary col-lg-6">
+                                <span class="source"><a rel="noopener" target="_blank"
+                                                        href="https://stackoverflow.com/q/16301241">来源</a></span>
+                            </p>
+                            <p class="text-secondary col-lg-6">
+                                    <span class="float-right date">
+                                        <span>2013-04-30</span>
+    <a rel="noopener" target="_blank" href="https://stackoverflow.com/users/2335107/">Felix Petriconi</a></span>
+                                    </span>
+                            </p>
+                            <p class="col-12"></p>
+                            <p class="col-12"></p></div>
+                    </div>
+
+
+
+                </div>
+            </article>
+        </div>
+
+        <div class="answer-title">
+            <span class="text-logo margin-top-sm">A</span>
+            <h2 class="title h4">回答</h2>
+        </div>
+
+        <div class="item-description text-md markdown-body margin-bottom-40 voidso">
+
+        <article class="board-top-1 padding-top-10">
+            <div class="post-col vote-info">
+                <span class="count">2<i class="fa fa-thumbs-up"></i></span>
+                    <i class="fa fa-check fa-2x"></i>
+            </div>
+            <div class="post-offset">
+                <div class="answer fmt">
+                <p>你是一个很好的问题，希望这里有人会来的东西比这更清洁：</p> 
+<pre><code class="prettyprint-override">... 
+struct fusion_printer_2 
+{ 
+    typedef std::ostream* result_type; 
+
+    // Well, not really the intented use but... 
+    template&lt;typename T&gt; 
+    std::ostream* operator()(std::ostream const* out, const T&amp; t) const 
+    { 
+     std::ostream* const_violated_out = const_cast&lt;result_type&gt;(out); 
+     (*const_violated_out) &lt;&lt; 
+      (std::string(typeid(typename boost::fusion::result_of::key_of&lt;T&gt;::type).name()) + ": " + boost::lexical_cast&lt;std::string&gt;(deref(t))) &lt;&lt; std::endl; 
+     return const_violated_out; 
+    } 
+}; 
+
+void PrintTo(Foo::Bar const&amp; v, std::ostream* os) 
+{ 
+    boost::fusion::iter_fold(v, os, fusion_printer_2()); 
+} 
+... 
+</code></pre>
+                </div>
+                <div class="post-info">
+                    <div class="post-meta row">
+                        <p class="text-secondary col-lg-6">
+                                <span class="source">
+                                    <a rel="noopener" target="_blank" href="https://stackoverflow.com/q/16301907">来源</a>
+                                </span>
+                        </p>
+                        <p class="text-secondary col-lg-6">
+                                <span class="float-right date">
+                                    <span>2013-04-30 14:05:11</span>
+    <a rel="noopener" target="_blank" href="https://stackoverflow.com/users/296827/">dsign</a></span>
+                        </p>
+                        <p class="col-12"></p>
+                        <p class="col-12"></p></div>
+                </div>
+
+    <!-- comments -->
+    <div class="comments">
+        <div itemprop="comment" class="post-comment">
+            <div class="row">
+                <div class="col-lg-1"><span class="text-secondary">+1</span></div>
+                <div class="col-lg-11">
+                    <p class="commenttext">感谢您的回答。它帮助我进一步。通过将函数的result_type更改为std :: string并将boost :: fusion :: iter_fold的结果直接传递给* os，我可以避免使用_ugly_ const_cast。 –
+                        <span class="text-secondary">
+                            <small>
+                                <span>2013-04-30 16:28:12</span>
+                            </small>
+                        </span>
+                    </p>
+                </div>
+            </div>
+        </div>
+        <div itemprop="comment" class="post-comment">
+            <div class="row">
+                <div class="col-lg-1"><span class="text-secondary">+0</span></div>
+                <div class="col-lg-11">
+                    <p class="commenttext">甚至不要提到它，留下一个人让他的灵魂被深不可测的抽象和沉重的编译错误压垮会是非常不人道的...... –
+                        <span class="text-secondary">
+                            <small>
+    <a rel="noopener" target="_blank" href="https://stackoverflow.com/users/296827/">dsign</a></span>
+                                <span>2013-04-30 18:57:50</span>
+                            </small>
+                        </span>
+                    </p>
+                </div>
+            </div>
+        </div>
+        <div itemprop="comment" class="post-comment">
+            <div class="row">
+                <div class="col-lg-1"><span class="text-secondary">+0</span></div>
+                <div class="col-lg-11">
+                    <p class="commenttext">我知道你在说什么。至少VC10和Clang已经改善了很多。 （我不知道gcc）。在boost :: spirit的使用中出现错误总是很有趣:-( –
+                        <span class="text-secondary">
+                            <small>
+                                <span>2013-04-30 20:59:35</span>
+                            </small>
+                        </span>
+                    </p>
+                </div>
+            </div>
+        </div>
+    </div>
+            </div>
+        </article>
+<div>
+        <script async src="//pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
+        <ins class="adsbygoogle"
+             style="display:block"
+             data-ad-client="ca-pub-6208739752673518"
+             data-ad-slot="4319274062"
+             data-ad-format="auto"
+             data-full-width-responsive="true"></ins>
+        <script>
+            (adsbygoogle = window.adsbygoogle || []).push({});
+        </script>
+</div>
+        </div>
+
+        <div class="clearfix">
+        </div>
+
+            <div class="relative-box">
+                <div class="relative">相关文章</div>
+                <ul class="relative_list">
+                            <li>1. <a href="http://www.aiuxian.com/article/p-dcdopmzu-ch.html" target="_blank" title="yield 关键字和迭代器"> yield 关键字和迭代器 </a></li>
+                            <li>2. <a href="http://www.aiuxian.com/article/p-pdctsaoh-dm.html" target="_blank" title="如何定义关键字"> 如何定义关键字 </a></li>
+                            <li>3. <a href="http://www.aiuxian.com/article/p-zeseebwc-ey.html" target="_blank" title="Java类的访问权限关键字"> Java类的访问权限关键字 </a></li>
+                            <li>4. <a href="http://www.aiuxian.com/article/p-higdqwwq-uw.html" target="_blank" title="react-native 搜索关键字并改变关键字样式"> react-native 搜索关键字并改变关键字样式 </a></li>
+                            <li>5. <a href="http://www.aiuxian.com/article/p-tvzulzat-dx.html" target="_blank" title="如何在Bash中迭代关联数组"> 如何在Bash中迭代关联数组 </a></li>
+                            <li>6. <a href="http://www.aiuxian.com/article/p-qtdrtqyp-mk.html" target="_blank" title="Swift5 访问限制关键字"> Swift5 访问限制关键字 </a></li>
+                            <li>7. <a href="http://www.aiuxian.com/article/p-doyioptn-pb.html" target="_blank" title="Java关键字使用：private 关键字"> Java关键字使用：private 关键字 </a></li>
+                            <li>8. <a href="http://www.aiuxian.com/article/p-vmytzhpc-pb.html" target="_blank" title="【Java关键字总结】（一）用于定义访问权限修饰符的关键字"> 【Java关键字总结】（一）用于定义访问权限修饰符的关键字 </a></li>
+                            <li>9. <a href="http://www.aiuxian.com/article/p-rwcpkrka-bn.html" target="_blank" title="Java并发关键字-synchronized"> Java并发关键字-synchronized </a></li>
+                            <li>10. <a href="http://www.aiuxian.com/article/p-wchnixss-ky.html" target="_blank" title="java并发－Volatile关键字"> java并发－Volatile关键字 </a></li>
+                            <li>11. <a href="http://www.aiuxian.com/article/p-bbyduajx-bq.html" target="_blank" title="C语言：const关键字、结构体"> C语言：const关键字、结构体 </a></li>
+                            <li>12. <a href="http://www.aiuxian.com/article/p-xvrmpelg-nu.html" target="_blank" title="Java循环结构_常量_关键字"> Java循环结构_常量_关键字 </a></li>
+                            <li>13. <a href="http://www.aiuxian.com/article/p-eprnjlxg-dm.html" target="_blank" title="yield 关键字"> yield 关键字 </a></li>
+                            <li>14. <a href="http://www.aiuxian.com/article/p-vqgydtiy-w.html" target="_blank" title="java循环结构_break关键字"> java循环结构_break关键字 </a></li>
+                            <li>15. <a href="http://www.aiuxian.com/article/p-rcadkvft-hm.html" target="_blank" title="[C++]1、关键字与数据结构"> [C++]1、关键字与数据结构 </a></li>
+<div>
+        <script async src="//pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
+        <ins class="adsbygoogle"
+             style="display:block; text-align:center;"
+             data-ad-layout="in-article"
+             data-ad-format="fluid"
+             data-ad-client="ca-pub-6208739752673518"
+             data-ad-slot="9842885874"></ins>
+        <script>
+            (adsbygoogle = window.adsbygoogle || []).push({});
+        </script>
+</div>
+                            <li>16. <a href="http://www.aiuxian.com/article/p-easttfcj-od.html" target="_blank" title="JVM 字节码（四）静态方法、构造代码、this 以及 synchronized 关键字"> JVM 字节码（四）静态方法、构造代码、this 以及 synchronized 关键字 </a></li>
+                            <li>17. <a href="http://www.aiuxian.com/article/p-fobhoohp-by.html" target="_blank" title="Java并发—synchronized关键字"> Java并发—synchronized关键字 </a></li>
+                            <li>18. <a href="http://www.aiuxian.com/article/p-cqzgohik-gm.html" target="_blank" title="js 关键字 in 的使用方法"> js 关键字 in 的使用方法 </a></li>
+                            <li>19. <a href="http://www.aiuxian.com/article/p-ffcdvxqf-bq.html" target="_blank" title="yield关键字使用"> yield关键字使用 </a></li>
+                            <li>20. <a href="http://www.aiuxian.com/article/p-pjjfrvcu-qt.html" target="_blank" title="static关键字总结"> static关键字总结 </a></li>
+                            <li>21. <a href="http://www.aiuxian.com/article/p-csktmtmx-hz.html" target="_blank" title="[java] static关键字总结"> [java] static关键字总结 </a></li>
+                            <li>22. <a href="http://www.aiuxian.com/article/p-yjfqogst-np.html" target="_blank" title="const关键字总结"> const关键字总结 </a></li>
+                            <li>23. <a href="http://www.aiuxian.com/article/p-fbijppan-to.html" target="_blank" title="JS总结--------JavaScript常用关键字"> JS总结--------JavaScript常用关键字 </a></li>
+                            <li>24. <a href="http://www.aiuxian.com/article/p-zorurfef-mc.html" target="_blank" title="以通俗的方式理解关键渲染路径"> 以通俗的方式理解关键渲染路径 </a></li>
+                            <li>25. <a href="http://www.aiuxian.com/article/p-dfqsdmwm-hc.html" target="_blank" title="什么是淘宝关键词以及如何查找关键词的方法"> 什么是淘宝关键词以及如何查找关键词的方法 </a></li>
+                            <li>26. <a href="http://www.aiuxian.com/article/p-yzqccdih-mp.html" target="_blank" title="C++关键字const总结"> C++关键字const总结 </a></li>
+                            <li>27. <a href="http://www.aiuxian.com/article/p-aqmwzzqn-cm.html" target="_blank" title="C关键字volatile总结"> C关键字volatile总结 </a></li>
+                            <li>28. <a href="http://www.aiuxian.com/article/p-qkyppmju-kg.html" target="_blank" title="C++关键字大总结"> C++关键字大总结 </a></li>
+                            <li>29. <a href="http://www.aiuxian.com/article/p-ywqfcwda-de.html" target="_blank" title="谈谈git以及如何关联github"> 谈谈git以及如何关联github </a></li>
+                            <li>30. <a href="http://www.aiuxian.com/article/p-htmzbvxi-mr.html" target="_blank" title="C++关键字总结"> C++关键字总结 </a></li>
+                </ul>
+            </div>
+
+
+<div>
+        <script async src="//pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
+        <ins class="adsbygoogle"
+             style="display:block"
+             data-ad-format="autorelaxed"
+             data-ad-client="ca-pub-6208739752673518"
+             data-ad-slot="3534119089"></ins>
+        <script>
+            (adsbygoogle = window.adsbygoogle || []).push({});
+        </script>
+</div>
+
+        <div class="padding-top-10"></div>
+
+    </div>
+</div>
+
+<script type="text/javascript" src="http://img.voidcc.com/voidso/script/side.js?t=1640443370269"></script>
+<script type="text/javascript" src="http://img.voidcc.com/voidso/plugin/highlight/highlight.pack.js"></script>
+<link href="http://img.voidcc.com/voidso/plugin/highlight/styles/docco.css" media="screen" rel="stylesheet" type="text/css" />
+<script type="text/javascript">
+$('pre').each(function(i, e) {
+    hljs.highlightBlock(e, "<span class='indent'>  </span>", false)
+});
+</script>
+<div class="col-lg-3 col-md-4 col-sm-5">
+    <div id="rightTop">
+        <div class="row sidebar panel panel-default">
+        <div class="panel-heading font-bold">
+            每日一句
+        </div>
+        <div class="panel-body m-b-sm m-t-sm clearfix">
+            每一个你不满意的现在，都有一个你没有努力的曾经。
+        </div>
+    </div>
+<div class="row">
+        <script async src="//pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
+        <!-- VOIDCC问答侧边栏广告 -->
+        <ins class="adsbygoogle"
+             style="display:block"
+             data-ad-client="ca-pub-6208739752673518"
+             data-ad-slot="3862022848"
+             data-ad-format="auto"
+             data-full-width-responsive="true"></ins>
+        <script>
+            (adsbygoogle = window.adsbygoogle || []).push({});
+        </script>
+</div>
+<div class="row sidebar panel panel-default">
+    <div class="panel-heading font-bold">
+最新问题    </div>
+    <div class="m-b-sm m-t-sm clearfix">
+        <ul class="side_article_list">
+            <li class="side_article_list_item">
+                1. <a href="http://cn.voidcc.com/question/p-zydjubfl-gg.html" target="_blank"
+                                 title="转到代码编译链接器错误。我可以手动链接吗？"> 转到代码编译链接器错误。我可以手动链接吗？ </a>
+            </li>
+            <li class="side_article_list_item">
+                2. <a href="http://cn.voidcc.com/question/p-ywlcfgzz-cy.html" target="_blank"
+                                 title="IE"> IE </a>
+            </li>
+            <li class="side_article_list_item">
+                3. <a href="http://cn.voidcc.com/question/p-pbzmixop-ke.html" target="_blank"
+                                 title="将PPCPCell添加到段落"> 将PPCPCell添加到段落 </a>
+            </li>
+            <li class="side_article_list_item">
+                4. <a href="http://cn.voidcc.com/question/p-pzttrdon-tq.html" target="_blank"
+                                 title="添加验证/如果其他语句公共类功能PHP"> 添加验证/如果其他语句公共类功能PHP </a>
+            </li>
+            <li class="side_article_list_item">
+                5. <a href="http://cn.voidcc.com/question/p-uxnacdgl-th.html" target="_blank"
+                                 title="Python：按多列分组的值线图"> Python：按多列分组的值线图 </a>
+            </li>
+            <li class="side_article_list_item">
+                6. <a href="http://cn.voidcc.com/question/p-vwvshxjw-tk.html" target="_blank"
+                                 title="我不确定如何正确使用fscanf"> 我不确定如何正确使用fscanf </a>
+            </li>
+            <li class="side_article_list_item">
+                7. <a href="http://cn.voidcc.com/question/p-fsjscfzk-tm.html" target="_blank"
+                                 title="无法加载资源：服务器与404未找到"> 无法加载资源：服务器与404未找到 </a>
+            </li>
+            <li class="side_article_list_item">
+                8. <a href="http://cn.voidcc.com/question/p-ojaychum-tn.html" target="_blank"
+                                 title="Typescript的/ ** @class * /是否有目的？"> Typescript的/ ** @class * /是否有目的？ </a>
+            </li>
+            <li class="side_article_list_item">
+                9. <a href="http://cn.voidcc.com/question/p-aphsakxr-dt.html" target="_blank"
+                                 title="测试十进制是否足够接近有理数"> 测试十进制是否足够接近有理数 </a>
+            </li>
+            <li class="side_article_list_item">
+                10. <a href="http://cn.voidcc.com/question/p-uggdhrgq-eo.html" target="_blank"
+                                 title="Android WifiManager - 以十六进制或不以十六进制"> Android WifiManager - 以十六进制或不以十六进制 </a>
+            </li>
+        </ul>
+    </div>
+</div>
+
+    </div>
+
+    <p class="article-nav-bar"></p>
+    <div class="row sidebar article-nav">
+
+        <div class="row box_white visible-sm visible-md visible-lg margin-zero">
+            <div class="top">
+                <h3 class="title"><i
+                        class="glyphicon glyphicon-th-list"></i>&nbsp;相关问题</h3>
+            </div>
+            <div class="article-relative-content">
+                <ul class="side_article_list">
+                            <li class="side_article_list_item">1. <a href="http://www.aiuxian.com/article/p-dcdopmzu-ch.html" target="_blank" title="yield 关键字和迭代器"> yield 关键字和迭代器 </a></li>
+                            <li class="side_article_list_item">2. <a href="http://www.aiuxian.com/article/p-pdctsaoh-dm.html" target="_blank" title="如何定义关键字"> 如何定义关键字 </a></li>
+                            <li class="side_article_list_item">3. <a href="http://www.aiuxian.com/article/p-zeseebwc-ey.html" target="_blank" title="Java类的访问权限关键字"> Java类的访问权限关键字 </a></li>
+                            <li class="side_article_list_item">4. <a href="http://www.aiuxian.com/article/p-higdqwwq-uw.html" target="_blank" title="react-native 搜索关键字并改变关键字样式"> react-native 搜索关键字并改变关键字样式 </a></li>
+                            <li class="side_article_list_item">5. <a href="http://www.aiuxian.com/article/p-tvzulzat-dx.html" target="_blank" title="如何在Bash中迭代关联数组"> 如何在Bash中迭代关联数组 </a></li>
+                            <li class="side_article_list_item">6. <a href="http://www.aiuxian.com/article/p-qtdrtqyp-mk.html" target="_blank" title="Swift5 访问限制关键字"> Swift5 访问限制关键字 </a></li>
+                            <li class="side_article_list_item">7. <a href="http://www.aiuxian.com/article/p-doyioptn-pb.html" target="_blank" title="Java关键字使用：private 关键字"> Java关键字使用：private 关键字 </a></li>
+                            <li class="side_article_list_item">8. <a href="http://www.aiuxian.com/article/p-vmytzhpc-pb.html" target="_blank" title="【Java关键字总结】（一）用于定义访问权限修饰符的关键字"> 【Java关键字总结】（一）用于定义访问权限修饰符的关键字 </a></li>
+                            <li class="side_article_list_item">9. <a href="http://www.aiuxian.com/article/p-rwcpkrka-bn.html" target="_blank" title="Java并发关键字-synchronized"> Java并发关键字-synchronized </a></li>
+                            <li class="side_article_list_item">10. <a href="http://www.aiuxian.com/article/p-wchnixss-ky.html" target="_blank" title="java并发－Volatile关键字"> java并发－Volatile关键字 </a></li>
+
+                </ul>
+            </div>
+        </div>
+    </div>
+
+</div>    </div>
+</div>
+</div><!-- wrap end-->
+
+<!-- footer -->
+<footer id="footer">
+    <div class="bg-simple lt">
+        <div class="container">
+            <div class="row padder-v m-t">
+                <div class="col-xs-8">
+                    <ul class="list-inline">
+                        <li><a href="http://cn.voidcc.com/contact">联系我们</a></li>
+                        <li>© 2020 CN.VOIDCC.COM</li>
+                        <li><a rel="nofollow" href="https://beian.miit.gov.cn/" target="_blank">沪ICP备13005482号-13</a></li>
+                        <li><script type="text/javascript" src="https://s9.cnzz.com/z_stat.php?id=1280098168&web_id=1280098168"></script></li>
+                        <li><a href="http://cn.voidcc.com/" target="_blank" title="程序问答园区">简体中文</a></li>
+                        <li><a href="http://hk.voidcc.com/" target="_blank" title="程序問答園區">繁體中文</a></li>
+                        <li><a href="http://ru.voidcc.com/" target="_blank" title="поле вопросов и ответов">Русский</a></li>
+                        <li><a href="http://de.voidcc.com/" target="_blank" title="Frage - und - antwort - Park">Deutsch</a></li>
+                        <li><a href="http://es.voidcc.com/" target="_blank" title="Preguntas y respuestas">Español</a></li>
+                        <li><a href="http://hi.voidcc.com/" target="_blank" title="कार्यक्रम प्रश्न और उत्तर पार्क">हिन्दी</a></li>
+                        <li><a href="http://it.voidcc.com/" target="_blank" title="IL Programma di chiedere Park">Italiano</a></li>
+                        <li><a href="http://ja.voidcc.com/" target="_blank" title="プログラム問答園区">日本語</a></li>
+                        <li><a href="http://ko.voidcc.com/" target="_blank" title="프로그램 문답 단지">한국어</a></li>
+                        <li><a href="http://pl.voidcc.com/" target="_blank" title="program o park">Polski</a></li>
+                        <li><a href="http://tr.voidcc.com/" target="_blank" title="Program soru ve cevap parkı">Türkçe</a></li>
+                        <li><a href="http://vi.voidcc.com/" target="_blank" title="Đáp ứng viên">Tiếng Việt</a></li>
+                        <li><a href="http://fr.voidcc.com/" target="_blank" title="Programme interrogation Park">Française</a></li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </div>
+    </div>
+</footer>
+<!-- / footer -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=UA-77509369-5"></script>
+<script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag() {
+        dataLayer.push(arguments);
+    }
+    gtag('js', new Date());
+
+    gtag('config', 'UA-77509369-5');
+</script>
+
+<script>
+    var _hmt = _hmt || [];
+    (function () {
+        var hm = document.createElement("script");
+        hm.src = "https://hm.baidu.com/hm.js?67d4731349f0b00136755b80364ce381";
+        var s = document.getElementsByTagName("script")[0];
+        s.parentNode.insertBefore(hm, s);
+    })();
+</script>
+
+</body>
+</html>

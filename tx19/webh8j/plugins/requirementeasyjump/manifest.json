@@ -1,0 +1,17 @@
+{
+    "name": "RequirmentEasyJump",
+    "author": "wu, jinchao",
+    "manifest_version": 3,
+    "description": "transform requirement txt to link",
+    "version": "1.1",
+    "content_scripts": [
+    {
+      "matches": [
+          "https://gates.nsn-net.net/*",
+          "http://best.eecloud.dynamic.nsn-net.net:666/tools/gates/*"
+      ],
+      "js": ["js/content.js"],
+      "run_at": "document_end"
+    }
+   ]
+  }

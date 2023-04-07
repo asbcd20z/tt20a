@@ -1,0 +1,3 @@
+[submodule "exts/svv20bp"]
+	path = exts/svv20bp
+	url = https://gitlab.com/asbcd20z/svv20bp

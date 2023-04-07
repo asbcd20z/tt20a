@@ -15,17 +15,23 @@ http://man7.org/linux/man-pages/man7/futex.7.html
 http://man7.org/linux/man-pages/man3/dlopen.3.html  
 
 ## c/cpp/c++
+```
+https://gcc.gnu.org/onlinedocs/libstdc++/manual/
 https://en.cppreference.com/w/cpp/container/vector  
 https://zh.cppreference.com/w/c/io/fprintf  
 https://zh.cppreference.com/w/cpp/io  
 https://coliru.stacked-crooked.com/  
+http://coliru.stacked-crooked.com/  
 https://cppinsights.io/  
 https://zh.cppreference.com/w/Cppreference:Archives  
 http://www.cplusplus.com/reference/stl/  
 http://www.cplusplus.com/reference/ios/  
+https://www.cplusplus.com/reference/type_traits/decay/  
+C++ 教程 https://cloud.tencent.com/developer/doc/1024  
+apiref  https://www.apiref.com/cpp/index.html
 typeid(x).name()  std::type_info  std::type_index  
 boost::typeindex::type_index type=typeindex::type_id<int&>(); type.pretty_name()  
-boost::msm  
+boost::msm   Boost.Msm 介绍  https://www.jianshu.com/p/6748aa7c117b  
 c __packed struct, struck __attribute__((packed)),member__attribute((aligned (n))), #pragma pack(2^x)默认是2^2=4B/8double-arch64(最大对齐值)  
 浅谈C语言字节对齐+位域https://blog.csdn.net/ljx_5489464/article/details/50006133  
 C语言字节对齐详解##https://www.cnblogs.com/born2run/p/9581355.html  
@@ -47,14 +53,39 @@ C语言宏高级用法https://www.cnblogs.com/shirishiqi/p/6033364.html
 gcc动态链接库so的制作和使用# https://www.cnblogs.com/oxspirt/p/7344371.html  
 =Linux下gcc生成和使用静态库和动态库详解# https://blog.csdn.net/CSqingchen/article/details/51546784  
 router-路由器LAN口IP地址到底是什么?https://www.cnblogs.com/oxspirt/p/12302041.html  https://www.zhihu.com/question/369737960/answer/1004809747  
+```
+
 ### c++
 c++ inheritance -- 继承 https://www.cnblogs.com/timssd/p/4781107.html  
 C++类的大小 https://www.cnblogs.com/timssd/p/5714079.html  
 C++ 虚函数表解析 https://blog.csdn.net/haoel/article/details/1948051  
 C++ 对象的内存布局(上) https://blog.csdn.net/haoel/article/details/3081328  https://blog.csdn.net/haoel/article/details/3081385  
 
+### c++/type_traits/MPL/boost/fusion
+```
+baidu: type_traits
+C++模板元编程Type_traits     https://blog.csdn.net/zxc024000/article/details/79405869
+-C++11标准库之Type Traits简介https://blog.csdn.net/garfee_guan/article/details/12234011
+c++11——type_traits 类型萃取  https://www.cnblogs.com/gtarcoder/p/4807670.html
+模板元编程 --- 用 MPL 解决实际问题 http://www.cppblog.com/jack-wang/archive/2010/10/04/128589.html , http://blog.csdn.net/ralph623/archive/2005/10/15/504369.aspx
+//
+baidu: boost::fusion::extension::struct_member_name , BOOST_FUSION_ADAPT_STRUCT
+https://www.boost.org/doc/libs/  Asio,fusion,iterator,json,log,msm(Meta State Machine),move,mp11,MPL,pool,Preprocessor,Process,Program_options,Python,Range,Ref,
+   Signals2,Stacktrace,Test,Thread,Timer,TTI(Type Traits Introspection),typeinfo(not typeid,std::type_index,std::type_info),type_traits,typeof,Variant,VMD(Variadic)
+https://www.boost.org/doc/libs/1_78_0/libs
+https://www.boost.org/doc/libs/1_78_0/libs/fusion/doc/html/fusion/extension/ext_full.html
+https://www.boost.org/doc/libs/1_78_0/libs/fusion/doc/html/index.html
+https://www.boost.org/doc/libs/1_78_0/libs/mpl/doc/refmanual/components.html
+如何迭代boost :: fusion关联结构并以通用方式访问关键字  http://cn.voidcc.com/question/p-dhyelvne-gp.html
+--(std::string(typeid(typename boost::fusion::result_of::key_of<T>::type).name()) + ": " + boost::lexical_cast<std::string>(deref(t)))
+Boost Fusion：将适应的结构类型转换为文本  https://www.thinbug.com/q/39033097
+--std::string member_type = boost::typeindex::type_id<typename fusion::result_of::value_at<Sequence,Index>::type >().pretty_name() ;
+--std::string member_name = fusion::extension::struct_member_name<Sequence,Index::value>::call();
+```
+
+
 ## elearning web/lang
-https://www.runoob.com/lua  https://www.w3cschool.cn/lua  
+菜鸟 https://www.runoob.com/lua , https://www.w3cschool.cn/lua  
 https://www.w3cschool.cn/sublimetext/  
 关于HTTP协议，一篇就够了 https://www.cnblogs.com/ranyonsue/p/5984001.html  
 HTTP协议超级详解        https://www.cnblogs.com/an-wen/p/11180076.html  
@@ -63,6 +94,7 @@ HTTP协议和SOCKS5协议    https://www.cnblogs.com/yinzhengjie/p/7357860.html
 https://www.ietf.org/rfc/ , https://www.rfc-editor.org/  , (socks5)https://www.rfc-editor.org/rfc/rfc1928.txt  
 
 ## //git
+```
 https://git-scm.com/book/zh/v2/Git-基础-查看提交历史 https://php.cn/manual/view/34971.html  
 git换行符LF与CRLF转换问题 https://www.cnblogs.com/sdgf/p/6237847.html  
 git config --global core.autocrlf false/input/true  
@@ -88,11 +120,11 @@ Git知识总览(五)Git中的merge、rebase、cherry-pick以及交互式rebase h
 简单对比git pull和git pull --rebase的使用 https://blog.csdn.net/dake_160413/article/details/78676163  https://www.cnblogs.com/kevingrace/p/5896706.html  
 git submodule 完整用法整理 https://blog.csdn.net/wkyseo/article/details/81589477  
 git init --bare project.git; repack,fsck,gc  
-git push -f origin master ///[f]to restore,but better to revert commitId  
-git remote -v  #gitlab project项目迁移https://blog.csdn.net/lcyaiym/article/details/77678467  
+git push -vv -f  origin master  #--force ///careful!!!, to restore,but better to revert commitId  
+git remote -vv  #gitlab project项目迁移https://blog.csdn.net/lcyaiym/article/details/77678467  
 git remote add mybak URL..; git remote set-url mybak URL..;  
 git var -l; git config -l --local; git ls-files; git whatchanged  
-git remote show; git remote -v; git ls-remote  
+git remote show; git remote -vv; git ls-remote  
 git branch --unset-upstream  
 git show-branch; lo = log -9 --oneline #--all --graph #--decorate; loag=lo --all --graph #--decorate;  ##log --left-right --boundary --reverse bra1...bra2  
 git branch -vv  
@@ -100,14 +132,96 @@ git revert/ reset++push -f [Git恢复之前版本的两种方法reset、revert] 
 git apply --check my.pat; git apply -3 my.pat;  git apply --reject my.pat  
 开源-GIT常用命令 https://www.cnblogs.com/kex1n/p/6141166.html  
 git config配置  https://www.cnblogs.com/fireporsche/p/9359130.html  
+git-常用的搜索命令 https://www.cnblogs.com/daowangzhizhu-pt/p/12778478.html
+==
+Git Submodule //baidu
+git submodule 完整用法整理 https://blog.csdn.net/wkyseo/article/details/81589477 ，https://www.cnblogs.com/zhoug2020/p/13544721.html
+Git Submodule管理项目子模块# https://www.cnblogs.com/nicksheng/p/6201711.html
+Git Submodule使用完整教程 https://www.cnblogs.com/lsgxeva/p/8540758.html , https://recomm.cnblogs.com/blogpost/8540758
+1.先来个官方的API
+git submodule [--quiet] add [<options>] [--] <repository> [<path>]       #add new (and in cached**)
+git submodule [--quiet] status [--cached] [--recursive] [--] [<path>…​]
+git submodule [--quiet] init [--] [<path>…​]                              #init exsting to be registered in .git/config
+git submodule [--quiet] deinit [-f|--force] (--all|[--] <path>…​)         #.............to deregister
+git submodule [--quiet] update [<options>] [--] [<path>…​]                #update exsting to clone(1st) or update
+git submodule [--quiet] summary [<options>] [--] [<path>…​]
+git submodule [--quiet] foreach [--recursive] <command>
+git submodule [--quiet] sync [--recursive] [--] [<path>…​]
+git submodule [--quiet] absorbgitdirs [--] [<path>…​]
+//.gitmodules, .git/config[submodule]
+2.解析git命令
+常用命令如下
+#cat .git/config;ll .git/modules/; ll moduleA -R
+#//rm moduleA/* -fr              //ok,only del module/*
+#//git submodule deinit moduleA  //ok,only del module/*,vs-init
+#//git rm moduleA  -r            //del moduleA-dir and change .gitmodule to commit
+git clone <repository> --recursive  //递归的方式克隆整个项目
+git submodule add <repository> <path> //添加子模块
+git submodule init //初始化子模块
+git submodule update //更新子模块
+git submodule foreach git pull  //拉取所有子模块
+```
 
+## //git remote ,pull/push/branch
+```
+baidu: git fetch push不同路径
+==
+git push 到不同的 地址库  https://www.cnblogs.com/woshixiaozhu/p/13439913.html
+	git push 到不同的 url
+	1、增加库地址
+	git remote add origin(可以自己命名) URL
+	2、修改
+	git remote origin set-url URL
+	3、先删后加
+	git remote rm origin
+	git remote add origin URL
+	4、提交
+	git push origin //提交默认分支
+	git push myorigin dev //提交指定的地址，指定的分支
+	5、git pull
+	git pull  #拉取默认分支
+	git push aliyun dev #拉取指定地址的指定分支
+==
+git fetch和push的区别  http://t.zoukankan.com/jeremylee-p-5564776.html
+	git remote add origin git@github.com:schacon/simplegit-progit.git
+	git fetch /home/bob/myrepo master:bobworks ：用于从bob的工作目录的master分支下载objects和refs到本地的bobworks分支中。
+	git pull是git fetch和git merge命令的一个组合
+	git push origin master 把本地仓库提交到远程仓库的master分支中
+	$ git push origin test:master         // 提交本地test分支作为远程的master分支
+	$ git push origin test:test              // 提交本地test分支作为远程的test分支
+	git push origin :test              // 刚提交到远程的test将被删除，但是本地还会保存的，不用担心
+==
+Git 设置不同的 fetch 和 push 地址  https://www.awaimai.com/2971.html
+	方法一：多个 origin
+	第一种方法是，在原 origin 远程仓库地址的基础上，再加一个地址，也就是主仓库地址，例如加一个origin_mian，如下
+	git remote add origin_main git@github.com:yeszao/dnmp.git
+	git remote -vv
+	origin git@github.com:MY_REPOSITY/dnmp.git (fetch)
+	origin git@github.com:MY_REPOSITY/dnmp.git (push)
+	origin_main git@github.com:yeszao/dnmp.git (fetch)
+	origin_main git@github.com:yeszao/dnmp.git (push)
+	git push origin master
+	git pull origin_main master
+	方法二：一个 origin（推荐）
+	另外一种办法就是，我们只用一个 origin，设置主仓库为 fetch 地址，个人仓库为 push 地址：
+	git remote set-url origin git@github.com:yeszao/dnmp.git                    #pull remote.url=
+	git remote set-url --add --push origin git@github.com:MY_REPOSITY/dnmp.git  #push remote.pushurl=
+	git remote -vv
+	origin git@github.com:MY_REPOSITY/dnmp.git (push)
+	origin git@github.com:yeszao/dnmp.git (fetch)
+	git push origin master
+	git pull origin master
+```
 
-## //gitlab/github--2git-acc
+## //gitlab/github--2git-acc/gitee
 https://blog.csdn.net/px_dn/article/details/89455457 
 创建github repository(仓库) https://www.cnblogs.com/siestakc/p/6862446.html  
 gitlab项目仓库自动同步到github或者码云gitee https://blog.csdn.net/zjcjava/article/details/90047837  
+github博客自动同步到gitee（保姆级教程） https://www.icode9.com/content-4-916162.html , https://blog.csdn.net/outman_1921/article/details/115454572  
 Gitlab代码库自动同步到Github https://blog.csdn.net/kelvin_yin/article/details/86661066  
 gitlab Repository mirroring https://gitlab.com/help/workflow/repository_mirroring.html  https://gitlab.com/help/user/project/repository/repository_mirroring.md  
+Repository mirroring        https://docs.gitlab.com/ee/user/project/repository/mirror/index.html  
+-Bidirectional mirroring    https://docs.gitlab.com/ee/user/project/repository/mirror/bidirectional.html  
 GitLab仓库重命名以及GitHub仓库的删除https://www.jianshu.com/p/d6f7da6bd275  (new-setting\project-name,Advanced\Change-path)  
 ```
 remote: Support for password authentication was removed on August 13, 2021. Please use a personal access token instead.
@@ -118,6 +232,68 @@ Push上传出错：Support for password authentication was removed on August 13,
 --https://github.com/settings/tokens
 --https://xiazemin.github.io/MyBlog/web/2021/08/14/github_token.html
 --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21a
+docker 查看镜像 https://blog.csdn.net/weixin_39892309/article/details/113067230
+https://docs.gitlab.com/ee/user/profile/account/two_factor_authentication.html
+```
+
+## //gitlab.CI/CD
+```
+GitLab CI/CD 基础教程（一） https://blog.csdn.net/bingfeilongxin/article/details/88326984 , https://blog.stdioa.com/2018/06/gitlab-cicd-fundmental/
+gitlab中CI/CD自动化部署使用 https://pibigstar.blog.csdn.net/article/details/82762413
+GitLab CI/CD (cube6)  https://www.cnblogs.com/cjsblog/p/12256843.html
+-gitlab image
+GitLab-CI 来自动创建 Docker 镜像  https://www.cnblogs.com/jingtyu/p/6993763.html
+-ci.yaml
+https://gitlabe2.ext.net.nokia.com/help/ci/yaml/README.md#needs
+https://docs.gitlab.com/ee/ci/yaml/index.html
+https://docs.gitlab.com/ee/ci/docker/using_docker_build.html
+gitlab>prj>CI/CD configuration>Browse templates
+-https://gitlab.com/gitlab-org/gitlab-foss/tree/master/lib/gitlab/ci/templates
+-ci.gitlab.image
+#
+# see https://hub.docker.com/_/gcc/ , hub.docker.com/_/busybox/?tab=tags , hub.docker.com/_/hello-world/
+# AlpineLinux hub.docker.com/_/alpine
+# docker search busybox  ===https://index.docker.io/v1/search?q=busybox&n=25
+https://www.runoob.com/docker/windows-docker-install.html
+docker 查看镜像_Docker容器部署及使用 https://blog.csdn.net/weixin_39892309/article/details/113067230
+-(可选加速image镜像库 /etc/docker/daemon.json)  https://hub.docker.com/explore
+# docker  // LXC(Linux Container, namespace,cgroups), AUFS
+Docker安装和常用命令 https://www.cnblogs.com/milton/p/9866963.html  
+https://www.runoob.com/docker/docker-tutorial.html
+https://www.runoob.com/docker/docker-dockerfile.html
+https://docs.docker.com/get-started/ , https://docs.docker.com/reference/ , forums.docker.com
+https://docs.docker.com/engine/reference/builder/
+https://docs.docker.com/compose/gettingstarted/
+https://docs.docker.com/compose/wordpress/ ,=https://docs.docker.com/samples/wordpress/
+https://docs.docker.com/compose/compose-file/compose-file-v3/#compose-file-structure-and-examples
+https://docs.docker.com/get-started/swarm-deploy/
+https://docs.docker.com/engine/swarm/how-swarm-mode-works/nodes/
+https://docs.docker.com/config/containers/logging/
+docker image存储路径_Docker架构与基本操作  https://blog.csdn.net/weixin_39548606/article/details/111214747
+baidu:docker image存储路径(/var/lib/docker/)
+深刻理解Docker镜像大小  https://blog.csdn.net/shlazww/article/details/47375009
+Dockerfile文件详解  https://www.cnblogs.com/panwenbin-logs/p/8007348.html
+dumb-init：一个Docker容器初始化系统  https://www.zybuluo.com/babydragon/note/262116
+(docker网络互通) Docker之四种网络模式 、容器的互通与隔离  https://blog.csdn.net/lilygg/article/details/88616218
+                Docker网络详解——原理篇  https://blog.csdn.net/meltsnow/article/details/94490994
+veth-pair, opnenstack,ovs(Open VSwitch)
+#baidu: docker架构图
+https://gitee.com/kuangstudy/kuang_livenote
+[狂神说Java]Docker最新超详细版教程通俗易懂  https://www.bilibili.com/video/BV1og4y1q7M4?p=2
+[狂神说Java]Docker进阶篇超详细版教程通俗易懂  https://www.bilibili.com/video/BV1kv411q7Qc
+Docker 10分钟快速入门 https://www.bilibili.com/video/BV1s54y1n7Ev , yeasy.gitbook.io/docker_practice
+[编程不良人]2021年最新Docker容器技术&Docker-Compose实战教程  https://www.bilibili.com/video/BV1ZT4y1K75K
+2020年最新 docker+k8s技术全解 #老男孩教育  https://www.bilibili.com/video/BV1PJ411h7Sw
+Docker Compose(yaml), Docker Swarm, CI/CD Jenkins
+k8s Kubernetes(assemble编排), openstack/vm
+LXC的介绍(LXC与KVM技术的比较)  https://www.cnblogs.com/xidongyu/p/5767020.html
+Docker学习（一）：如何Docker化任意一个应用 https://blog.csdn.net/liao392781/article/details/85992207
+                                        https://blog.csdn.net/liao392781/category_8591111.html
+golang
+从0开始学习微服务框架(go)  https://www.bilibili.com/video/BV137411H7t9
+##
+GitHub Actions 入门教程  http://www.ruanyifeng.com/blog/2019/09/getting-started-with-github-actions.html
+YAML 语言教程            https://www.ruanyifeng.com/blog/2016/07/yaml.html
 ```
 
 ## git17-hi-memo1
@@ -133,7 +309,8 @@ https://github.com/search?l=C&p=5&q=timer+c&type=Repositories
 ## tools/coding/online
 ```
 https://en.cppreference.com/w/
-https://cppinsights.io/
+http://coliru.stacked-crooked.com/
+https://cppinsights.io/ , https://godbolt.org/
 推荐几款实用的C++ 在线工具 https://www.jb51.net/article/197290.htm
 https://wandbox.org/
 https://quick-bench.com/q/eP40RY6zDK-eJFdSSPBINa0apTM
@@ -141,6 +318,7 @@ https://gcc.godbolt.org/ -https://github.com/compiler-explorer/compiler-explorer
 https://cppinsights.io/  -https://github.com/andreasfertig/cppinsights
 https://build-bench.com/b/47ciR2_jQ0RuAt2fy1Pnk66b3yM
 推荐几个好用的在线编译器  https://zhuanlan.zhihu.com/p/58294969
+C++在线编译器 http://t.zoukankan.com/abc-begin-p-7765532.html
 https://www.onlinegdb.com/
 https://wandbox.org/
 https://godbolt.org/
@@ -148,6 +326,31 @@ geeksforgeeks https://ide.geeksforgeeks.org/index.php
 codechef https://www.codechef.com/ide
 菜鸟工具　https://c.runoob.com/compile/12
 ideone https://www.ideone.com/
+https://www.tutorialspoint.com/compile_cpp_online.php
+Code::Blocks https://www.codeblocks.org/
+https://www.cplusplus.com/reference/type_traits/decay/
+http://cpp.sh/
+=
+https://wandbox.org/
+// GCC reference:
+//   https://gcc.gnu.org/
+
+// C++ language references:
+//   https://cppreference.com/
+//   https://isocpp.org/
+//   http://www.open-std.org/jtc1/sc22/wg21/
+
+// Boost libraries references:
+//   https://www.boost.org/doc/
+=
+C++ Online Compilers  https://arne-mertz.de/2017/05/online-compilers/
+-http://melpon.org/wandbox , http://godbolt.org/ , https://ideone.com/ 
+-http://coliru.stacked-crooked.com/ , http://rextester.com/ , http://cpp.sh/ 
+-https://www.tutorialspoint.com/compile_cpp11_online.php , http://codepad.org/
+-http://fiddle.jyt.io/
+推荐几个好用的在线编译器  https://zhuanlan.zhihu.com/p/58294969
+-https://www.onlinegdb.com/ , https://wandbox.org/ , https://godbolt.org/ ,...
+最全盘点：18款在线C/C++/Py/Java编译器  https://www.eet-china.com/mp/a7826.html
 =
 =online-code-review (linux)
 https://code.woboq.org/
@@ -181,6 +384,9 @@ eg:程序员绘图工具-Plantuml https://www.jianshu.com/p/30f6a9c06083  https:
 eg:plantuml使用教程 https://www.cnblogs.com/ningskyer/articles/5397750.html  http://archive.3zso.com/archives/plantuml-quickstart.html  
 markdown-stackedit使用 https://www.cnblogs.com/mfmdaoyou/p/6709491.html  
 https://www.w3cschool.cn/asciidoc_guide/  
+markdown,typora,http://www.gtalkabout.cn/tools/minidown.html  
+typora + q七牛(qq截图),Snipaste + PicGo  
+文章编写实用工具——Typora+PicGo+Gitee  https://www.jianshu.com/p/1152941beaa7  
 Markdown基本语法 https://www.jianshu.com/p/191d1e21f7ed/  
 印象笔记Markdown入门指南 https://yinxiang.com/new/hc/articles/%E5%8D%B0%E8%B1%A1%E7%AC%94%E8%AE%B0-markdown-%E5%85%A5%E9%97%A8%E6%8C%87%E5%8D%97/  
 https://github.com/stanzgy/wiki/blob/master/markup/markdown-guide.md  
@@ -193,12 +399,21 @@ asciidoctor  AsciidocFX支持的元数据 https://blog.csdn.net/wiborgite/articl
 Asciidoc简介#  http://asciidoctor.org/docs/asciidoc-syntax-quick-reference/  
 
 ### tools/more1a
+```
 在线工具 https://c.runoob.com/  http://tools.jb51.net/  www.iloveimg.com/zh-cn  
 在线工具 https://tool.lu/asciidoc/  https://tool.lu/markdown/  
 json在线 https://www.sojson.com/runjs.html  
 ietf-json https://tools.ietf.org/html/rfc7159.html  https://www.ietf.org/rfc/  
+https://www.ietf.org/rfc/ , https://www.rfc-editor.org/  , (socks5)https://www.rfc-editor.org/rfc/rfc1928.txt  
 TIPC  https://blog.csdn.net/yunlong34574/article/details/42460803  http://blog.chinaunix.net/uid-8048969-id-4107394.html  https://www.jianshu.com/p/7fb89e3d19af  
+http://tipc.sourceforge.net/protocol.html (tipc can over some media for transport,such as:ethernet,tcp,udp,...  eg:torvalds/linux/net/tipc/udp_media.c)
 bash-prompt-Linux命令行提示符修改【全攻略】 https://vimsky.com/article/4284.html  
+测速网 https://www.speedtest.cn/ , http://www.dglxx.com/ , https://ping.chinaz.com/
+==
+intelliJ IDEA , vscode+ssh-remote, sublime
+notepad++v7.7.1, UltraEdit17.10.0.1015, beyondcompare, MobaXterm_Personal_9.0, AsciidocFX_Windows1.6.6
+```
+
 
 ### more1
 ```
@@ -214,11 +429,28 @@ proxy.pac https://wenku.baidu.com/view/1d29739ea2161479171128a6.html
 用Python写socks5服务器端             https://www.cnblogs.com/lexus/archive/2012/03/04/2379103.html  
 python怎么走socks5代理？    (PySocks) https://blog.csdn.net/qiya2007/article/details/107291233  https://github.com/Anorov/PySocks  
 python3给socket模块设置代理 (PySocks-socks.set_default_proxy) https://www.cnblogs.com/woaixuexi9999/p/9360581.html  
+使用frp进行内网穿透(frp V0.35.1)  http://www.awccc.com/3107
+-FrpProxy。frp是什么，简单地说，frp就是一个反向代理软件，它体积轻量但功能很强大，可以使处于内网或防火墙后的设备对外界提供服务，它支持HTTP、TCP、UDP等众多协议。
+十分钟教你配置frp实现内网穿透  https://blog.csdn.net/u013144287/article/details/78589643
+https://www.cnblogs.com/lsgxeva/p/8540758.html
+FrpProxy - tcp://frpgz1.idcfengye.com:10000
+ChromeURLs - chrome://chrome-urls/
+ProxyDownload - https://d.serctl.com/
+nand2tetris - https://www.nand2tetris.org/
+fuchsia - https://cs.opensource.google/fuchsia/fuchsia
+firefox - https://www.mozilla.org/zh-CN/firefox
+--
 Docker安装和常用命令 https://www.cnblogs.com/milton/p/9866963.html  
 迁移Git项目到Gitlab https://www.cnblogs.com/milton/p/11053007.html  OpenSSL的证书, 私钥和签名请求(CSRs)www.cnblogs.com/milton/p/11076925.html  
 github仓库迁移到gitlab以及gitlab仓库迁移到另一个gitlab服务器# https://www.cnblogs.com/saysmy/p/10942814.html  
 typeset; man bash |grep PROMPT_DIRTRIM=3  PS1==https://www.cnblogs.com/wi100sh/p/4814745.html  
-export PS1="\[\e[1m\]\w\[\e[0m\] [\u@\h \W]$ "  
+export PS1='\[\e[1m\]\w\[\e[0m\] [\u@\h \W]\$ '  
+PROMPT_COMMAND=/etc/sysconfig/bash-prompt-screen
+PROMPT_COMMAND='printf "\033k%s@%s:%s\033\\" "${USER}" "${HOSTNAME%%.*}" "${PWD/#$HOME/~}"'
+/etc/profile.d/bash_completion.sh
+linux系统用户登陆时脚本执行顺序, https://www.cnblogs.com/yzwone/p/12527603.html
+linux切换用户后执行脚本,Linux 用户登录后执行的脚本, https://blog.csdn.net/weixin_34163588/article/details/116772209
+--/etc/profile(/etc/profile.d)->.bash_profile->.bashrc(/etc/bashrc)-->.bash_logout
 Bootloader之uBoot简介##https://www.cnblogs.com/wi100sh/p/4255081.html  
 endian如何判断CPU是大端还是小端模式 https://www.cnblogs.com/wi100sh/p/4899466.html  
 重载(overload)，覆盖(override),隐藏(hide)的区别 https://www.cnblogs.com/wi100sh/p/4325397.html https://www.cnblogs.com/wi100sh/p/4325336.html  
@@ -241,7 +473,7 @@ Linux常用操作# https://blankj.com/gitbook/linux/ https://github.com/Blankj/A
 //curl 的用法指南 http://www.ruanyifeng.com/blog/2019/09/curl-reference.html  
 //JavaScript 有多灵活？ http://www.ruanyifeng.com/blog/2015/02/flexible-javascript.html  
 //《SSH 入门教程》发布了   http://www.ruanyifeng.com/blog/2020/12/ssh-tutorial.html  https://wangdoc.com/ssh/  
-//man screen (-dr) (DEFAULT KEY BINDINGS): C-a C-a, C-a C-c,  C-a ", C-a a
+//man screen (-dr) (DEFAULT KEY BINDINGS): C-a C-a, C-a C-c,  C-a ", C-a a, //-dr -ls -wipe
 //screen tmux  byobu         http://www.ruanyifeng.com/blog/2019/10/tmux.html  
 https://stackoverflow.com/questions/41830936/mobaxterm-follow-terminal-folder-stfp-and-byobu  
 深入ProtoBuf-简介 https://www.jianshu.com/p/a24c88c0526a  
@@ -251,12 +483,17 @@ Protobuf3语法详解 https://www.cnblogs.com/tohxyblog/p/8974763.html
 python c struct/python之struct详解  https://blog.csdn.net/qq_30638831/article/details/80421019  
 PYTHON C/C++结构体 ctypes.Structure https://www.cnblogs.com/yang220/p/12091863.html   https://www.programcreek.com/python/example/1122/ctypes.Structure  
 date +%FT%T.%Nz -u  
+c++filter , http://demangler.com/
 ```
 
 ### more3
+```
+Linux、Windows、Mac换行符相互转换方法  https://blog.csdn.net/Hehuyi_In/article/details/89735510  
+批量换行符mac转unix  sed -bi 's:\r:\n:g' files*   ///sed 's,a/b/i'  ///tr "\r" "\n" <macfile >unixfile
+-echo -e 'ab\rc\n' |hexdump -C
 VI模式中上下左右键和回退键出现字母 set nocompatible backspace=2 hlsearch https://www.cnblogs.com/wangshuyi/p/6078678.html  
 vim set nu=number hl=hlsearch ic=ignorecase ai=autoindex ruler showmode  :q noxx  #export EXINIT='set nu'  
-```
+sublime3-text:
 //Disable “A new version of Sublime Text is available, download now?” in Sublime 3 (stable channel)
 https://forum.sublimetext.com/t/disable-a-new-version-of-sublime-text-is-available-download-now-in-sublime-3-stable-channel/19961
 https://github.com/sublimehq/sublime_text/issues/1206  (merge 127.0.0.1/0.0.0.0 www.sublimetext.com into /etc/hosts)
@@ -277,6 +514,8 @@ Sublime Text 2 设置文件详解  https://blog.csdn.net/xlh1991/article/details
 sublime 快捷键设置 (word_wrap) https://www.jianshu.com/p/04ef6fe437b7
 https://sublime-text-unofficial-documentation.readthedocs.io/en/latest/reference/commands.html#cmd-list
 Sublime Text3—自带快捷键介绍  https://www.cnblogs.com/easy-blue/p/5809760.html
+Sublime 注册, https://www.cnblogs.com/lingzhii/p/10543437.html, https://www.jianshu.com/p/1dc6ca5b9175
+sublime text--你所不知道的12个秘密  https://blog.csdn.net/weixin_42108494/article/details/80312343
 ```
 
 ### python
@@ -325,6 +564,8 @@ Python 调试器之pdb https://www.cnblogs.com/xiaohai2003ly/p/8529472.html
 3.5.2chm-Python » 3.5.2 Documentation » Python HOWTOs » Descriptor HowTo Guide // https://docs.python.org/2/howto/descriptor.html#descriptor-protocol  
 3.5.2chm-Python Language Reference/3. Data model/3.3. Special method names(__new__)/3.3.3. Customizing class creation(metaclass)/3.3.2. Customizing attribute access(__getattr__)  
 data descriptor, property  
+Python Hacking: “高级”偏函数 https://blog.stdioa.com/2018/12/python-hacking-advanced-partial/  
+Python学习之logging https://blog.stdioa.com/2015/10/learning-python-logging/  
 python logging详解及自动添加上下文信息 https://www.cnblogs.com/xybaby/p/9197032.html  
 关于metaclass，我原以为我是懂的# https://www.cnblogs.com/xybaby/p/7927407.html  //mixin  
 https://stackoverflow.com/questions/100003/what-are-metaclasses-in-python  深刻理解Python中的元类(metaclass) https://www.jianshu.com/p/e017bc810702  
@@ -339,6 +580,7 @@ python 编程风格术语说明 EAFP: Easier to ask for forgiveness than permiss
 猴子补丁(monkey patch) JSONEncoder https://www.jianshu.com/p/f1060b22aab8  
 Python MRO方法解析顺序详解 (c3算法) http://c.biancheng.net/view/5450.html  
 Python拼接字符串的7种方法总结 https://www.jb51.net/article/149991.htm  
+//python3 -m json.tool  
 
 
 ### python-https
@@ -404,8 +646,11 @@ rsync putty/https://www.chiark.greenend.org.uk/~sgtatham/putty/latest.html
 Python学习之Socket通信的实现  https://blog.csdn.net/m0_37717595/article/details/81101895  
 thread_name-pthread--linux编程 - 给线程起名字_落尘纷扰的专栏-CSDN博客(prctl()/pthread_setname_np()) https://blog.csdn.net/jasonchen_gbd/article/details/51308638  
 
-### linux/c/lib.so ,//gcc+gdb
+### linux/c/lib.so ,//gcc+gdb ,//llvm,icecc
 ```
+https://www.gnu.org/software/software.html
+https://directory.fsf.org/ , https://www.gnu.org/software/libc/ , https://www.gnu.org/software/libc/manual/
+https://www.kernel.org/doc/man-pages/
 https://www.man7.org/linux/man-pages/man1/ldd.1.html  , ldconfig和ldd用法-https://www.cnblogs.com/foohack/p/4105847.html  
 https://www.man7.org/linux/man-pages/man8/ld.so.8.html  
 LIBRARY_PATH(静态链接库lib.a),  LD_LIBRARY_PATH,LD_PRELOAD  //dlopen  
@@ -430,6 +675,11 @@ gcc选项-g与-rdynamic的异同 ### https://www.cnblogs.com/LiuYanYGZ/p/5550544
 __attribute__ 机制详解  https://www.cnblogs.com/tureno/articles/12236495.html  https://blog.csdn.net/weaiken/article/details/88085360  
 https://gcc.gnu.org/onlinedocs/gcc/Common-Function-Attributes.html#index-finstrument-functions-1
 ///(__cyg_profile_func_enter) 调试技巧之 gcc/g++ -instrument-functions 参数 https://blog.csdn.net/tycoon1988/article/details/38924241
+uclibc,eglibc,glibc,Musl-libc之间的区别和联系  https://www.sohu.com/a/164202127_424963
+//-
+https://github.com/icecc/icecream
+使用 icecream 进行分布式编译  https://blog.csdn.net/yuwen_dai/article/details/17223309
+深入浅出让你理解什么是LLVM   https://www.jianshu.com/p/1367dad95445
 ```
 
 
@@ -465,6 +715,9 @@ web-http-server (embedding)  https://gitee.com/louisyou/mongoose  https://github
 
 
 ### linux/bash
+```
+https://www.runoob.com/linux/linux-command-manual.html
+https://www.runoob.com/w3cnote/linux-common-command-2.html
 bash参考文档.html https://yiyibooks.cn/Phiix/bash_reference_manual/bash参考文档.html#Shell-Expansions  
 .. https://yiyibooks.cn/Phiix/bash_reference_manual/bash%E5%8F%82%E8%80%83%E6%96%87%E6%A1%A3.html#Shell-Expansions  
 Bash中文手册  https://gitee.com/ccnuacm/bash-manual-zh  
@@ -475,12 +728,49 @@ $ cat <<EOT|cut -c2-
 c++ 理解虚函数，多重继承，虚基类和RTTI所需的代价 https://www.cnblogs.com/xkfz007/archive/2012/08/19/2646356.html  
 c++ 虚继承与虚函数表 https://www.cnblogs.com/xkfz007/archive/2012/07/15/2592565.html  
 google关于ssh key的解释（转）转的google的wiki的 https://www.cnblogs.com/likui360/p/6012075.html  
-pidof, lsof, htop, strace/ltrace, chmod, lsattr -a/chattr  
+pidof, lsof -i:80, htop, strace/ltrace, chmod, lsattr -a/chattr  
 lsattr命令: 显示文件属性介绍 https://blog.csdn.net/weixin_34021089/article/details/92872999  
 hexdump, xxd  
-
+-
+json.tool.py
+mkdir -p
+which, whereis, whatis
+mount -o remount r,w /
+console-tset-reset, dirname, basename
+mobadifffiles v0route.txt vpnroute.txt
+grep -s --exclude-dir=tests/ --include=GLOB
+find . -type l  ##symbolic link
+find . -type d  #dir
+echo aa |& tee afile  #https://www.runoob.com/linux/linux-comm-tee.html  www.cnblogs.com/nanruosen/p/16317025.html
+ps -aux -ef, pgrep, pidof, killall,pkill
+ifconfig, ip, ping6, traceroute,route,arp -a, dhcpconfig, netstat,ss, netsh-w
+https://deepinout.com/linux-cmd/linux-terminal-related-cmd/linux-cmd-reset.html
+-
+for i in *.c ;do echo $i ==; done
+for ((i=0; i<10; i++)); do touch t$i.txt; done
+ls *.c |xargs -tn1 -i true {} == {}
+find ./ -name '*c' -exec echo {} == \;
+if ! [[ $x =~ ^(startup|runtime)_cp_.*\.log ]]; then echo 111; fi  #bash正则匹配
+if [[ 'aa' == 'ab' ]] ;then echo 111;else echo 222; fi
+echo -e 'aa\nbbb\nc'| for i in `cat -`;do echo -n "$i, ";done
+foo(){ echo $1-xyz-$*;}
+typeset -f foo //declare
+htail(){ head -3 $*; echo ...; tail --line=3 $*;}
+a xztail='xzcat|cat -n|grep Cprt|htail'
+a sort.k77='sort -k7,7'  ##for syslog,better for cu
+#echo -e 'AA\r\nBB\rC' |sed -b -e's/\r$/-/g' -e's/\r/\n/g' | hexdump -C  ##can't match \n or $
+a lsed="sed -bi 's:\r:\n:g'"  #files*
+a pyy='python3 -B' #-Bi
+-
+ip+ifconfig+busybox //Linux下IP命令使用详解  https://www.cnblogs.com/liunaixu/p/12808936.html
+试试Linux下的ip命令，ifconfig已经过时了  https://linux.cn/article-3144-1.html
+linux命令总结之ip命令 (ip addr)  https://www.cnblogs.com/ginvip/p/6367803.html
+配置IP别名 https://blog.51cto.com/dianel/1921129 https://blog.51cto.com/sharan/726600
+Linux系统使用ss命令查看端口状态  https://my.oschina.net/u/4413564/blog/3550024
+```
 
 ### lang/script
+```
 lua/(wireshark plugin)  https://www.runoob.com/lua  http://www.lua.org/docs.html  
 Lua中调用C函数(lua-5.2.3)    https://www.w3cschool.cn/lua/gxj31te8.html  
 //Step By Step(Lua调用C函数) https://www.cnblogs.com/orangeform/archive/2012/07/23/2469902.html  
@@ -489,6 +779,8 @@ Lua中调用C函数(lua-5.2.3)    https://www.w3cschool.cn/lua/gxj31te8.html
 Lua编写wireshark插件基础 https://blog.csdn.net/chen_jianjian/article/details/81502840  
 脚本之家51jb首页 >> 脚本专栏 >> Lua  https://www.jb51.net/list/list_245_1.htm  
 Duktape：在C/C++项目中嵌入JavaScript  http://www.cppblog.com/tx7do/archive/2016/04/13/213263.html  
+Rust 专注于安全，尤其是并发安全  https://www.runoob.com/rust
+```
 
 
 ### gawk/gawkinet
@@ -500,6 +792,26 @@ Duktape：在C/C++项目中嵌入JavaScript  http://www.cppblog.com/tx7do/archiv
 
 ## HarmonyOS
 https://gitee.com/openharmony/docs?hmsr=aladdin1e6  
+
+
+
+##  Alpine Linux
+```
+hub.docker.com/_/alpine
+http://dl-cdn.alpinelinux.org/alpine/v3.6/releases/x86_64/alpine-standard-3.6.2-x86_64.iso
+Alpine Linux 使用简介  https://blog.csdn.net/freeking101/article/details/80795752
+Alpine linux硬盘安装  https://blog.csdn.net/csdn_duomaomao/article/details/76053229
+Alpine Linux详解  https://blog.csdn.net/weixin_34355715/article/details/89536087
+tinycore?
+```
+
+
+## etc
+```
+github/gitlab-web-acc-nopw-authentication win10\控制面板\用户帐户\凭据管理器(管理Windows凭据)
+https://shjg.nongtianlang.com/  https://gitee.com/yinshuwei
+日历精灵 http://www.5adanci.com/excel/2022.html
+```
 
 
 ## end00

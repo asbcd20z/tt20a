@@ -1,0 +1,8 @@
+FROM busybox
+MAINTAINER mybb
+
+RUN echo "echo hi.." >/hi
+RUN echo "echo hi2.." >/hi2
+CMD sh hi2
+CMD sh
+

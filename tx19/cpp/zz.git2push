@@ -1,6 +1,18 @@
 
 MINGW64 /c/xd/tmpd/tgit/a1/test20210208syn (main)$ 
+MINGW64 /c/xd/tmpd/tgit/a1/test20210208syn (main)$
+MINGW64 /c/xd/tmpd/tgit/a1/test20210208syn (main)$ git remote -vv
+origin  https://gitlab.com/asbcd20z/test20210208syn (fetch)
+origin  https://gitlab.com/asbcd20z/test20210208syn (push)
+MINGW64 /c/xd/tmpd/tgit/a1/test20210208syn (main)$
 MINGW64 /c/xd/tmpd/tgit/a1/test20210208syn (main)$ git remote add  github https://github.com/asbcd20z/test20210208syn
+MINGW64 /c/xd/tmpd/tgit/a1/test20210208syn (main)$
+MINGW64 /c/xd/tmpd/tgit/a1/test20210208syn (main)$ git remote -vv
+github  https://github.com/asbcd20z/test20210208syn (fetch)
+github  https://github.com/asbcd20z/test20210208syn (push)
+origin  https://gitlab.com/asbcd20z/test20210208syn (fetch)
+origin  https://gitlab.com/asbcd20z/test20210208syn (push)
+MINGW64 /c/xd/tmpd/tgit/a1/test20210208syn (main)$
 MINGW64 /c/xd/tmpd/tgit/a1/test20210208syn (main)$ git br -vv
 * main 8330475 [origin/main] README.md--jqedit@lab
 MINGW64 /c/xd/tmpd/tgit/a1/test20210208syn (main)$ git push  -u github main
@@ -82,7 +94,7 @@ MINGW64 /c/xd/tmpd/tgit/a1/test20210208syn (main)$ git branch --set-upstream-to=
 MINGW64 /c/xd/tmpd/tgit/a1/test20210208syn (main)$ git branch -u                origin/main main  //not use
 MINGW64 /c/xd/tmpd/tgit/a1/test20210208syn (main)$ git push -u github main    // upstream and push, not use
 MINGW64 /c/xd/tmpd/tgit/a1/test20210208syn (main)$ git push   github main
-MINGW64 /c/xd/tmpd/tgit/a1/test20210208syn (main)$ //## git push -n -v
+MINGW64 /c/xd/tmpd/tgit/a1/test20210208syn (main)$ //## git push -n -vv
 MINGW64 /c/xd/tmpd/tgit/a1/test20210208syn (main)$ //##pgit push  [my-origin] [my-branch] [-u]
 MINGW64 /c/xd/tmpd/tgit/a1/test20210208syn (main)$ cat .git/config
 [user]
@@ -105,10 +117,14 @@ MINGW64 /c/xd/tmpd/tgit/a1/test20210208syn (main)$ cat .git/config
   merge = refs/heads/main
 
 [http]
+  #http_proxy=http://10.158.100.8:8080 #//sct
+  #http_proxy=http://10.158.100.1:8080 #gitlabe1cs?
 #        proxy = 135.245.48.34:8000
        proxy = 135.251.33.16:8080 #15
 #       proxy = 10.167.32.133:8080
 #       proxy = 127.0.0.1:1087
+#       sslVerify=false
+##alias pgit='https_proxy=135.251.33.16:8080 git'  ##pgit push  [my-origin] [my-branch] [-u]
 [xuser]
         name=jqasbcd20z
         email=jqasbcd20z@q.com

@@ -1,0 +1,271 @@
+
+单个C++ 知识点及使用方法：
+1.	Boost::apply_visitor
+2.	代码中 “|” 的使用， 比如：
+            boost::range::insert(
+                mappedSolutions,
+                mappedSolutions.end(),
+                calculateFeatureSets(subblocksPermutations, featureSet, solution.solution) |
+                    boost::adaptors::transformed([&bandCombinationInfoSn](const auto& assignedFeatureSets) {
+                        return MappedSolution{bandCombinationInfoSn, assignedFeatureSets};
+                    })); 
+3.	BOOST_FUSION_ADAPT_STRUCT 是如何实现的
+-> 30H 除了以上3个内容外，也可以包括boost 库内容的扩展 （priority: 1） [LH:] 21-12-27开始学习，预计1月5日分享
+   4. . 函数名后带->作用是什么，显示声明函数返回类型？比如
+auto CommonUeCapabilitiesHelper::calculateFeatureSets(
+            const std::vector<SubblocksPerBand>& subblocksPermutations,
+    types::nr_rrc::FeatureSetEntryIndex requestedFeatureSets,
+    const cplibs::scells_selection::Solution& solution) const -> std::vector<AssignedFeatureSets>
+5.	emplace()/try_emplace()是不是应该尽量使用try_emplace()？
+6.	ranges::containered和std::set_difference
+7.	std::decay/ std::bitset<bcsBitMapSize>(bcsBitSet << numOfBcsInTable).any() bitset 的使用， eg:
+bool doesUeSupportBcsBeyondTable ->打包4-7 （priority: 2） -> 3天   [lzhao:] 21-12-27 开始学习，估计一月上旬分享
+某个功能使用的探究跟比较：
+8.	C++ lemda函数在代码中的使用非常广泛，甚至可以说是“泛滥”，关于这个大家可以讨论一下，有利有弊吧, 比如：代码中lemda 使用比较复杂的case（priority: 3）3天
+template <typename T>
+auto createCsiRsResourceForOndurationChecker(std::int16_t offset, const T& drxParameter)
+{
+    return [offset, &drxParameter](std::uint16_t resource) {
+        auto beginEndPosition = getOnDurationBeginEndPosition(offset, drxParameter);
+        return boost::algorithm::any_of(
+            boost::irange(drxParameter.csiRsRate), [beginEndPosition, resource, &drxParameter](auto i) {
+                auto [begin, end] = beginEndPosition;
+                auto limitRange = (resource + i * drxParameter.csiRsCycle) % drxParameter.drxLongCycle;
+                return isLocatedInRange(begin, end, limitRange);
+            });
+    };
+}
+9.	boost  Meta State Machine (MSM)   状态机在CPRT和CU的不同定义方式 ->（priority: 2）Hou dashi （2天）
+10.	UT case: data preparation, test method, mock…   -> 基础Gtest 知识：30H （priority: 1）/目前代码中的使用/如何写一个好的UT
+11.	设计模式 （priority: 3）
+跟业务流程相关的代码：
+12.	CPRT/CPCL common Band combination solution selection related code （priority: 2）（CPCL:/CPRT: ）-> YLJ/LYQ : [LYQ:] 21-12-27开始抽空学习CPRT的BC 和 feature set选择代码, 估计需要时间2周左右.
+13.	CSIRS 的pool 又被新封装了一层，使用了RAII 机制. 可以学习一下 -> 40H （priority: 1）
+
+// 4. 
+auto CommonUeCapabilitiesHelper::calculateFeatureSets(
+            const std::vector<SubblocksPerBand>& subblocksPermutations,
+    types::nr_rrc::FeatureSetEntryIndex requestedFeatureSets,
+    const cplibs::scells_selection::Solution& solution) const -> std::vector<AssignedFeatureSets>
+
+cplane/CP-RT/CP-RT/src/common/utils/src/ue_capability/CommonUeCapabilitiesHelper.cpp:2708
+
+C++11返回类型后置语法的使用
+
+From <https://blog.csdn.net/fengxinlinux/article/details/78196056>
+eg…
+
+// 5.  emplace()/try_emplace()是不是应该尽量使用try_emplace()？
+https://en.cppreference.com/w/cpp/container/map
+
+emplace, …
+-The element may be constructed even if there already is an element with the key in the container, in which case the newly constructed element will be destroyed immediately.
+-Return value..
+
+From <https://en.cppreference.com/w/cpp/container/map/emplace> 
+https://www.it1352.com/1985235.html
+
+MINGW64 /c/xd/_nr/nr/gnb (master)$ grep try_emplace cplane/CP-RT/CP-RT/src/ -rIn
+cplane/CP-RT/CP-RT/src/common/messages/cprtue/src/ResourceConfig.cpp:37:        uesPerCellMap.try_emplace(resourceContextData.nrCellIdentity, ueIdDus);
+cplane/CP-RT/CP-RT/src/common/messages/cprtue/src/ResourceConfig.cpp:56:    auto [iter, result] = ueIdsRelationMap.try_emplace(ueIdentifiers.ueIdDu, vec);
+cplane/CP-RT/CP-RT/src/common/messages/cprtue/src/ResourceConfig.cpp:94:    auto [iter, result] = resourceContextDataMap.try_emplace(internalUeIdDu, std::move(resourceContextData));
+cplane/CP-RT/CP-RT/src/common/messages/cprtue/src/ResourceConfig.cpp:109:    auto [iter, result] = resourceContextDataMap.try_emplace(internalUeIdDu, resourceContextData);
+
+
+~ [lzhao019@rhel-7 ~]$ find /usr/include/ -name map
+/usr/include/c++/4.8.2/debug/map
+/usr/include/c++/4.8.2/map
+/usr/include/c++/4.8.2/profile/map
+~ [lzhao019@rhel-7 ~]$ less /usr/include/c++/4.8.2/map
+
+
+// 6. ranges::containered和std::set_difference
+
+/// ranges::containered
+https://www.boost.org/doc/libs/1_69_0/libs/range/
+https://www.boost.org/doc/libs/1_69_0/libs/range/doc/html/range/reference/adaptors/reference/transformed.html
+https://www.boost.org/doc/libs/1_69_0/boost/range/adaptor/transformed.hpp
+MINGW64 /c/xd/_nr/nr/gnb (master)$ ^C
+MINGW64 /c/xd/_nr/nr/gnb (master)$ grep transform cplane/CP-RT/CP-RT/src/ -rIn ^C
+MINGW64 /c/xd/_nr/nr/gnb (master)$
+MINGW64 /c/xd/_nr/nr/gnb (master)$ grep containered cplane/CP-RT/CP-RT/src/ -rIn
+cplane/CP-RT/CP-RT/src/common/utils/src/ue_capability/CommonUeCapabilitiesHelper.cpp:2580:        ranges::containered;
+cplane/CP-RT/CP-RT/src/common/utils/src/ue_capability/CommonUeCapabilitiesHelper.cpp:2694:                                     }) | ranges::containered};
+cplane/CP-RT/CP-RT/src/common/utils/src/ue_capability/UeCapabilityConverter.cpp:12:using ranges::containered;
+cplane/CP-RT/CP-RT/src/common/utils/src/ue_capability/UeCapabilityConverter.cpp:48:                featureSetsDownlink | transformed(convertFeatureSetDownlink) | containered),
+cplane/CP-RT/CP-RT/src/common/utils/src/ue_capability/UeCapabilityConverter.cpp:50:                featureSetsUplink | transformed(convertFeatureSetUplink) | containered),
+cplane/CP-RT/CP-RT/src/common/utils/src/ue_capability/UeCapabilityConverter.cpp:52:                featureSetsDownlinkPerCC | transformed(convertFeatureSetDownlinkPerCC) | containered),
+cplane/CP-RT/CP-RT/src/common/utils/src/ue_capability/UeCapabilityConverter.cpp:54:                featureSetsUplinkPerCC | transformed(convertFeatureSetUplinkPerCC) | containered)};
+cplane/CP-RT/CP-RT/src/common/utils/src/ue_capability/UeCapabilityConverter.cpp:73:    return {bandCombinationList | transformed(convertBandCombination) | containered,
+cplane/CP-RT/CP-RT/src/services/resource_mgmt/admission_control/src/LongPucchSCellResources.cpp:280:        ranges::containered;
+cplane/CP-RT/CP-RT/src/services/ue_mgmt/ue_procedures/common/src/Helper.cpp:275:        ranges::containered;
+cplane/CP-RT/CP-RT/src/services/ue_mgmt/ue_procedures/common/src/Helper.cpp:286:        ranges::containered;
+cplane/CP-RT/CP-RT/src/services/ue_mgmt/ue_procedures/msg_builders/src/cell_group_config_builder/src/csi_meas_config/CsiMeasConfigBuilder.cpp:106:        transformed([](const auto& report) { return report.reportConfigId; }) | ranges::containered;
+cplane/CP-RT/CP-RT/src/services/ue_mgmt/ue_procedures/msg_builders/src/cell_group_config_builder/src/csi_meas_config/CsiMeasConfigBuilderForCa.cpp:692:        transformed([](const auto& report) { return report.reportConfigId; }) | ranges::containered;
+cplane/CP-RT/CP-RT/src/services/ue_mgmt/ue_procedures/msg_builders/src/cell_group_config_builder/src/serving_cell_config/PucchResourceSetToAddModListBuilder.cpp:102:            csiReportConfigs | boost::adaptors::filtered(periodicReportConfigForSCell) | ranges::containered;
+cplane/CP-RT/CP-RT/src/services/ue_mgmt/ue_procedures/ue_modify/src/modify/UeModifyAdmissionControl.cpp:42:    return sCellsToBeSetup | boost::adaptors::transformed(getNrCellIdentity) | ranges::containered;
+cplane/CP-RT/CP-RT/src/services/ue_mgmt/ue_procedures/ue_release/src/fsm/UeReleaseCommon.cpp:91:    return ueCells | boost::adaptors::filtered(isL2RtPoolAlive) | ranges::containered;
+cplane/CP-RT/CP-RT/src/services/ue_mgmt/ue_procedures/ue_setup/src/common/WaitL2PsUserSetupResp.cpp:62:    return sCellsToBeSetup | boost::adaptors::transformed(getNrCellIdentity) | ranges::containered;
+MINGW64 /c/xd/_nr/nr/gnb (master)$
+MINGW64 /c/xd/_nr/nr/gnb (master)$
+MINGW64 /c/xd/_nr/nr/gnb (master)$ find -name RangeToContainer.hpp
+./cplane/libs/ranges/include/ranges/RangeToContainer.hpp
+MINGW64 /c/xd/_nr/nr/gnb (master)$
+MINGW64 /c/xd/_nr/nr/gnb (master)$ less  ./cplane/libs/ranges/include/ranges/RangeToContainer.hpp
+      1 #pragma once
+      2 #include <iterator>
+      3 #include <type_traits>
+      4
+      5 namespace ranges
+      6 {
+      7 namespace detail
+      8 {
+      9 template <class BeginIt, class EndIt>
+     10 struct RangeConverter
+     11 {
+     12     constexpr explicit RangeConverter(BeginIt begin, EndIt end) : beginIt(std::move(begin)), endIt(std::move(end)) {}
+     13
+     14     template <
+     15         class Container,
+     16         class = std::enable_if_t<not std::is_same_v<Container, std::initializer_list<typename Container::value_type>>>>
+     17     constexpr operator Container() const // NOLINT(google-explicit-constructor)
+     18     {
+     19         return Container{beginIt, endIt};
+     20     }
+     21
+     22     template <class Container>
+     23     constexpr Container as() const
+     24     {
+     25         return Container{beginIt, endIt};
+     26     }
+     27
+     28 private:
+     29     BeginIt beginIt;
+     30     EndIt endIt;
+     31 };
+     32
+     33 } // namespace detail
+     34
+     35 constexpr struct Containered
+     36 {
+     37 } containered;
+     38
+     39 template <class Range>
+     40 inline constexpr auto operator|(Range&& range, Containered)
+     41 {
+     42     using std::begin;
+     43     using std::end;
+     44     return detail::RangeConverter{begin(std::forward<Range>(range)), end(std::forward<Range>(range))};
+     45 }
+     46
+     47 template <class Range>
+     48 inline constexpr auto toContainer(Range&& range)
+     49 {
+     50     using std::begin;
+     51     using std::end;
+     52     return detail::RangeConverter{begin(std::forward<Range>(range)), end(std::forward<Range>(range))};
+     53 }
+     54
+     55 } // namespace ranges
+ 
+MINGW64 /c/xd/_nr/nr/gnb (master)$ find -name types ^C
+MINGW64 /c/xd/_nr/nr/gnb (master)$ l ./cplane/CP-RT/CP-RT/src/common/types/include/types/
+MINGW64 /c/xd/_nr/nr/gnb (master)$ l ./cplane/CP-RT/CP-RT/src/common/types/include/types/nr-rrc/SCellsToBeSetup.hpp
+ 
+ 
+///6.2  std::set_difference
+参考实现  https://en.cppreference.com/w/cpp/algorithm/set_difference
+MINGW64 /c/xd/_nr/nr/gnb (master)$
+MINGW64 /c/xd/_nr/nr/gnb (master)$ grep set_difference cplane/CP-RT/CP-RT/src/ -rIn
+cplane/CP-RT/CP-RT/src/data_repository/pucch_resources/long_pucch/include/long_pucch/ListDifference.hpp:15:    auto it = std::set_difference(
+cplane/CP-RT/CP-RT/src/data_repository/pucch_resources/long_pucch/src/SrResourcePoolBuilder.cpp:76:    std::set_difference(
+cplane/CP-RT/CP-RT/src/services/cfg_mgmt/cfg_mgmt/src/CfgMgmtService.cpp:221:    std::set_difference(
+Question: 好像code中没有排序？？
+MINGW64 /c/xd/_nr/nr/gnb (master)$
+Copies the elements from the sorted range [first1, last1) which are not found in the sorted range [first2, last2) to the range beginning at d_first.
+The resulting range is also sorted. Equivalent elements are treated individually,
+
+From <https://en.cppreference.com/w/cpp/algorithm/set_difference> 
+
+/usr/include/c++/4.8.2/algorithm
+/usr/include/c++/4.8.2/bits/stl_algo.h
+/usr/include/c++/4.8.2/parallel/algo.h
+
+vi /usr/include/c++/4.8.2/algorithm
+
+std::set_difference    //ret: Iterator past the end of the constructed range
+std::ranges::set_difference  //ret: {last1, result_last}, where result_last is the end of the constructed range
+
+// 7.  std::decay/ std::bitset<bcsBitMapSize>(bcsBitSet << numOfBcsInTable).any() bitset 的使用， eg: bool doesUeSupportBcsBeyondTable
+
+./cplane/cu/cp_cl/src/admission_control/scells_selection/src/ConcreteBcsChecker.cpp:47
+template <typename Entries>
+bool doesUeSupportBcsBeyondTable(
+    const BandCombination& bandCombination,
+    const Entries& entries,
+    const BandCombinationName& bandCombinationName,
+    const Solution& solution,
+    const storage_service::CellInformationProvider& cellInformationProvider)
+{
+    if (auto* pCellInfo = cellInformationProvider.getCellInformation(solution.getPCell().nrCellIdentity);
+        pCellInfo != nullptr and pCellInfo->nrCellData.acceptUnsupportedBcs)
+    {
+        auto numOfBcsInTable = entries.size();
+        auto bcsBitSet = bandCombination.supportedBandwidthCombinationSet.value();
+        constexpr auto bcsBitMapSize = sizeof(std::decay<decltype(bcsBitSet)>::type) * 8;
+        auto result = std::bitset<bcsBitMapSize>(bcsBitSet << numOfBcsInTable).any();
+        if (result)
+        {
+            LOG_INFO(
+                "For BandCombination {} UE supports bcs beyond defined in table. "
+                "BCS check will PASS. "
+                "Num of entries in table: {}, ue bcs: "
+                "{}. ",
+                bandCombinationName,
+                numOfBcsInTable,
+                getBcsBitset(bandCombination));
+        }
+        return result;
+    }
+
+less -N /usr/include/c++/4.8.2/type_traits   //ps: decay, **not decay for pointer
+https://en.cppreference.com/w/cpp/types/decay
+https://en.cppreference.com/w/cpp/utility/bitset
+Less  /usr/include/c++/4.8.2/type_traits
+
+./cplane/cu/cp_cl/src/admission_control/scells_selection/src/ConcreteBcsChecker.cpp
+class ConcreteBcsChecker : public BcsChecker
+// #include "UeTypesAliasesFwd.hpp" //using BandCombination = types::nr_rrc::BandCombination;
+// BcsCheckerFactory.hpp // return std::make_unique<bcs_checks::ConcreteBcsChecker>(… BcsTables::getCaBcsTable,)
+./cplane/cu/cp_cl/src/admission_control/scells_selection/src/BcsTables.cpp
+// BcsTables.hpp // const static CaBcsTable& getCaBcsTable() { return aggregatedTable; };
+// BcsTables.cpp // const CaBcsTable BcsTables::aggregatedTable = createCaBcsTable();
+MINGW64 /c/xd/_nr/nr/gnb (master)$ less ./cplane/libs/types/include/types/nr_rrc/BandCombination.hpp
+namespace types
+{
+namespace nr_rrc
+{
+using FeatureSetCombinationId = std::uint32_t;
+using SupportedBandwidthCombinationSet = std::uint32_t;
+ 
+struct BandCombination
+{
+    BandList bandList;
+    std::optional<MrdcParameters> mrdcParameters;
+    FeatureSetCombinationId featureSetCombinationId{};
+    std::optional<CaParametersNr> caParametersNr;
+    std::optional<SupportedBandwidthCombinationSet> supportedBandwidthCombinationSet;
+    bool diffNumerologyWithLargerScsSupported{};
+};
+using BandCombinationList = std::vector<BandCombination>;
+ 
+bool operator==(const BandCombination&, const BandCombination&);
+std::ostream& operator<<(std::ostream&, const BandCombination&);
+std::ostream& operator<<(std::ostream&, const BandCombinationList&);
+} // namespace nr_rrc
+} // namespace types
+
+ue capa..
+
+https://wandbox.org/
+http://coliru.stacked-crooked.com/

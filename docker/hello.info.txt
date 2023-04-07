@@ -1,0 +1,161 @@
+
+//docker ps
+//docker search busybox
+//docker images
+//docker pull hello-world
+//docker run hello-world
+//$ docker images
+REPOSITORY          TAG                 IMAGE ID            CREATED             SIZE
+hello-world         latest              feb5d9fea6a5        2 days ago          13.3kB
+//docker save hello-world > xxx/hello-world.dockimg.tar
+
+$ ls
+hello-world.dockimg.tar  hello.info.txt
+
+$ ll
+total 25
+-rwxrwxr--+ 1 lzhao019 Domain Users 24064 Sep 26 13:39 hello-world.dockimg.tar*
+-rwxrwxr--+ 1 lzhao019 Domain Users     1 Sep 26 14:41 hello.info.txt*
+
+$ tar -tvf hello-world.dockimg.tar
+drwxr-xr-x root/root         0 2021-09-24 07:47 c28b9c2faac407005d4d657e49f372fb3579a47dd4e4d87d13e29edd1c912d5c/
+-rw-r--r-- root/root         3 2021-09-24 07:47 c28b9c2faac407005d4d657e49f372fb3579a47dd4e4d87d13e29edd1c912d5c/VERSION
+-rw-r--r-- root/root      1141 2021-09-24 07:47 c28b9c2faac407005d4d657e49f372fb3579a47dd4e4d87d13e29edd1c912d5c/json
+-rw-r--r-- root/root     14848 2021-09-24 07:47 c28b9c2faac407005d4d657e49f372fb3579a47dd4e4d87d13e29edd1c912d5c/layer.tar
+-rw-r--r-- root/root      1469 2021-09-24 07:47 feb5d9fea6a5e9606aa995e879d862b825965ba48de054caab5ef356dc6b3412.json
+-rw-r--r-- root/root       207 1970-01-01 08:00 manifest.json
+-rw-r--r-- root/root        94 1970-01-01 08:00 repositories
+
+$ tar -xvf hello-world.dockimg.tar repositories -O |cat
+repositories
+{"hello-world":{"latest":"c28b9c2faac407005d4d657e49f372fb3579a47dd4e4d87d13e29edd1c912d5c"}}
+
+$ tar -xvf ../hello-world.dockimg.tar feb5d9fea6a5e9606aa995e879d862b825965ba48de054caab5ef356dc6b3412.json -O |python3 -m json.tool
+
+
+$ tar -xvf hello-world.dockimg.tar c28b9c2faac407005d4d657e49f372fb3579a47dd4e4d87d13e29edd1c912d5c/layer.tar -O |tar -tvf -
+c28b9c2faac407005d4d657e49f372fb3579a47dd4e4d87d13e29edd1c912d5c/layer.tar
+-rwxrwxr-x 0/0           13256 2021-09-24 07:47 hello
+
+$ tar --wildcards -xvf hello-world.dockimg.tar   */layer.tar -O |tar -xvf - -O |strings
+
+$ tar -xvf hello-world.dockimg.tar  */layer.tar -O |tar -xv hello
+c28b9c2faac407005d4d657e49f372fb3579a47dd4e4d87d13e29edd1c912d5c/layer.tar
+hello
+
+$ ll
+total 41
+-rwxrwxr-x+ 1 lzhao019 Domain Users 13256 Sep 24 07:47 hello*
+-rwxrwxr--+ 1 lzhao019 Domain Users 24064 Sep 26 13:39 hello-world.dockimg.tar*
+-rwxrwxr--+ 1 lzhao019 Domain Users     1 Sep 26 14:41 hello.info.txt*
+
+$ date
+Sun Sep 26 14:50:52 CST 2021
+
+
+
+///Dockerfile
+$ tar --wildcards -xvf hello-world.dockimg.tar   fe*.json -O |python3 -m json.tool |grep hello -n
+feb5d9fea6a5e9606aa995e879d862b825965ba48de054caab5ef356dc6b3412.json
+8:            "/hello"
+35:            "CMD [\"/hello\"]"
+62:            "created_by": "/bin/sh -c #(nop)  CMD [\"/hello\"]",
+
+$ tar --wildcards -xvf hello-world.dockimg.tar   */json -O |python3 -m json.tool |grep -ehello -eCmd -eEntrypoint -n -C2
+c28b9c2faac407005d4d657e49f372fb3579a47dd4e4d87d13e29edd1c912d5c/json
+5-        "AttachStdin": false,
+6-        "AttachStdout": false,
+7:        "Cmd": [
+8:            "/hello"
+9-        ],
+10-        "Domainname": "",
+11:        "Entrypoint": null,
+12-        "Env": [
+13-            "PATH=/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin"
+--
+29-        "AttachStdin": false,
+30-        "AttachStdout": false,
+31:        "Cmd": [
+32-            "/bin/sh",
+33-            "-c",
+34-            "#(nop) ",
+35:            "CMD [\"/hello\"]"
+36-        ],
+37-        "Domainname": "",
+38:        "Entrypoint": null,
+39-        "Env": [
+40-            "PATH=/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin"
+
+
+
+$ tar --wildcards -xvf hello-world.dockimg.tar   */json -O |python3 -m json.tool |grep -ehello -eCmd -eEntrypoint -n
+c28b9c2faac407005d4d657e49f372fb3579a47dd4e4d87d13e29edd1c912d5c/json
+7:        "Cmd": [
+8:            "/hello"
+11:        "Entrypoint": null,
+31:        "Cmd": [
+35:            "CMD [\"/hello\"]"
+38:        "Entrypoint": null,
+
+
+$ tar --wildcards -xvf hello-world.dockimg.tar   */json -O |python3 -m json.tool
+c28b9c2faac407005d4d657e49f372fb3579a47dd4e4d87d13e29edd1c912d5c/json
+{
+    "architecture": "amd64",
+    "config": {
+        "AttachStderr": false,
+        "AttachStdin": false,
+        "AttachStdout": false,
+        "Cmd": [
+            "/hello"
+        ],
+        "Domainname": "",
+        "Entrypoint": null,
+        "Env": [
+            "PATH=/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin"
+        ],
+        "Hostname": "",
+        "Image": "sha256:b9935d4e8431fb1a7f0989304ec86b3329a99a25f5efdc7f09f3f8c41434ca6d",
+        "Labels": null,
+        "OnBuild": null,
+        "OpenStdin": false,
+        "StdinOnce": false,
+        "Tty": false,
+        "User": "",
+        "Volumes": null,
+        "WorkingDir": ""
+    },
+    "container": "8746661ca3c2f215da94e6d3f7dfdcafaff5ec0b21c9aff6af3dc379a82fbc72",
+    "container_config": {
+        "AttachStderr": false,
+        "AttachStdin": false,
+        "AttachStdout": false,
+        "Cmd": [
+            "/bin/sh",
+            "-c",
+            "#(nop) ",
+            "CMD [\"/hello\"]"
+        ],
+        "Domainname": "",
+        "Entrypoint": null,
+        "Env": [
+            "PATH=/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin"
+        ],
+        "Hostname": "8746661ca3c2",
+        "Image": "sha256:b9935d4e8431fb1a7f0989304ec86b3329a99a25f5efdc7f09f3f8c41434ca6d",
+        "Labels": {},
+        "OnBuild": null,
+        "OpenStdin": false,
+        "StdinOnce": false,
+        "Tty": false,
+        "User": "",
+        "Volumes": null,
+        "WorkingDir": ""
+    },
+    "created": "2021-09-23T23:47:57.442225064Z",
+    "docker_version": "20.10.7",
+    "id": "c28b9c2faac407005d4d657e49f372fb3579a47dd4e4d87d13e29edd1c912d5c",
+    "os": "linux"
+}
+
+
