@@ -1,0 +1,11 @@
+##svv20a
+/debug/
+/out/
+#*/cpp/lvrvo.s
+#*.s
+*.out
+*.o
+*.so
+*.ell
+*.coredump
+core.*

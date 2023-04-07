@@ -4,6 +4,9 @@
 :numbered:
 :icons: font
 
+<font color=#00ffff size=7>color=#00ffff</font>
+<font color=gray size=72>color=gray</font>
+
 ## gnu
 http://www.man7.org/linux/man-pages/man2/gettimeofday.2.html  
 http://www.man7.org/linux/man-pages/man7/time.7.html  
@@ -16,6 +19,7 @@ https://en.cppreference.com/w/cpp/container/vector
 https://zh.cppreference.com/w/c/io/fprintf  
 https://zh.cppreference.com/w/cpp/io  
 https://coliru.stacked-crooked.com/  
+https://cppinsights.io/  
 https://zh.cppreference.com/w/Cppreference:Archives  
 http://www.cplusplus.com/reference/stl/  
 http://www.cplusplus.com/reference/ios/  
@@ -59,6 +63,7 @@ HTTP协议和SOCKS5协议    https://www.cnblogs.com/yinzhengjie/p/7357860.html
 https://www.ietf.org/rfc/ , https://www.rfc-editor.org/  , (socks5)https://www.rfc-editor.org/rfc/rfc1928.txt  
 
 ## //git
+https://git-scm.com/book/zh/v2/Git-基础-查看提交历史 https://php.cn/manual/view/34971.html  
 git换行符LF与CRLF转换问题 https://www.cnblogs.com/sdgf/p/6237847.html  
 git config --global core.autocrlf false/input/true  
 git config --global core.safecrlf true/warn/false  
@@ -74,7 +79,9 @@ github.com gitlab.com gitee.com oschina.net
 使用GitHub.io当作自己的博客网站 https://blog.csdn.net/tyyytcj/article/details/80880018  
 搭建自己的github.io博客 https://blog.csdn.net/qq_34106574/article/details/82704883  
 Git算不算程序员的必备技能 https://www.zhihu.com/question/41667536/answer/1297935355  
+GitLab中修改项目名称 (Settings->General->Advanced settings中，有Rename repository)  http://www.360doc.com/content/19/0102/16/10058718_806055719.shtml  
 GIT_DIR 10.8 Git内部原理-环境变量 https://www.git-scm.com/book/en/v2/Git-Internals-Environment-Variables  git-$Id https://git-scm.com/docs/gitattributes/  
+廖雪峰-Git教程  https://www.liaoxuefeng.com/wiki/896043488029600/900002180232448  
 Git常用命令速查 https://www.jianshu.com/p/38832b41143d  
 rebase,merge,cherry-pick的区别详解—面试常问 https://www.cnblogs.com/NaughtyCat/p/differ-with-rebase-merge-cherry-pick.html  https://git-scm.com/book/zh/v2  
 Git知识总览(五)Git中的merge、rebase、cherry-pick以及交互式rebase https://www.cnblogs.com/ludashi/p/8213550.html  
@@ -92,6 +99,7 @@ git branch -vv
 git revert/ reset++push -f [Git恢复之前版本的两种方法reset、revert] https://blog.csdn.net/yxlshk/article/details/79944535  
 git apply --check my.pat; git apply -3 my.pat;  git apply --reject my.pat  
 开源-GIT常用命令 https://www.cnblogs.com/kex1n/p/6141166.html  
+git config配置  https://www.cnblogs.com/fireporsche/p/9359130.html  
 
 
 ## //gitlab/github--2git-acc
@@ -101,24 +109,73 @@ gitlab项目仓库自动同步到github或者码云gitee https://blog.csdn.net/z
 Gitlab代码库自动同步到Github https://blog.csdn.net/kelvin_yin/article/details/86661066  
 gitlab Repository mirroring https://gitlab.com/help/workflow/repository_mirroring.html  https://gitlab.com/help/user/project/repository/repository_mirroring.md  
 GitLab仓库重命名以及GitHub仓库的删除https://www.jianshu.com/p/d6f7da6bd275  (new-setting\project-name,Advanced\Change-path)  
-
+```
+remote: Support for password authentication was removed on August 13, 2021. Please use a personal access token instead.
+remote: Please see https://github.blog/2020-12-15-token-authentication-requirements-for-git-operations/ for more information.
+Push上传出错：Support for password authentication was removed on August 13, 2021.git did not exit cleanly
+--https://blog.csdn.net/m0_46332820/article/details/119708248
+--https://docs.github.com/en/github/authenticating-to-github/keeping-your-account-and-data-secure/creating-a-personal-access-token
+--https://github.com/settings/tokens
+--https://xiazemin.github.io/MyBlog/web/2021/08/14/github_token.html
+--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21a
+```
 
 ## git17-hi-memo1
 https://github.com/asbcd17z/hi1/blob/master/memo1.txt  
 ###Google Chrome版本 72.0.3626.119（正式版本）（64 位）, firefox 65.0.1 (64 位)  
 https://github.com/TheAlgorithms/Python  
 https://github.com/libfuse/  
-用Python写一个FUSE（用户态文件系统）文件系统 http://blog.jobbole.com/51268/
+用Python写一个FUSE（用户态文件系统）文件系统 http://blog.jobbole.com/51268/  
 https://github.com/qianyubl/WATCH_dojo  
 https://github.com/search?l=C&p=5&q=timer+c&type=Repositories  
 
 
-## tools/markdown/asciidoc/graphviz/plantuml/planttext.com
+## tools/coding/online
+```
+https://en.cppreference.com/w/
+https://cppinsights.io/
+推荐几款实用的C++ 在线工具 https://www.jb51.net/article/197290.htm
+https://wandbox.org/
+https://quick-bench.com/q/eP40RY6zDK-eJFdSSPBINa0apTM
+https://gcc.godbolt.org/ -https://github.com/compiler-explorer/compiler-explorer
+https://cppinsights.io/  -https://github.com/andreasfertig/cppinsights
+https://build-bench.com/b/47ciR2_jQ0RuAt2fy1Pnk66b3yM
+推荐几个好用的在线编译器  https://zhuanlan.zhihu.com/p/58294969
+https://www.onlinegdb.com/
+https://wandbox.org/
+https://godbolt.org/
+geeksforgeeks https://ide.geeksforgeeks.org/index.php
+codechef https://www.codechef.com/ide
+菜鸟工具　https://c.runoob.com/compile/12
+ideone https://www.ideone.com/
+=
+=online-code-review (linux)
+https://code.woboq.org/
+https://code.woboq.org/linux/linux/init/main.c.html#start_kernel
+https://code.woboq.org/linux/linux/include/linux/compiler_attributes.h.html#194
+http://lxr.free-electrons.com/ , https://elixir.bootlin.com/linux/latest/source
+https://elixir.bootlin.com/busybox/1.34.0/source
+https://elixir.bootlin.com/barebox/latest/source
+https://elixir.bootlin.com/linux/v2.6.39.4/source/init/main.c#L456 //init_post
+https://elixir.bootlin.com/linux/v3.19.8/source/Documentation/initrd.txt
+https://elixir.bootlin.com/linux/2.0.40/source/Documentation/initrd.txt
+https://elixir.bootlin.com/linux/2.0.40/source/Documentation/nfsroot.txt
+https://elixir.bootlin.com/linux/v3.19.8/source/Documentation/early-userspace
+https://elixir.bootlin.com/linux/v5.6.19/source/Documentation/filesystems/ramfs-rootfs-initramfs.txt
+https://github.com/torvalds/linux/blob/master/Documentation/filesystems/ramfs-rootfs-initramfs.rst
+Initramfs 原理和实践 https://www.cnblogs.com/wipan/p/9269505.html
+关于initramfs https://blog.csdn.net/laohuang1122/article/details/8243271
+```
+
+
+## tools/markdown/asciidoc/graphviz/plantuml/planttext.com/svg
 方便好用的在线UML制作工具：PlantUML https://www.jianshu.com/p/c006dcb1493b  
 如何在线编辑显示markdown/plantuml/graphiz? https://segmentfault.com/q/1010000002802979  
 http://www.plantuml.com/plantuml/ , https://stackedit.io/ , https://github.com/mikitex70/plantuml-markdown  
 https://www.planttext.com/  
 https://plantuml.com/zh/  
+https://www.w3cschool.cn/ , https://www.w3school.com.cn/?  
+菜鸟 https://www.runoob.com/svg/svg-tutorial.html  
 uml par/UML序列图总结(Loop,Opt,Par和Alt) https://www.cnblogs.com/cy568searchx/p/6227238.html  
 eg:程序员绘图工具-Plantuml https://www.jianshu.com/p/30f6a9c06083  https://zhuanlan.zhihu.com/p/76948461  
 eg:plantuml使用教程 https://www.cnblogs.com/ningskyer/articles/5397750.html  http://archive.3zso.com/archives/plantuml-quickstart.html  
@@ -136,7 +193,7 @@ asciidoctor  AsciidocFX支持的元数据 https://blog.csdn.net/wiborgite/articl
 Asciidoc简介#  http://asciidoctor.org/docs/asciidoc-syntax-quick-reference/  
 
 ### tools/more1a
-在线工具 https://c.runoob.com/  http://tools.jb51.net/  
+在线工具 https://c.runoob.com/  http://tools.jb51.net/  www.iloveimg.com/zh-cn  
 在线工具 https://tool.lu/asciidoc/  https://tool.lu/markdown/  
 json在线 https://www.sojson.com/runjs.html  
 ietf-json https://tools.ietf.org/html/rfc7159.html  https://www.ietf.org/rfc/  
@@ -144,7 +201,12 @@ TIPC  https://blog.csdn.net/yunlong34574/article/details/42460803  http://blog.c
 bash-prompt-Linux命令行提示符修改【全攻略】 https://vimsky.com/article/4284.html  
 
 ### more1
+```
 https://asn1.io/asn1playground/  
+baidu:asn.1编码规则  ASN.1编码方式详解 https://www.cnblogs.com/NathanYang/p/9951282.html  
+ASN.1笔记——标准编码规则BER https://blog.csdn.net/sever2012/article/details/7698297/  
+ASN1编码规则详解.doc https://max.book118.com/html/2018/1030/6031242001001225.shtm  
+python第三方库asn1tools  https://github.com/eerimoq/asn1tools  
 CI/CD devops  git/gerrit/zuul/jenkins/  
 Gerrit 笔记 https://www.cnblogs.com/milton/p/12576792.html  
 proxy.pac https://wenku.baidu.com/view/1d29739ea2161479171128a6.html  
@@ -156,6 +218,7 @@ Docker安装和常用命令 https://www.cnblogs.com/milton/p/9866963.html
 迁移Git项目到Gitlab https://www.cnblogs.com/milton/p/11053007.html  OpenSSL的证书, 私钥和签名请求(CSRs)www.cnblogs.com/milton/p/11076925.html  
 github仓库迁移到gitlab以及gitlab仓库迁移到另一个gitlab服务器# https://www.cnblogs.com/saysmy/p/10942814.html  
 typeset; man bash |grep PROMPT_DIRTRIM=3  PS1==https://www.cnblogs.com/wi100sh/p/4814745.html  
+export PS1="\[\e[1m\]\w\[\e[0m\] [\u@\h \W]$ "  
 Bootloader之uBoot简介##https://www.cnblogs.com/wi100sh/p/4255081.html  
 endian如何判断CPU是大端还是小端模式 https://www.cnblogs.com/wi100sh/p/4899466.html  
 重载(overload)，覆盖(override),隐藏(hide)的区别 https://www.cnblogs.com/wi100sh/p/4325397.html https://www.cnblogs.com/wi100sh/p/4325336.html  
@@ -166,16 +229,21 @@ https://docs.gitlab.com/ee/api/markdown.html
 第三方登录原理及实现       https://blog.csdn.net/xihua1244914259/article/details/79000813  
 了解一下第三方登录         https://blog.csdn.net/y4x5m0nivsrjay3x92c/article/details/89369466  
 第三方账号登录功能接入全流程浅析  http://www.woshipm.com/pd/727011.html  
+```
 
 ### more2
+```
 在语雀绘制PlantUML图 https://www.yuque.com/barretlee/yuque/aabh67  
 糙读《如何高效记忆》后的读后感 https://www.yuque.com/sulirc/virtue/wrbp4i  
 gitbook https://www.jianshu.com/p/421cc442f06c  
+sudo, chroot, fakeroot
 Linux常用操作# https://blankj.com/gitbook/linux/ https://github.com/Blankj/AndroidOfferKiller  
 //curl 的用法指南 http://www.ruanyifeng.com/blog/2019/09/curl-reference.html  
 //JavaScript 有多灵活？ http://www.ruanyifeng.com/blog/2015/02/flexible-javascript.html  
 //《SSH 入门教程》发布了   http://www.ruanyifeng.com/blog/2020/12/ssh-tutorial.html  https://wangdoc.com/ssh/  
-//screen tmux           http://www.ruanyifeng.com/blog/2019/10/tmux.html  
+//man screen (-dr) (DEFAULT KEY BINDINGS): C-a C-a, C-a C-c,  C-a ", C-a a
+//screen tmux  byobu         http://www.ruanyifeng.com/blog/2019/10/tmux.html  
+https://stackoverflow.com/questions/41830936/mobaxterm-follow-terminal-folder-stfp-and-byobu  
 深入ProtoBuf-简介 https://www.jianshu.com/p/a24c88c0526a  
 google ProtoBuf开发者指南 https://linuxstyle.blog.csdn.net/article/details/6594036  
 深入理解 ProtoBuf 原理与工程实践（概述） https://mp.weixin.qq.com/s/fKzZ49YmKawsudGUlbOL3g  
@@ -183,15 +251,32 @@ Protobuf3语法详解 https://www.cnblogs.com/tohxyblog/p/8974763.html
 python c struct/python之struct详解  https://blog.csdn.net/qq_30638831/article/details/80421019  
 PYTHON C/C++结构体 ctypes.Structure https://www.cnblogs.com/yang220/p/12091863.html   https://www.programcreek.com/python/example/1122/ctypes.Structure  
 date +%FT%T.%Nz -u  
-VI模式中上下左右键和回退键出现字母 set nocompatible backspace=2 hlsearch https://www.cnblogs.com/wangshuyi/p/6078678.html  
-vim set nu=number hl=hlsearch ruler showmode :q noxx  
 ```
+
+### more3
+VI模式中上下左右键和回退键出现字母 set nocompatible backspace=2 hlsearch https://www.cnblogs.com/wangshuyi/p/6078678.html  
+vim set nu=number hl=hlsearch ic=ignorecase ai=autoindex ruler showmode  :q noxx  #export EXINIT='set nu'  
+```
+//Disable “A new version of Sublime Text is available, download now?” in Sublime 3 (stable channel)
+https://forum.sublimetext.com/t/disable-a-new-version-of-sublime-text-is-available-download-now-in-sublime-3-stable-channel/19961
+https://github.com/sublimehq/sublime_text/issues/1206  (merge 127.0.0.1/0.0.0.0 www.sublimetext.com into /etc/hosts)
 {//sublime3 settings
 	"font_size": 9,
+	//"trim_trailing_white_space_on_save": false, //Sublime自动去除代码行尾多余的空格-否
 	"ignored_packages": ["Vintage"]
 	///"highlight_line": true,
 	"update_check": false
 }
+sublime - sublimerge 文本比较插件  https://blog.csdn.net/qq250782929/article/details/78983119
+sublime--[ctrl]+[alt]+[d]                      - display Quick Panel with commands available for current view //or文件标签上右点击
+设置sublime自动换行的两种方法:
+1.   方法一，通过菜单栏的View----> Word Wrap进行勾选设置
+2.   方法二， Preferences--->Settings--->Preferences.sublime-settings-User，添加 "word_wrap":true
+Sublime Text 2 设置文件详解  https://blog.csdn.net/xlh1991/article/details/39099833
+//view->word_wrap
+sublime 快捷键设置 (word_wrap) https://www.jianshu.com/p/04ef6fe437b7
+https://sublime-text-unofficial-documentation.readthedocs.io/en/latest/reference/commands.html#cmd-list
+Sublime Text3—自带快捷键介绍  https://www.cnblogs.com/easy-blue/p/5809760.html
 ```
 
 ### python
@@ -213,7 +298,7 @@ Python的学习（三十二）---- ctypes库的使用整理 https://blog.csdn.ne
 调用c的so库https://blog.csdn.net/claroja/article/details/79237887  使用ctypes进行Python和C的混合编程#https://blog.csdn.net/weixin_30614109/article/details/98999904  
 Python ctypes介绍——非常详尽https://blog.csdn.net/Brouce__Lee/article/details/88869234  ctypes##http://blog.timd.cn/python-ctypes/  
  python和C语言互相调用的几种方式https://www.cnblogs.com/mq0036/p/8492621.html  
- python与C互相调用的方法详解http://www.cppcns.com/jiaoben/python/196662.html
+ python与C互相调用的方法详解http://www.cppcns.com/jiaoben/python/196662.html  
 Python调用windows下DLL详解 - ctypes库的使用##### https://www.cnblogs.com/timssd/p/9732380.html  
 python中hasattr()、getattr()、setattr()函数的使用 https://www.cnblogs.com/timssd/p/11168127.html  
 cpu个数、核数、线程数、Java多线程关系的理解 https://www.cnblogs.com/timssd/p/9507316.html  
@@ -253,6 +338,7 @@ Python thread local https://www.cnblogs.com/xybaby/p/6420873.html
 python 编程风格术语说明 EAFP: Easier to ask for forgiveness than permission. / LBYL: Look before you leap.  https://blog.csdn.net/zhouguoqionghai/article/details/57089859  
 猴子补丁(monkey patch) JSONEncoder https://www.jianshu.com/p/f1060b22aab8  
 Python MRO方法解析顺序详解 (c3算法) http://c.biancheng.net/view/5450.html  
+Python拼接字符串的7种方法总结 https://www.jb51.net/article/149991.htm  
 
 
 ### python-https
@@ -262,6 +348,10 @@ Python抓需要输入用户名密码的https网页 https://blog.csdn.net/liumeng
 Python实现网站自动登录---傻瓜教程chromedriver https://blog.csdn.net/qiudechao1/article/details/89234582  
 Python 爬虫的工具列表 附Github代码下载链接 https://www.cnblogs.com/arxive/p/6291709.html  
 python模拟自动登录网站（urllib2）https://blog.csdn.net/xgocn/article/details/85130734  https://www.cnblogs.com/dreamer-fish/p/5484767.html  
+pytest 
+python behave --BDD(Behavior Driven Development)[BDD in Python]使用behave框架在Python中实践行为驱动开发 https://cloud.tencent.com/developer/article/1157391 
+python behave学习笔记 https://danteyu.github.io/2016/10/13/behave-tutorial/ 
+
 
 ### gdb/gdb python脚本
 用 Python 拓展 GDB（一） https://blog.csdn.net/weixin_33947521/article/details/89377701  
@@ -303,11 +393,19 @@ Google开源C++单元测试框架Google Test-gtest https://www.cnblogs.com/kex1n
 Google C++单元测试 GTest https://www.cnblogs.com/kex1n/p/8981552.html  http://www.cnblogs.com/jycboy/p/6057677.html  
 开源-GIT常用命令 https://www.cnblogs.com/kex1n/p/6141166.html  
 Linux命令中：rsync和cp之间的区别 https://www.cnblogs.com/kex1n/p/7008178.html  
+python 有 rsync 库吗？ https://pypi.python.org/pypi/rsync.py  
+pyrsync https://pypi.org/project/pyrsync/0.1.0/  
+在python中寻找类似rsync的跨平台功能，例如rsync.py https://www.orcode.com/question/1048465_k67553.html  
+https://www.cnpython.com/pypi/rsync4python  
+在Windows中配置Rsync同步 https://www.cnblogs.com/janas/p/3321087.html  
+rsync windows/https://www.itefix.net/cwrsync  
+rsync putty/https://www.chiark.greenend.org.uk/~sgtatham/putty/latest.html  
 如何在socket编程的Tcp连接中实现心跳协议 https://www.cnblogs.com/kex1n/p/7448552.html  http://blog.csdn.net/nyist327/article/details/39586203  
 Python学习之Socket通信的实现  https://blog.csdn.net/m0_37717595/article/details/81101895  
 thread_name-pthread--linux编程 - 给线程起名字_落尘纷扰的专栏-CSDN博客(prctl()/pthread_setname_np()) https://blog.csdn.net/jasonchen_gbd/article/details/51308638  
 
 ### linux/c/lib.so ,//gcc+gdb
+```
 https://www.man7.org/linux/man-pages/man1/ldd.1.html  , ldconfig和ldd用法-https://www.cnblogs.com/foohack/p/4105847.html  
 https://www.man7.org/linux/man-pages/man8/ld.so.8.html  
 LIBRARY_PATH(静态链接库lib.a),  LD_LIBRARY_PATH,LD_PRELOAD  //dlopen  
@@ -328,7 +426,12 @@ gcc选项-g与-rdynamic的异同 ### https://www.cnblogs.com/LiuYanYGZ/p/5550544
 //linux syslog详解  https://www.cnblogs.com/LiuYanYGZ/p/12425234.html  摘自https://blog.csdn.net/know9163/article/details/81901207  
 关于weakref的用法  https://blog.csdn.net/wang1902568721/article/details/71159699  
 // https://gcc.gnu.org/onlinedocs/gcc/Common-Function-Attributes.html#Common-Function-Attributes  
+///weakref https://gcc.gnu.org/onlinedocs/gcc/Common-Function-Attributes.html#index-weak-function-attribute  
 __attribute__ 机制详解  https://www.cnblogs.com/tureno/articles/12236495.html  https://blog.csdn.net/weaiken/article/details/88085360  
+https://gcc.gnu.org/onlinedocs/gcc/Common-Function-Attributes.html#index-finstrument-functions-1
+///(__cyg_profile_func_enter) 调试技巧之 gcc/g++ -instrument-functions 参数 https://blog.csdn.net/tycoon1988/article/details/38924241
+```
+
 
 
 ### linux/syslog/syslogd
@@ -372,6 +475,9 @@ $ cat <<EOT|cut -c2-
 c++ 理解虚函数，多重继承，虚基类和RTTI所需的代价 https://www.cnblogs.com/xkfz007/archive/2012/08/19/2646356.html  
 c++ 虚继承与虚函数表 https://www.cnblogs.com/xkfz007/archive/2012/07/15/2592565.html  
 google关于ssh key的解释（转）转的google的wiki的 https://www.cnblogs.com/likui360/p/6012075.html  
+pidof, lsof, htop, strace/ltrace, chmod, lsattr -a/chattr  
+lsattr命令: 显示文件属性介绍 https://blog.csdn.net/weixin_34021089/article/details/92872999  
+hexdump, xxd  
 
 
 ### lang/script
@@ -392,6 +498,8 @@ Duktape：在C/C++项目中嵌入JavaScript  http://www.cppblog.com/tx7do/archiv
                                                 https://www.gnu.org/software/gawk/manual/gawkinet/gawkinet.html  
 
 
+## HarmonyOS
+https://gitee.com/openharmony/docs?hmsr=aladdin1e6  
 
 
 ## end00

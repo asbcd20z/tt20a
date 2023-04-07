@@ -1,0 +1,104 @@
+# This is Git's per-user configuration file.
+[user]
+# Please adapt and uncomment the following lines:
+#	name = 
+#	email = 
+#
+#
+	name=z
+	email=z
+[alias]
+	#@time20210816a
+	#git clean -x -f -d  # rm  untracked files
+	#git rm --cached aa.txt
+	#git add -u  # -A -f --dry-run
+	##git reset    <cid> <file> ---only update INDEX  ##opposite of git add. means to unstaged?
+	##git checkout <cid> <file> ---both update INDEX and workspace,or only update workspace from INDEX if without cid
+	#git br -vv
+	#git show-branch
+	#git show -name-only [cid] my-path   ## see changes log
+	#git log -S'' -i -L --grep=  # grep/search (-i:case insensitive),  -G --basic-regexp...
+	##git log --grep=logMessage -i  -S<string> -G<regex> -L<range>
+	#git-log中文  https://www.php.cn/manual/view/34971.html
+	#git blame -M -C my-rev~  myfile  -L99,+9  ## blame-history
+	tt3=log --oneline -3
+	configge=config --global -e
+	co = checkout
+	ci = commit
+	cia= commit --amend
+	df = diff --name-only
+	#git add -N aa.txt ; git rm --cached aa.txt ##new-file-for-diff, untracked--notStaged-staged4tobeCommit
+	#git add -A
+	br = branch
+	#br -r -a
+	puv= push origin HEAD:refs/for/master
+	#puv19a=push origin HEAD:refs/for/rel/5G19A
+	#
+	logfuller=log -1 --format=fuller
+	##
+	#show -q -s --name-only --name-status --source/default  [cid1 cid2...]  ##
+	#log     --name-only
+	#log --oneline --follow  # <afile> ,follow rename, -M/--find-renames/--diff-filter=R
+	logme=log --author='liwen.a'
+	log1p=log -1 -p #--name-only ##=show
+	log1f=log -1 --name-only
+	showf=show   --name-status   ##with cid-list
+	# show [sha1] -- [file]  ## or, diff sha1~ sha1  file
+	# show -U4 -W  ## diff -M -C  -U4 -W  --unified=4 --function-context
+	showvcat=show  ## git show next~10:Documentation/README  # cat version-file
+	#or, git blame 0.0.0-1615388870 x/y.cc # cat version-file to check
+	#or change a file, git co <sha1> -- file.tex ## zhihu.com/question/53061133
+	##
+	# git rebase -i HEAD~4  ## git rebase -i <after-this-commit> # merge HEAD~4..HEAD
+	# git cherry-pick ciid1 ciid2..
+	#https://git-scm.com/book/zh/v2/Git-分支-变基  //rebase
+	#-git rebase --onto master server client  ##then, git checkout master; git merge client
+	# gerrit,gitweb,Gitiles
+	# git instaweb --httpd=webrick  ## git-scm.com/book/zh/v2/服务器上的-Git-GitWeb
+	lol= log -9 --pretty='%h %cI%d %s  .%an'
+	loo= log -8 --pretty=oneline
+	lo = log -9 --oneline #--all --graph #--decorate
+	loag=lo --all --graph #--decorate
+	#lot=lo --pretty=format:"%h [%cI %cn] %s %d" -9
+	lot =lo --pretty=format:'%h %cI %d %s  .%an'  #--decorate
+	lotag=lot --all --graph #--decorate' 
+	##log bra1..bra2 == log ^br1 br2  #gitrevisions  # branch-base-point
+	##log --left-right --boundary --reverse bra1...bra2
+	#show
+	#reflog
+	st = status
+	hh = help
+	#git apply --check my.pat; git apply -3 my.pat; git apply --reject my.pat #patch
+	#git branch [--track | --no-track] [-f] <branchname> [<start-point>]
+	#git branch (--set-upstream-to=<upstream> | -u <upstream>) [<branchname>]
+	# eg: git branch --set-upstream-to=origin/main main
+	# or, git branch -u origin/main main
+	# or, git push -u orign/main main
+	# git push -n  -v ##--dry-run  ##--all --tags  ##-f -d
+	#git push origin master
+	#git push origin :
+	#git push --all; git push --tags; git push --mirror  ## push-all-branches/-or-tags/-or-alls-in-refs
+	#git push origin mybr1  ## update mybr1, or create mybr1 if not exist remotely. and -n to try
+	#git branch -d mybr1; git push origin :mybr1; or,git push origin  --delete mybr1  ## same. delete branch remotely
+	#git tag -d tag-name; git push origin :refs/tags/tag-name; or,git push origin --delete tag-name  ## delete tag local/remotely
+	##
+	#git config --local user.name mxasbcd20z; git config --local user.email mxasbcd20z@q.com
+	#git config -l; git var -l
+	#Git Submodule使用完整教程 https://www.cnblogs.com/lsgxeva/p/8540758.html
+	#git中submodule子模块的添加、使用和删除 https://blog.csdn.net/guotianqing/article/details/82391665
+
+
+[xcolor]
+	status=auto
+[xhttp]
+	#http_proxy=http://10.158.100.8:8080 #//sct
+#        proxy = 135.245.48.34:8000
+#	proxy = 135.251.33.16:8080 #15
+#       proxy = 10.167.32.133:8080
+#       proxy = 127.0.0.1:1087
+#       sslVerify=false
+##alias pgit='https_proxy=135.251.33.16:8080 git'  ##pgit push  [my-origin] [my-branch] [-u]
+[xuser]
+        name=jqasbcd20z
+        email=jqasbcd20z@q.com
+

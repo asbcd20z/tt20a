@@ -3,12 +3,20 @@
 
 # tt20a
 tt20a-test20200511-first
+
+https://git-scm.com/book/zh/v2/Git-基础-查看提交历史 https://php.cn/manual/view/34971.html
 ## //started
 https://github.com/join/get-started  
 https://github.com/new  
 https://github.com/organizations/plan  
 https://lab.github.com/  
 actions  
+https://github.com/asbcd20z  
+https://github.com/asbcd20z?tab=repositories  
+https://github.com/features/codespaces  
+https://github.com/asbcd20z?tab=projects  
+https://github.com/asbcd20z?tab=stars  
+https://gist.github.com/mine  
 https://help.github.com/en/packages/publishing-and-managing-packages/about-github-packages#supported-clients-and-formats  
 https://help.github.com/en/github/collaborating-with-issues-and-pull-requests/about-pull-requests  
 https://gitlab.com/help/topics/autodevops/index.md  
@@ -60,4 +68,7 @@ https://www.gnu.org/software/gdb/documentation/
 --
 Linux C/C++编程手册查阅方法  https://www.cnblogs.com/findumars/p/6653704.html
 The Linux man-pages project https://www.kernel.org/doc/man-pages/  https://man7.org/linux/man-pages/
+https://man7.org/linux/man-pages/man1/bash.1.html#EXPANSION
+https://man7.org/linux/man-pages/man1/bash.1.html#REDIRECTION
+lexical/syntax/semantically
 ```
