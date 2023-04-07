@@ -5,6 +5,7 @@ git push origin --tags
 git push origin master
 git push -u origin master
 git remote add bklab https://gitlab.com/asbcd20z/tt20a
+git branch -vv
 ===
 https://help.github.com/en/github/collaborating-with-issues-and-pull-requests/creating-and-deleting-branches-within-your-repository
 https://help.github.com/en/github/authenticating-to-github
