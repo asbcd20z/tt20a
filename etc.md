@@ -47,7 +47,10 @@ C语言字节对齐详解##https://blog.csdn.net/cclethe/article/details/7965959
 在64位系统以及64位编译器下字节对齐----阿里巴巴2015实习生笔试题 https://blog.csdn.net/chengonghao/article/details/51861493  
 32位和64位系统区别及字节对齐 https://blog.csdn.net/lz20120808/article/details/49910659  
 man gcc: -gstabs+编译.  i386 and x86-64 Options  -malign-double //On x86-64, -malign-double is enabled by default.  
-
+c++filter , http://demangler.com/
+/
+compiler/interpreter/transpiler, lint, tidy, cpd, gcov/coverage, valgrind, sanitizer
+/
 C/C++打印文件名/行号/函数名的方法https://www.cnblogs.com/shirishiqi/p/5431627.html  
 C语言宏高级用法https://www.cnblogs.com/shirishiqi/p/6033364.html  
 gcc动态链接库so的制作和使用# https://www.cnblogs.com/oxspirt/p/7344371.html  
@@ -106,6 +109,7 @@ Sublime Text,View->Line Endings，选Unix，保存;
 //git remote add origin https://github.com/liyifeng1994/study-xxx.git; git push -u origin master;  
 https://gitee.com/help/articles/4284  https://blog.gitee.com/2018/06/05/github_to_gitee/  
 //git remote add gitee https://xxx;...   git pull origin master;  git push gitee master;  
+baidu--git rebase --skip
 ...
 github.com gitlab.com gitee.com oschina.net  
 使用GitHub.io当作自己的博客网站 https://blog.csdn.net/tyyytcj/article/details/80880018  
@@ -118,6 +122,23 @@ Git常用命令速查 https://www.jianshu.com/p/38832b41143d
 rebase,merge,cherry-pick的区别详解—面试常问 https://www.cnblogs.com/NaughtyCat/p/differ-with-rebase-merge-cherry-pick.html  https://git-scm.com/book/zh/v2  
 Git知识总览(五)Git中的merge、rebase、cherry-pick以及交互式rebase https://www.cnblogs.com/ludashi/p/8213550.html  
 简单对比git pull和git pull --rebase的使用 https://blog.csdn.net/dake_160413/article/details/78676163  https://www.cnblogs.com/kevingrace/p/5896706.html  
+==
+github 'force push'
+github git push -f 慎用  http://www.kuazhi.com/post/320409.html
+/
+git clean -n  #-n -x -X -f -d
+git st -uno   #-u -unormal -uall, --untracked-files=no,normal,all
+git st --ignored  #--renames
+/
+git help hooks  #githooks  https://www.jianshu.com/p/f3f83872a801
+==
+多个git账户和项目切换#  blog.csdn.net/HeatDeath/article/details/79181025 , https://blog.csdn.net/jdk137/article/details/17579837
+Selenium自动化测试#  https://blog.csdn.net/HeatDeath/category_6898402.html
+/
+```
+
+## //git.submodue
+```
 git submodule 完整用法整理 https://blog.csdn.net/wkyseo/article/details/81589477  
 git init --bare project.git; repack,fsck,gc  
 git push -vv -f  origin master  #--force ///careful!!!, to restore,but better to revert commitId  
@@ -128,6 +149,7 @@ git remote show; git remote -vv; git ls-remote
 git branch --unset-upstream  
 git show-branch; lo = log -9 --oneline #--all --graph #--decorate; loag=lo --all --graph #--decorate;  ##log --left-right --boundary --reverse bra1...bra2  
 git branch -vv  
+git br ## -D -d -f -m -c  
 git revert/ reset++push -f [Git恢复之前版本的两种方法reset、revert] https://blog.csdn.net/yxlshk/article/details/79944535  
 git apply --check my.pat; git apply -3 my.pat;  git apply --reject my.pat  
 开源-GIT常用命令 https://www.cnblogs.com/kex1n/p/6141166.html  
@@ -211,7 +233,23 @@ Git 设置不同的 fetch 和 push 地址  https://www.awaimai.com/2971.html
 	origin git@github.com:yeszao/dnmp.git (fetch)
 	git push origin master
 	git pull origin master
+==
+git fetch, pull, push --prune --mirror --all --dry-run  --porcelain  --delete -f -u
+/
+>git pull -r
+error: some local refs could not be updated: try running
+ 'git remote prune origin' to remove any old, conflicting branches
+/
+git remote prune -n origin  #--dry-run
+git remote prune origin    #https://blog.csdn.net/BryantLmm/article/details/85130091
+git remote show origin
+/
+git remote prune origin删除本地分支存但是远程分支已经不存在的分支（必须之前存在追踪关系）
+https://mingyang.blog.csdn.net/article/details/80927979
+git br -D br1; git push origin :br1; git remote prune origin
+/
 ```
+
 
 ## //gitlab/github--2git-acc/gitee
 https://blog.csdn.net/px_dn/article/details/89455457 
@@ -224,6 +262,11 @@ Repository mirroring        https://docs.gitlab.com/ee/user/project/repository/m
 -Bidirectional mirroring    https://docs.gitlab.com/ee/user/project/repository/mirror/bidirectional.html  
 GitLab仓库重命名以及GitHub仓库的删除https://www.jianshu.com/p/d6f7da6bd275  (new-setting\project-name,Advanced\Change-path)  
 ```
+baidu-github 'force push'
+#git push origin features/my_branch -f //push -f --force  //master分支上github默认允许force, gitlab默认不允许, gitee收费设置?
+github->Setting->Branches->...  //github git push -f 慎用 (请指定分支，默认对所有分支)  http://www.kuazhi.com/post/320409.html
+gitlab->Setting->Repository->Protected branches->...(master..Unpretect)
+---
 remote: Support for password authentication was removed on August 13, 2021. Please use a personal access token instead.
 remote: Please see https://github.blog/2020-12-15-token-authentication-requirements-for-git-operations/ for more information.
 Push上传出错：Support for password authentication was removed on August 13, 2021.git did not exit cleanly
@@ -473,8 +516,8 @@ Linux常用操作# https://blankj.com/gitbook/linux/ https://github.com/Blankj/A
 //curl 的用法指南 http://www.ruanyifeng.com/blog/2019/09/curl-reference.html  
 //JavaScript 有多灵活？ http://www.ruanyifeng.com/blog/2015/02/flexible-javascript.html  
 //《SSH 入门教程》发布了   http://www.ruanyifeng.com/blog/2020/12/ssh-tutorial.html  https://wangdoc.com/ssh/  
-//man screen (-dr) (DEFAULT KEY BINDINGS): C-a C-a, C-a C-c,  C-a ", C-a a, //-dr -ls -wipe
-//screen tmux  byobu         http://www.ruanyifeng.com/blog/2019/10/tmux.html  
+//man screen (-dr) (DEFAULT KEY BINDINGS): C-a C-a, C-a C-c,  C-a ", C-a C-d,  C-a a, //-dr -ls -wipe //$DISPLAY无法继承
+//nohup screen tmux  byobu         http://www.ruanyifeng.com/blog/2019/10/tmux.html  
 https://stackoverflow.com/questions/41830936/mobaxterm-follow-terminal-folder-stfp-and-byobu  
 深入ProtoBuf-简介 https://www.jianshu.com/p/a24c88c0526a  
 google ProtoBuf开发者指南 https://linuxstyle.blog.csdn.net/article/details/6594036  
@@ -482,26 +525,23 @@ google ProtoBuf开发者指南 https://linuxstyle.blog.csdn.net/article/details/
 Protobuf3语法详解 https://www.cnblogs.com/tohxyblog/p/8974763.html  
 python c struct/python之struct详解  https://blog.csdn.net/qq_30638831/article/details/80421019  
 PYTHON C/C++结构体 ctypes.Structure https://www.cnblogs.com/yang220/p/12091863.html   https://www.programcreek.com/python/example/1122/ctypes.Structure  
-date +%FT%T.%Nz -u  
-c++filter , http://demangler.com/
 ```
 
-### more3
+### more3a.sublime-text
 ```
-Linux、Windows、Mac换行符相互转换方法  https://blog.csdn.net/Hehuyi_In/article/details/89735510  
-批量换行符mac转unix  sed -bi 's:\r:\n:g' files*   ///sed 's,a/b/i'  ///tr "\r" "\n" <macfile >unixfile
--echo -e 'ab\rc\n' |hexdump -C
-VI模式中上下左右键和回退键出现字母 set nocompatible backspace=2 hlsearch https://www.cnblogs.com/wangshuyi/p/6078678.html  
-vim set nu=number hl=hlsearch ic=ignorecase ai=autoindex ruler showmode  :q noxx  #export EXINIT='set nu'  
 sublime3-text:
+#strings sublime_text.exe| grep www.sublimetext.co|grep https://www.sublimetext.coo/upgrade
+#grep www.sublimetext.com sublime_text.exe -a;  sed -bi 's/www.sublimetext.com/www.sublimetext.coo/g' sublime_text.exe
 //Disable “A new version of Sublime Text is available, download now?” in Sublime 3 (stable channel)
 https://forum.sublimetext.com/t/disable-a-new-version-of-sublime-text-is-available-download-now-in-sublime-3-stable-channel/19961
 https://github.com/sublimehq/sublime_text/issues/1206  (merge 127.0.0.1/0.0.0.0 www.sublimetext.com into /etc/hosts)
 {//sublime3 settings
 	"font_size": 9,
+	"highlight_line": true,
 	//"trim_trailing_white_space_on_save": false, //Sublime自动去除代码行尾多余的空格-否
-	"ignored_packages": ["Vintage"]
+	"ignored_packages": ["Sublimerge Pro","Vintage"]
 	///"highlight_line": true,
+	"word_wrap": false,
 	"update_check": false
 }
 sublime - sublimerge 文本比较插件  https://blog.csdn.net/qq250782929/article/details/78983119
@@ -516,12 +556,81 @@ https://sublime-text-unofficial-documentation.readthedocs.io/en/latest/reference
 Sublime Text3—自带快捷键介绍  https://www.cnblogs.com/easy-blue/p/5809760.html
 Sublime 注册, https://www.cnblogs.com/lingzhii/p/10543437.html, https://www.jianshu.com/p/1dc6ca5b9175
 sublime text--你所不知道的12个秘密  https://blog.csdn.net/weixin_42108494/article/details/80312343
+/
+sublime-shortcut-key:
+goto>Jump-Back(alt+-)
+goto>Switch-File>Next-File-in-Stack(ctr+tab)
+/
 ```
 
+### more3b.sublime-text/vscode
+```
+//http://www.sublimetext.com/docs/ , http://www.sublimetext.com/docs/3/projects.html, https://packagecontrol.io/
+//
+vscode-workspace: xx/.vscode/launch.json, or ~/workspace/myxxDirs.code-workspace //delete:file>new-Window>Recent>More>x
+sublimetext: xx.sublime-project(++xx.sublime-workspace), app\\Data\Local\Session.sublime_session??--"recent_workspaces"
+/in ggg.sublime-workspace{"project": "ggg.sublime-project","folders":} / ggg.sublime-project{"folders":[...]}
+/in ggg3.sublime-workspace{"project": "","folders":[...]}
+/
+sublime Text中的workspace和project什么关系?  https://www.zhihu.com/question/22681628  //Ctrl+Shift+N
+Sublime text开发工具快捷键整理？##  https://www.zhihu.com/question/37342465
+/
+//sublime, python-cmd
+dir();dir(window); dir(); window.is_minimap_visible();window.set_minimap_visible(True); window.folders()
+import os; os.system("/ephereral/workplace/lzhao019/nr8")
+/
+#sublimetext #plugin: https://packagecontrol.io/
+#plugin: recent, File History, Blame Explorer, Git blame, Diffy,Modific(change-line),FileDiffsgoto, View-Bookmarks
+#plugin: FoldFunctions, HyperClick, Class-Navigator, 
+#plugin: MarkdownPreview,sublimerge,CompareSbS,BracketHighlighter,TrailingSpacer,SideBarEnhancements,SyncedSideBar
+#Sublime 快速插入当前日期时间plugin/  https://www.jianshu.com/p/b592853177b1
+#grep www.sublimetext.com sublime_text.exe -a;  sed -bi 's/www.sublimetext.com/www.sublimetext.coo/g' sublime_text.exe
+#/c/Windows/System32/drivers/etc/hosts  #45.55.41.223 www.sublimetext.com
+Sublime Text 摘要  https://www.w3cschool.cn/sublimetext/vgj4cozt.html
+sublimetext register issue, to modify dns ip for hostname in local 'hosts' file
+MINGW64 /c/xd/ (master)$ cat /c/Windows/System32/drivers/etc/hosts
+# Copyright (c) 1993-2009 Microsoft Corp.
+#
+# This is a sample HOSTS file used by Microsoft TCP/IP for Windows.
+#
+# This file contains the mappings of IP addresses to host names. Each
+# entry should be kept on an individual line. The IP address should
+# be placed in the first column followed by the corresponding host name.
+# The IP address and the host name should be separated by at least one
+# space.
+#
+# Additionally, comments (such as these) may be inserted on individual
+# lines or following the machine name denoted by a '#' symbol.
+#
+# For example:
+#
+#      102.54.94.97     rhino.acme.com          # source server
+#       38.25.63.10     x.acme.com              # x client host
+
+# localhost name resolution is handled within DNS itself.
+#       127.0.0.1       localhost
+#       ::1             localhost
+#
+#sublimetext
+#/c/Windows/System32/drivers/etc/hosts  #45.55.41.223 www.sublimetext.com
+#45.55.41.223 forum.sublimetext.com
+#45.55.41.223 www.sublimetext.com
+127.0.0.1 www.sublimetext.com
+127.0.0.1 sublimetext.com
+127.0.0.1 sublimehq.com
+127.0.0.1 telemetry.sublimehq.com
+127.0.0.1 license.sublimehq.com
+127.0.0.1 45.55.255.55
+127.0.0.1 45.55.41.223
+#
+```
+
+
 ### python
+```
 help(),x.__class__==type,id,dir/locals/vars,super(),getattr(),Xattr(..)  //py核心编程v2-13.11  
 python collections.namedtuple dataclasses.@dataclass __slots__  
-#x=eval('1+2'); exec('y=1+2')  # eval('expression'); exec('statement')  
+x=eval('1+2'); exec('y=1+2')  # eval('expression'); exec('statement')  
 python c struct/python之struct详解https://blog.csdn.net/qq_30638831/article/details/80421019  
 PYTHON C/C++结构体 ctypes.Structure https://www.cnblogs.com/yang220/p/12091863.html  
 Python ctypes.Structure() Examples  https://www.programcreek.com/python/example/1122/ctypes.Structure  
@@ -581,6 +690,8 @@ python 编程风格术语说明 EAFP: Easier to ask for forgiveness than permiss
 Python MRO方法解析顺序详解 (c3算法) http://c.biancheng.net/view/5450.html  
 Python拼接字符串的7种方法总结 https://www.jb51.net/article/149991.htm  
 //python3 -m json.tool  
+bytes.hex(), bytearray.hex(), binascii.hexlify(data) 
+```
 
 
 ### python-https
@@ -596,6 +707,7 @@ python behave学习笔记 https://danteyu.github.io/2016/10/13/behave-tutorial/
 
 
 ### gdb/gdb python脚本
+```
 用 Python 拓展 GDB（一） https://blog.csdn.net/weixin_33947521/article/details/89377701  
 用 Python 拓展 GDB（一） https://segmentfault.com/a/1190000005718889  GDB 自动化操作的技术 https://segmentfault.com/a/1190000005367875  
 用 Python 拓展 GDB（二） https://blog.csdn.net/weixin_33819479/article/details/89369809  
@@ -610,7 +722,20 @@ GDBserver远程调试(汇总)                       https://blog.csdn.net/water_
 GDB基本命令(整合) https://blog.csdn.net/wangwenwen/article/details/9259687  
 //100个gdb小技巧（v1.0）.pdf  https://www.cnblogs.com/LiuYanYGZ/p/14247052.html  摘自https://github.com/hellogcc/100-gdb-tips  
 gdb: https://sourceware.org/bugzilla/  
+gdb> apropos tbreak
+```
 
+
+## makefile/cmake
+```
+Makefile常用模板  https://blog.csdn.net/barry1020441722/article/details/107642024
+-Makefile常用模板  https://blog.csdn.net/shaosunrise/article/details/79968921
+//
+cmakefile target_link_libraries   add_library add_subdirectory
+#Cmake#__target_link_libraries函数的使用说明 https://blog.csdn.net/sinat_37231928/article/details/121684722
+target_link_libraries 和link_libraries区别  https://blog.csdn.net/u012483097/article/details/109066405
+
+```
 
 
 ## //GNU/linux/c
@@ -627,6 +752,15 @@ The Linux man-pages project https://www.kernel.org/doc/man-pages/  https://man7.
 ```
 
 ### linux/c
+```
+Linux、Windows、Mac换行符相互转换方法  https://blog.csdn.net/Hehuyi_In/article/details/89735510  
+批量换行符mac转unix  sed -bi 's:\r:\n:g' files*   ///sed 's,a/b/i'  ///tr "\r" "\n" <macfile >unixfile
+-echo -e 'ab\rc\n' |hexdump -C
+VI模式中上下左右键和回退键出现字母 set nocompatible backspace=2 hlsearch https://www.cnblogs.com/wangshuyi/p/6078678.html  
+vim set nu=number hl=hlsearch ic=ignorecase ai=autoindex ruler showmode  :q noxx  #export EXINIT='set nu' 
+date +%FT%T.%Nz -u
+/
+__PRETTY_FUNCTION__，__FUNCTION__，__func__之间有什么区别？  https://m.656463.com/wenda/__PRETTY_FUNCTION____FUNCTION____173
 常见 core dump 原因分析signal 11 - SIGSEGV (signal 6-SIGABRT释放多次/11-SIGSEGV空指针) https://www.cnblogs.com/kex1n/p/6972046.html  
 Linux信号列表详解 (kill -l, gdb/i signal,i handle) https://blog.csdn.net/liushuimpc/article/details/51611354  
 应用 Valgrind 发现 Linux 程序的内存问题 https://www.cnblogs.com/kex1n/p/11573606.html  https://www.cnblogs.com/kex1n/p/11573526.html  
@@ -645,6 +779,7 @@ rsync putty/https://www.chiark.greenend.org.uk/~sgtatham/putty/latest.html
 如何在socket编程的Tcp连接中实现心跳协议 https://www.cnblogs.com/kex1n/p/7448552.html  http://blog.csdn.net/nyist327/article/details/39586203  
 Python学习之Socket通信的实现  https://blog.csdn.net/m0_37717595/article/details/81101895  
 thread_name-pthread--linux编程 - 给线程起名字_落尘纷扰的专栏-CSDN博客(prctl()/pthread_setname_np()) https://blog.csdn.net/jasonchen_gbd/article/details/51308638  
+```
 
 ### linux/c/lib.so ,//gcc+gdb ,//llvm,icecc
 ```
@@ -653,6 +788,12 @@ https://directory.fsf.org/ , https://www.gnu.org/software/libc/ , https://www.gn
 https://www.kernel.org/doc/man-pages/
 https://www.man7.org/linux/man-pages/man1/ldd.1.html  , ldconfig和ldd用法-https://www.cnblogs.com/foohack/p/4105847.html  
 https://www.man7.org/linux/man-pages/man8/ld.so.8.html  
+gdb调试解决找不到源代码的问题###   https://blog.csdn.net/albertsh/article/details/107437084
+GDB调试指北-启动GDB并查看说明信息  https://blog.csdn.net/albertsh/article/details/107873029
+GDB调试指北大全                   https://blog.csdn.net/albertsh/article/details/107587859
+推荐一个C++枚举转字符串的开源项目magic_enum  https://blog.csdn.net/albertsh/article/details/125955230
+-https://en.cppreference.com/w/cpp/types/underlying_type , https://en.cppreference.com/w/cpp/language/enum
+通过vscode进行嵌入式linux arm开发板gdb调试  https://blog.csdn.net/weixin_43398250/article/details/127088065
 LIBRARY_PATH(静态链接库lib.a),  LD_LIBRARY_PATH,LD_PRELOAD  //dlopen  
 Linux环境变量设置方法总结PATH,LD_LIBRARY_PATH  (LD_LIBRARY_PATH, ld.so.conf+ldconfig)  https://blog.csdn.net/qq_19004627/article/details/79090052  
 Linux C/C++调试之一：利用LD_PRELOAD机制监控程序IO操作 (readp=dlsym(RTLD_NEXT, "read"))  https://blog.csdn.net/imred/article/details/81106792  
@@ -731,6 +872,7 @@ google关于ssh key的解释（转）转的google的wiki的 https://www.cnblogs.
 pidof, lsof -i:80, htop, strace/ltrace, chmod, lsattr -a/chattr  
 lsattr命令: 显示文件属性介绍 https://blog.csdn.net/weixin_34021089/article/details/92872999  
 hexdump, xxd  
+//dirname,basename
 -
 json.tool.py
 mkdir -p
@@ -745,6 +887,7 @@ echo aa |& tee afile  #https://www.runoob.com/linux/linux-comm-tee.html  www.cnb
 ps -aux -ef, pgrep, pidof, killall,pkill
 ifconfig, ip, ping6, traceroute,route,arp -a, dhcpconfig, netstat,ss, netsh-w
 https://deepinout.com/linux-cmd/linux-terminal-related-cmd/linux-cmd-reset.html
+ssh -T git@github.com
 -
 for i in *.c ;do echo $i ==; done
 for ((i=0; i<10; i++)); do touch t$i.txt; done
@@ -767,6 +910,27 @@ ip+ifconfig+busybox //Linux下IP命令使用详解  https://www.cnblogs.com/liun
 linux命令总结之ip命令 (ip addr)  https://www.cnblogs.com/ginvip/p/6367803.html
 配置IP别名 https://blog.51cto.com/dianel/1921129 https://blog.51cto.com/sharan/726600
 Linux系统使用ss命令查看端口状态  https://my.oschina.net/u/4413564/blog/3550024
+/
+baidu-linux上发邮件
+linux中使用mail命令发送邮件详解##  https://blog.csdn.net/m0_49562857/article/details/128518590
+--echo test|mail -s test 12121@qq.com;  mail -s test 1212@qq.com </etc/hosts
+linux发送邮件mail详解             https://blog.csdn.net/whandgdh/article/details/127425496
+linux mail命令用法浅析 https://www.cnblogs.com/wordless/p/16208865.html http://www.jb51.net/LINUXjishu/183047.html
+baidu-Python mail()
+https://www.sendcloud.net/doc/email_v2/  ??
+Python之Mail编程（电子邮件编程） https://blog.csdn.net/ydw_ydw/article/details/81914326
+/
+bash--SHELL BUILTIN COMMANDS, REDIRECTION
+grep默认显示color--grep配置颜色显示  export GREP_OPTIONS='--color=auto'; GREP_COLOR='4;41'  https://www.bbsmax.com/A/1O5Ev693d7/
+/
+在linux中的sort命令,技术|Linux 的 ‘sort’命令的14个有用的范例  https://blog.csdn.net/weixin_35648264/article/details/116575875
+Linux Bash之正则表达式  https://www.cnblogs.com/phillee/p/10949796.html
+bash 自带正则匹配功能 - BASH_REMATCH 介绍  =~ http://bbs.chinaunix.net/thread-4125147-1-1.html
+awk and sed 饭醉团伙 高清版 修订第三版  http://bbs.chinaunix.net/thread-1743038-1-1.html
+https://man.linuxde.net/docs/shell_regex.html
+/
+vim-vi上下左右键异常(set nocompatible,backspace=2) https://wenku.baidu.com/view/5971023668d97f192279168884868762caaebbf7.html
+
 ```
 
 ### lang/script
@@ -784,11 +948,12 @@ Rust 专注于安全，尤其是并发安全  https://www.runoob.com/rust
 
 
 ### gawk/gawkinet
+```
 使用一下gawk的socket功能 http://blog.chinaunix.net/uid-22270773-id-1778335.html  
   http://www.gnu.org/software/gawk/manual/html_node/TCP_002fIP-Networking.html  
   Gawkinet: TCP/IP Internetworking with Gawk ## https://www.gnu.org/software/gawk/manual/gawkinet/  
                                                 https://www.gnu.org/software/gawk/manual/gawkinet/gawkinet.html  
-
+```
 
 ## HarmonyOS
 https://gitee.com/openharmony/docs?hmsr=aladdin1e6  
@@ -806,12 +971,54 @@ tinycore?
 ```
 
 
+## bat
+```
+bat批处理, https://baike.baidu.com/item/批处理/1448600
+//
+regedit添加文件或文件夹右键菜单项  https://blog.csdn.net/qq_44705203/article/details/119966938
+[HKEY_CLASSES_ROOT\Directory\shell\cmd\command]
+@="cmd.exe /s /k pushd \"%V\""
+--
+[HKEY_CLASSES_ROOT\Directory\shell\git_shell\command]
+@="\"C:\\appc\\Git\\git-bash.exe\" \"--cd=%1\""
+--
+[HKEY_CLASSES_ROOT\Directory\shell\Powershell\command]
+@="powershell.exe -noexit -command Set-Location -literalPath '%V'"
+--
+[HKEY_CLASSES_ROOT\Directory\shell\zz\command]
+@="cmd.exe"
+//
+```
+
+
 ## etc
 ```
 github/gitlab-web-acc-nopw-authentication win10\控制面板\用户帐户\凭据管理器(管理Windows凭据)
 https://shjg.nongtianlang.com/  https://gitee.com/yinshuwei
 日历精灵 http://www.5adanci.com/excel/2022.html
+//
+https://m.pp.cn/home.html
+http://www.timebie.com/cn/timezonesearch.php
+https://www.kylc.com/stats/global/yearly_overview/g_gdp.html
+//
+MSC-Generator 的语法  https://blog.csdn.net/weixin_40643581/article/details/78242664
+脚本绘图工具总结       https://blog.csdn.net/dfe30001/article/details/102154644
+//
+网盘 https://ufile.io/
+//
+年终工作总结/技术工作年度总结/软件工程师年度总结
+投资回报率/溢价
+baidu-厨房防油贴纸怎么去除
+爱立敷粘性敷料  https://www.jianshu.com/p/0bf2204e57a1
+tiny-teeny
+异星歧途（1985）——八十亿疯狗出笼  https://www.bilibili.com/read/cv5876825
+//
+freemind-vscode
+hysteresis
+//
+http://www.zaixian-fanyi.com/, http://win.mail.ru(asbcd17x/m6x17a..d), https://mail.yandex.com/lite(20z)
 ```
+
 
 
 ## end00

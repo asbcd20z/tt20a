@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html>
+<head> 
+<meta charset="utf-8"> 
+<title>菜鸟教程(runoob.com)</title> 
+	
+</head>
+<body>
+<script>
+function myFunction()
+{    alert("Hello World!");
+	//document.getElementById('demo').innerHTML=Date();
+}
+function foo(){
+    //alert("Hello World!");
+	document.getElementById('demo').innerHTML=Date();
+	var texta=document.getElementById('input1').value;
+	window.alert(texta+ texta.length);
+	document.getElementById('demo').innerHTML += texta;
+	var texta2=texta.trim().replaceAll("\n",",").replaceAll('"',"")
+	document.getElementById('demo').innerHTML += ("//"+texta2);
+	console.log(texta);
+}
+</script>
+<textarea rows="10" cols="30" id="input1">
+"aa
+bb
+cc"
+</textarea> <br/>
+<button onclick="getElementById('demo').innerHTML=Date()">现在的时间是?</button>
+<button onclick="myFunction()">点我</button>
+<button type="button" onclick="foo()">点我!2</button>
+<p id="demo1" stytle="background-color:rgba(85 0 0 /46%);">xx</p>
+<div id="demo" style="background-color:rgba(85 0 0 /46%); xopacity:0.9; background：linear-gradient（to right yellow,green); ">
+hhh</div>
+<br/>
+https://www.runoob.com/w3cnote/javascript-copy-clipboard.html
+</body>
+</html>

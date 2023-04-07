@@ -26,6 +26,7 @@ Boost type_index库使用介绍 https://blog.csdn.net/ffx54611/article/details/4
 ```
 
 ### c++/type_traits/MPL/boost/fusion
+```
 //
 https://en.cppreference.com/w/cpp/utility
 https://en.cppreference.com/w/cpp/utility/forward
@@ -90,6 +91,72 @@ eg: //StructWriter.hpp, boost::fusion::extension::struct_member_name<T, Index::v
 
 
 # boost.2
-`
+```
 boost::mpl::for_each  http://www.cppblog.com/jack-wang/archive/2010/10/04/128589.html
-`
+```
+
+
+## template/ostream<<
+```
+template<typename ty>
+std::ostream& operator<<(std::ostream& os, const std::vector<ty>& v)
+{
+    //for (int n : v) std::cout << n << ", ";
+    for (const auto& n : v) os << n << ", ";  os<<"0vend..\n";
+    return os;
+    //std::cout <<std::vector<int>({1,2,3}) <<"\n";
+    //std::cout <<std::vector<std::string>{"aa","bb"} <<"\n";
+}
+template<> std::ostream& operator<<(std::ostream& os, const std::vector<std::string>& v){return os<<"overriden==\n";}
+template<typename ty>
+std::ostream& operator<<(std::ostream& os, const std::list<ty>& v)
+{for (const auto& n : v) os << n << ", "; return os<<"0lend..\n";}
+
+//
+template <typename Index, typename Container, typename Key>
+auto findT(const Container& c, Key&& key)
+{
+    auto indexIt = c.template get<Index>().find(std::forward<Key>(key));
+    return c.template project<0>(indexIt);
+}
+//
+```
+
+
+## gtest/gmock, googletest
+```
+//cc,gcc, google mock,gtest
+gcc, icecc, distcc
+distcc  https://wiki.archlinux.org/title/Distcc_(简体中文)
+Ccache — a fast C/C++ compiler cache   https://ccache.dev/
+gtest/gmock###  https://github.com/google/googletest
+GoogleMock初探(0)   http://t.zoukankan.com/duan-shui-liu-p-10740642.html
+单元测试其二：gmock  https://zhuanlan.zhihu.com/p/536004224 , https://blog.csdn.net/weixin_43966547/article/details/126784391
+gmock  EXPECT_CALL(mock_object, method(matchers)).Times(cardinality).WillOnce(action).WillRepeatedly(action);
+gmock  EXPECT_CALL(*ueContextScopeMock, getNrDrb(Matcher<types::QCI>(_), _)).WillRepeatedly(Return(nrDrb));//
+gmock  ON_CALL(ueContextMock, isSa()).WillByDefault(Return(false));
+gmock  StrictMock,NiceMock, MATCHER_P2
+EXPECT_CALL(firstCellConfigUpdateTaskMockRef, process_event(A<const common::StartTask&>()))
+    .WillOnce(Invoke([&firstTaskId](const auto& startTask) { firstTaskId = startTask.taskId; }));
+EXPECT_CALL(asymmChBwFilter.getRef(), filter(_)).WillOnce(Invoke([](auto& list) { list = {nrcgi3}; }));
+EXPECT_CALL(nrAccessMock, getNrRels(_)).WillRepeatedly(Invoke(expectNrRelsGettingByCellId));
+google mock 语法基础篇 （三）  https://blog.csdn.net/nowETforever/article/details/116142073
+/到目前为止一直很好...... 现在我读到除非你需要，否则不要使用EXPECT_CALL。 
+/然而，一个简单的EXPECT_CALL到ON_CALL替换将不起作用（??），因为带有WillByDefault的ON_CALL只计算一次返回类型（??）
+https://stackoverflow.com/questions/13933475/gmock-setting-default-actions-on-call-vs-expect-call
+Google C++单元测试框架GoogleTest---Google Mock简介--概念及基础语法#  https://www.cnblogs.com/jycboy/p/gmock_summary.html
+Google C++单元测试框架GoogleTest---GMock的CheatSheet文档##          https://www.cnblogs.com/jycboy/p/gmock_cheatsheet.html
+--https://github.com/google/googletest/blob/main/docs/gmock_cheat_sheet.md
+TEST 和 TEST_F 区别  https://blog.csdn.net/wowolook/article/details/53241747
+--
+gmock: //TEST, TEST_F(+fixture.SetUp/TearDown), TEST_P(+ArgSet)
+class XSuiteFixture: public ::testing::Test{... public: NiceMock<NiddConfigMock> niddConfigMock{};}
+class XSuite:public ::testing::Test{...}; TEST_F(XSuite, aCase){...}; //TEST_P/INSTANTIATE_TEST_SUITE_P
+struct ArgSet{}, const std::vector<ArgSet> argSetList; class Xtest:public ::testing::Test,public WithParamInterface<ArgSet>, 
+TEST_P(Xtest,aCase){...},  INSTANTIATE_TEST_SUITE_P(grp,Xtest,::testing::ValuesIn(argSetList))), ===>grp/Xtest.aCase/0
+namespace mytest{using namespace ::testing;}
+/
+std::reference_wrapper  https://zh.cppreference.com/w/cpp/utility/functional/reference_wrapper
+C++引用  https://blog.csdn.net/qq_41412237/article/details/125174203
+```
+

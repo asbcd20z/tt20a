@@ -1,18 +1,76 @@
 t2
 网速测试 https://www.speedtest.cn/  360测速-https://wangsuceshi.bmcx.com/
-json.tool.py
+python -m json.tool
+ulimit -a
 mkdir -p
 which, whereis, whatis
 mount -o remount r,w /
 console-tset-reset, dirname, basename
 mobadifffiles v0route.txt vpnroute.txt
-grep -s --exclude-dir=tests/ --include=GLOB
+MobaXterm personal edition v21.4//mobadifffiles  //MobaXterm PersonalEdition v21.4 Build 4786 --2021.8?
+#strings sublime_text.exe| grep www.sublimetext.co|grep https://www.sublimetext.coo/upgrade
+#grep www.sublimetext.com sublime_text.exe -a;  sed -bi 's/www.sublimetext.com/www.sublimetext.coo/g' sublime_text.exe
+#echo "C:\xd\tmpd\tgit\a1\tt20a\tx19\cpp\zz.git2push" |sed 's,^C:,/cygdrive//c,;s,\\,/,g'  #dos-unix-cygwin-path
+#echo -e 'aa\nbbb\nc'| for i in `cat -` ; do echo -n "$i, "; done  #join to a line ##req-id merge
+cat - |xargs echo $1|sed 's/ /, /g'  #join to a line ##req-id merge
+cat .git/HEAD |cut -d/ -f3-  ##this.branch
+#PS1="\[\e[1m\]\w\[\e[0m\] $PS1"
+#export https_proxy="http://10.158.100.1:8080/",${https_proxy}
+#export no_proxy=".int.nokia-sbell.com",${no_proxy}
+#export PATH="bin:${PATH}"
+#使用FUNCNAME 和BASH_LINENO实现shell脚本中定位函数错误在代码中的位置  https://www.cnblogs.com/mxp-neu/articles/11097042.html
+#echo ===0-`id`--${BASH_ENV[@]}:${BASH_LINENO[@]},${LINENO}@${FUNCNAME[@]}--${BASH_SOURCE[@]}--//$0:"$*"
+#if [[ "$0" == "${BASH_SOURCE[*]}" ]]; then true; fi  #source-or-not
+#function tgrep(){ local t=$1;shift;echo $t-$1-$*; echo =grep "$*" $t; sh -xc "grep $*  $t";}  ##grep with dir ahead
+tgrep(){ local t=$1;shift; sh -xc "grep -n $*  $t";}  ##grep with dir ahead
+grep -s --exclude-dir=tests/ --include=GLOB  ##--exclude-dir=DIR  -f -o -s -a/I
+typeset -f; env, printenv, xdpyinfo
+EXINIT=set nu
+sudo, /etc/sudoers
+find . -iname xX  ##like -name,but case insensitive
 find . -type l  ##symbolic link
 find . -type d  #dir
+echo {0..9}
 echo aa |& tee afile  #https://www.runoob.com/linux/linux-comm-tee.html  www.cnblogs.com/nanruosen/p/16317025.html
-ps -aux -ef, pgrep, pidof, killall,pkill
-ifconfig, ip, ping6, traceroute,route,arp -a, dhcpconfig, netstat,ss, netsh-w
+openssl asn1parse, 
+ldconfig, ldd
+hexdump -ve; sed -bi; xxd -rp   //sed 可以修改二进制文件? https://www.zhihu.com/question/19703679
+ps aux -elf -alf,pstree -aup-Aah,pgrep, pidof, kill,killall,pkill, mount,df,du
+ifconfig, ip addr, ping6, traceroute,route,arp -a, dhcpconfig, netstat,ss, netsh-w, systemctl,service --status-all
+//
+htail(){ head -3 $*; echo ...; tail --line=3 $*;}
+#xztail(){ xzcat $1 |htail;}
+a xztail='xzcat|cat -n|grep Cprt|htail'
+a bsed="sed 's/\W\+/-/g'"
+a sort.k77='sort -k7,7'  ##for syslog,better for cu
+a lsed="sed -bi 's:\r:\n:g'"  #files*
+/
+为wget命令设置代理(export http_proxy=http://127.0.0.1:8087)  https://www.cnblogs.com/frankyou/p/6693256.html
+命令行Web浏览器 lync,w3m, wget,curl
 https://deepinout.com/linux-cmd/linux-terminal-related-cmd/linux-cmd-reset.html
+x11/xwindow eg:(screen -r) [env] bash> DISPLAY=:12.0 sublime_text
+x11/xwindow(DISPLAY=本地机器IP地址:0, export DISPLAY=localhost:11.0, env)  https://linux.13pc.com/linux/linux4406.htm
+x11/xwindow--通过SSH -q -X来远程打开连接显示图形界面  https://blog.csdn.net/xxradon/article/details/86636340
+x11/xwindow--X的DISPLAY=:0.0  https://blog.csdn.net/sonach/article/details/7168451
+远程访问Linux下的Xwindows  https://linux.13pc.com/linux/linux4406.htm
+x11/ssh, man  -x Disables X11 forwarding
+/
+//x11/xwindow, $DISPLAY
+ssh开启图形界面_xwindow——远程启动linux的图形界面  https://blog.csdn.net/weixin_31487533/article/details/113543320
+SSH高阶玩法实现神奇的魔法效果（网络攻防必备技能）  https://blog.csdn.net/u014374009/article/details/128085386
+ssh本地端口转发，远程端口转发，隧道（这个解释不饶）https://mohen.blog.csdn.net/article/details/124297097
+SSH 连接慢的解决方案详解(GSSAPIAuthentication=no)  https://www.runoob.com/w3cnote/ssh-slow.html
+/
+javascript:void($={});
+Xmanager用法（export DISPLAY=客户端IP:0.0）#  https://recomm.cnblogs.com/blogpost/2302994?page=1
+Xmanager用法（export DISPLAY=客户端IP:0.0）   https://www.cnblogs.com/diyunpeng/archive/2011/12/27/2302994.html
+X的DISPLAY=:0.0 (如果Host为空, 运行于本机)     https://www.cnblogs.com/sonach/archive/2011/12/31/2363760.html
+/
+linux cooked capture  //tcpdump -i any
+tcpdump使用详解  https://blog.csdn.net/LS_ss123/article/details/127240008
+运算符优先级  https://baike.baidu.com/item/运算符优先级/4752611
+
+
 //
 greenshot, Snipaste.exe  https://github.com/Snipaste https://www.snipaste.com/download.html
 json格式化工具有哪些 https://www.bejson.com/
@@ -28,8 +86,6 @@ https://www.boost.org/doc/libs/1_45_0/libs/statechart/doc/tutorial.html
 https://www.boost.org/doc/libs/1_78_0/libs/msm/doc/HTML/index.html
 https://www.boost.org/doc/libs/1_78_0/libs/msm/doc/HTML/ch03s02.html#d0e344
 C++元编程和Boost编程库  https://blog.csdn.net/hityct1/article/details/4191030
-为wget命令设置代理  https://www.cnblogs.com/frankyou/p/6693256.html
-MobaXterm personal edition v21.4//mobadifffiles
 boost::msm   Boost.Msm 介绍  https://www.jianshu.com/p/6748aa7c117b  
  https://www.cnblogs.com/chendeqiang/p/12885243.html
 https://en.cppreference.com/w/cpp/utility/tuple
@@ -45,34 +101,17 @@ https://en.cppreference.com/w/cpp/utility/apply
 如何优雅的使用 std::variant 与 std::optional  https://zhuanlan.zhihu.com/p/366537214
 boost::static_visitor， boost::apply_visitor
 boost::variant and boost::apply_visitor  https://blog.csdn.net/janeqi1987/article/details/78425454
+/
+//
+wasp
 https://search.bilibili.com/all?keyword=外国评论翻译&from_source=webtop_search&spm_id_from=333.788&order=pubdate&tids_1=0&page=2&o=36
 https://player.bilibili.com/player.html?aid=423982749&bvid=BV1c341177vp&cid=506423299&page=1
 https://player.bilibili.com/player.html?bvid=BV1c341177vp
 https://www.bilibili.com/video/BV1ES4y1C7y5
-//
-wasp
 baidu:网页禁止右键代码 //body oncontextmenu="return false"
 //body oncontextmenu="return false" onselectstart="return false" 
 ondragstart="return false" onbeforecopy="return false" oncopy=document.selection.empty() onselect=document.selection.empty()
-//
-//5G-NR CSI-RS, LTE
-LTE两种帧结构  https://www.icode9.com/content-4-770461.html
-//
-https://www.3gpp.org/specification-numbering
-https://www.3gpp.org/DynaReport/38-series.htm
-https://blog.csdn.net/lilliana/article/details/109402345#  /5G/NR帧格式概要#
-http://www.sharetechnote.com/
-https://blog.csdn.net/m0_38099948/article/details/108561696  /5G NR 无线帧结构###
-https://blog.csdn.net/qq_39074243/article/details/119886180
-https://blog.csdn.net/qq_39074243/article/details/119926972
-https://blog.csdn.net/qq_39074243/article/details/120901507
-http://www.sharetechnote.com/
-https://blog.csdn.net/Graduate2015/article/details/118547062  /【5G NR】帧结构
-https://blog.csdn.net/Graduate2015/article/details/119295224  /【5G NR】UE上报CSI的过程—CSI框架
-https://blog.csdn.net/graduate2015/category_11192048.html
-https://blog.csdn.net/Graduate2015/article/details/111874148  /LTE空口资源
-https://blog.csdn.net/m_052148/article/details/51305338  /LTE物理传输资源（1）-帧结构和OFDM符号
-https://zhuanlan.zhihu.com/p/365758206  /5G-NR-3GPP协议学习（零）：CSI简介
+
 /
 https://blog.csdn.net/weixin_41008284/article/details/108896591  /MIMO基础总结##
 https://blog.csdn.net/jyqxerxes/article/details/78994699
@@ -80,7 +119,6 @@ https://blog.csdn.net/jyqxerxes/article/details/78994699
 https://www.bilibili.com/video/BV1Pf4y1j7hA?spm_id_from=333.999.0.0
 https://www.bilibili.com/video/BV1jT4y1d7Dr/?spm_id_from=333.788.recommend_more_video.0
 https://www.bilibili.com/video/BV1fk4y1d7qn/?spm_id_from=333.788.recommend_more_video.1
-bat批处理, https://baike.baidu.com/item/批处理/1448600
 https://www.ddnx.com/shenghuo/592339.html 花洒切换水的按钮坏了怎么修
 //
 https://www.kylc.com/stats/global/yearly_overview/g_gdp.html
@@ -94,14 +132,9 @@ https://www.bilibili.com/video/BV1Tg411P7EB?spm_id_from=333.337.search-card.all.
 https://k8s.easydoc.net/docs/dRiQjyTY/28366845/6GiNOzyZ/9EX8Cp45
 https://docker.easydoc.net/
 docker, https://www.runoob.com/docker/docker-compose.html
-年35-华为云11.11主会场_实惠更实用，“1 1”都如愿_云服务器限时购_领万元大礼包-华为云
+年35-华为云11.11主会场_实惠更实用，“1 1”都如愿_云服务器限时购_领万元大礼包-华为云 //2023.3=99/年
 //
-QoS-3gpp TS23.501 section5.7 5G QoS model, defined 5QI values etc.
-MobaXterm PersonalEdition v21.4 Build 4786 --2021.8?
-//
-cmakefile target_link_libraries   add_library add_subdirectory
-#Cmake#__target_link_libraries函数的使用说明 https://blog.csdn.net/sinat_37231928/article/details/121684722
-target_link_libraries 和link_libraries区别  https://blog.csdn.net/u012483097/article/details/109066405
+
 //
 https://www.w3cschool.cn/tutorial
 https://www.w3cschool.cn/doc_git/git-git-log.html?lang=en
@@ -110,60 +143,22 @@ https://blog.csdn.net/qq310563349/article/details/107044199
 git diff的最全最详细的4大主流用法/log https://lijunde.blog.csdn.net/article/details/88798254
 Git 命令小记  https://zhuanlan.zhihu.com/p/20938735
 git的冲突解决--git rebase之abort、continue、skip  https://blog.csdn.net/qq_37708668/article/details/88813266
+git的冲突解决--git rebase之abort、continue、skip  https://blog.csdn.net/JSN___/article/details/110929101
+baidu--git rebase --skip
 //
-MSC-Generator 的语法  https://blog.csdn.net/weixin_40643581/article/details/78242664
-脚本绘图工具总结       https://blog.csdn.net/dfe30001/article/details/102154644
-//
-在linux中的sort命令,技术|Linux 的 ‘sort’命令的14个有用的范例  https://blog.csdn.net/weixin_35648264/article/details/116575875
-Linux Bash之正则表达式  https://www.cnblogs.com/phillee/p/10949796.html
-bash 自带正则匹配功能 - BASH_REMATCH 介绍  =~ http://bbs.chinaunix.net/thread-4125147-1-1.html
-awk and sed 饭醉团伙 高清版 修订第三版  http://bbs.chinaunix.net/thread-1743038-1-1.html
-https://man.linuxde.net/docs/shell_regex.html
-//
-http://www.timebie.com/cn/timezonesearch.php
-https://m.pp.cn/home.html
-//
-https://www.kylc.com/stats/global/yearly_overview/g_gdp.html
-//
-//AI/ML-python
-jupyter notebook
-jupyter notebook 可以做哪些事情？ https://zhuanlan.zhihu.com/p/33105153
-https://blog.csdn.net/Bocker_Will/article/details/122828050 , try.jupyter.org , https://jupyter.org/try
--https://jupyter.org/try-jupyter/lab/ , from matplotlib import pyplot as plt; import numpy as np
+
+
 //
 pip3 代理 https://www.csdn.net/tags/MtTakg5sMjE1NjctYmxvZwO0O0OO0O0O.html
 https://www.runoob.com/w3cnote/python-pip-install-usage.html
 pip和pip3（安装与使用）详细讲解 https://blog.csdn.net/hgdl_sanren/article/details/82858896 , https://pypi.org/project/pip/#downloads
 Python--详细讲解反射has|get|set|delattr  https://blog.csdn.net/hgdl_sanren/article/details/81368628
 //
-网盘 https://ufile.io/
+
 //
 FlatBuffers, protobuf,ProtoBuffers
 深入浅出FlatBuffers原理 https://baijiahao.baidu.com/s?id=1705686535856873496&wfr=spider&for=pc
 深入浅出FlatBuffers原理 https://blog.csdn.net/yunqiinsight/article/details/118928676
-//cc,gcc, google mock,gtest
-icecc
-distcc  https://wiki.archlinux.org/title/Distcc_(简体中文)
-Ccache — a fast C/C++ compiler cache   https://ccache.dev/
-GoogleMock初探(0)   http://t.zoukankan.com/duan-shui-liu-p-10740642.html
-单元测试其二：gmock  https://zhuanlan.zhihu.com/p/536004224 , https://blog.csdn.net/weixin_43966547/article/details/126784391
-gmock  EXPECT_CALL(mock_object, method(matchers)).Times(cardinality).WillOnce(action).WillRepeatedly(action);
-gmock  EXPECT_CALL(*ueContextScopeMock, getNrDrb(Matcher<types::QCI>(_), _)).WillRepeatedly(Return(nrDrb));//
-gmock  ON_CALL(ueContextMock, isSa()).WillByDefault(Return(false));
-gmock  StrictMock,NiceMock, MATCHER_P2
-.WillOnce(Invoke([&firstTaskId](const auto& startTask) { firstTaskId = startTask.taskId; }));
-google mock 语法基础篇 （三）  https://blog.csdn.net/nowETforever/article/details/116142073
-/到目前为止一直很好...... 现在我读到除非你需要，否则不要使用EXPECT_CALL。 
-/然而，一个简单的EXPECT_CALL到ON_CALL替换将不起作用（??），因为带有WillByDefault的ON_CALL只计算一次返回类型（??）
-https://stackoverflow.com/questions/13933475/gmock-setting-default-actions-on-call-vs-expect-call
---
-class XSuite:public ::testing::Test{...}; TEST_F(XSuite, aCase){...}
-struct ArgSet{}, const std::vector<ArgSet> argSetList; class Xtest:public ::testing::Test,public WithParamInterface<ArgSet>, 
-TEST_P(Xtest,aCase){...},  INSTANTIATE_TEST_SUITE_P(grp,Xtest,::testing::ValuesIn(argSetList))), ===>grp/Xtest.aCase/0
-namespace mytest{using namespace ::testing;}
-/
-std::reference_wrapper  https://zh.cppreference.com/w/cpp/utility/functional/reference_wrapper
-C++引用  https://blog.csdn.net/qq_41412237/article/details/125174203
 --
 --
 baidu小米路由器桥接模式怎么设置
@@ -172,7 +167,8 @@ baidu小米路由器桥接模式怎么设置
 路由器 AP、路由、中继、桥接模式的区别  https://blog.csdn.net/ahelloyou/article/details/113781634
 WIFI无线路由器的五种工作模式  http://www.360doc.com/content/12/0814/08/10560798_230064460.shtml
 路由器WDS（无线桥接，无线中继）设置，网上的坑货教程只教了一半(Wireless Distribution System)  https://zhuanlan.zhihu.com/p/103715511
-/
+
+//
 excel vba //vb模拟键盘输入,vbs模拟鼠标键盘
 https://learn.microsoft.com/en-us/office/vba/language/reference/user-interface-help/visual-basic-user-interface-help
 https://learn.microsoft.com/en-us/office/vba/language/reference/user-interface-help/visual-basic-user-interface-help
@@ -193,7 +189,10 @@ vbs模拟键盘和鼠标输入  https://blog.csdn.net/qq_42662283/article/detail
 vbs创建快捷方式, 使用VBS创建快捷方式的代码  https://www.jb51.net/article/224580.htm
 -批处理BAT创建快捷方式 https://www.jb51.net/article/54832.htm
 windows杀死进程命令 ntsd -c q -p PID, tasklist|findstr, taskkill /f /t /im wscript.exe
-/
+C:\appc\cygwin\bin\mintty.exe
+
+
+//
 javascript, 油猴chrome Tampermonkey
 htmldiff(python3,from lxml.html.diff import htmldiff)
 resetAPI, GraphQL
@@ -205,20 +204,16 @@ iframe跨域嵌套问题  https://zhuanlan.zhihu.com/p/335140487
 -https://blog.csdn.net/qq_41422946/article/details/108270534
 https://www.iloveimg.com/zh-cn , https://www.yasuotu.com/gif
 /
-regedit添加文件或文件夹右键菜单项  https://blog.csdn.net/qq_44705203/article/details/119966938
-[HKEY_CLASSES_ROOT\Directory\shell\git_shell\command]
-@="\"C:\\appc\\Git\\git-bash.exe\" \"--cd=%1\""
-[HKEY_CLASSES_ROOT\Directory\shell\zz\command]
-@="cmd.exe"
-/
-vi上下左右键异常(set nocompatible,set backspace=2) https://wenku.baidu.com/view/5971023668d97f192279168884868762caaebbf7.html
-年终工作总结/技术工作年度总结/软件工程师年度总结
-/
+
+
 //
 std::optional<int> x{8},y{9};
 std::cout<<std::boolalpha<<std::oct<<int((std::int8_t)65)<<(x==y) <<x.value()<<y.value()<<std::endl;
 //
 Docker 创建镜像、修改、上传镜像  https://www.cnblogs.com/lsgxeva/p/8746644.html
+baidu--docker register
+Docker镜像仓库Register的搭建  https://blog.csdn.net/b_______/article/details/123081349
+-##docker-镜像加速器配置, 阿里云注册账号即可使用该服务 /etc/docker/daemon.json  {"registry-mirrors":}
 Git Submodule使用完整教程      https://www.cnblogs.com/lsgxeva/p/8540758.html
 ELF反调试初探     https://www.cnblogs.com/lsgxeva/p/8781533.html
 IPV6地址格式分析  https://www.cnblogs.com/lsgxeva/p/9209266.html
@@ -228,7 +223,173 @@ git-submodule
 .gitmodules/[submodule]
 .git/config/[submodule]
 .git/modules/repository-for-submodule
-git submodule ststus,init,update,
+git submodule add, //ststus, init & update, //git clone --recursive, foreach,  //sync, //deinit
+
+//
+//
+github.com
+https://docs.github.com/en/codespaces/overview
+https://docs.github.com/en/codespaces/developing-in-codespaces/creating-a-codespace-for-a-repository
+https://docs.github.com/en/codespaces/setting-up-your-project-for-codespaces/adding-a-dev-container-configuration/introduction-to-dev-containers
+https://github.com/codespaces (home->Codespace->new,topright+->new,or button-code->codespace->create in a project)
+https://github.com/marketplace/circleci
+baidu-codespaces怎么用  https://blog.csdn.net/sD7O95O/article/details/121133513
+https://asbcd20z-symmetrical-funicular-46j4j9rw4742q55v.github.dev/
+https://busybox.net/
+//
+gitlab.com
+https://gitlab.com/gitlab-org/gitlab-foss/tree/master/lib/gitlab/ci/templates
+https://gitlab.com/gitlab-org/gitlab/-/blob/master/lib/gitlab/ci/templates/Bash.gitlab-ci.yml
+https://gitlab.com/gitlab-org/gitlab-foss/-/blob/master/lib/gitlab/ci/templates/C++.gitlab-ci.yml
+https://docs.gitlab.com/ee/install/docker.html
+https://docs.gitlab.com/ee/topics/build_your_application.html
+https://docs.gitlab.com/ee/ci/pipelines/
+https://docs.gitlab.com/ee/ci/yaml/index.html
+https://docs.gitlab.com/ee/ci/pipelines/pipeline_artifacts.html#pipeline-artifacts
+https://docs.gitlab.com/ee/ci/pipelines/job_artifacts.html ##
+https://docs.gitlab.com/ee/ci/docker/using_docker_build.html
+https://docs.gitlab.com/ee/user/packages/container_registry/build_and_push_images.html#use-gitlab-cicd
+Gitlab CI yaml官方配置文件翻译  https://blog.csdn.net/weixin_34414650/article/details/89009275
+baidu-gitlab artifacts 上传api
+-gitlab-ci配置详解(二)  https://blog.csdn.net/sinat_17775997/article/details/116068193
+-gitlab创建分支上传文件_gitlab自带持续集成工具介绍  https://blog.csdn.net/weixin_31869917/article/details/112380489
+-持续集成指南：GitLab 的 CI/CD 工具配置与使用      https://blog.csdn.net/sD7O95O/article/details/127158126
+-Gitlab简单使用CI/CD   /etc/docker/daemon.json   https://blog.csdn.net/sD7O95O/article/details/128156531
+-GitLab-CI中的artifacts和cache 的区别             https://blog.csdn.net/pxiongw/article/details/123308800
+-GitLab CI入门及实践操作  https://zhuanlan.zhihu.com/p/509293226
+gitlab使用教程  https://zongxp.blog.csdn.net/article/details/87699989
+gitlab--add-permission-members: sidebar->project-information->members
+https://blog.csdn.net/qq_42750240/article/details/120917259  //fatal error: bits/libc-header-start.h
+https://www.runoob.com/docker/docker-compose.html
+https://www.runoob.com/docker/docker-resources.html
+https://docs.docker.com/
+https://docs.docker.com/compose/
+https://docs.docker.com/compose/compose-file/
+/
+docker search busybox
+docker search buildroot  #tinycore,nginx
+https://hub.docker.com/search?q=
+https://hub.docker.com/r/bensuperpc/tinycore  #tinyLinux?
+https://hub.docker.com/r/bensuperpc/tinycore/tags
+Docker image 存储路径 解析  https://blog.csdn.net/raindaywhu/article/details/52946740
+cat /var/lib/docker/repositories-aufs | python -m json.tool
+深入理解Docker ulimit - DockOne.io  https://dockone.io/article/522 , https://www.cnblogs.com/dirgo/p/16769440.html
+在 Docker 中指定用户和组  https://devpress.csdn.net/linux/62eedaf57e66823466182d2d.html
+docker-compose 配置  https://blog.51cto.com/u_4483409/6103505
+//
+
+
+
+//
+baidu--vscode创建workspace,  //baidu--vs code gdb 远程调试 /vscode
+一文掌握vscode远程gdb调试###       https://zongxp.blog.csdn.net/article/details/124338072
+一文掌握vscode远程gdb调试          https://blog.csdn.net/zong596568821xp/article/details/124338072 
+一文掌握vscode远程调试python代码   https://blog.csdn.net/zong596568821xp/article/details/124344569
+C/C++之makefile写法               https://blog.csdn.net/zong596568821xp/article/details/81134406
+CMakeLists.txt 语法介绍与实例演练  https://zongxp.blog.csdn.net/article/details/114581446
+Linux之python发送邮件             https://zongxp.blog.csdn.net/article/details/122926015
+Windows安装jupyter教程 交互式笔记本https://zongxp.blog.csdn.net/article/details/81939639
+gitlab使用教程                    https://zongxp.blog.csdn.net/article/details/87699989
+VsCode + gdb + gdbserver远程调试C++程序  https://blog.csdn.net/u014552102/article/details/122793256
+利用VScode连接远程服务器进行代码调试及可视化界面  https://yaoyz.blog.csdn.net/article/details/121672295
+VSCode连接远程的docker容器进行代码调试    https://blog.csdn.net/TracelessLe?type=blog
+VSCode连接远程的docker容器进行代码调试    https://blog.csdn.net/TracelessLe/article/details/119060513
+VSCode远程连接Docker https://blog.csdn.net/weixin_33947521/article/details/94005596 ,www.cnblogs.com/adawoo/p/11056658.html
+jenkins+docker+docker-compose持续集成  https://www.cnblogs.com/adawoo/p/11683748.html
+vscode之神级插件整理（持续更新）   https://zongxp.blog.csdn.net/article/details/124043053
+Python调用C++程序的几种方法       https://zongxp.blog.csdn.net/article/details/81133511
+python调用c++函数    https://blog.csdn.net/weixin_35752122/article/details/128874037
+python中调用C++函数  https://blog.csdn.net/qq_25105061/article/details/112173430
+vscode插件开发  https://blog.csdn.net/weixin_40200876/article/details/125941307
+VS Code的的使用之如何设置以及什么是workspace  https://blog.csdn.net/qq_15601471/article/details/120739777
+vscode--VS Code中的“工作区”是什么？  https://www.codenong.com/44629890/ , https://www.thinbug.com/q/44629890
+/
+screen, tmux, sublime-txt3, vscode
+vscode+remote-ssh+remote-explorer+remote-development+gitlens+docker+bookmarks+line-highlight-bookmark
+vscode-- help-keyboard  https://code.visualstudio.com/shortcuts/keyboard-shortcuts-windows.pdf
+/
+svg 文件钓鱼原理     https://www.cnblogs.com/lovebing/p/16377956.html
+2022电脑装机软件推荐  https://www.cnblogs.com/lovebing/p/15864371.html
+Docker学习知识图     https://www.cnblogs.com/lovebing/p/11214156.html
+AWK 思维导图         https://www.cnblogs.com/lovebing/p/7772989.html
+Nginx之负载均衡服务器揭秘  https://www.cnblogs.com/lovebing/p/6075782.html
+typegoose,Mongoose-models(MongoDB?), TypeScript/javascript,npm,Node.js,node-—server-side-JavaScript-runtime
+Typegoose简易使用  https://blog.csdn.net/weixin_43554584/article/details/121270443
+nodejs或者mongoose查询读取MongoDB已存在的集合  https://blog.csdn.net/LJX888666/article/details/116525720
+-MongoDB详解，用心看这篇就够了【重点】  https://blog.csdn.net/weixin_42039228/article/details/123657641
+Node.js安装教程（Windows） https://blog.csdn.net/weixin_43553153/article/details/113933268 ,https://nodejs.org/en/download/
+https://nodejs.org/en/docs/ , https://nodejs.org/zh-cn/docs/
+https://www.runoob.com/typescript/ts-tutorial.html
+https://www.runoob.com/nodejs/nodejs-tutorial.html
+在线JS代码格式化、JS代码美化工具  https://www.qianbo.com.cn/Tool/Beautify/Js-Formatter.html
+js压缩/格式化工具  https://www.wenyiso.com/tool/jscompress/
+OPENSSL 常用命令详解  http://www.nndssk.com/rjwt/182778urVHAq.html , https://www.bkqs.com.cn/content/zn2jjze3y.html
+详解SSH原理  http://www.360doc.com/content/20/0129/23/18005502_888576341.shtml
+//
+//
+
+//
+MINGW64 /c/xd/tmpd/tgit/b1/c_timer-t1s (master)$ git push origin vv/b1:vv/b1
+MINGW64 /c/xd/tmpd/tgit/b1/c_timer-t1s (master)$ git push origin vv/b1:vv/b1
+fatal: unable to access 'https://github.com/asbcd20z/c_timer-t1s/': OpenSSL SSL_read: SSL_ERROR_SYSCALL, errno 10054
+MINGW64 /c/xd/tmpd/tgit/b1/c_timer-t1s (master)$ git push origin vv/b1:vv/b1
+fatal: unable to access 'https://github.com/asbcd20z/c_timer-t1s/': Failed to connect to github.com port 443: Timed out
+MINGW64 /c/xd/tmpd/tgit/b1/c_timer-t1s (master)$ git push origin vv/b1:vv/b1
+Total 0 (delta 0), reused 0 (delta 0)
+remote:
+remote: Create a pull request for 'vv/b1' on GitHub by visiting:
+remote:      https://github.com/asbcd20z/c_timer-t1s/pull/new/vv/b1
+remote:
+To https://github.com/asbcd20z/c_timer-t1s
+ * [new branch]      vv/b1 -> vv/b1
+MINGW64 /c/xd/tmpd/tgit/b1/c_timer-t1s (master)$
+MINGW64 /c/xd/tmpd/tgit/b1/c_timer-t1s (master)$
+
+
+
+//==AI
+//AI/ML-python
+jupyter notebook
+Jupyter Notebook介绍、安装及使用教程  https://zhuanlan.zhihu.com/p/33105153
+jupyter notebook 可以做哪些事情？    https://zhuanlan.zhihu.com/p/33105153
+https://blog.csdn.net/Bocker_Will/article/details/122828050 , try.jupyter.org , https://jupyter.org/try
+-https://jupyter.org/try-jupyter/lab/ , from matplotlib import pyplot as plt; import numpy as np
+/
+AI/ChatGPT,openAI.com,bing.com
+AI, chatGPT/GPT-4/openAI.com, copilot, chatGPL, www.bing.com,poe.com, Midjourney/Stable Diffusion/NovelAI/SkyPaint,
+https://openai.com/blog/chatgpt/
+https://chat.openai.com/, HayoAI
+GPT-4 发布，ChatGPT 大升级  https://www.ithome.com/0/679/741.htm
+文心一言 vs GPT-4 实测，百度背水一战交卷  https://www.ithome.com/0/680/154.htm
+AI大模型  http://app.myzaker.com/news/article.php?pk=641d22d28e9f094c0109679c
+B 站的一位 UP 主，注册了 " 跟着李沐学 AI" 
+ChatGPT全宇宙大爆炸！开启联网解除封印 无敌插件彻底颠覆体验  https://tech.ifeng.com/c/8OPaLmUppLz
+/
+
+
+
+
+## 5G-NR
+//
+//5G-NR CSI-RS, LTE
+LTE两种帧结构  https://www.icode9.com/content-4-770461.html
+QoS-3gpp TS23.501 section5.7 5G QoS model, defined 5QI values etc.
+/
+https://www.3gpp.org/specification-numbering
+https://www.3gpp.org/DynaReport/38-series.htm
+https://blog.csdn.net/lilliana/article/details/109402345#  /5G/NR帧格式概要#
+http://www.sharetechnote.com/
+https://blog.csdn.net/m0_38099948/article/details/108561696  /5G NR 无线帧结构###
+https://blog.csdn.net/qq_39074243/article/details/119886180
+https://blog.csdn.net/qq_39074243/article/details/119926972
+https://blog.csdn.net/qq_39074243/article/details/120901507
+http://www.sharetechnote.com/
+https://blog.csdn.net/Graduate2015/article/details/118547062  /【5G NR】帧结构
+https://blog.csdn.net/Graduate2015/article/details/119295224  /【5G NR】UE上报CSI的过程—CSI框架
+https://blog.csdn.net/graduate2015/category_11192048.html
+https://blog.csdn.net/Graduate2015/article/details/111874148  /LTE空口资源
+https://blog.csdn.net/m_052148/article/details/51305338  /LTE物理传输资源（1）-帧结构和OFDM符号
+https://zhuanlan.zhihu.com/p/365758206  /5G-NR-3GPP协议学习（零）：CSI简介
 //
 4g5g  http://www.sharetechnote.com/html/5G/5G_LTE_Interworking.html
 http://www.sharetechnote.com/html/5G/5G_LTE_Interworking.html#Overall_Signaling_Procedure
@@ -239,5 +400,26 @@ http://www.sharetechnote.com/html/5G/5G_CSI_Framework.html
 5G学习笔记之NG-RAN系统架构（2）  https://blog.csdn.net/u012800825/article/details/105890037
 高效的5G ASN.1编解码工具  https://blog.csdn.net/Dybinx/article/details/115458634
 使用asn1tools进行asn1编解码  https://www.bbsmax.com/A/kmzLmKyNJG/ , https://www.cnblogs.com/zhanghongfeng/p/9234663.html
-投资回报率/溢价
+ASN.1 -- 编码规则##  https://blog.csdn.net/mao834099514/article/details/109078662
+ASN.1 -- 使用asn1c完成ASN encode/decode  https://blog.csdn.net/mao834099514/article/details/109102770
+ASN.1 常用类型 编码详解 入门#  https://blog.csdn.net/q1009020096/article/details/86619059
+ASN1编码查看工具, ASN.1 Editor, https://asn1.io/asn1playground/
+//
+TTCN-3 Standards-Tutorials  http://www.ttcn-3.org/index.php/learn/tutorials
+nok--https://shjg.nongtianlang.com/exchange?id=15
+通信人家  http://www.c114.com.cn/ , https://www.txrjy.com/forum.php
+5G工作频段及波长覆盖计算  https://blog.csdn.net/dxy0219/article/details/122368550
+5G NR Rel16 Measurement report triggering--测量上报事件  https://blog.csdn.net/m0_45416816/article/details/121039979
+【5G RRC】NR测量事件介绍  https://blog.csdn.net/qq_31985307/article/details/129641918
+7 RRC Measurement -- 测量报告##  https://blog.csdn.net/dandan920107/article/details/111560307
+5g信令流程详解_5G NSA接入信令流程  https://blog.csdn.net/weixin_42476912/article/details/112141332
+5G注册流程分级详解 (tag:5g信令流程详解)https://blog.csdn.net/wuyou125/article/details/113806183
+5G注册流程详解                       https://blog.csdn.net/weixin_36139431/article/details/126937357
+5G SA接入信令介绍###                 https://liwangjiang.blog.csdn.net/article/details/113731848
+通信行业的必备网站                   https://liwangjiang.blog.csdn.net/article/details/127711718
+https://baike.c114.com.cn/ , https://www.sharetechnote.com/
+LTE基本信令流程  https://blog.csdn.net/weixin_42563968/article/details/108852564
+//
+//
+
 

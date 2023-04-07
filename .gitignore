@@ -9,3 +9,8 @@
 *.ell
 *.coredump
 core.*
+#
+#
+docker/getting-started.tar
+etc.html
+#
