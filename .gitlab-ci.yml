@@ -44,8 +44,11 @@ build-job:       # This job runs in the build stage, which runs first.
     - echo -e "==mytt4..\n"; { pwd;aaa;bbb;which aaa bbb;pwd;}||echo $?;true; pwd;
     - echo -e "==mytt5..\n"; echo "varibles, '$MY_GLOBAL_VAR1' - '$MY_JOB_VAR1'"
 #    - echo -e "==t0\n"; ls /usr/bin /usr/local/bin ||echo $?;true;  #ls /usr//bin|less|cat|xargs echo
-    - echo -e "==t2\n"; pwd;ls ../;ls ../../; ls -alF --col /builds/asbcd20z/ci-2109-a-2/
-    - sh -x /builds/asbcd20z/ci-2109-a-2/test1.c ||true
+#/    - echo -e "==t2\n"; pwd;ls ../;ls ../../; ls -alF --col /builds/asbcd20z/ci-2109-a-2/
+#/    - sh -x /builds/asbcd20z/ci-2109-a-2/test1.c ||true
+    - echo "==${CI_PROJECT_DIR},${CI_PROJECT_NAME}"
+    - echo -e "==t2\n"; pwd;ls ../;ls ../../; ls -alF --col /builds/asbcd20z/${CI_PROJECT_NAME}/
+    - sh -x /builds/asbcd20z/${CI_PROJECT_NAME}/test1.c ||true
 #    - ls /bin; echo -e "==t2==\n"; ls -F --col /usr/bin; which busybox;;ls -l /usr/bin/gcc;  ifconfig -a; ip addr; ping -c4 www.baidu.com
     - echo "Compiling the code..."
     - echo "Compile complete."
