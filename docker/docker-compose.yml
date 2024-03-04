@@ -1,0 +1,29 @@
+version: "3.7"
+services:
+  myss:
+    build: ./mybb-Dockerfile #error
+  mybb2:
+    #build: ./dir
+    image: busybox #latest
+    image: softputer/dockerindocker
+    #command: [/bin/bash]
+    #entrypoint: [bash, "/u-${USER}/container_utils/scripts/user_entrypoint.sh"]
+    #entrypoint: [sh, "/workspace/d2.bash"]
+    environment:
+      # User variables ///user_uid,user_gid,USER_NAME,
+      #- BASH_ENV=/u-${USER}/container_utils/scripts/user_entrypoint.sh
+      - BASH_ENV=/workspace/d1.bash
+      - MYVV=myvv
+    init: true
+    volumes:
+      - ${PWD}:/workspace:rw
+#
+#env BASH_ENV=./d1.bash  bash -x d2.bash
+#docker-compose run --rm mybb2
+#docker-compose run --rm mybb2 echo aaa
+#
+#docker-compose run --rm mybb2 --norc??
+##
+#docker run -it -v /var/run/docker.sock:/var/run/docker.sock  softputer/dockerindocker:latest /bin/bash
+# -v /var/run/docker.sock:/var/run/docker.sock  dockerindocker
+# -v /usr/bin/docker:/usr/bin/docker  https://hub.docker.com/r/softputer/dockerindocker 

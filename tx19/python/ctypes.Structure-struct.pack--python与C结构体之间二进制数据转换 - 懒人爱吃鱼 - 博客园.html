@@ -1,0 +1,649 @@
+<!DOCTYPE html>
+<html lang="zh-cn">
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="referrer" content="never" />
+    <meta name="keywords" content="python" />
+    <meta name="description" content="python与C结构体之间数据转换 前言 在实际应用中,可能会遇到直接和C进行二进制字节流协议通信,这时要把数据解包成python数据,如果可能,最好与C定义的结构体完全对应上. python中有2种方式,可处理二进制数据转换 用ctypes包的 直接定义结构体 用struct包的 函数组装转换 在" />
+    <meta property="og:description" content="python与C结构体之间数据转换 前言 在实际应用中,可能会遇到直接和C进行二进制字节流协议通信,这时要把数据解包成python数据,如果可能,最好与C定义的结构体完全对应上. python中有2种方式,可处理二进制数据转换 用ctypes包的 直接定义结构体 用struct包的 函数组装转换 在" />
+    <meta http-equiv="Cache-Control" content="no-transform" />
+    <meta http-equiv="Cache-Control" content="no-siteapp" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <title>python与C结构体之间二进制数据转换 - 懒人爱吃鱼 - 博客园</title>
+    <link rel="canonical" href="https://www.cnblogs.com/iclodq/p/9216763.html" />
+    <link rel="shortcut icon" id="favicon" href="//assets.cnblogs.com/favicon.svg?v=2" type="image/svg+xml" />
+    
+    <link rel="stylesheet" href="/css/blog-common.min.css?v=AJIlWmRcUWubw4__4HWNpQD2Vn965c-cq63Ynw90RNA" />
+    
+
+    <link id="MainCss" rel="stylesheet" href="/skins/lessismoreright/bundle-lessismoreright.min.css?v=O5zHESxCF0tzyVg01nX06fLeohvC5JYxsLWE4NmQOMg" />
+        <link id="highlighter-theme-cnblogs" type="text/css" rel="stylesheet" href="/css/hljs/cnblogs.css?v=5J1NDtbnnIr2Rc2SdhEMlMxD4l9Eydj88B31E7_NhS4" />
+    
+    
+    <link id="mobile-style" media="only screen and (max-width: 767px)" type="text/css" rel="stylesheet" href="/skins/lessismoreright/bundle-lessismoreright-mobile.min.css?v=MfrgFaFXzY5qlNFqLDqLeJ60oZXqAXyqcuGef5Vex3c" />
+    
+    <link type="application/rss+xml" rel="alternate" href="https://www.cnblogs.com/iclodq/rss" />
+    <link type="application/rsd+xml" rel="EditURI" href="https://www.cnblogs.com/iclodq/rsd.xml" />
+    <link type="application/wlwmanifest+xml" rel="wlwmanifest" href="https://www.cnblogs.com/iclodq/wlwmanifest.xml" />
+    <script>
+        var currentBlogId = 276070;
+        var currentBlogApp = 'iclodq';
+        var isLogined = false;
+        var isBlogOwner = false;
+        var skinName = 'LessIsMoreRight';
+        var visitorUserId = '';
+        var hasCustomScript = false;
+        window.cb_enable_mathjax = false;
+        window.mathEngine = 0;
+        window.codeHighlightEngine = 1;
+        window.enableCodeLineNumber = false;
+        window.codeHighlightTheme = 'cnblogs';
+        window.darkModeCodeHighlightTheme = 'vs2015';
+        window.isDarkCodeHighlightTheme = false;
+        window.isDarkModeCodeHighlightThemeDark = true;
+        window.isDisableCodeHighlighter = false;
+        window.enableCodeThemeTypeFollowSystem = false;
+        window.enableMacStyleCodeBlock = false;
+    </script>
+        <script>
+            window.currentPostId = 9216763;
+            window.currentPostDateAdded = '2018-06-23 11:35';
+        </script>
+    <script src="https://assets.cnblogs.com/scripts/jquery-3.3.1.min.js"></script>
+    <script src="https://cdn-www.cnblogs.com/js/blog-common.min.js?v=kKkB9LQEb7iyXLZ40RpmRJtQHki9qpcK401YtlQ7UEc"></script>
+    
+</head>
+<body class="skin-lessismoreright has-navbar has-bannerbar">
+    <a name="top"></a>
+        <a href="https://www.cnblogs.com/cmt/p/18298240" onclick="countCreativeClicks('C0-vivo-蓝河技术沙龙')" target="_blank" rel="nofollow">
+            <div class="bannerbar forpc" style="background-size: contain;background-image: url(https://img2024.cnblogs.com/blog/35695/202407/35695-20240713065703506-1612656754.jpg);">
+                <img src="https://img2024.cnblogs.com/blog/35695/202407/35695-20240713065543687-106657163.jpg" style="" onload="countCreativeImpressions('C0-vivo-蓝河技术沙龙')" />
+                
+                
+                <span id="c0_impression" style="display:none"></span>
+            </div>
+        </a>
+        <div id="bannerbar" class="bannerbar-mobile bannerbar-text-mobile formobile">
+                <a href="https://www.cnblogs.com/cmt/p/18298240" onclick="countCreativeClicks('M2-vivo-蓝河技术沙龙')" rel="nofollow">
+                    <img src="https://img2024.cnblogs.com/blog/35695/202407/35695-20240713070140969-2093504952.jpg" alt="" onload="countCreativeImpressionsOnMobile('M2-vivo-蓝河技术沙龙')" />
+                    <span id="m2_impression" style="display:none"></span>
+                </a>
+        </div>
+    <div id="top_nav" class="navbar forpc">
+        <nav id="nav_main" class="navbar-main">
+            <ul id="nav_left" class="navbar-list navbar-left">
+                <li class="navbar-branding">
+                    <a href="https://www.cnblogs.com/" title="开发者的网上家园" role="banner">
+                        <img src="//assets.cnblogs.com/logo.svg" alt="博客园Logo" />
+                    </a>
+                </li>
+                <li><a href="https://cnblogs.vip/">会员</a></li>
+                <li><a href="https://cnblogs.vip/store">周边</a></li>
+                <li><a href="https://www.cnblogs.com/cmt/articles/18197617">众包</a></li>
+                <li>
+                    <a href="https://news.cnblogs.com/" onclick="countClicks('nav', 'skin-navbar-news')">新闻</a>
+                </li>
+                <li>
+                    <a href="https://q.cnblogs.com/" onclick="countClicks('nav', 'skin-navbar-q')">博问</a>
+                </li>
+                <li>
+                    <a href="https://ing.cnblogs.com/" onclick="countClicks('nav', 'skin-navbar-ing')">闪存</a>
+                </li>
+            </ul>
+            <ul id="nav_right" class="navbar-list navbar-right">
+                <li>
+                    <form id="zzk_search" class="navbar-search dropdown" action="https://zzk.cnblogs.com/s" method="get" role="search">
+                        <input name="w" id="zzk_search_input" placeholder="代码改变世界" type="search" tabindex="3" autocomplete="off" />
+                        <button id="zzk_search_button" onclick="window.navbarSearchManager.triggerActiveOption()">
+                            <img id="search_icon" class="focus-hidden" src="//assets.cnblogs.com/icons/search.svg" alt="搜索" />
+                            <img class="hidden focus-visible" src="//assets.cnblogs.com/icons/enter.svg" alt="搜索" />
+                        </button>
+                        <ul id="navbar_search_options" class="dropdown-menu quick-search-menu">
+                            <li tabindex="0" class="active" onclick="zzkSearch(event, document.getElementById('zzk_search_input').value)">
+                                <div class="keyword-wrapper">
+                                    <img src="//assets.cnblogs.com/icons/search.svg" alt="搜索" />
+                                    <div class="keyword"></div>
+                                </div>
+                                <span class="search-area">所有博客</span>
+                            </li>
+                                    <li tabindex="1" onclick="zzkBlogSearch(event, 'iclodq', document.getElementById('zzk_search_input').value)">
+                                        <div class="keyword-wrapper">
+                                            <img src="//assets.cnblogs.com/icons/search.svg" alt="搜索" />
+                                            <div class="keyword"></div>
+                                        </div>
+                                        <span class="search-area">当前博客</span>
+                                    </li>
+                        </ul>
+                    </form>
+                </li>
+                <li id="navbar_login_status" class="navbar-list">
+                    <a class="navbar-user-info navbar-blog" href="https://i.cnblogs.com/EditPosts.aspx?opt=1" alt="写随笔" title="写随笔">
+                        <img id="new_post_icon" class="navbar-icon" src="//assets.cnblogs.com/icons/newpost.svg" alt="写随笔" />
+                    </a>
+                    <a id="navblog-myblog-icon" class="navbar-user-info navbar-blog" href="https://passport.cnblogs.com/GetBlogApplyStatus.aspx" alt="我的博客" title="我的博客">
+                        <img id="myblog_icon" class="navbar-icon" src="//assets.cnblogs.com/icons/myblog.svg" alt="我的博客" />
+                    </a>
+                    <a class="navbar-user-info navbar-message navbar-icon-wrapper" href="https://msg.cnblogs.com/" alt="短消息" title="短消息">
+                        <img id="msg_icon" class="navbar-icon" src="//assets.cnblogs.com/icons/message.svg" alt="短消息" />
+                        <span id="msg_count" style="display: none"></span>
+                    </a>
+                    <a id="navbar_lite_mode_indicator" data-current-page="blog" style="display: none" href="javascript:void(0)" alt="简洁模式" title="简洁模式启用，您在访问他人博客时会使用简洁款皮肤展示">
+                        <img class="navbar-icon" src="//assets.cnblogs.com/icons/lite-mode-on.svg" alt="简洁模式" />
+                    </a>
+                    <div id="user_info" class="navbar-user-info dropdown">
+                        <a class="dropdown-button" href="https://home.cnblogs.com/">
+                            <img id="user_icon" class="navbar-avatar" src="//assets.cnblogs.com/icons/avatar-default.svg" alt="用户头像" />
+                        </a>
+                        <div class="dropdown-menu">
+                            <a id="navblog-myblog-text" href="https://passport.cnblogs.com/GetBlogApplyStatus.aspx">我的博客</a>
+                            <a href="https://home.cnblogs.com/">我的园子</a>
+                            <a href="https://account.cnblogs.com/settings/account">账号设置</a>
+                            <a href="javascript:void(0)" id="navbar_lite_mode_toggle" title="简洁模式会使用简洁款皮肤显示所有博客">
+    简洁模式 <img id="navbar_lite_mode_on" src="/images/lite-mode-check.svg" class="hide" /><span id="navbar_lite_mode_spinner" class="hide">...</span>
+</a>
+                            <a href="javascript:void(0)" onclick="account.logout();">退出登录</a>
+                        </div>
+                    </div>
+                    <a class="navbar-anonymous" href="https://account.cnblogs.com/signup">注册</a>
+                    <a class="navbar-anonymous" href="javascript:void(0);" onclick="account.login()">登录</a>
+                </li>
+            </ul>
+        </nav>
+    </div>
+
+    
+
+    <div id="home">
+    <div id="header">
+        <div id="blogTitle">
+            <div class="title"><a id="Header1_HeaderTitle" class="headermaintitle HeaderMainTitle" href="https://www.cnblogs.com/iclodq">懒人在流浪</a>
+</div>
+<div class="subtitle">流浪的人在外想念你</div>
+
+        </div>
+        <div id="navigator">
+            
+<ul id="navList">
+    <li id="nav_sitehome"><a id="blog_nav_sitehome" class="menu" href="https://www.cnblogs.com/">
+博客园</a>
+</li>
+    <li id="nav_myhome">
+<a id="blog_nav_myhome" class="menu" href="https://www.cnblogs.com/iclodq/">
+首页</a>
+</li>
+    <li id="nav_newpost">
+
+<a id="blog_nav_newpost" class="menu" href="https://i.cnblogs.com/EditPosts.aspx?opt=1">
+新随笔</a>
+</li>
+    <li id="nav_contact">
+<a id="blog_nav_contact" class="menu" href="https://msg.cnblogs.com/send/%E6%87%92%E4%BA%BA%E7%88%B1%E5%90%83%E9%B1%BC">
+联系</a></li>
+    <li id="nav_rss">
+<a id="blog_nav_rss" class="menu" href="javascript:void(0)" data-rss="https://www.cnblogs.com/iclodq/rss/">
+订阅</a></li>
+    <li id="nav_admin">
+<a id="blog_nav_admin" class="menu" href="https://i.cnblogs.com/">
+管理</a>
+</li>
+</ul>
+
+            <div class="blogStats">
+                <div id="blog_stats_place_holder"><script>loadBlogStats();</script></div>
+            </div>
+        </div>
+    </div>
+    <div id="main">
+        <div id="mainContent">
+            <div class="forFlow">
+                <div id="post_detail">
+    <div id="topics">
+        <div class="post">
+            <h1 class="postTitle">
+                <a id="cb_post_title_url" class="postTitle2 vertical-middle" href="https://www.cnblogs.com/iclodq/p/9216763.html" title="发布于 2018-06-23 11:35">
+    <span role="heading" aria-level="2">python与C结构体之间二进制数据转换</span>
+    
+
+</a>
+
+            </h1>
+            <div class="clear"></div>
+            <div class="postBody">
+                <div id="cnblogs_post_body" class="blogpost-body cnblogs-markdown">
+<h1 id="python与c结构体之间数据转换">python与C结构体之间数据转换</h1>
+<h2 id="前言">前言</h2>
+<p>在实际应用中,可能会遇到直接和C进行二进制字节流协议通信,这时要把数据解包成python数据,如果可能,最好与C定义的结构体完全对应上.<br>
+python中有2种方式,可处理二进制数据转换</p>
+<ul>
+<li>用ctypes包的<code>Structure</code>直接定义结构体</li>
+<li>用struct包的<code>pack/unpack</code>函数组装转换</li>
+</ul>
+<p>在转换时一定要注意<mark>字节序</mark>,这两种方式都有各自的方法标志字节序.</p>
+<h2 id="使用ctypes包">使用ctypes包</h2>
+<p>ctypes中有许多C中的操作接口,如<code>sizeof</code>,<code>memmove</code>等,也提供近似C结构体的模拟类<code>Structure</code>,<code>BigEndianStructure</code>,<code>Union</code>,显然的是<code>BigEndianStructure</code>是网络字节序(大端),方便直接用于网络传输,<code>Union</code>和<code>Structure</code>是主机序(可能是大端,也可能是小端,和本机有关).</p>
+<h3 id="structurebigendianstructure使用">Structure/BigEndianStructure使用</h3>
+<pre><code class="language-python">from ctypes import *
+class SSHead(BigEndianStructure):
+    _pack_ = 1
+    _fields_ = [
+        #(字段名, c类型 )
+        ('nTotalSize', c_uint32),
+        ('nSourceID', c_int32),
+        ('sourceType', c_uint8),
+        ('destType', c_uint8),
+        ('transType', c_uint8),
+        ('nDestID', c_int32),
+        ('nFlag', c_uint8),
+        ('nOptionalLength', c_uint16),
+        ('arrOptional', c_char * 20),
+    ]
+    
+    def encode(self):
+        return string_at(addressof(self), sizeof(self))
+
+    def decode(self, data):
+        memmove(addressof(self), data, sizeof(self))
+        return len(data)
+
+# -------------------
+# 使用
+sshead = SSHead()
+sshead.nSourceID = 20 #省略其他赋值
+buf = sshead.encode()
+ss = SSHead()
+ss.decode(buf)
+print(ss.nSourceID)
+</code></pre>
+<p>以上就是一个简单协议结构体定义,对应的C版本如下</p>
+<pre><code class="language-cc">struct SSHead
+{
+    uint32_t nTotalSize;
+    int32_t nSourceID;
+    uint8_t sourceType;
+    uint8_t destType;
+    uint8_t transType;
+    int32_t nDestID;
+    int8_t nFlag;
+    uint16_t nOptionalLength;
+    char arrOptional[20];
+    
+    //简单模拟python的打包解包
+    int encode(char* buf, size_t max_len)
+    {
+        memmove(buf, this, sizeof(this));
+        return 0;
+    }
+    int decode(char* buf, size_t len)
+    {
+        memmove(this, buf, len);
+        return 0;
+    }
+}
+// c中对应的 打包/解包流程(假设本机字节序为大端)
+SSHead sshead = {0};
+sshead.nSourceID = 20;
+char buf[1024];
+sshead.encode(buf);
+
+SSHead ss = {0};
+ss.decode(buf, sizeof(ss));
+
+</code></pre>
+<p>其中<code>_pack_ = 1</code>表示1字节对齐,不然可能会被填充,导致结构体实际所占字节数与表面上的不一样.<br>
+<code>_fields_</code>定义C结构体中相对应的字段名和类型,C中每种基础类型在ctypes都有与之对应的类型,如<code>c_uint32</code>对应<code>uint32_t</code>,占4个字节.数组就是后面乘以对应的长度即可,如<code>c_uint8 * 20</code>.另外还支持嵌套定义结构体.在实例化后,字段名会成为成员变量,可直接赋值.</p>
+<p><code>encode</code>会直接得到该对象的二进制数据,如果不考虑字节序,则与C中相同对象的二进制数据是一样的<br>
+<code>decode</code>相反,直接解包二进制数据为python数据<br>
+这样python和c就可以直接通过结构体定义协议通信了.</p>
+<h3 id="注意">注意</h3>
+<ul>
+<li>python中的二进制数据是<mark>bytes</mark>类型,不是<mark>str</mark>类型</li>
+<li>在python3.6及之前的版本,是没有<code>BigEndianUnion</code>类型</li>
+<li>用来网络传输一定要用<code>BigEndianStructure</code>,不然会有字节序问题</li>
+</ul>
+<h3 id="缺点">缺点</h3>
+<p>此方法只能适用于结构体固定打解包的情况,如果协议中有大数组,但数组中的数据只有前几个是有效的,后面都是无效的,一般在打包的时候只打包有效数据,这种情况用<code>Structure</code>就不合适了.</p>
+<h2 id="使用struct包">使用struct包</h2>
+<p>struct模块是专门用来处理python与C之间的二进制数据转换,总共只有几个函数</p>
+<p>下面在原有的SSHead定义中增加2个使用struct打包解包的函数</p>
+<pre><code>from ctypes import *
+import struct
+class SSHead(BigEndianStructure):
+    _pack_ = 1
+    _fields_ = [
+        #(字段名, c类型 )
+        ('nTotalSize', c_uint32),
+        ('nSourceID', c_int32),
+        ('sourceType', c_uint8),
+        ('destType', c_uint8),
+        ('transType', c_uint8),
+        ('nDestID', c_int32),
+        ('nFlag', c_uint8),
+        ('nOptionalLength', c_uint16),
+        ('arrOptional', c_char * 20),
+    ]
+    
+    def encode(self):
+        return string_at(addressof(self), sizeof(self))
+
+    def decode(self, data):
+        memmove(addressof(self), data, sizeof(self))
+        return len(data)
+        
+    def pack(self):
+        buffer = struct.pack("!IIBBBIBH20s", self.nTotalSize, self.nSourceID, self.sourceType
+                             , self.destType, self.transType, self.nDestID, self.nFlag, self.nOptionalLength, self.arrOptional)
+        return buffer
+    
+    def unpack(self, data):
+        (self.nTotalSize, self.nSourceID, self.sourceType, self.destType, self.transType, self.nDestID,
+        self.nFlag, self.nOptionalLength, self.arrOptional) = struct.unpack("!IIBBBIBH20s", data)
+
+# ---------------------------
+# 测试        
+s = SSHead()
+s.arrOptional = b'hello'
+ss = SSHead()
+ss.unpack(s.encode())
+print(ss.arrOptional)
+
+</code></pre>
+<h3 id="packunpack的fmt格式化串说明">pack/unpack的fmt(格式化串)说明</h3>
+<p><code>"!IIBBBIBH20B"</code>:<code>!</code>表示按照网络序处理,<code>I</code>表示后面的第一变量为4字节的<code>int</code>型,接着的<code>B</code>表示为下一个变量为1字节的<code>uint8_t</code>型,以此类推,<code>20s</code>表示后面是长度20的字节数组<br>
+其他参数可参考官方文档.</p>
+<h3 id="缺点-1">缺点</h3>
+<p>上面的例子中如果使用<code>pakc/unpack</code>方法,是不用继承<code>BigEndianStructure</code>,只需自定义相应字段变量.<br>
+可以看到,struct.pack/unpack必须对每个字段代表什么类型,几个字节进行描述.与<code>Structure</code>相比,比较灵活,可以自由组合怎么打包,比如在<code>nOptionalLength=0</code>时,不打包<code>arrOptional</code>字段.缺点就是,定义<code>pack/unpack</code>函数时,协议多起来会非常繁琐且容易出错.所以最好是自动化生成<code>pack/unpack</code>函数.</p>
+<h2 id="自动化生成packunpack">自动化生成pack/unpack</h2>
+<h3 id="定义结构体成员列表">定义结构体成员列表</h3>
+<p>显然,我们需要知道结构体成员的变量名和类型,参考<code>Structure</code>,有如下定义</p>
+<pre><code class="language-python">class BaseCode(object):
+    _type_map_index_pack_tag = 1
+    _type_map_index_pack_size = 2
+    _type_map = {
+        # C类型:(说明, 编码标志)
+        'char': ('int', 'B'),
+        'uint32_t': ('int', 'I'),
+        'string': ('str', 'B'),
+        'int32_t': ('int', 'i'),
+        'int64_t': ('int', 'q'),
+        'uint64_t': ('int', 'Q'),
+        'float': ('float', 'f'),
+        'double': ('double', 'd'),
+    }
+
+    # 每种基础类型所占字节数
+    _ctype_size_map = {'I': 4, 'B': 1, 'i': 4, 'b': 1, 'Q': 8, 'q': 8, 'f': 4, 'd': 8}
+
+    _fields_index_ctype = 0
+    _fields_index_value_name = 1
+    _fields_index_array_length = 2
+
+    # 测试
+    
+    _fields = [
+        # (C类型, 变量名)
+        ('uint32_t', 'nUint'),
+        ('string', 'szString', '_Const.enmMaxAccountIDLength'),
+        ('int32_t', 'nInt3'),
+        ('uint32_t', 'nUintArray', 4),
+    ]
+</code></pre>
+<h3 id="按序遍历_fields中的字段">按序遍历_fields中的字段</h3>
+<p>对_fields中的每个元素,进行编码,通过变量名可获得实际变量值,通过C类型利用<code>struct.pack/unpack</code>可获得实际编码<br>
+下面是添加的类成员函数encode</p>
+<pre><code class="language-python">    def encode(self, nest=1):
+        data = b''
+        tmp = b''
+        debug_log("&amp;" * nest, self.__class__.__name__, "encode struct start :")
+        for one in self._fields:
+            debug_log("#" * nest, "encode one element:", one)
+            ctype = one[self._fields_index_ctype]
+
+            value = getattr(self, one[self._fields_index_value_name])
+            if len(one) == 3:
+                length = one[self._fields_index_array_length]
+                if type(length) == str:
+                    length = eval(length)
+                tmp = self._encode_array(ctype, value, length)
+            else:
+
+                # 不是基础类型,即嵌套定义
+                if ctype not in BaseCode._type_map:
+                    tmp = value.encode(nest+1)
+                else:
+                    fmt = '!' + self._type_map[ctype][self._type_map_index_pack_tag]
+                    tmp = struct.pack(fmt, value)
+                    # debug_log(fmt, type(value), value)
+            debug_log("#" * nest,"encode one element:", len(tmp), tmp)
+            data += tmp
+        debug_log("&amp;" * nest, self.__class__.__name__, "encode end: len=", len(data), data)
+        return data
+
+    def _encode_array(self, ctype, value, max_length):
+        """
+        打包数组
+        如果是字符串类型 需要做下特殊处理
+        :param ctype:
+        :param value:
+        :param max_length:
+        :return:
+        """
+        debug_log('ctype:', ctype, type(ctype))
+        if ctype == 'string':
+            max_length -= 1  # 字符串长度需要减一
+            value = bytes(value, encoding='utf8')
+            #print(value)
+
+        if len(value) &gt; max_length:
+            raise EncodeError('the length of  array is too long')
+
+        # pack长度
+        data = struct.pack('!H', len(value))
+        debug_log("array count:", len(value), "value:", value, type(value))
+        # pack数组内容
+        for one in value:
+            #debug_log("self._type_map[ctype][1]=", self._type_map[ctype][self._type_map_index_pack_tag], one)
+            if ctype not in BaseCode._type_map:
+                data += one.encode()
+            else:
+                data += struct.pack('!' + self._type_map[ctype][self._type_map_index_pack_tag], one)
+        return data
+</code></pre>
+<p>数组类型在python中使用<code>list</code>表示,在打包数组类型之前会添加<mark>2字节表示数组长度</mark><br>
+字符串类型转换为<code>bytes</code>类型,然后就和普通数组一样,一个元素一个元素处理(实际在for遍历中,一个元素是一个<code>int</code>,和C中一样,所以用<code>B</code>标志打包)<br>
+当<mark>c类型</mark>不是<code>_type_map</code>中的基础类型,那就是自定义的结构体类型,然后嵌套调用encode就可以了<br>
+目前没有考虑<code>union</code>的处理</p>
+<h3 id="解码反向处理">解码,反向处理</h3>
+<pre><code class="language-python">    def decode(self, data, offset=0, nest=1):
+        """
+        :param data:
+        :return:
+        """
+        debug_log("&amp;" * nest, self.__class__.__name__, "decode struct start :")
+        for one in self._fields:
+            debug_log("#" * nest, "decode one element:", one)
+            ctype = one[self._fields_index_ctype]
+            if len(one) == 3:
+                offset = self._decode_array(one, data, offset, nest)
+            else:
+                ctype_attr = self._type_map[ctype]
+                if ctype not in BaseCode._type_map:
+                    value = eval(ctype + '()')
+                    offset = value.decode(data, offset, nest)
+                    setattr(self, one[self._fields_index_value_name], value)
+
+                else:
+                    fmt = '!' + ctype_attr[self._type_map_index_pack_tag]
+                    value, = struct.unpack_from(fmt, data, offset)
+                    offset += self._ctype_size_map[ctype_attr[self._type_map_index_pack_tag]]
+                    debug_log(one, one[self._fields_index_value_name])
+                    setattr(self, one[self._fields_index_value_name], value)
+            debug_log("#" * nest, "decode one element end:", offset, one)
+        return offset
+
+    def _decode_array(self, field, data, offset, nest):
+        ctype = field[self._fields_index_ctype]
+        array_num, = struct.unpack_from('!H', data, offset)
+        offset += 2
+        value = []
+        ctype_attr = self._type_map[ctype]
+        debug_log("$" * nest, "decode array count", array_num, field)
+        while array_num &gt; 0:
+            array_num -= 1
+            if ctype not in BaseCode._type_map:
+                one = eval(ctype + '()')
+                offset = one.decode(data, offset, nest)
+                value.append(one)
+            else:
+                one, = struct.unpack_from('!' + ctype_attr[self._type_map_index_pack_tag], data, offset)
+                value.append(one)
+                offset += self._ctype_size_map[ctype_attr[self._type_map_index_pack_tag]]
+
+        if ctype == 'string':
+            # 这里是因为字符串是按照单个字符解包,会解成python的int,通过chr()转化为字符型
+            # value = [97,98]
+            # list(map(chr,value)) 后等于 ['a','b']
+            # ''.join() 就转成'ab'
+
+            value = ''.join(list(map(chr, value)))
+            value = bytes(value, encoding='latin1').decode('utf8')
+
+
+        setattr(self, field[self._fields_index_value_name], value)
+        debug_log("$" * nest, "decode array ok", array_num, field)
+        return offset
+</code></pre>
+<h2 id="最后">最后</h2>
+<p>完整代码:<a href="https://gitee.com/iclodq/codes/e81qfpxw3dnkju594yi6b90" target="_blank" rel="noopener">https://gitee.com/iclodq/codes/e81qfpxw3dnkju594yi6b90</a></p>
+<p>包含简单测试和转成字典结构<br>
+在python3.5下运行成功</p>
+<p>希望帮到各位!!</p>
+<h2 id="buy-me-a-coffee">Buy me a coffee</h2>
+<p><img src="http://wx3.sinaimg.cn/large/71ec914dgy1fskyn5vu1oj2074071mxj.jpg" alt="image" loading="lazy"></p>
+
+</div>
+<div class="clear"></div>
+<div id="blog_post_info_block" role="contentinfo">
+    <div id="blog_post_info"></div>
+    <div class="clear"></div>
+    <div id="post_next_prev"></div>
+</div>
+            </div>
+            <div class="postDesc">posted @ 
+<span id="post-date" data-last-update-days="2220.923935777948" data-date-created="BlogServer.Application.Dto.BlogPost.BlogPostDto" data-date-updated="2018-06-25 12:01">2018-06-23 11:35</span>&nbsp;
+<a href="https://www.cnblogs.com/iclodq">懒人爱吃鱼</a>&nbsp;
+阅读(<span id="post_view_count">11465</span>)&nbsp;
+评论(<span id="post_comment_count">0</span>)&nbsp;
+<a href="https://i.cnblogs.com/EditPosts.aspx?postid=9216763" rel="nofollow">编辑</a>&nbsp;
+<a href="javascript:void(0)" onclick="AddToWz(9216763);return false;">收藏</a>&nbsp;
+<a href="javascript:void(0)" onclick="reportManager.report({ currentUserId: '', targetType: 'blogPost', targetId: '9216763', targetLink: 'https://www.cnblogs.com/iclodq/p/9216763.html', title: 'python与C结构体之间二进制数据转换' })">举报</a>
+</div>
+        </div>
+        <script>
+    var cb_entryId = 9216763, cb_entryCreatedDate = '2018-06-23 11:35', cb_postType = 1, cb_postTitle = 'python与C结构体之间二进制数据转换';
+    var allowComments = true, cb_blogId = 276070, cb_blogApp = 'iclodq', cb_blogUserGuid = '4c8984b6-fd5a-e511-b908-9dcfd8948a71';
+    mermaidRender.render()
+    markdown_highlight()
+    zoomManager.apply("#cnblogs_post_body img:not(.code_img_closed):not(.code_img_opened)");    
+</script>
+        <a id="!comments"></a>
+<div id="blog-comments-placeholder"></div>
+<div id="comment_form" class="commentform">
+    <a name="commentform"></a>
+    <div id="divCommentShow"></div>
+    <div id="comment_nav">
+            <a class="comment-nav-left forpc" href="https://cnblogs.vip/" target="_blank">会员力量，点亮园子希望</a>
+        <div class="comment-nav-right">
+            <span id="span_refresh_tips"></span><a href="#" onclick="return RefreshPage();">刷新页面</a><a href="#top">返回顶部</a>
+        </div>
+    </div>
+    <div id="comment_form_container"></div>
+    <div class="ad_text_commentbox" id="ad_text_under_commentbox"></div>
+        <div id="cnblogs_ch"></div>
+    <div id="opt_under_post"></div>
+        <div id="cnblogs_c1" class="under-post-card">
+            <a href="https://www.cnblogs.com/cmt/p/18298240" rel="nofollow" target="_blank" onclick="countCreativeClicks('C1-vivo-蓝河技术沙龙')">
+                <img src="https://img2024.cnblogs.com/blog/35695/202407/35695-20240713070336838-1837943664.jpg" onload="countCreativeImpressions('C1-vivo-蓝河技术沙龙')" alt="" />
+                <span id="c1_impression" style="display:none"></span>
+            </a>
+        </div>
+    <div id="under_post_card1"></div>
+    <div id="under_post_card2"></div>
+    <div id="HistoryToday" class="under-post-card"></div>
+    <script type="text/javascript">
+        var commentManager = new blogCommentManager();
+        commentManager.renderComments(0);
+        fixPostBody();
+        window.footnoteTipManager.generateFootnoteTips();
+
+            window.tocManager.displayDisableTocTips = false;
+            window.tocManager.generateToc();
+            
+                setTimeout(function() { countViews(cb_blogId, cb_entryId); }, 50);
+            
+            deliverT2();
+            deliverC1C2();
+            loadNewsAndKb();
+            
+                LoadPostCategoriesTags(cb_blogId, cb_entryId);
+            
+            LoadPostInfoBlock(cb_blogId, cb_entryId, cb_blogApp, cb_blogUserGuid);
+            GetPrevNextPost(cb_entryId, cb_blogId, cb_entryCreatedDate, cb_postType);
+            loadOptUnderPost();
+            GetHistoryToday(cb_blogId, cb_blogApp, cb_entryCreatedDate);
+                </script>
+</div>
+
+    </div>
+</div>
+            </div>
+        </div>
+
+        <div id="sideBar">
+            <div id="sideBarMain">
+                <div id="sidebar_news" class="newsItem">
+    
+<h3 class="catListTitle">公告</h3>
+<div id="blog-news">    
+    <div id="sidebar_news_content">
+    </div>
+</div>
+<script>loadBlogNews();</script> 
+</div>
+<div id="sidebar_c3"></div>
+                <div id="calendar"><div id="blog-calendar" style="display:none"></div></div>                
+                <script>loadBlogDefaultCalendar();</script>
+                <div id="leftcontentcontainer">
+                    <!-- begin:SingleColumn -->
+                    <div id="blog-sidecolumn"></div>
+                    <script>loadBlogSideColumn();</script>
+                    <!-- end:  SingleColumn -->
+                </div>
+            </div>
+        </div>
+        <div class="clear"></div>
+    </div>
+    <div class="clear"></div>
+    <div id="footer">
+        <!--done-->
+Copyright &copy; 2024 懒人爱吃鱼
+<br /><span id="poweredby">Powered by .NET 8.0 on Kubernetes</span>
+
+    </div>
+</div>
+
+
+    
+
+    <input type="hidden" id="antiforgery_token" value="CfDJ8ONv0caE5GtEh3YJ5j088klHvviy2XHa_V02QYl0X5T9o-xweJOD85c_pmVrUHlJVBEZsqDqaZ-f4b0izKelHzAOfTS0TLMaaUzfbOgJYEh-levk-RsFNZAbpS9EXZyEKbAh_7UGQHGbaIDjemMe0ZA" />
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-M95P3TTWJZ"></script>
+<script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag() { dataLayer.push(arguments); }
+    gtag('js', new Date());
+    gtag('config', 'G-M95P3TTWJZ');
+</script>
+<script defer src="https://hm.baidu.com/hm.js?866c9be12d4a814454792b1fd0fed295"></script>
+</body>
+</html>
