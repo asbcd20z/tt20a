@@ -10,17 +10,42 @@ https://en.cppreference.com/w/cpp/string
 https://en.cppreference.com/w/cpp/container
 https://zh.cppreference.com/w/cpp/io
 http://www.cplusplus.com/reference/iolibrary/
+/
+https://www.runoob.com/cprogramming/c-function-isdigit.html
+https://en.cppreference.com/w/cpp/language/ascii
+https://en.cppreference.com/w/cpp/language/expressions#Operators
+https://en.cppreference.com/w/cpp/language/operator_precedence
+https://zh.cppreference.com/w/cpp/language/typeid
+-typeid详解 https://blog.csdn.net/TuxedoLinux/article/details/80604377
+-boost::core::demangle(typeid(*this).name());
+-boost::core::demangle(typeid(atypeOrVar).name()).rfind("::") != std::string::npos; string.strstr();
 ```
 
 ## boost
 ```
-boost::msm
+boost::msm (FSM)  //baidu:boost MSM
+Boost.Msm 介绍  https://blog.csdn.net/u010217394/article/details/121713731#3 ,  https://gitee.com/lclei/boost_msm_guide
+-               https://blog.csdn.net/u010217394/article/details/121713731  http://redboltz.wikidot.com/boost-msm-guide
+-https://www.cnblogs.com/chendeqiang/p/12885243.html, https://www.jianshu.com/p/6748aa7c117b#3 
+-///event,guard,exit1,action1,entry2 (execute-seq)
+-///Row-gurad: boost::msm::front::none,..myaGuard(即,最先通用[eg:boost::msm::front::none],后具体的)
+-using initial_state = boost::mp11::mp_list<state_machines::states::Init, state_machines::states::Working>;
+-template <typename... Actions> using ActionSequence = boost::msm::front::ActionSequence_<boost::mpl::vector<Actions...>>;
+-template <typename Guard> using Not = boost::msm::front::euml::Not_<Guard>;
+-template <typename... Guards> using And = boost::msm::front::euml::And_<Guards...>;
+-template <typename... Guards> using Or = boost::msm::front::euml::Or_<Guards...>;
+-template <typename... T> using Row = boost::msm::front::Row<T...>;
+-state_machines::states::Init, boost::msm::front::none, state_machines::states::End
+/
 BOOST_FUSION_ADAPT_STRUCT有什么用
 -https://www.it1352.com/456560.html
 -C++如何获得未知struct的成员？ -https://www.zhihu.com/question/271685630
 -https://www.boost.org/doc/libs/1_61_0/libs/hana/doc/html/index.html#tutorial-introspection
 -https://stackoverflow.com/questions/47820378/can-i-use-boost-fusion-adapt-struct-with-inherited-stuff
 -https://www.boost.org/doc/libs/1_59_0/libs/fusion/doc/html/fusion/adapted/adapt_struct.html
+//
+https://www.boost.org/doc/libs/1_69_0/doc/html/stacktrace.html
+https://www.boost.org/doc/libs/1_69_0/libs/fusion/doc/html/index.html
 //
 Boost type_index库使用介绍 https://blog.csdn.net/ffx54611/article/details/49512841?utm_medium=distribute.pc_relevant.none-task-blog-baidujs-4
 ```
@@ -159,4 +184,16 @@ namespace mytest{using namespace ::testing;}
 std::reference_wrapper  https://zh.cppreference.com/w/cpp/utility/functional/reference_wrapper
 C++引用  https://blog.csdn.net/qq_41412237/article/details/125174203
 ```
+
+
+## 内存,malloc, LD_PRELOAD,dlsym(RTLD_NEXT, "malloc")
+'''
+拦截malloc、free等库函数（malloc挂钩）  (__malloc_hook)  https://blog.csdn.net/leolinux/article/details/6117489
+劫持linux系统函数 malloc free linux打桩hooking  https://blog.csdn.net/xiaoxiaowenqiang/article/details/138135384
+Linux函数调用劫持的方法总结(带图）（Ring3中劫持)  https://blog.csdn.net/weixin_38371073/article/details/106235404
+<p>​ 在Linux中,动态库加载的时候,会按照以下顺序进行搜索: LD_PRELOAD >LD_LIBRARY_PATH >/etc/ld.so.cache >/lib&gt;/usr/lib</p>
+<p>​ 方法原理: 通过LD_PERELOAD设置编写自己的so库函数在原正常函数前执行</p>
+Linux C几种HOOK函数的方法  (real_malloc = dlsym(RTLD_NEXT, "malloc");)  https://weibo.com/1202332555/LfazNdxUC
+'''
+
 

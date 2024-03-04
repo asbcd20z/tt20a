@@ -1,0 +1,66 @@
+
+///2016-02-26T17:04:00+08
+//=baidu:gcc packed, maligndouble
+http://blog.sina.com.cn/s/blog_559f6ffc0101dbem.html
+http://blog.csdn.net/astrotycoon/article/details/8272743
+https://en.wikipedia.org/wiki/Data_structure_alignment
+
+
+
+///=byte-aligned-pack
+
+重要规则：
+1，复杂类型中各个成员按照它们被声明的顺序在内存中顺序存储，第一个成员的地址和整个类型的地址相同；
+2，每个成员分别对齐，即每个成员按自己的方式对齐，并最小化长度；规则就是每个成员按其类型的对齐参数（通常是这个类型的大小）和指定对齐参数中较小的一个对齐；
+3，结构、联合或者类的数据成员，第一个放在偏移为0的地方；以后每个数据成员的对齐，按照#pragma pack指定的数值和这个数据成员自身长度两个中比较小的那个进行；也就是说，当#pragma pack指定的值等于或者超过所有数据成员长度的时候，这个指定值的大小将不产生任何效果；
+4，复杂类型（如结构）整体的对齐<注意是“整体”>是按照结构体中长度最大的数据成员和#pragma pack指定值之间较小的那个值进行；这样在成员是复杂类型时，可以最小化长度；
+5，结构整体长度的计算必须取所用过的所有对齐参数的整数倍，不够补空字节；也就是取所用过的所有对齐参数中最大的那个值的整数倍，因为对齐参数都是2的n次方；这样在处理数组时可以保证每一项都边界对齐；
+对齐的算法：
+
+
+
+这里面有四个概念值： 
+1.数据类型自身的对齐值：就是上面交代的基本数据类型的自身对齐值。 
+2.指定对齐值：#progma pack (value)时的指定对齐值value。 
+3.结构体或者类的自身对齐值：其数据成员中自身对齐值最大的那个值。 
+4.数据成员、结构体和类的有效对齐值：自身对齐值和指定对齐值中小的那个值。 
+有了这些值，我们就可以很方便的来讨论具体数据结构的成员和其自身的对齐方式。有效对齐值N是最终用来决定数据存放地址方式的值，最重要。有效对齐N，就是表示“对齐在N上”，也就是说该数据的"存放起始地址%N=0". 而数据结构中的数据变量都是按定义的先后顺序来排放的。第一个数据变量的起始地址就是数据结构的起始地址。结构体的成员变量要对齐排放，结构体本身也要根据自身的有效对齐值圆整(就是结构体成员变量占用总长度需要是对结构体有效对齐值的整数倍，结合下面例子理解)。这样就不能理解上面的几个例子的值了。 
+
+
+
+
+
+
+二、自然边界对齐
+    什么是 自然边界对齐 呢？
+    我们知道，在C语言中，结构是一种 复合数据类型，它的 构成元素 可以是基本数据类型（如int 、long、float等）的变量，也可以是一些 复合数据类型（如数组、结构、联合体等）的数据单元。
+  
+    首先让我们来了解下 结构体  字节对齐有哪些特点？
+    ①  对于结构体，编译器会自动进行 成员变量 的对齐， 以提高运算效率。
+          缺省情况下，编译器为结构体的每个成员按其自然边界对齐方式分配空间 -- 自然边界对齐方式是编译器的默认对齐方式；
+    ②  各个成员按照它们被声明的顺序在内存中顺序存储，第一个成员的地址和整个结构体的地址相同；
+    ③  结构体整体的默认字节对齐大小是它的所有成员中对齐参数最大的一个；
+    ④  结构体长度的计算必须取所用过的所有对齐参数的整数倍，不够的话就填充（pad）空字节；
+         也就是说，最后整个结构体的大小是所有用过的对齐参数中最大的那个值的整数倍。对齐参数一般都是2的n次方，这样在处理数组时可以保证每一项都边界对齐。
+ 
+    下面一段英文摘自（http://en.wikipedia.org/wiki/Data_structure_alignment），注意其中的红色字体，下文还会涉及到。
+    The type of each member of the structure usually has a default alignment, meaning that it will, unless
+    otherwise requested by the programmer, be aligned on a pre-determined boundary. The following
+    typical alignments are valid for compilers fromMicrosoft (Visual C++),Borland/CodeGear (C++Builder),
+    Digital Mars (DMC)   andGNU (GCC) when compiling for 32-bit x86:
+•	A char (one byte) will be 1-byte aligned. 
+•	A short (two bytes) will be 2-byte aligned. 
+•	An int (four bytes) will be 4-byte aligned. 
+•	A long (four bytes) will be 4-byte aligned. 
+•	A float (four bytes) will be 4-byte aligned. 
+•	A double (eight bytes) will be 8-byte aligned on Windows and 4-byte aligned on Linux (8-byte with
+             -malign-double compile time option).  //double, or ‘long long’ 比较特别！！
+•	A long double (ten bytes with C++Builder and DMC, eight bytes with Visual C++, twelve bytes with GCC) will be 8-byte aligned with C++Builder, 2-byte aligned with DMC, 8-byte aligned with Visual C++ and 4-byte aligned with GCC. 
+•	Any pointer (four bytes) will be 4-byte aligned. (e.g.: char*, int*)
+
+    The only notable difference in alignment for a 64-bit system when compared to a 32-bit system is:
+•	A long (eight bytes) will be 8-byte aligned. 
+•	A double (eight bytes) will be 8-byte aligned. 
+•	A long double (eight bytes with Visual C++, sixteen bytes with GCC) will be 8-byte aligned with Visual C++ and 16-byte aligned with GCC. 
+•	Any pointer (eight bytes) will be 8-byte aligned.
+
