@@ -10,18 +10,18 @@
 [corex]
 	core.autocrlf
 	core.whitespace
-	core.ignoreCase
 	core.gitProxy  # GIT_PROXY_COMMAND ,or alias pgit='https_proxy=135.251.33.16:8080 git' 
+	core.ignoreCase
 	core.longpaths
 	#symlinks = false  # If false, symbolic links are checked out as small plain files that contain the link text.
-	#git config --global core.longpaths true
+	#git config --global core.longpaths true  #https://blog.csdn.net/WolfOfSiberian/article/details/127153588 
 	#git config -l
 	#git config --get-all core.symlinks
 #hint:   git config pull.rebase false  # merge (the default strategy)
 #hint:   git config pull.rebase true   # rebase
 #hint:   git config pull.ff only       # fast-forward only
 [alias]
-	#@time20230401a
+	#@time20240315a
 	#https://git-scm.com/docs/git-log
 	#core.symlinks   ,https://www.codenong.com/11662868/
 	#delete: git rm LICENSE.txt ; git ci --amend --allow-empty   ## use "git restore --staged <file>..." to unstage
@@ -91,6 +91,7 @@
 	#lot=lo --pretty=format:"%h [%cI %cn] %s %d" -9
 	lot =lo --pretty=format:'%h %cI %d %s  .%an'  #--decorate
 	lotag=lot --all --graph #--decorate' 
+	loau = lo --author=iwen
 	##
 	##compare branch
 	##log bra1..bra2 == log ^br1 br2  #gitrevisions  # branch-base-point, to compare branch
@@ -114,6 +115,7 @@
 	# or, git branch -u origin/main main
 	# or, git push -u orign/main main
 	# git push -n  -v ##--dry-run  ##--all --tags  ##-f -d
+	# git push -f  ##-f -d  # --force --delete
 	#git push origin master
 	#git push origin :
 	#git push --all; git push --tags; git push --mirror  ## push-all-branches/-or-tags/-or-alls-in-refs
@@ -128,9 +130,31 @@
 	# git remote show origin
 	#
 	##
+	#git gc --prune=now  #https://blog.csdn.net/weixin_64316191/article/details/127897952
 	#git remote prune -n origin  #--dry-run
 	#git remote prune origin    #https://blog.csdn.net/BryantLmm/article/details/85130091
 	#git remote show origin
+	#
+	##
+#
+#git status -s
+#git tag -a mytag1 -m'a-tag'
+#git show mytag1
+#//Git的Patch功能 https://www.cnblogs.com/y041039/articles/2411600.html
+#git apply -3 aa.diff  #apply-patch with coflict. Better-than-"patch-p1<aa.diff"
+#git apply --check
+#//=local
+#git rebase -i startCid
+#git rebase fromBr
+#git merge fromBr
+#//#https://www.cnblogs.com/tocy/p/git-stash-reference.html
+#git stash] [save [myComment]] [-u]
+#git stash pop
+#git stash show -u stash@{0}
+#//git stash apply; git stash drop
+#git stash list; git stash show -p
+#git stash branch myBranch
+#
 	#
 	##
 	#git config --local user.name mxasbcd20z; git config --local user.email mxasbcd20z@q.com
