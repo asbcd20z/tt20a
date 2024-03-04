@@ -1,0 +1,44 @@
+
+//env
+//https://gitlab.com/asbcd20z/ci-2109-a-2/-/jobs/3806516330
+CI_PROJECT_CLASSIFICATION_LABEL=
+CI_PROJECT_DESCRIPTION=ci2109a--ci/cd--copy20230211
+CI_PROJECT_DIR=/builds/asbcd20z/ci-2109-a-2
+CI_PROJECT_ID=43424933
+CI_PROJECT_NAME=ci-2109-a-2  //========(here?)
+CI_PROJECT_NAMESPACE=asbcd20z
+CI_PROJECT_NAMESPACE_ID=8224539
+CI_PROJECT_PATH=asbcd20z/ci-2109-a-2
+CI_PROJECT_PATH_SLUG=asbcd20z-ci-2109-a-2
+CI_PROJECT_REPOSITORY_LANGUAGES=c
+CI_PROJECT_ROOT_NAMESPACE=asbcd20z
+CI_PROJECT_TITLE=ci2109a2  //=======(Project name)
+CI_PROJECT_URL=https://gitlab.com/asbcd20z/ci-2109-a-2
+CI_PROJECT_VISIBILITY=private
+CI_REGISTRY=registry.gitlab.com
+CI_REGISTRY_IMAGE=registry.gitlab.com/asbcd20z/ci-2109-a-2
+CI_REGISTRY_PASSWORD=[MASKED]
+CI_REGISTRY_USER=gitlab-ci-token
+CI_REPOSITORY_URL=https://gitlab-ci-token:[MASKED]@gitlab.com/asbcd20z/ci-2109-a-2.git
+//
+//https://gitlab.com/asbcd20z/tt20a/-/jobs/4083722824
+CI_PROJECT_CLASSIFICATION_LABEL=
+CI_PROJECT_DESCRIPTION=tt20a
+CI_PROJECT_DIR=/builds/asbcd20z/tt20a  //==
+CI_PROJECT_ID=19964693
+CI_PROJECT_NAME=tt20a  //=========(here?)
+CI_PROJECT_NAMESPACE=asbcd20z
+CI_PROJECT_NAMESPACE_ID=8224539
+CI_PROJECT_PATH=asbcd20z/tt20a
+CI_PROJECT_PATH_SLUG=asbcd20z-tt20a
+CI_PROJECT_REPOSITORY_LANGUAGES=html,python,c++,c,javascript
+CI_PROJECT_ROOT_NAMESPACE=asbcd20z
+CI_PROJECT_TITLE=tt20a  //====
+CI_PROJECT_URL=https://gitlab.com/asbcd20z/tt20a
+CI_PROJECT_VISIBILITY=public
+CI_REGISTRY=registry.gitlab.com
+CI_REGISTRY_IMAGE=registry.gitlab.com/asbcd20z/tt20a
+CI_REGISTRY_PASSWORD=[MASKED]
+CI_REGISTRY_USER=gitlab-ci-token
+CI_REPOSITORY_URL=https://gitlab-ci-token:[MASKED]@gitlab.com/asbcd20z/tt20a.git
+//

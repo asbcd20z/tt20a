@@ -541,6 +541,10 @@ https://github.com/sublimehq/sublime_text/issues/1206  (merge 127.0.0.1/0.0.0.0 
 	//"trim_trailing_white_space_on_save": false, //Sublime自动去除代码行尾多余的空格-否
 	"ignored_packages": ["Sublimerge Pro","Vintage"]
 	///"highlight_line": true,
+	"highlight_modified_tabs": true,
+	"show_encoding": true,            //eg:UTF-8
+	"show_line_endings": true,        //eg:Unix
+	"theme": "Default.sublime-theme",
 	"word_wrap": false,
 	"update_check": false
 }
@@ -658,7 +662,10 @@ python352.chm/Python » 3.5.2 Documentation » The Python Standard Library » 16
  -ctypes/16.16.1.6. Calling functions with your own custom data types /16.16.1.10. Structures and unions /16.16.1.13. Arrays  
  -ctypes.Structure(*args, **kw) ctypes.BigEndianStructure(*args, **kw) class ctypes.LittleEndianStructure(*args, **kw)  
 python352.chm/Python » 3.5.2 Documentation » Python/C API Reference Manual  Utilities/Data marshalling support  
-python-document文档###https://docs.python.org/zh-cn/3/library/ctypes.html  
+python-document文档### https://docs.python.org/zh-cn/3/library/ctypes.html  
+ https://docs.python.org/zh-cn/3/library/ctypes.html#structures-and-unions  //pack?? //ctypes.string_at(..) for bytes
+ https://docs.python.org/zh-cn/3/library/ctypes.html#utility-functions
+ https://docs.python.org/zh-cn/3/library/ctypes.html#data-types
 bitfield in ctypes @Python-cytes-str-#getattr#### https://zhuanlan.zhihu.com/p/20182674  
 type(int().__str__),<type 'method-wrapper'>, help(int().__str__),  https://www.cnblogs.com/wancy86/p/descriptor.html  
 装饰器的完整实现及原理https://www.cnblogs.com/reklen/p/9534941.html  
@@ -666,7 +673,17 @@ type(int().__str__),<type 'method-wrapper'>, help(int().__str__),  https://www.c
 python – 如何正确实现__str__和__repr__ #### https://www.icode9.com/content-1-359907.html  
 baidu:str repr 区别.  pyton中repr函数将一个对象转成类似源代码的字符串，只用于显示。repr的输出对python友好，适合eval函数得到原来的对象。  
 sys._current_frames(), sys._getframe(), traceback.print_stack(), inspect.currentframe(),inspect.isbuiltin(),  logging, str(datetime.datetime.now())  
-collections.OrderedDict/namedtuple(), Callable, callable()  
+//
+/baidu:python如何按顺序输出dict/ python中的字典（dict）排序###(py3.7)  https://blog.csdn.net/weixin_39743356/article/details/137974922
+/如何用python表示c语言的struct, collections.OrderedDict/namedtuple(), typing.NamedTuple(对于Python 3.6及以上版本), Callable, callable()  
+ [Python 高级特性]深入NamedTuple命名元组 https://blog.csdn.net/XcantloadX/article/details/134071289
+ https://docs.python.org/zh-cn/3/library/collections.html#collections.namedtuple  #collections.OrderedDict
+ https://docs.python.org/zh-cn/3/library/typing.html#typing.NamedTuple
+ https://github.com/python/cpython/blob/14ab5e51c14e4f6298826823ea94cf51252da2d5/Lib/collections/__init__.py#L355
+/ai-copilot:如何用python表示一个c struct, 并且方便在python和c struct之间做数据转换.
+ 为了在Python中表示一个C struct并且方便地在Python和C struct之间进行数据转换，可以使用ctypes或cffi库
+ https://docs.python.org/zh-cn/3/library/ctypes.html#structures-and-unions  //pack?? //ctypes.string_at(..) for bytes
+在Python中处理ASN.1编解码，可以使用`pyasn1`库。这个库提供了ASN.1类型的定义以及编解码器，支持多种编解码格式，如BER、DER、CER等。
 method-wrapper  https://stackoverflow.com/questions/53130485/how-to-import-method-wrapper-type  
 Python 调试器之pdb https://www.cnblogs.com/xiaohai2003ly/p/8529472.html  
 //  
@@ -690,7 +707,11 @@ python 编程风格术语说明 EAFP: Easier to ask for forgiveness than permiss
 Python MRO方法解析顺序详解 (c3算法) http://c.biancheng.net/view/5450.html  
 Python拼接字符串的7种方法总结 https://www.jb51.net/article/149991.htm  
 //python3 -m json.tool  
-bytes.hex(), bytearray.hex(), binascii.hexlify(data) 
+bytes.hex(), bytearray.hex(), binascii.hexlify(data).hex(), str(binascii.hexlify(data), 'utf-8') 
+//
+Tutorial> 4.7.3. Special parameters, 4.7.8. Function Annotations, 9. Classes, 9.9. Generators
+baidu:python象c一样打印__FILE__,__LINE__,__FUNCTION__  //inspect.currentframe(),getframeinfo(),stack()
+baidu:python如何按顺序输出dict  //collections.OrderedDict, python3.7+dict
 ```
 
 

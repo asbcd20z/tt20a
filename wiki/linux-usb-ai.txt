@@ -1,0 +1,274 @@
+
+//linux.kernel
+baidu:linux内核usb配置,
+Linux USB 开发指南  https://zhuanlan.zhihu.com/p/609754745
+baidu:linux内核usb存储配置
+mini2440 + Linux-2.6.38.2内核移植USB驱动挂载U盘    https://blog.csdn.net/wuhuiskt/article/details/125413909
+嵌入式arm,Linux kernel配置USB的U盘，君正x1600e平台  https://blog.csdn.net/qq_41974787/article/details/134350010
+
+
+
+
+
+
+///=
+https://poe.com , chatGPT
+Q:linux内核为支持u盘需要哪些配置
+要在Linux内核中支持U盘，您需要进行以下配置：
+
+1. USB支持：确保内核配置中启用了USB支持。您可以在内核配置中找到这个选项：`Device Drivers -> USB support`。确保相关的USB选项已经启用，例如`USB Mass Storage support`、`USB Printer support`等。
+
+2. SCSI支持：大多数U盘在Linux中被视为SCSI设备。因此，您需要启用SCSI支持。在内核配置中，您可以找到这个选项：`Device Drivers -> SCSI device support`。确保相关的SCSI选项已经启用，例如`SCSI disk support`、`SCSI generic support`等。
+
+3. 文件系统支持：U盘通常使用文件系统进行格式化（如FAT32、NTFS等）。确保您的内核配置中启用了相应的文件系统支持。您可以在内核配置中找到这个选项：`File systems`。确保相关的文件系统选项已经启用，例如`DOS/FAT/NT Filesystems`、`NTFS file system support`等。
+
+4. USB存储驱动程序：确保内核配置中启用了USB存储驱动程序支持。您可以在内核配置中找到这个选项：`Device Drivers -> USB support -> USB Mass Storage support`。启用这个选项将使内核能够检测和挂载U盘。
+
+这些是在Linux内核中启用U盘支持所需的基本配置。根据您的具体需求和系统环境，可能还需要进行其他配置或调整。建议参考您所使用的Linux发行版的文档或社区支持资源，以获取更详细和特定的配置说明。
+
+
+Q:usb2.0的echi ochi xchi uchi区别/ahci
+对不起，我之前提到的 "UCHI" 有误，正确的名称是 "UHCI"。让我为您解释 USB 2.0 的 EHCI、OHCI、UHCI 和 XHCI 的区别：
+
+1. EHCI（Enhanced Host Controller Interface）：EHCI 是用于 USB 2.0 的主机控制器接口标准。它支持高速传输（480 Mbps）和全速传输（12 Mbps），并提供对 USB 2.0 设备的兼容性。EHCI 主机控制器通常使用 PCI（Peripheral Component Interconnect）总线与计算机系统连接。
+
+2. OHCI（Open Host Controller Interface）：OHCI 是另一种用于 USB 1.1 和 USB 2.0 的主机控制器接口标准。它支持全速传输（12 Mbps）和低速传输（1.5 Mbps），并提供对 USB 1.1 设备的兼容性。OHCI 主机控制器通常使用 PCI 总线与计算机系统连接。
+
+3. UHCI（Universal Host Controller Interface）：UHCI 是 USB 1.1 的主机控制器接口标准。它支持全速传输（12 Mbps）和低速传输（1.5 Mbps），并提供对 USB 1.1 设备的兼容性。UHCI 主机控制器通常使用 PCI 总线与计算机系统连接。
+
+4. XHCI（eXtensible Host Controller Interface）：XHCI 是用于 USB 3.0 和 USB 3.1 的主机控制器接口标准。它支持超速传输（5 Gbps 和 10 Gbps），并提供对 USB 3.0 和 USB 3.1 设备的兼容性。XHCI 主机控制器通常使用 PCIe（Peripheral Component Interconnect Express）总线与计算机系统连接。
+
+这些标准主机控制器接口定义了与 USB 设备之间的通信协议和传输速率。根据您的计算机硬件和操作系统支持的 USB 版本，相应的主机控制器接口将被使用。现代计算机通常同时支持 EHCI、OHCI 和 UHCI 接口，并且可以兼容 USB 1.1 和 USB 2.0 设备。而 XHCI 接口则用于兼容 USB 3.0 和 USB 3.1 设备。
+
+请注意，USB 2.0 设备可以与 EHCI、OHCI 和 UHCI 主机控制器兼容，但 USB 3.0 和 USB 3.1 设备只能与 XHCI 主机控制器兼容。因此，如果您的系统只有 EHCI、OHCI 或 UHCI 接口而没有 XHCI 接口，您将无法使用 USB 3.0 和 USB 3.1 设备的全部功能。
+>usb设备驱动>usb core>usb主机控制器(usb-Host-Controller-Device)
+Linux USB 3.0驱动分析（四）—— USB Core分析  https://www.cnblogs.com/wen123456/p/14281890.html
+协议里说，HCD提供主控制器驱动的硬件抽象，它只对USBCore一个负责，USBCore将用户的请求映射到相关的HCD，用户不能直接访问HCD。换句话说，USBCore就是HCD与USB设备唯一的桥梁。
+# find /sys/bus/usb/devices/usb1/ -name uevent 
+# find /sys/bus/usb/devices/usb1/ -name uevent |grep -v ep_  |xargs -tn 1 cat
+#ez@ez-desktop:~$ l /etc/udev/  /lib/udev/ez@ez-desktop:~$
+#CONFIG_USB_STORAGE=y
+ez@ez-desktop:~$ find /lib/modules/2.6.31-14-generic/ -iname *usb* |grep storage -i
+/lib/modules/2.6.31-14-generic/kernel/drivers/usb/storage/ums-usbat.ko
+/lib/modules/2.6.31-14-generic/kernel/drivers/usb/storage/usb-storage.ko
+ez@ez-desktop:~$
+ez@ez-desktop:~$
+
+
+
+
+Q:usb主设备和从设备驱动如何区分，linux内核中如何分别配置主设备和从设备
+在USB系统中，主设备（Host）是指控制和管理USB总线的设备，而从设备（Device）是指连接到USB总线上的外部设备。在Linux内核中，主设备和从设备驱动可以通过以下方式进行区分和配置：
+
+1. 主设备（Host）配置：
+   - 在Linux内核中，主设备驱动通常被称为Host Controller Driver（主控制器驱动），用于与特定的主控制器硬件进行通信。
+   - 在构建Linux内核时，可以启用或禁用特定的主设备驱动。相关的内核配置选项通常位于`Device Drivers -> USB support`和相关子菜单中。您可以选择启用或禁用特定的主设备驱动，以适应您的主控制器硬件。
+   - 常见的主设备驱动包括EHCI、OHCI、UHCI和XHCI驱动。您可以根据您的主控制器硬件类型选择适当的驱动。
+
+2. 从设备（Device）配置：
+   - 在Linux内核中，从设备驱动通常被称为USB Device Driver（USB设备驱动），用于与特定的USB外部设备进行通信。
+   - 从设备驱动程序可以作为内核模块进行编译，并在运行时通过模块加载器加载到内核中。您可以使用`modprobe`命令加载特定的从设备驱动模块。
+   - 为了配置特定的USB外部设备，您需要为其编写适当的从设备驱动程序。这需要了解设备的通信协议、功能和寄存器等。您可以根据设备的规范或文档编写适当的驱动程序，并将其编译为内核模块。
+   - 另外，在Linux系统中，可以使用udev规则（位于`/etc/udev/rules.d`目录中）为USB设备驱动程序提供附加的配置和规则。通过编辑和创建udev规则文件，可以指定特定USB设备的驱动程序、设备节点名称、权限设置等。
+
+需要注意的是，主设备驱动和从设备驱动通常是独立的，并且由不同的开发者或团队负责维护。主设备驱动用于管理USB总线和与主控制器交互，而从设备驱动用于管理特定的USB外部设备。在配置USB支持时，您需要同时考虑主设备和从设备驱动的配置，并确保它们能够正确地协同工作。
+
+
+
+Q:usb OTG 是什么，有什么作用
+USB OTG（USB On-The-Go）是一种USB标准，旨在扩展USB设备的功能，使其能够在主机模式（Host Mode）和设备模式（Device Mode）之间进行切换。传统的USB设备通常只能在主机模式下与计算机进行通信，而USB OTG设备可以在需要时充当主机或设备，实现直接的点对点连接。
+
+USB OTG的作用如下：
+
+1. 直接连接：使用USB OTG功能，两个USB设备可以直接连接，无需通过计算机主机。这样可以方便地实现设备之间的数据传输、文件共享、音频/视频传输等，例如将手机连接到USB闪存驱动器来传输文件。
+
+2. 主机模式：当USB OTG设备处于主机模式时，它可以控制和管理连接的USB设备，就像传统的USB主机一样。这使得USB OTG设备可以连接和使用其他USB设备，如键盘、鼠标、打印机、存储设备等。
+
+3. 设备模式：当USB OTG设备处于设备模式时，它可以被其他USB主机设备（如计算机）识别为普通的USB外部设备。这使得USB OTG设备可以作为存储设备、音频设备、视频设备等与其他主机进行通信。
+
+4. 自供电：USB OTG设备通常支持自供电（Self-Powered）功能，这意味着它们可以通过USB连接从主机设备获取电力，或者它们可以自己提供电力给连接的设备。这在某些情况下可以为其他设备充电，如智能手机充电器通过OTG连接到其他设备进行充电。
+
+5. 灵活性：USB OTG提供了更大的灵活性和便利性，使得USB设备更加多样化和互联互通。它使移动设备（如智能手机和平板电脑）能够直接连接到其他USB设备，而无需依赖计算机。
+
+总的来说，USB OTG扩展了USB设备的能力，使其能够在主机和设备之间灵活切换，实现直接连接和通信。这为移动设备和其他USB设备提供了更多的功能和互联互通的可能性。
+
+
+/-qemu-0.15.0
+ez@ez-desktop:~/bak$
+ez@ez-desktop:~/bak$ ll qemu-0.15.0/i386-softmmu/qemu* qemu-0.15.0/i386-linux-user/qemu-i386
+-rwxr-xr-x 1 ez ez 2769218 2011-09-14 20:24 qemu-0.15.0/i386-linux-user/qemu-i386*
+-rwxr-xr-x 1 ez ez 9045564 2011-09-14 20:20 qemu-0.15.0/i386-softmmu/qemu*
+ez@ez-desktop:~/bak$
+ez@ez-desktop:~/bak$
+ez@ez-desktop:~/bak$ qemu --version
+QEMU PC emulator version 0.11.0 (qemu-kvm-0.11.0), Copyright (c) 2003-2008 Fabrice Bellard
+ez@ez-desktop:~/bak$
+//bzip2 -k -d/-z xxx.bz2, bzip2 -cd xxx.bz2 >xxx
+
+
+/--ahci
+https://download.qemu.org/
+https://www.qemu.org/documentation/
+https://wiki.qemu.org/Testing/System_Images
+https://en.wikibooks.org/wiki/QEMU/Monitor#usb_add
+https://blog.csdn.net/weixin_39944595/article/details/110814200
+CONFIG_BLK_DEV_SD=y
+CONFIG_SATA_AHCI is not set
+/
+(qemu) info block                                                               
+ide0-hd0: type=hd removable=0 file=C:\\xxt\\bak20191223\\xe\\bk.pc20190408\\e\\0
+ide0-hd1: type=hd removable=0 file=C:\\xxt\\bak20191223\\xe\\bk.pc20190408\\e\\0
+ide1-hd0: type=hd removable=0 file=C:\\xxt\\bak20191223\\xe\\bk.pc20190408\\e\\0
+floppy0: type=floppy removable=1 locked=0 file=C:\\xxt\\bak20191223\\xe\\bk.pc20
+sd0: type=floppy removable=1 locked=0 [not inserted]                            
+(qemu)    
+/
+/(qemu) still no /dev??
+change sd0 C:\\xd\\appd\\qman70a\\Images\\usb2023a.qcow2
+change sd0 C:\\xxt\\usb2023a2.qcow2
+/
+/udev
+ez@ez-desktop:~$
+ez@ez-desktop:~$ service  --status-all |& grep udev
+ [ ? ]  udev
+ [ ? ]  udev-finish
+ [ ? ]  udevmonitor
+ [ ? ]  udevtrigger
+ez@ez-desktop:~$
+
+/
+ez@ez-desktop:~$
+ez@ez-desktop:~$
+ez@ez-desktop:~$ cat mount.log
+/dev/sda1 on / type ext4 (rw,errors=remount-ro)
+proc on /proc type proc (rw)
+none on /sys type sysfs (rw,noexec,nosuid,nodev)
+none on /sys/fs/fuse/connections type fusectl (rw)
+none on /sys/kernel/debug type debugfs (rw)
+none on /sys/kernel/security type securityfs (rw)
+udev on /dev type tmpfs (rw,mode=0755)
+none on /dev/pts type devpts (rw,noexec,nosuid,gid=5,mode=0620)
+none on /dev/shm type tmpfs (rw,nosuid,nodev)
+none on /var/run type tmpfs (rw,nosuid,mode=0755)
+none on /var/lock type tmpfs (rw,noexec,nosuid,nodev)
+none on /lib/init/rw type tmpfs (rw,nosuid,mode=0755)
+nfsd on /proc/fs/nfsd type nfsd (rw)
+binfmt_misc on /proc/sys/fs/binfmt_misc type binfmt_misc (rw,noexec,nosuid,nodev)
+/dev/sdc1 on /t type ext2 (rw)
+/dev/sdb5 on /lx type ext2 (rw)
+/dev/sdd5 on /tlx type ext2 (rw)
+/dev/sdc1 on /t type ext2 (rw)
+/dev/sde5 on /bra02 type ext2 (rw)
+ez@ez-desktop:~$
+
+
+
+///
+/qemu.usb-support=yes,usb devices=+1img
+(qemu)                                                                          
+(qemu)                                                                          
+(qemu) info usb                                                                 
+(qemu) info usbhost                                                             
+(qemu) info block                                                               
+ide0-hd0: type=hd removable=0 file=C:\\xxt\\bak20191223\\xe\\bk.pc20190408\\e\\0
+ide1-cd0: type=cdrom removable=1 locked=0 [not inserted]                        
+floppy0: type=floppy removable=1 locked=0 [not inserted]                        
+sd0: type=floppy removable=1 locked=0 [not inserted]                            
+(qemu) info pci                                                                 
+  Bus  0, device   0, function 0:                                               
+    Host bridge: PCI device 8086:1237                                           
+      id ""                                                                     
+  Bus  0, device   1, function 0:                                               
+    ISA bridge: PCI device 8086:7000                                            
+      id ""                                                                     
+  Bus  0, device   1, function 1:                                               
+    IDE controller: PCI device 8086:7010                                        
+      BAR4: I/O at 0xc000 [0xc00f].                                             
+      id ""                                                                     
+  Bus  0, device   1, function 2:                                               
+    USB controller: PCI device 8086:7020                                        
+      IRQ 9.                                                                    
+      BAR4: I/O at 0xc020 [0xc03f].                                             
+      id ""                                                                     
+  Bus  0, device   1, function 3:                                               
+    Bridge: PCI device 8086:7113                                                
+      IRQ 9.                                                                    
+      id ""                                                                     
+  Bus  0, device   2, function 0:                                               
+    VGA controller: PCI device 1013:00b8                                        
+      BAR0: 32 bit memory at 0xf0000000 [0xf1ffffff].                           
+      BAR1: 32 bit memory at 0xf2000000 [0xf2000fff].                           
+      id ""                                                                     
+  Bus  0, device   3, function 0:                                               
+    Ethernet controller: PCI device 10ec:8139                                   
+      IRQ 11.                                                                   
+      BAR0: I/O at 0xc100 [0xc1ff].                                             
+      BAR1: 32 bit memory at 0xf2001000 [0xf20010ff].                           
+      id ""                                                                     
+  Bus  0, device   4, function 0:                                               
+    Audio controller: PCI device 1274:5000                                      
+      IRQ 9.                                                                    
+      BAR0: I/O at 0xc200 [0xc2ff].                                             
+      id ""                                                                     
+  Bus  0, device   5, function 0:                                               
+    RAM controller: PCI device 1af4:1002                                        
+      IRQ 11.                                                                   
+      BAR0: I/O at 0xc300 [0xc31f].                                             
+      id ""                                                                     
+(qemu)                              
+
+
+
+2. 从设备（Device）配置：
+   - 在Linux内核中，从设备驱动通常被称为USB Device Driver（USB设备驱动），用于与特定的USB外部设备进行通信。
+   - 从设备驱动程序可以作为内核模块进行编译，并在运行时通过模块加载器加载到内核中。您可以使用`modprobe`命令加载特定的从设备驱动模块。
+   - 为了配置特定的USB外部设备，您需要为其编写适当的从设备驱动程序。这需要了解设备的通信协议、功能和寄存器等。您可以根据设备的规范或文档编写适当的驱动程序，并将其编译为内核模块。
+   - 另外，在Linux系统中，可以使用udev规则（位于`/etc/udev/rules.d`目录中）为USB设备驱动程序提供附加的配置和规则。通过编辑和创建udev规则文件，可以指定特定USB设备的驱动程序、设备节点名称、权限设置等。
+
+需要注意的是，主设备驱动和从设备驱动通常是独立的，并且由不同的开发者或团队负责维护。主设备驱动用于管理USB总线和与主控制器交互，而从设备驱动用于管理特定的USB外部设备。在配置USB支持时，您需要同时考虑主设备和从设备驱动的配置，并确保它们能够正确地协同工作。
+
+
+///
+
+
+
+
+
+
+
+
+///=
+lzhao019@N-20N3PF224VCM /cygdrive/c/xxt/bak20191223/xe/bk.pc20190408/d/d2=/Users/lzhao019/Downloads=/free-electrons.com
+$ ll
+total 7232
+-rwxrwx---+ 1 lzhao019 Domain Users 2569439 May 20  2016 buildroot-slides.pdf*
+-rwxrwx---+ 1 lzhao019 Domain Users 4833280 Jul 28  2016 musl-1.1.15.tar.gz*
+lzhao019@N-20N3PF224VCM /cygdrive/c/xxt/bak20191223/xe/bk.pc20190408/d/d2=/Users/lzhao019/Downloads=/free-electrons.com
+$ ll -h
+total 7.1M
+-rwxrwx---+ 1 lzhao019 Domain Users 2.5M May 20  2016 buildroot-slides.pdf*
+-rwxrwx---+ 1 lzhao019 Domain Users 4.7M Jul 28  2016 musl-1.1.15.tar.gz*
+lzhao019@N-20N3PF224VCM /cygdrive/c/xxt/bak20191223/xe/bk.pc20190408/d/d2=/Users/lzhao019/Downloads=/tar_gz
+$ ll -h
+total 13M
+-rwxrwx---+ 1 lzhao019 Domain Users  705 Apr  4  2019 _si_sourceInsight_memo.txt*
+-rwxrwx---+ 1 lzhao019 Domain Users 671K May 27  2017 cvs-1.11.23-2.tar.xz*
+-rwxrwx---+ 1 lzhao019 Domain Users 1.4K Dec 16  2017 debugfs.zip*
+-rwxrwx---+ 1 lzhao019 Domain Users 375K Dec 14  2016 dmalloc-5.4.2-2-src.tar.bz2*
+-rwxrwx---+ 1 lzhao019 Domain Users  68K Dec 14  2016 flog-1.8-1-src.tar.bz2*
+-rwxrwx---+ 1 lzhao019 Domain Users 546K Jul 15  2016 fuse-2.9.0.tar.gz*
+-rwxrwx---+ 1 lzhao019 Domain Users 646K Jul 15  2016 fuse-2.9.7.tar.gz*
+-rwxrwx---+ 1 lzhao019 Domain Users  53K Jun  2  2016 fuse-python-0.2.tar.gz*
+-rwxrwx---+ 1 lzhao019 Domain Users    0 Apr  3  2019 gdb-7.2a.tar.bz2.txt*
+-rwxrwx---+ 1 lzhao019 Domain Users 1.3K Oct 15  2019 gdb-7.8.tar.gz - ????????????.lnk*
+-rwxrwx---+ 1 lzhao019 Domain Users    0 Apr  3  2019 graphviz-2.40.1.tar.gz.txt*
+-rwxrwx---+ 1 lzhao019 Domain Users 264K Jul 15  2016 libfuse-master.zip*
+-rwxrwx---+ 1 lzhao019 Domain Users 8.0M May 25  2016 linux-0.2.img.bz2*
+-rwxrwx---+ 1 lzhao019 Domain Users  25K Dec 25  2016 nc-1.107-3-src.tar.bz2*
+drwxrwx---+ 1 lzhao019 Domain Users    0 Dec 27  2019 nfs-server/
+-rwxrwx---+ 1 lzhao019 Domain Users 460K Feb  7  2017 psmisc-22.16-1-src.tar.bz2*
+-rwxrwx---+ 1 lzhao019 Domain Users 104K Feb  7  2017 psmisc-22.16-1.tar.bz2*
+-rwxrwx---+ 1 lzhao019 Domain Users 1.1M Jun  9  2017 rapidsvn-0.12.1.tar.gz*
+-rwxrwx---+ 1 lzhao019 Domain Users 5.8K Nov 15  2016 tinyhttpd-0.1.0.tar.gz*
+
+
