@@ -137,3 +137,25 @@ MINGW64 /c/xd/tmpd/tgit/a1/test20210208syn (main)$ cat .git/config
   url = https://github.com/asbcd20z/test20210208syn
   fetch = +refs/heads/*:refs/remotes/github/*
 ===
+
+
+
+///
+https://gitee.com/all-about-git
+///
+git clone https://<USERNAME>@gitlab.com/path/to/a/project.git
+git remote set-url origin https://asbcd20z@github.com/asbcd20z/tt20a
+git config --global url."https://asbcd20z@gitlab.com/".insteadOf "https://gitlab.com/"
+
+Administrator@WWW-F367279F207 MINGW32 /d/cygwin00/z/git_root/t21a/tt20a (vv/twk)
+$ git push github
+remote: Invalid username or token. Password authentication is not supported for Git operations.
+fatal: Authentication failed for 'https://asbcd20z@github.com/asbcd20z/tt20a/'
+
+Administrator@WWW-F367279F207 MINGW32 /d/cygwin00/z/git_root/t21a/tt20a (vv/twk)
+$ git push
+Username for 'https://gitlab.com': asbcd20z
+remote: HTTP Basic: Access denied. If a password was provided for Git authentication, the password was incorrect or you're required to use a token instead of a password. If a token was provided, it was either incorrect, expired, or improperly scoped. See https://gitlab.com/help/topics/git/troubleshooting_git.md#error-on-git-fetch-http-basic-access-denied
+fatal: Authentication failed for 'https://gitlab.com/asbcd20z/tt20a.git/'
+
+

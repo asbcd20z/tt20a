@@ -54,10 +54,11 @@
 	configge=config --global -e
 	co = checkout   ##[-t|--track] [-b]  feature origin/feature
 	ci = commit
-	cia= commit --amend   #-a  #--no-edit
+	cia= commit --amend   #-a  #--no-edit  #--date=<authorDate>
 	ciaa= commit --amend   -a   --no-edit 
 	df = diff --name-only
 	#    diff --name-status
+	#diff HEAD  ; diff --cached
 	#git add -N aa.txt ; git rm --cached aa.txt ##new-file-for-diff, untracked--notStaged-staged4tobeCommit
 	#git add -A
 	br = branch
@@ -76,6 +77,8 @@
 	logme=log --author='liwen.a'
 	log1p=log -1 -p #--name-only ##=show
 	log1f=log -1 --name-only
+	#log  --pretty=fuller
+	#show  --pretty=fuller
 	showf=show   --name-status  --format=fuller   ##with cid-list
 	# show [sha1] -- [file]  ## or, diff sha1~ sha1  file
 	# show -U4 -W  ## diff -M -C  -U4 -W  --unified=4 --function-context
@@ -129,6 +132,10 @@
 	# or, git push -u orign/main main
 	# git push -n  -v ##--dry-run  ##--all --tags  ##-f -d
 	# git push -f  ##-f -d  # --force --delete
+	#git push <remote> <bra>[:bra-rename]
+	#git push <remote> --delete <bra> ;or git push <remote> :<bra>
+	#git push tags
+	#git push -u origin master[:master] ##1st-time for local-remote mapping
 	#git push origin master
 	#git push origin :
 	#git push --all; git push --tags; git push --mirror  ## push-all-branches/-or-tags/-or-alls-in-refs

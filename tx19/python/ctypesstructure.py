@@ -1,6 +1,10 @@
 #!/usr/bin/env python3
 ##-*- coding:utf-8 -*-
 
+#https://docs.python.org/zh-cn/3.9/howto/descriptor.html
+#https://docs.python.org/zh-cn/3.5/howto/descriptor.html
+
+
 #python352.chm- 3.5.2 Documentation » The Python Standard Library » 16. Generic Operating System Services » 
 # 16.16. ctypes — A foreign function library for Python
 #ctypes --- Python 的外部函数库 # https://docs.python.org/zh-cn/3.7/library/ctypes.html
